@@ -1,0 +1,3263 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="8dp"
+    android:background="#FFD700"
+    android:paddingBottom="8dp"
+    tools:context=".detail.servicosPonsse.DetailGarantiaForwarderPonsseActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF">
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:id="@+id/imageView5"
+            android:src="@drawable/ponsse_menucheck"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GARANTIA DE MANUTENÇÃO / FORWARDER"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:background="#FFD700"
+            android:id="@+id/textView79"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="220dp"
+            android:layout_height="118dp"
+            android:layout_margin="2dp"
+            android:layout_below="@+id/textView79"
+            android:layout_alignParentStart="true"
+            android:id="@+id/linearLayout108">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cliente:"
+                android:textColor="#000000"
+                android:textSize="17dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:id="@+id/editTextClienteGarantiaForwarderDetail" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Telefone n°:"
+                android:textColor="#000000"
+                android:textSize="17dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:textSize="15dp"
+                android:id="@+id/editTextTelefoneClienteForwarderDetail" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="220dp"
+            android:layout_height="118dp"
+            android:layout_margin="2dp"
+            android:layout_below="@+id/textView79"
+            android:layout_toEndOf="@+id/linearLayout108"
+            android:id="@+id/linearLayout109">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data/hora:"
+                android:textColor="#000000"
+                android:textSize="17dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:layout_margin="8dp"
+                android:textColor="#000000"
+                android:text=""
+                android:textSize="15dp"
+                android:id="@+id/textViewDataGruaDetail" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/modelo_forwarder"
+                android:textColor="#000000"
+                android:textSize="17dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/modelo_forwarderDetail"
+                android:prompt="@string/modelo_forwarder"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="220dp"
+            android:layout_height="118dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_alignTop="@+id/linearLayout109"
+            android:layout_toEndOf="@+id/linearLayout109"
+            android:id="@+id/linearLayout110">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ordem de serviço n°:"
+                android:textColor="#000000"
+                android:textSize="17dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:id="@+id/editTextOrdemServicoForwarderDetail" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N° de série:"
+                android:textColor="#000000"
+                android:textSize="17dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:textSize="15dp"
+                android:id="@+id/editTextNumSerieForwarderDetail" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/textView79"
+            android:layout_toEndOf="@+id/linearLayout110"
+            android:id="@+id/linearLayout193"
+            android:layout_alignBottom="@+id/imageView5">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Horas de motor:"
+                android:textColor="#000000"
+                android:textSize="17dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textSize="15dp"
+                android:ems="10"
+                android:id="@+id/editTextHorasMotorForwarderDetail" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="      Motor"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:background="#FFD700"
+            android:id="@+id/textView99"
+            android:layout_below="@+id/linearLayout108"
+            android:layout_alignEnd="@+id/imageView5" />
+
+        <TextView
+            android:layout_width="860dp"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Verificação de vazamentos de óleo e fluido:"
+            android:id="@+id/textView100"
+            android:layout_below="@+id/textView99"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Troca de óleo do motor:"
+            android:id="@+id/textView102"
+            android:layout_below="@+id/textView100"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/checkBox210" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Troca do filtro de óleo:"
+            android:id="@+id/textView104"
+            android:layout_below="@+id/textView102"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/checkBox210" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Separador de água, troca do elemento do filtro:"
+            android:id="@+id/textView112"
+            android:layout_below="@+id/textView104"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/checkBox213" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Troca do filtro de combustível:"
+            android:id="@+id/textView114"
+            android:layout_below="@+id/textView112"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/checkBox213" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Verificação do filtro de ar, substitua se necessário:"
+            android:id="@+id/textView115"
+            android:layout_below="@+id/textView114"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/checkBox215" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Troca do filtro da unidade da bomba de DEF (EU Stage IV):"
+            android:id="@+id/textView116"
+            android:layout_below="@+id/textView115"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/checkBox216" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Verificação da limpeza do tanque de DEF (EU Stage IV):"
+            android:id="@+id/textView121"
+            android:layout_below="@+id/textView116"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/checkBox216" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Ajuste da válvula do motor (EU Stage IIIA / IV):"
+            android:id="@+id/textView122"
+            android:layout_below="@+id/textView121"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/checkBox264" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox140"
+            android:layout_below="@+id/textView99"
+            android:layout_toEndOf="@+id/textView100" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox209"
+            android:layout_below="@+id/textView99"
+            android:layout_toEndOf="@+id/checkBox140" />
+
+        <CheckBox
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox210"
+            android:layout_alignTop="@+id/textView102"
+            android:layout_toEndOf="@+id/checkBox140" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox211"
+            android:layout_below="@+id/checkBox210"
+            android:layout_alignStart="@+id/checkBox210" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox213"
+            android:layout_alignTop="@+id/textView112"
+            android:layout_alignStart="@+id/checkBox211" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox214"
+            android:layout_below="@+id/checkBox213"
+            android:layout_alignStart="@+id/checkBox213" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox215"
+            android:layout_alignTop="@+id/textView115"
+            android:layout_alignStart="@+id/checkBox214" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox216"
+            android:layout_alignTop="@+id/textView116"
+            android:layout_alignStart="@+id/checkBox215" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox217"
+            android:layout_alignTop="@+id/checkBox216"
+            android:layout_alignStart="@+id/checkBox216" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox218"
+            android:layout_below="@+id/checkBox216"
+            android:layout_alignStart="@+id/checkBox216" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox264"
+            android:layout_alignTop="@+id/textView122"
+            android:layout_alignStart="@+id/checkBox218" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:textSize="17dp"
+            android:background="#FF3030"
+            android:id="@+id/editText68Detail"
+            android:layout_above="@+id/checkBox211"
+            android:layout_toEndOf="@+id/checkBox210" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="      Sistema de resfriamento"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:background="#FFD700"
+            android:id="@+id/textView123"
+            android:layout_below="@+id/textView122"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Verif. da resistência contra congelam. do líquido de arrefecimento:"
+            android:id="@+id/textView124"
+            android:layout_below="@+id/textView123"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView100" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="      Sistema hidráulico"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:background="#FFD700"
+            android:id="@+id/textView127"
+            android:layout_below="@+id/textView124"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Troca de óleo hidráulico:"
+            android:id="@+id/textView177"
+            android:layout_below="@+id/textView127"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/checkBox267" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Troca do filtro de retorno de óleo hidráulico 1 pç:"
+            android:id="@+id/textView182"
+            android:layout_below="@+id/textView177"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView192" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Troca do filtro da pressão de carga da transm.de deslocamento:"
+            android:id="@+id/textView192"
+            android:layout_below="@+id/textView182"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView124" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Troca do respiro do tanque hidráulico:"
+            android:id="@+id/textView197"
+            android:layout_below="@+id/textView192"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView192" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Troca do filtro de circulação do resfriamento:"
+            android:id="@+id/textView768"
+            android:layout_below="@+id/textView197"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView197" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Troca do filtro da pressão de carga do ventilador hidráulico:"
+            android:id="@+id/textView769"
+            android:layout_below="@+id/textView768"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView768" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sistema de filtro fino (equipamento opcional):"
+            android:textStyle="italic"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:background="#FFD700"
+            android:id="@+id/textView770"
+            android:layout_below="@+id/textView769"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Troca de filtro para sangrar:"
+            android:id="@+id/textView771"
+            android:layout_below="@+id/textView770"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/checkBox275" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox265"
+            android:layout_alignTop="@+id/textView124"
+            android:layout_toEndOf="@+id/textView124" />
+
+        <CheckBox
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox266"
+            android:layout_alignTop="@+id/checkBox265"
+            android:layout_toEndOf="@+id/checkBox265" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Troca de filtro de ar desumidificador:"
+            android:id="@+id/textView772"
+            android:layout_below="@+id/textView771"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/checkBox279" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="      Caixa de transferência:"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:background="#FFD700"
+            android:id="@+id/textView773"
+            android:layout_below="@+id/textView772"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Troca de óleo:"
+            android:id="@+id/textView774"
+            android:layout_below="@+id/textView773"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView771" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Parafusos de fixação, verificação e aperto:"
+            android:id="@+id/textView775"
+            android:layout_below="@+id/textView774"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView774" />
+
+        <CheckBox
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox267"
+            android:layout_below="@+id/textView127"
+            android:layout_toEndOf="@+id/checkBox265" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:textSize="17dp"
+            android:background="#FF3030"
+            android:id="@+id/editText69Detail"
+            android:layout_alignTop="@+id/checkBox266"
+            android:layout_toEndOf="@+id/checkBox266" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:textSize="17dp"
+            android:background="#CD2626"
+            android:id="@+id/editText70Detail"
+            android:layout_alignTop="@+id/checkBox267"
+            android:layout_toEndOf="@+id/checkBox267" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox268"
+            android:layout_alignTop="@+id/textView182"
+            android:layout_toEndOf="@+id/textView182" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox269"
+            android:layout_alignTop="@+id/checkBox268"
+            android:layout_toEndOf="@+id/checkBox268" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox270"
+            android:layout_below="@+id/textView182"
+            android:layout_toEndOf="@+id/textView192" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox271"
+            android:layout_below="@+id/checkBox268"
+            android:layout_toEndOf="@+id/checkBox270" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox272"
+            android:layout_alignTop="@+id/textView197"
+            android:layout_alignStart="@+id/checkBox271" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox273"
+            android:layout_below="@+id/textView197"
+            android:layout_toEndOf="@+id/textView768" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox274"
+            android:layout_below="@+id/checkBox272"
+            android:layout_toEndOf="@+id/checkBox273" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox275"
+            android:layout_alignTop="@+id/textView769"
+            android:layout_toEndOf="@+id/textView769" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox276"
+            android:layout_alignTop="@+id/checkBox275"
+            android:layout_toEndOf="@+id/checkBox275" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox277"
+            android:layout_below="@+id/textView770"
+            android:layout_toEndOf="@+id/textView771" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox278"
+            android:layout_alignTop="@+id/checkBox277"
+            android:layout_toEndOf="@+id/checkBox277" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox279"
+            android:layout_above="@+id/textView773"
+            android:layout_toEndOf="@+id/checkBox277" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Lubrificação da cruzeta do cardan:"
+            android:id="@+id/textView776"
+            android:layout_below="@+id/textView775"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView775" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="      Eixo frontal / truque frontal"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:background="#FFD700"
+            android:id="@+id/textView777"
+            android:layout_below="@+id/textView776"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Troca de óleo da engrenagem diferencial:"
+            android:id="@+id/textView778"
+            android:layout_below="@+id/textView777"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Troca de óleo das engrenagens planetárias:"
+            android:id="@+id/textView779"
+            android:layout_below="@+id/textView778"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Troca de óleo da carcaça do truque (8w):"
+            android:id="@+id/textView780"
+            android:layout_below="@+id/textView779"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Placa de proteção do peito-de-aço, verificação e aperto:"
+            android:id="@+id/textView781"
+            android:layout_below="@+id/textView780"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Parafusos de fixação, verificação e aperto:"
+            android:id="@+id/textView782"
+            android:layout_below="@+id/textView781"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Lubrificação dos pivôs (8w):"
+            android:id="@+id/textView783"
+            android:layout_below="@+id/textView782"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="      Truque traseiro"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:background="#FFD700"
+            android:id="@+id/textView784"
+            android:layout_below="@+id/textView783"
+            android:layout_alignParentStart="true" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox280"
+            android:layout_alignTop="@+id/textView774"
+            android:layout_toEndOf="@+id/textView774" />
+
+        <CheckBox
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox281"
+            android:layout_alignTop="@+id/checkBox280"
+            android:layout_toEndOf="@+id/checkBox280" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox284"
+            android:layout_below="@+id/textView774"
+            android:layout_toEndOf="@+id/textView775" />
+
+        <CheckBox
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox285"
+            android:layout_below="@+id/checkBox280"
+            android:layout_toEndOf="@+id/checkBox284" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox286"
+            android:layout_alignTop="@+id/textView776"
+            android:layout_alignStart="@+id/checkBox284" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox287"
+            android:layout_alignTop="@+id/checkBox286"
+            android:layout_toEndOf="@+id/checkBox286" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:textSize="17dp"
+            android:background="#CD2626"
+            android:id="@+id/editText71Detail"
+            android:layout_alignTop="@+id/checkBox281"
+            android:layout_toEndOf="@+id/checkBox281" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:textSize="17dp"
+            android:background="#FF3030"
+            android:id="@+id/editText72Detail"
+            android:layout_below="@+id/checkBox281"
+            android:layout_toEndOf="@+id/checkBox281" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Troca de óleo da engrenagem diferencial:"
+            android:id="@+id/textView785"
+            android:layout_below="@+id/textView784"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView776" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Troca de óleo das engrenagens planetárias:"
+            android:id="@+id/textView786"
+            android:layout_below="@+id/textView785"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView785" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Troca de óleo da carcaça do truque:"
+            android:id="@+id/textView787"
+            android:layout_below="@+id/textView786"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView786" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Placas de proteção do peito-de-aço, verificação e aperto:"
+            android:id="@+id/textView788"
+            android:layout_below="@+id/textView787"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView787" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Parafusos de fixação, verificação e aperto:"
+            android:id="@+id/textView789"
+            android:layout_below="@+id/textView788"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView788" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Lubrificação dos pivôs de giro:"
+            android:id="@+id/textView790"
+            android:layout_below="@+id/textView789"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView789" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox288"
+            android:layout_alignTop="@+id/textView785"
+            android:layout_toEndOf="@+id/textView785" />
+
+        <CheckBox
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox289"
+            android:layout_alignTop="@+id/checkBox288"
+            android:layout_toEndOf="@+id/checkBox288" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:textSize="17dp"
+            android:hint="Grau/Quantidade: "
+            android:background="#FF3030"
+            android:inputType="number"
+            android:id="@+id/editText3Detail"
+            android:layout_alignTop="@+id/checkBox289"
+            android:layout_toEndOf="@+id/checkBox289" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox290"
+            android:layout_alignTop="@+id/textView786"
+            android:layout_toEndOf="@+id/textView786" />
+
+        <CheckBox
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox291"
+            android:layout_below="@+id/checkBox289"
+            android:layout_alignStart="@+id/checkBox289" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:textSize="17dp"
+            android:hint="Grau/Quantidade: "
+            android:background="#CD2626"
+            android:inputType="number"
+            android:id="@+id/editText136Detail"
+            android:layout_below="@+id/editText3Detail"
+            android:layout_alignStart="@+id/editText3Detail" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox292"
+            android:layout_below="@+id/textView786"
+            android:layout_toEndOf="@+id/textView786" />
+
+        <CheckBox
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox293"
+            android:layout_below="@+id/checkBox290"
+            android:layout_toEndOf="@+id/checkBox290" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:textSize="17dp"
+            android:hint="Grau/Quantidade: "
+            android:background="#FF3030"
+            android:inputType="number"
+            android:id="@+id/editText146Detail"
+            android:layout_below="@+id/editText136Detail"
+            android:layout_alignStart="@+id/editText136Detail" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox294"
+            android:layout_alignTop="@+id/textView788"
+            android:layout_toEndOf="@+id/textView788" />
+
+        <CheckBox
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox295"
+            android:layout_alignTop="@+id/checkBox294"
+            android:layout_toEndOf="@+id/checkBox294" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:textSize="17dp"
+            android:hint="Nm: "
+            android:background="#CD2626"
+            android:inputType="number"
+            android:id="@+id/editText147Detail"
+            android:layout_below="@+id/editText146Detail"
+            android:layout_toEndOf="@+id/checkBox295" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox296"
+            android:layout_below="@+id/checkBox294"
+            android:layout_alignStart="@+id/checkBox294" />
+
+        <CheckBox
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox297"
+            android:layout_below="@+id/checkBox295"
+            android:layout_toEndOf="@+id/checkBox296" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:textSize="17dp"
+            android:hint="Nm: "
+            android:background="#FF3030"
+            android:inputType="number"
+            android:id="@+id/editText149Detail"
+            android:layout_below="@+id/editText147Detail"
+            android:layout_toEndOf="@+id/checkBox297" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox298"
+            android:layout_below="@+id/textView789"
+            android:layout_toEndOf="@+id/textView789" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox299"
+            android:layout_below="@+id/checkBox296"
+            android:layout_toEndOf="@+id/checkBox296" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Marque os itens verificados:"
+            android:textStyle="italic"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:background="#FFD700"
+            android:id="@+id/textView716"
+            android:layout_below="@+id/textView790"
+            android:layout_alignParentStart="true" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="50dp"
+            android:id="@+id/checkBox55"
+            android:layout_below="@+id/textView716"
+            android:layout_alignParentStart="true" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="68px"
+            android:id="@+id/checkBox56"
+            android:layout_below="@+id/checkBox55"
+            android:layout_alignParentStart="true" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="67dp"
+            android:id="@+id/checkBox57"
+            android:layout_below="@+id/checkBox56"
+            android:layout_alignParentStart="true" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="330dp"
+            android:id="@+id/checkBox58"
+            android:layout_below="@+id/checkBox57"
+            android:layout_alignParentStart="true" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="69dp"
+            android:id="@+id/checkBox59"
+            android:layout_below="@+id/checkBox58"
+            android:layout_alignParentStart="true" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="69dp"
+            android:id="@+id/checkBox60"
+            android:layout_below="@+id/checkBox59"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:layout_width="500px"
+            android:layout_height="900px"
+            android:src="@drawable/chassi_quatro_eixos"
+            android:id="@+id/imageView13"
+            android:layout_below="@+id/textView716"
+            android:layout_toEndOf="@+id/checkBox55" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="40dp"
+            android:id="@+id/checkBox103"
+            android:layout_below="@+id/textView716"
+            android:layout_toEndOf="@+id/imageView13" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="68px"
+            android:id="@+id/checkBox104"
+            android:layout_below="@+id/checkBox103"
+            android:layout_toEndOf="@+id/imageView13" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="67dp"
+            android:id="@+id/checkBox105"
+            android:layout_below="@+id/checkBox104"
+            android:layout_toEndOf="@+id/imageView13" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="330dp"
+            android:id="@+id/checkBox106"
+            android:layout_below="@+id/checkBox105"
+            android:layout_toEndOf="@+id/imageView13" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="69dp"
+            android:id="@+id/checkBox107"
+            android:layout_below="@+id/checkBox106"
+            android:layout_toEndOf="@+id/imageView13" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="69dp"
+            android:id="@+id/checkBox108"
+            android:layout_below="@+id/checkBox107"
+            android:layout_toEndOf="@+id/imageView13" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:layout_marginTop="135dp"
+            android:id="@+id/checkBox109"
+            android:layout_below="@+id/textView716"
+            android:layout_toEndOf="@+id/checkBox103" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:layout_marginTop="420dp"
+            android:id="@+id/checkBox110"
+            android:layout_below="@+id/checkBox109"
+            android:layout_alignStart="@+id/checkBox109" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:layout_marginTop="73dp"
+            android:id="@+id/checkBox111"
+            android:layout_below="@+id/checkBox110"
+            android:layout_alignStart="@+id/checkBox110" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:layout_marginTop="71dp"
+            android:id="@+id/checkBox112"
+            android:layout_below="@+id/checkBox111"
+            android:layout_toStartOf="@+id/imageView15" />
+
+        <ImageView
+            android:layout_width="500px"
+            android:layout_height="900px"
+            android:src="@drawable/chassi_tres_eixos"
+            android:id="@+id/imageView15"
+            android:layout_below="@+id/textView716"
+            android:layout_toEndOf="@+id/checkBox109" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="135dp"
+            android:id="@+id/checkBox113"
+            android:layout_below="@+id/textView716"
+            android:layout_toEndOf="@+id/imageView15" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:layout_marginTop="420dp"
+            android:id="@+id/checkBox114"
+            android:layout_below="@+id/checkBox113"
+            android:layout_toEndOf="@+id/imageView15" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:layout_marginTop="73dp"
+            android:id="@+id/checkBox115"
+            android:layout_below="@+id/checkBox114"
+            android:layout_toEndOf="@+id/imageView15" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:layout_marginTop="71dp"
+            android:id="@+id/checkBox116"
+            android:layout_below="@+id/checkBox115"
+            android:layout_toEndOf="@+id/imageView15" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="      Pivô intermediário"
+            android:layout_marginTop="40dp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:background="#FFD700"
+            android:id="@+id/textView791"
+            android:layout_below="@+id/checkBox112"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Mancais verticais, verificação e aperto:"
+            android:id="@+id/textView792"
+            android:layout_below="@+id/textView791"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView790" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Mancais horizontais, verificação e aperto (Gazelle, Wisent):"
+            android:id="@+id/textView793"
+            android:layout_below="@+id/textView792"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView792" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="      Equipamento de aquecimento e ar condicionado"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:background="#FFD700"
+            android:id="@+id/textView794"
+            android:layout_below="@+id/textView793"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Verificação do filtro, substitua se necessário:"
+            android:id="@+id/textView795"
+            android:layout_below="@+id/textView794"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView793" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Verificação da funcionalidade do equipamento:"
+            android:id="@+id/textView796"
+            android:layout_below="@+id/textView795"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView795" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="      Sistema elétrico"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:background="#FFD700"
+            android:id="@+id/textView797"
+            android:layout_below="@+id/textView796"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Verificação das baterias (eletrólito) Preste atenção à necessidade de inspeção adicional causada por condições
+climáticas."
+            android:id="@+id/textView798"
+            android:layout_below="@+id/textView797"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView796" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="      Rodas"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:background="#FFD700"
+            android:id="@+id/textView799"
+            android:layout_below="@+id/textView798"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Verificação da porca de aperto, apertar se necessário:"
+            android:id="@+id/textView800"
+            android:layout_below="@+id/textView799"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView798" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Verificação da pressão do pneu:"
+            android:id="@+id/textView801"
+            android:layout_below="@+id/textView800"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView800" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="      Bomba de lubrificação central"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:background="#FFD700"
+            android:id="@+id/textView802"
+            android:layout_below="@+id/textView801"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Limpeza do filtro:"
+            android:id="@+id/textView803"
+            android:layout_below="@+id/textView802"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView801" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Verificação da pressão (Valor padrão / Ajustado)"
+            android:textStyle="italic"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:background="#FFD700"
+            android:id="@+id/textView804"
+            android:layout_below="@+id/textView803"
+            android:layout_alignParentStart="true" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox300"
+            android:layout_below="@+id/textView791"
+            android:layout_toEndOf="@+id/textView792" />
+
+        <CheckBox
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="1800h "
+            android:textSize="16dp"
+            android:id="@+id/checkBox301"
+            android:layout_below="@+id/textView791"
+            android:layout_toEndOf="@+id/checkBox300" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:textSize="17dp"
+            android:hint="Nm: "
+            android:background="#FF3030"
+            android:inputType="number"
+            android:id="@+id/editText150Detail"
+            android:layout_below="@+id/textView791"
+            android:layout_toEndOf="@+id/checkBox301" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox302"
+            android:layout_alignTop="@+id/textView793"
+            android:layout_toEndOf="@+id/textView793" />
+
+        <CheckBox
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox303"
+            android:layout_below="@+id/checkBox300"
+            android:layout_toEndOf="@+id/checkBox300" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:textSize="17dp"
+            android:hint="Nm: "
+            android:background="#CD2626"
+            android:inputType="number"
+            android:id="@+id/editText151Detail"
+            android:layout_alignTop="@+id/checkBox303"
+            android:layout_toEndOf="@+id/checkBox303" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox304"
+            android:layout_below="@+id/textView794"
+            android:layout_alignStart="@+id/checkBox303" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox305"
+            android:layout_alignTop="@+id/textView796"
+            android:layout_toEndOf="@+id/textView796" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox306"
+            android:layout_alignTop="@+id/checkBox305"
+            android:layout_toEndOf="@+id/checkBox305" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox307"
+            android:layout_below="@+id/textView797"
+            android:layout_toEndOf="@+id/textView798" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox308"
+            android:layout_below="@+id/textView797"
+            android:layout_toEndOf="@+id/checkBox307" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox309"
+            android:layout_alignTop="@+id/textView800"
+            android:layout_toEndOf="@+id/textView800" />
+
+        <CheckBox
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox310"
+            android:layout_alignTop="@+id/checkBox309"
+            android:layout_toEndOf="@+id/checkBox309" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:textSize="17dp"
+            android:hint="Nm: "
+            android:background="#CD2626"
+            android:inputType="number"
+            android:id="@+id/editText152Detail"
+            android:layout_below="@+id/textView799"
+            android:layout_toEndOf="@+id/checkBox310" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox311"
+            android:layout_below="@+id/checkBox309"
+            android:layout_alignStart="@+id/checkBox309" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox312"
+            android:layout_below="@+id/checkBox309"
+            android:layout_toEndOf="@+id/checkBox311" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox313"
+            android:layout_alignTop="@+id/textView803"
+            android:layout_toEndOf="@+id/textView803" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox314"
+            android:layout_alignTop="@+id/checkBox313"
+            android:layout_toEndOf="@+id/checkBox313" />
+
+        <TextView
+            android:layout_width="640dp"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Verificação da pressão do sistema hidráulico de deslocamento:"
+            android:id="@+id/textView805"
+            android:layout_below="@+id/textView804"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/editText38GarantiaHarvester" />
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="32dp"
+            android:background="#FF3030"
+            android:hint="DA: padrão"
+            android:inputType="number"
+            android:id="@+id/editText38GarantiaHarvester"
+            android:layout_above="@+id/editText44GarantiaHarvester"
+            android:layout_toEndOf="@+id/textView806" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#FF3030"
+            android:textSize="17dp"
+            android:text="/"
+            android:id="@+id/textView753"
+            android:layout_above="@+id/editText45GarantiaHarvester"
+            android:layout_toEndOf="@+id/editText40GarantiaHarvester" />
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="32dp"
+            android:background="#FF3030"
+            android:hint="ajustado"
+            android:inputType="number"
+            android:id="@+id/editText39GarantiaHarvester"
+            android:layout_below="@+id/textView804"
+            android:layout_toEndOf="@+id/textView754" />
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="32dp"
+            android:textSize="17dp"
+            android:hint="DB: padrão"
+            android:background="#FF3030"
+            android:inputType="number"
+            android:id="@+id/editText40GarantiaHarvester"
+            android:layout_below="@+id/textView804"
+            android:layout_toEndOf="@+id/editText39GarantiaHarvester" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#FF3030"
+            android:textSize="17dp"
+            android:text="/"
+            android:id="@+id/textView754"
+            android:layout_below="@+id/textView804"
+            android:layout_toEndOf="@+id/editText38GarantiaHarvester" />
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="32dp"
+            android:textSize="17dp"
+            android:background="#FF3030"
+            android:hint="ajustado"
+            android:inputType="number"
+            android:id="@+id/editText41GarantiaHarvester"
+            android:layout_above="@+id/textView806"
+            android:layout_toEndOf="@+id/textView753" />
+
+        <TextView
+            android:layout_width="154dp"
+            android:layout_height="32dp"
+            android:textSize="17dp"
+            android:hint="Pressão alimentação"
+            android:background="#FF3030"
+            android:inputType="number"
+            android:id="@+id/editText42GarantiaHarvester"
+            android:layout_above="@+id/textView806"
+            android:layout_toEndOf="@+id/editText41GarantiaHarvester" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#FF3030"
+            android:textSize="17dp"
+            android:text="/"
+            android:id="@+id/textView755"
+            android:layout_alignTop="@+id/editText42GarantiaHarvester"
+            android:layout_toStartOf="@+id/editText43GarantiaHarvester" />
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="32dp"
+            android:textSize="17dp"
+            android:background="#FF3030"
+            android:hint="ajustado"
+            android:inputType="number"
+            android:id="@+id/editText43GarantiaHarvester"
+            android:layout_below="@+id/textView804"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="220dp"
+            android:layout_height="32dp"
+            android:background="#CD2626"
+            android:textSize="17dp"
+            android:hint="Pressão de reserva: padrão"
+            android:inputType="number"
+            android:id="@+id/editText44GarantiaHarvester"
+            android:layout_alignTop="@+id/textView806"
+            android:layout_toEndOf="@+id/textView806" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#CD2626"
+            android:textSize="17dp"
+            android:text="/"
+            android:id="@+id/textView756"
+            android:layout_alignTop="@+id/editText44GarantiaHarvester"
+            android:layout_toEndOf="@+id/editText44GarantiaHarvester" />
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="32dp"
+            android:textSize="17dp"
+            android:background="#CD2626"
+            android:hint="ajustado"
+            android:inputType="number"
+            android:id="@+id/editText45GarantiaHarvester"
+            android:layout_below="@+id/editText40GarantiaHarvester"
+            android:layout_toStartOf="@+id/editText46GarantiaHarvester" />
+
+        <TextView
+            android:layout_width="210dp"
+            android:layout_height="32dp"
+            android:textSize="17dp"
+            android:hint="Pressão máxima: padrão"
+            android:background="#CD2626"
+            android:inputType="number"
+            android:id="@+id/editText46GarantiaHarvester"
+            android:layout_alignTop="@+id/editText45GarantiaHarvester"
+            android:layout_toStartOf="@+id/textView757" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#CD2626"
+            android:textSize="17dp"
+            android:text="/"
+            android:id="@+id/textView757"
+            android:layout_below="@+id/editText42GarantiaHarvester"
+            android:layout_alignStart="@+id/textView755" />
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="32dp"
+            android:textSize="17dp"
+            android:background="#CD2626"
+            android:hint="ajustado"
+            android:inputType="number"
+            android:id="@+id/editText47GarantiaHarvester"
+            android:layout_alignTop="@+id/textView757"
+            android:layout_toEndOf="@+id/textView757" />
+
+        <TextView
+            android:layout_width="220dp"
+            android:layout_height="32dp"
+            android:background="#FF3030"
+            android:textSize="17dp"
+            android:hint="Pressão de reserva: padrão"
+            android:inputType="number"
+            android:id="@+id/editText48Detail"
+            android:layout_below="@+id/editText44GarantiaHarvester"
+            android:layout_toEndOf="@+id/textView807" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#FF3030"
+            android:textSize="17dp"
+            android:text="/"
+            android:id="@+id/textView758"
+            android:layout_alignTop="@+id/editText48Detail"
+            android:layout_alignStart="@+id/textView756" />
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="32dp"
+            android:textSize="17dp"
+            android:background="#FF3030"
+            android:hint="ajustado"
+            android:inputType="number"
+            android:id="@+id/editText49Detail"
+            android:layout_alignTop="@+id/textView758"
+            android:layout_toEndOf="@+id/textView758" />
+
+        <TextView
+            android:layout_width="210dp"
+            android:layout_height="32dp"
+            android:textSize="17dp"
+            android:hint="Pressão máxima: padrão"
+            android:background="#FF3030"
+            android:inputType="number"
+            android:id="@+id/editText50Detail"
+            android:layout_alignTop="@+id/editText49Detail"
+            android:layout_toEndOf="@+id/editText49Detail" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#FF3030"
+            android:textSize="17dp"
+            android:text="/"
+            android:id="@+id/textView759"
+            android:layout_below="@+id/editText46GarantiaHarvester"
+            android:layout_toEndOf="@+id/editText50Detail" />
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="32dp"
+            android:textSize="17dp"
+            android:background="#FF3030"
+            android:hint="ajustado"
+            android:inputType="number"
+            android:id="@+id/editText51Detail"
+            android:layout_alignTop="@+id/textView759"
+            android:layout_toEndOf="@+id/textView759" />
+
+        <TextView
+            android:layout_width="220dp"
+            android:layout_height="32dp"
+            android:background="#FF3030"
+            android:textSize="17dp"
+            android:hint="Pressão de reserva: padrão"
+            android:inputType="number"
+            android:id="@+id/editText56Detail"
+            android:layout_below="@+id/editText48Detail"
+            android:layout_toEndOf="@+id/textView807" />
+
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="32dp"
+            android:textSize="17dp"
+            android:background="#FF3030"
+            android:hint="ajustado"
+            android:inputType="number"
+            android:id="@+id/editText57Detail"
+            android:layout_below="@+id/textView758"
+            android:layout_toEndOf="@+id/textView758" />
+
+        <TextView
+            android:layout_width="210dp"
+            android:layout_height="32dp"
+            android:textSize="17dp"
+            android:hint="Pressão máxima: padrão"
+            android:background="#FF3030"
+            android:inputType="number"
+            android:id="@+id/editText58Detail"
+            android:layout_below="@+id/editText49Detail"
+            android:layout_toEndOf="@+id/editText49Detail" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#FF3030"
+            android:textSize="17dp"
+            android:text="/"
+            android:id="@+id/textView763"
+            android:layout_below="@+id/textView759"
+            android:layout_toStartOf="@+id/editText51Detail" />
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="32dp"
+            android:textSize="17dp"
+            android:background="#FF3030"
+            android:hint="ajustado"
+            android:inputType="number"
+            android:id="@+id/editText59Detail"
+            android:layout_below="@+id/editText51Detail"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="640dp"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Verificação da pressão da bomba do carregador:"
+            android:id="@+id/textView806"
+            android:layout_below="@+id/textView805"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="640dp"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Verif. pressão de pré-controle do bloco de válvulas do carregador/da grua::"
+            android:id="@+id/textView807"
+            android:layout_below="@+id/textView806"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="640dp"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Verificação da pressão do ventilador hidráulico:"
+            android:id="@+id/textView808"
+            android:layout_below="@+id/textView807"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="      Deslocamento de teste, verificação da funcionalidade"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:background="#FFD700"
+            android:id="@+id/textView809"
+            android:layout_below="@+id/editText56Detail"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Verificação do freio de estacionamento:"
+            android:id="@+id/textView810"
+            android:layout_below="@+id/textView809"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView803" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Verificação do freio de serviço:"
+            android:id="@+id/textView811"
+            android:layout_below="@+id/textView810"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView810" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Verificação do seletor de faixa e da tração traseira:"
+            android:id="@+id/textView812"
+            android:layout_below="@+id/textView811"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView811" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Verificação do bloqueio do diferencial:"
+            android:id="@+id/textView813"
+            android:layout_below="@+id/textView812"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView812" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Verificação da trava de oscilação do chassi:"
+            android:id="@+id/textView814"
+            android:layout_below="@+id/textView813"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView813" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Verificação da borracha de absorção de vibração da cabine:"
+            android:id="@+id/textView815"
+            android:layout_below="@+id/textView814"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView814" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Verificação da calha guia do anel de giro da grua:"
+            android:id="@+id/textView816"
+            android:layout_below="@+id/textView815"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView815" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Verificação da suspensão ativa (máquinas ActiveFrame )"
+            android:id="@+id/textView817"
+            android:layout_below="@+id/textView816"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView816" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#FF3030"
+            android:textSize="17dp"
+            android:text="/"
+            android:id="@+id/textView818"
+            android:layout_below="@+id/textView758"
+            android:layout_toEndOf="@+id/editText48Detail" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="Concluída"
+            android:textSize="16dp"
+            android:id="@+id/checkBox315"
+            android:layout_below="@+id/textView809"
+            android:layout_toEndOf="@+id/textView810" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="Concluída"
+            android:textSize="16dp"
+            android:id="@+id/checkBox316"
+            android:layout_alignTop="@+id/textView811"
+            android:layout_toEndOf="@+id/textView811" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="Concluída"
+            android:textSize="16dp"
+            android:id="@+id/checkBox317"
+            android:layout_below="@+id/textView811"
+            android:layout_toEndOf="@+id/textView811" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="Concluída"
+            android:textSize="16dp"
+            android:id="@+id/checkBox318"
+            android:layout_above="@+id/textView814"
+            android:layout_toEndOf="@+id/textView813" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="Concluída"
+            android:textSize="16dp"
+            android:id="@+id/checkBox319"
+            android:layout_above="@+id/textView815"
+            android:layout_toEndOf="@+id/textView814" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="Concluída"
+            android:textSize="16dp"
+            android:id="@+id/checkBox320"
+            android:layout_above="@+id/textView816"
+            android:layout_toEndOf="@+id/textView815" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="Concluída"
+            android:textSize="16dp"
+            android:id="@+id/checkBox321"
+            android:layout_below="@+id/checkBox320"
+            android:layout_toEndOf="@+id/textView815" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="Concluída"
+            android:textSize="16dp"
+            android:id="@+id/checkBox322"
+            android:layout_below="@+id/checkBox321"
+            android:layout_toEndOf="@+id/textView816" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="      Outras"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:background="#FFD700"
+            android:id="@+id/textView819"
+            android:layout_below="@+id/textView817"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Instruções e adesivos de advertência:"
+            android:id="@+id/textView820"
+            android:layout_below="@+id/textView819"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView817" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Lubrificação da máquina inteira:"
+            android:id="@+id/textView821"
+            android:layout_below="@+id/textView820"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView820" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Notas"
+            android:textStyle="italic"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:background="#FFD700"
+            android:id="@+id/textView822"
+            android:layout_below="@+id/textView821"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GARANTIA DE MANUTENÇÃO / FORWARDER (GRUA)"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:background="#FFD700"
+            android:id="@+id/textView823"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/linearLayout125"
+            android:layout_alignParentStart="true" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox323"
+            android:layout_alignTop="@+id/textView820"
+            android:layout_toEndOf="@+id/textView820" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox324"
+            android:layout_below="@+id/textView820"
+            android:layout_toEndOf="@+id/textView821" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox325"
+            android:layout_alignTop="@+id/checkBox323"
+            android:layout_toEndOf="@+id/checkBox323" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox326"
+            android:layout_below="@+id/checkBox323"
+            android:layout_toEndOf="@+id/checkBox323" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="      Mecanismo de giro e coluna vertical"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:background="#FFD700"
+            android:id="@+id/textView824"
+            android:layout_below="@+id/textView823"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Parafusos de fixação da base, aperto:"
+            android:id="@+id/textView825"
+            android:layout_below="@+id/textView824"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView821" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Parafusos de fixação do cilindro de giro, aperto:"
+            android:id="@+id/textView826"
+            android:layout_below="@+id/textView825"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView825" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Troca do óleo da base:"
+            android:id="@+id/textView827"
+            android:layout_below="@+id/textView826"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView826" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Mancais da base, verificação:"
+            android:id="@+id/textView828"
+            android:layout_below="@+id/textView827"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView827" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Fixações do rotor e da garra, aperto:"
+            android:id="@+id/textView829"
+            android:layout_below="@+id/textView828"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView828" />
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/textView822"
+            android:layout_alignParentStart="true"
+            android:id="@+id/linearLayout125">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText154Detail" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="      Lanças"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:background="#FFD700"
+            android:id="@+id/textView831"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView829" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Fixação do pino, aperto:"
+            android:id="@+id/textView832"
+            android:layout_below="@+id/textView831"
+            android:layout_alignEnd="@+id/textView829" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Verificação da tensão da corrente, ajuste e engraxamento:"
+            android:id="@+id/textView833"
+            android:layout_below="@+id/textView832"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView832" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox327"
+            android:layout_alignTop="@+id/textView825"
+            android:layout_toEndOf="@+id/textView825" />
+
+        <CheckBox
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox328"
+            android:layout_below="@+id/textView824"
+            android:layout_toEndOf="@+id/checkBox327" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:textSize="17dp"
+            android:hint="Nm: "
+            android:background="#FF3030"
+            android:inputType="number"
+            android:id="@+id/editText153Detail"
+            android:layout_alignTop="@+id/checkBox328"
+            android:layout_toEndOf="@+id/checkBox328" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox329"
+            android:layout_alignTop="@+id/textView826"
+            android:layout_alignStart="@+id/checkBox327" />
+
+        <CheckBox
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox330"
+            android:layout_alignTop="@+id/checkBox329"
+            android:layout_toEndOf="@+id/checkBox329" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:textSize="17dp"
+            android:hint="Nm: "
+            android:background="#CD2626"
+            android:inputType="number"
+            android:id="@+id/editText155Detail"
+            android:layout_alignTop="@+id/checkBox330"
+            android:layout_toEndOf="@+id/checkBox330" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox333"
+            android:layout_below="@+id/textView826"
+            android:layout_toEndOf="@+id/textView826" />
+
+        <CheckBox
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox334"
+            android:layout_below="@+id/checkBox330"
+            android:layout_alignStart="@+id/checkBox330" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:textSize="17dp"
+            android:hint="Grau/Quantidade: "
+            android:background="#FF3030"
+            android:inputType="number"
+            android:id="@+id/editText156Detail"
+            android:layout_below="@+id/checkBox330"
+            android:layout_toEndOf="@+id/checkBox334" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox335"
+            android:layout_alignTop="@+id/textView828"
+            android:layout_alignStart="@+id/checkBox333" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox336"
+            android:layout_alignTop="@+id/checkBox335"
+            android:layout_toEndOf="@+id/checkBox335" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox337"
+            android:layout_below="@+id/textView828"
+            android:layout_toEndOf="@+id/textView829" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox338"
+            android:layout_below="@+id/checkBox335"
+            android:layout_toEndOf="@+id/checkBox337" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Ajuste, engraxam. e verific. de condição das mangueiras internas:"
+            android:id="@+id/textView834"
+            android:layout_below="@+id/textView833"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView833" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Ajuste da folga da extensão e verificação da condição do coxim:"
+            android:id="@+id/textView835"
+            android:layout_below="@+id/textView834"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView834" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Fixação do tubo hidráulico, verificação:"
+            android:id="@+id/textView836"
+            android:layout_below="@+id/textView835"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView835" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="      Cilindros"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:background="#FFD700"
+            android:id="@+id/textView837"
+            android:layout_below="@+id/textView836"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Trava do pino de fixação do cilindro, verificação:"
+            android:id="@+id/textView838"
+            android:layout_below="@+id/textView837"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView836" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Verificação de vazamento de óleo:"
+            android:id="@+id/textView839"
+            android:layout_below="@+id/textView838"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView838" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="      Outras"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:background="#FFD700"
+            android:id="@+id/textView840"
+            android:layout_below="@+id/textView839"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Verif. da movimentação e da veloc. do movimento do carregador:"
+            android:id="@+id/textView841"
+            android:layout_below="@+id/textView840"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView839" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#fff"
+            android:textSize="17dp"
+            android:text="Funcionam. sensor de amortecimento da lança de içamento, testes:"
+            android:id="@+id/textView842"
+            android:layout_below="@+id/textView841"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView841" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:background="#D3D3D3"
+            android:textSize="17dp"
+            android:text="Funcionam. do acumulador de pressão de içamento e giro, testes:"
+            android:id="@+id/textView843"
+            android:layout_below="@+id/textView842"
+            android:layout_alignParentStart="true"
+            android:layout_alignEnd="@+id/textView842" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Notas"
+            android:textStyle="italic"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:background="#FFD700"
+            android:id="@+id/textView844"
+            android:layout_below="@+id/textView843"
+            android:layout_alignParentStart="true" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/textView844"
+            android:layout_alignParentStart="true"
+            android:id="@+id/linearLayout126">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText157Detail" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="nome do mecanico"
+            android:id="@+id/textView845"
+            android:layout_below="@+id/linearLayout126"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView14"
+            android:src="@drawable/rodape_ponsse"
+            android:layout_below="@+id/textView845"
+            android:layout_alignParentStart="true" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox339"
+            android:layout_below="@+id/textView831"
+            android:layout_toEndOf="@+id/textView832" />
+
+        <CheckBox
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox340"
+            android:layout_below="@+id/textView831"
+            android:layout_toEndOf="@+id/checkBox339" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:textSize="17dp"
+            android:hint="Nm: "
+            android:background="#FF3030"
+            android:inputType="number"
+            android:id="@+id/editText158Detail"
+            android:layout_below="@+id/textView831"
+            android:layout_toEndOf="@+id/checkBox340" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox341"
+            android:layout_below="@+id/textView832"
+            android:layout_toEndOf="@+id/textView832" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox342"
+            android:layout_below="@+id/checkBox339"
+            android:layout_toEndOf="@+id/checkBox339" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox343"
+            android:layout_alignTop="@+id/textView834"
+            android:layout_toEndOf="@+id/textView834" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox344"
+            android:layout_alignTop="@+id/checkBox343"
+            android:layout_toEndOf="@+id/checkBox343" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox345"
+            android:layout_below="@+id/textView834"
+            android:layout_toEndOf="@+id/textView835" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox346"
+            android:layout_below="@+id/checkBox343"
+            android:layout_toEndOf="@+id/checkBox345" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox347"
+            android:layout_alignTop="@+id/textView836"
+            android:layout_toEndOf="@+id/textView836" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox348"
+            android:layout_alignBottom="@+id/checkBox347"
+            android:layout_toEndOf="@+id/checkBox345" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox349"
+            android:layout_alignBottom="@+id/textView838"
+            android:layout_alignStart="@+id/checkBox347" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox350"
+            android:layout_below="@+id/textView837"
+            android:layout_toEndOf="@+id/checkBox349" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="200h  "
+            android:textSize="16dp"
+            android:id="@+id/checkBox351"
+            android:layout_alignBottom="@+id/textView839"
+            android:layout_toEndOf="@+id/textView838" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="1800h"
+            android:textSize="16dp"
+            android:id="@+id/checkBox352"
+            android:layout_alignTop="@+id/checkBox351"
+            android:layout_toEndOf="@+id/checkBox351" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="Selecionada"
+            android:textSize="16dp"
+            android:id="@+id/checkBox353"
+            android:layout_below="@+id/textView840"
+            android:layout_toEndOf="@+id/textView841" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="Concluída"
+            android:textSize="16dp"
+            android:id="@+id/checkBox354"
+            android:layout_below="@+id/textView840"
+            android:layout_toEndOf="@+id/checkBox353" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="Selecionada"
+            android:textSize="16dp"
+            android:id="@+id/checkBox355"
+            android:layout_alignTop="@+id/textView842"
+            android:layout_toEndOf="@+id/textView842" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:clickable="false"
+            android:text="Concluída"
+            android:textSize="16dp"
+            android:id="@+id/checkBox356"
+            android:layout_alignTop="@+id/checkBox355"
+            android:layout_toEndOf="@+id/checkBox355" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="Selecionada"
+            android:textSize="16dp"
+            android:id="@+id/checkBox357"
+            android:layout_alignTop="@+id/textView843"
+            android:layout_toEndOf="@+id/textView843" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:clickable="false"
+            android:text="Concluída"
+            android:textSize="16dp"
+            android:id="@+id/checkBox358"
+            android:layout_alignTop="@+id/checkBox357"
+            android:layout_toEndOf="@+id/checkBox357" />
+
+        <RadioGroup
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:id="@+id/radioGroupDetail"
+            android:orientation="horizontal"
+            android:layout_below="@+id/textView944"
+            android:layout_toEndOf="@+id/linearLayout193">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6x6 "
+                android:clickable="false"
+                android:id="@+id/radioButton6x6Detail"
+                android:layout_below="@+id/textView944"
+                android:layout_toEndOf="@+id/linearLayout193" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8x8 "
+                android:clickable="false"
+                android:id="@+id/radioButton8x8Detail"
+                android:layout_below="@+id/textView944"
+                android:layout_alignStart="@+id/checkBox209" />
+
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quantidade de eixos:"
+            android:textColor="#000000"
+            android:textSize="17dp"
+            android:id="@+id/textView944"
+            android:layout_alignTop="@+id/linearLayout110"
+            android:layout_toEndOf="@+id/linearLayout193" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Revisão de :"
+            android:textColor="#000000"
+            android:textSize="17dp"
+            android:id="@+id/textView947"
+            android:layout_below="@+id/radioGroupDetail"
+            android:layout_alignStart="@+id/radioGroupDetail" />
+
+        <RadioGroup
+            android:layout_width="220dp"
+            android:layout_height="match_parent"
+            android:id="@+id/radioGroupRevisaoDetail"
+            android:orientation="horizontal"
+            android:layout_below="@+id/imageView5"
+            android:layout_alignStart="@+id/textView947">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="200 Horas "
+                android:clickable="false"
+                android:id="@+id/radioButton200hrsDetail"
+                android:layout_below="@+id/textView944"
+                android:layout_toEndOf="@+id/linearLayout193" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1800 Horas "
+                android:clickable="false"
+                android:id="@+id/radioButton1800hrsDetail"
+                android:layout_below="@+id/textView944"
+                android:layout_alignStart="@+id/checkBox209" />
+        </RadioGroup>
+
+
+    </RelativeLayout>
+</ScrollView>

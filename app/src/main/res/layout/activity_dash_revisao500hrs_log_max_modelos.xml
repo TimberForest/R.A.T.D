@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="3dp"
+    android:paddingRight="3dp"
+    android:paddingTop="3dp"
+    android:paddingBottom="3dp"
+    android:background="@drawable/fundo_degrade_dashboard_logmax"
+    tools:context=".dashboards.DashRevisao500hrsLogMaxModelosActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Revisão de 500 horas cabeçotes LOG MAX"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="italic"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:id="@+id/textView451"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="400px"
+            android:layout_height="500px"
+            android:text="4000B"
+            android:onClick="selecionarOpcao"
+            android:clickable="true"
+            android:id="@+id/revisao500Hrs4000B"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:gravity="center"
+            android:drawableTop="@drawable/lm_4000"
+            android:layout_below="@+id/textView451"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="400px"
+            android:layout_height="525px"
+            android:text="5000D"
+            android:onClick="selecionarOpcao"
+            android:clickable="true"
+            android:id="@+id/revisao500Hrs5000D"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:gravity="center"
+            android:drawableTop="@drawable/lm_5000"
+            android:layout_alignTop="@+id/revisao500Hrs4000B"
+            android:layout_toEndOf="@+id/revisao500Hrs4000B" />
+
+        <TextView
+            android:layout_width="400px"
+            android:layout_height="495px"
+            android:text="6000B"
+            android:onClick="selecionarOpcao"
+            android:clickable="true"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:gravity="center"
+            android:drawableTop="@drawable/lm_6000"
+            android:id="@+id/revisao500Hrs6000B"
+            android:layout_below="@+id/textView451"
+            android:layout_toEndOf="@+id/revisao500Hrs5000D" />
+
+        <TextView
+            android:layout_width="400px"
+            android:layout_height="540px"
+            android:text="E6"
+            android:onClick="selecionarOpcao"
+            android:clickable="true"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:gravity="center"
+            android:drawableTop="@drawable/lm_e6"
+            android:id="@+id/revisao500Hrse6"
+            android:layout_below="@+id/revisao500Hrs5000D"
+            android:layout_alignStart="@+id/revisao500Hrs4000B" />
+
+        <TextView
+            android:layout_width="400px"
+            android:layout_height="585px"
+            android:text="7000C"
+            android:onClick="selecionarOpcao"
+            android:clickable="true"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:gravity="center"
+            android:drawableTop="@drawable/lm_7000"
+            android:id="@+id/revisao500Hrs7000C"
+            android:layout_below="@+id/revisao500Hrs5000D"
+            android:layout_toEndOf="@+id/revisao500Hrse6" />
+
+        <TextView
+            android:layout_width="400px"
+            android:layout_height="585px"
+            android:text="7000XT"
+            android:onClick="selecionarOpcao"
+            android:clickable="true"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:gravity="center"
+            android:drawableTop="@drawable/lm_7000xt"
+            android:id="@+id/revisao500Hrs7000XT"
+            android:layout_alignTop="@+id/revisao500Hrs7000C"
+            android:layout_toEndOf="@+id/revisao500Hrs7000C" />
+
+        <TextView
+            android:layout_width="400px"
+            android:layout_height="540px"
+            android:text="10000XT"
+            android:onClick="selecionarOpcao"
+            android:clickable="true"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:gravity="center"
+            android:drawableTop="@drawable/lm_10000xt"
+            android:id="@+id/revisao500Hrs10000XT"
+            android:layout_below="@+id/revisao500Hrse6"
+            android:layout_alignParentStart="true" />
+
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout117">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Codigo"
+            android:id="@+id/textViewCodigo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text=" - "
+            android:id="@+id/textViewTracoCodigo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Nome"
+            android:id="@+id/textViewNomeClienteList" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text=" - "
+            android:id="@+id/textView945" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Data"
+            android:id="@+id/textViewNascimento" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="918dp"
+        android:layout_height="50dp"
+        android:id="@+id/linearLayout115"
+        android:layout_below="@+id/linearLayout117"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Quantidade de eixos - "
+            android:id="@+id/textViewModelo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text=" - "
+            android:id="@+id/Traco" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Modelo"
+            android:id="@+id/textViewQdtEixos"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout116">
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:background="#999"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/linearLayout115"
+        android:layout_alignParentStart="true">
+
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Visualizar"
+        android:id="@+id/buttonEditar"
+        android:textColor="#276bea"
+        android:layout_gravity="right"
+        android:layout_alignBottom="@+id/linearLayout115"
+        android:layout_toEndOf="@+id/linearLayout115" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Excluir"
+        android:id="@+id/buttonExcluir"
+        android:layout_marginRight="29dp"
+        android:textColor="#276bea"
+        android:layout_gravity="right"
+        android:layout_alignTop="@+id/buttonEditar"
+        android:layout_toEndOf="@+id/buttonEditar" />
+
+
+</RelativeLayout>

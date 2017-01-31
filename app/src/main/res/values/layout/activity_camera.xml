@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="410dp"
+        android:layout_height="325dp"
+        android:id="@+id/linearLayout19"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/linearLayout23">
+
+        <TextView
+            android:id="@+id/btn_foto_horimetro"
+            android:layout_width="fill_parent"
+            android:layout_height="56dp"
+            android:text="Fotografar Horimetro"
+            android:clickable="true"
+            android:gravity="center"
+            android:background="#DAA520"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_below="@+id/btn_foto_chassi"
+            android:layout_toEndOf="@+id/image_chassi" />
+
+        <ImageView
+            android:id="@+id/image_horimetro"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher"
+            android:layout_gravity="center_horizontal"
+            android:layout_above="@+id/btn_foto_horimetro"
+            android:layout_toStartOf="@+id/btn_foto_chassi" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="410dp"
+        android:layout_height="325dp"
+        android:id="@+id/linearLayout20"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_above="@+id/linearLayout23"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/btn_foto_chassi"
+            android:layout_width="411dp"
+            android:layout_height="56dp"
+            android:text="Fotografar Chassi"
+            android:clickable="true"
+            android:textColor="#000000"
+            android:background="#DAA520"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_below="@+id/image_chassi"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="140dp" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/image_chassi"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_launcher"
+            android:layout_alignTop="@+id/linearLayout19"
+            android:layout_toEndOf="@+id/linearLayout19" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="410dp"
+        android:layout_height="325dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:id="@+id/linearLayout22"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/linearLayout24">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="56dp"
+            android:background="#DAA520"
+            android:textColor="#000000"
+            android:clickable="true"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="Fotografar Defeito"
+            android:id="@+id/btn_defeito"
+            android:layout_gravity="center_horizontal" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher"
+            android:id="@+id/image_defeito"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="410dp"
+        android:layout_height="325dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:id="@+id/linearLayout23"
+        android:layout_below="@+id/linearLayout19"
+        android:layout_toStartOf="@+id/linearLayout20">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="56dp"
+            android:background="#DAA520"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:clickable="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:text="Fotografar Defeito 1"
+            android:id="@+id/btn_defeito1" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/image_defeito1"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_launcher"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="410dp"
+        android:layout_height="325dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:id="@+id/linearLayout24"
+        android:layout_below="@+id/linearLayout19"
+        android:layout_toEndOf="@+id/linearLayout23">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="56dp"
+            android:background="#DAA520"
+            android:textColor="#000000"
+            android:clickable="true"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:text="Fotografar Defeito 2"
+            android:id="@+id/btn_defeito2" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/image_defeito2"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_launcher"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="410dp"
+        android:layout_height="325dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:id="@+id/linearLayout25"
+        android:layout_below="@+id/linearLayout22"
+        android:layout_alignStart="@+id/linearLayout22">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="56dp"
+            android:background="#DAA520"
+            android:textColor="#000000"
+            android:clickable="true"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:text="Fotografar Defeito 3"
+            android:id="@+id/btn_defeito3" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/image_defeito3"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_launcher"/>
+    </LinearLayout>
+
+</RelativeLayout>

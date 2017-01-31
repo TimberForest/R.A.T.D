@@ -1,0 +1,1242 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="3dp"
+    android:paddingRight="3dp"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#E8E8E8"
+    tools:context=".formulariosActivity.relatorioAvaliacaoOperacional.RelatorioOperacionalFormActivity">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#E8E8E8"
+        tools:context="com.timberforest.andreives.relatorios.formulariosActivity.relatorioAvaliacaoOperacional.FormRelatorioOperacionalActivity">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="270dp"
+            android:layout_height="283dp"
+            android:layout_margin="2dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/linearLayout37">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome da empresa:"
+                android:textColor="#000000" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:id="@+id/editTextNomeEmpresaAval" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome do operador:"
+                android:textColor="#000000" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:imeOptions="actionNext"
+                android:inputType="textCapWords"
+                android:id="@+id/editTextNomeOpAval" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Número de frota da máquina:"
+                android:textColor="#000000" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:id="@+id/editTextIdDeFrotaMaq" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mecânico avaliador:"
+                android:textColor="#000000"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mecanico_avaliador"
+                android:text=""
+                android:layout_margin="1dp"
+                android:textColor="#000000" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data/hora:"
+                android:textColor="#000000"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:inputType="date"
+                android:id="@+id/data_hora_avaliacao"
+                android:textColor="#000000"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="270dp"
+            android:background="#CD0000"
+            android:layout_height="950dp"
+            android:id="@+id/linearLayout"
+            android:layout_margin="2dp"
+            android:layout_below="@+id/linearLayout93"
+            android:layout_toEndOf="@+id/linearLayout102">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GRUPO"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:id="@+id/grupoSegurtextView"
+                android:layout_gravity="center_horizontal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Segurança"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                android:id="@+id/segurancatextView"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Capacete:"
+                android:textColor="#000000"
+                android:id="@+id/capacetetextView3" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/capaceteditText"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Óculos de proteção:"
+                android:textColor="#000000"
+                android:id="@+id/oculostextView4" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:id="@+id/oculoseditText" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Luva:"
+                android:textColor="#000000"
+                android:id="@+id/luvatextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/luvaeditText" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Camisa manga longa c/ faixa refletiva:"
+                android:textColor="#000000"
+                android:id="@+id/camisaMangaLongatextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/camisaMangaLongaeditText" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calça c/ faixa refletiva:"
+                android:textColor="#000000"
+                android:id="@+id/calsaFaixRefletextView" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/calsaFaixRefleteditText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sapato uso normal"
+                android:textColor="#000000"
+                android:id="@+id/sapatoUsoNormtextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/sapatoUsoNormeditText" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sapato p/ operação:"
+                android:textColor="#000000"
+                android:id="@+id/sapatoOperacaotextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/sapatoOperacaoeditText" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Distância entre máquinas:"
+                android:textColor="#000000"
+                android:id="@+id/distanciaEntrMaquinatextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/distanciaEntrMaquinaeditText" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Estacionamento em local adequado:"
+                android:textColor="#000000"
+                android:id="@+id/estacionLocalAdeqtextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/estacionLocalAdeqeditText" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Distância do operador no abastecim.:"
+                android:textColor="#000000"
+                android:id="@+id/distanciaOpAbastctextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/distanciaOpAbastceditText" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Procedimento subir/descer da máq.: "
+                android:textColor="#000000"
+                android:id="@+id/procedimSubDescertextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/procedimSubDescereditText" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Utlilização correta saída de emergencia:"
+                android:textColor="#000000"
+                android:id="@+id/utilizacaoSaidaEmergtextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/utilizacaoSaidaEmergeditText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subir/descer na prancha c/ a máquina:"
+                android:textColor="#000000"
+                android:id="@+id/suburDescerMaquinaPrnachatextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/suburDescerMaquinaPrnachaeditText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fixar a máquina em cima da prancha:"
+                android:textColor="#000000"
+                android:id="@+id/fixarMaquinaNaPranchatextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/fixarMaquinaNaPranchaeditText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="270dp"
+            android:layout_height="180dp"
+            android:background="#DAA520"
+            android:id="@+id/linearLayout92"
+           android:layout_margin="2dp"
+            android:layout_below="@+id/linearLayout98"
+            android:layout_toEndOf="@+id/linearLayout5">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GRUPO"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:id="@+id/grupoTecnicasOperatextView"
+                android:layout_gravity="center_horizontal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Técnicas de operação"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                android:id="@+id/tecnicasOperacaotextView"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Movimentos suaves/sincronizados:"
+                android:textColor="#000000"
+                android:id="@+id/movimentSuavesSincrontextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/movimentSuavesSincroneditText" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Manobrabilidade do equipamento:"
+                android:textColor="#000000"
+                android:id="@+id/manobraEquiptextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/manobraEquipeditText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="270dp"
+            android:layout_height="110dp"
+            android:background="#8B7D7B"
+            android:id="@+id/linearLayout102"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_below="@+id/linearLayout5"
+            android:layout_toEndOf="@+id/linearLayout96">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GRUPO"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:id="@+id/grupoSimuladortextView"
+                android:layout_gravity="center_horizontal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Simulador"
+                android:textColor="#000"
+                android:textSize="15dp"
+                android:id="@+id/simuladortextView"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Desempenho geral:"
+                android:textColor="#000000"
+                android:id="@+id/desempenhoGeraSimuladorltextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/desempenhoGeraSimuladorleditText" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="270dp"
+            android:layout_height="110dp"
+            android:id="@+id/linearLayout98"
+            android:background="#008B8B"
+         android:layout_margin="2dp"
+            android:layout_alignTop="@+id/linearLayout93"
+            android:layout_toEndOf="@+id/linearLayout5">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GRUPO"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:id="@+id/grupoavaliacaoQualidadetextView"
+                android:layout_gravity="center_horizontal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Avaliação de qualidade"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                android:id="@+id/avaliacaoQualidadetextView"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Desempenho geral:"
+                android:textColor="#000000"
+                android:id="@+id/desempenhoGeraltextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/desempenhoGeralQualidadeditText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="270dp"
+            android:layout_height="110dp"
+            android:id="@+id/linearLayout99"
+            android:background="#FF4500"
+            android:layout_margin="2dp"
+            android:layout_below="@+id/linearLayout102"
+            android:layout_toStartOf="@+id/linearLayout">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GRUPO"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:id="@+id/grupoProducaoOpEquiptextView"
+                android:layout_gravity="center_horizontal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Producão"
+                android:textColor="#000"
+                android:textSize="15dp"
+                android:id="@+id/producaOptextView"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Desempenho geral:"
+                android:textColor="#000000"
+                android:id="@+id/desempenhoGeraProducaoltextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/desempenhoGeralProducaoeditText" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="270dp"
+            android:layout_height="375dp"
+            android:background="#FF8C00"
+            android:id="@+id/linearLayout39"
+            android:layout_margin="2dp"
+            android:layout_below="@+id/linearLayout99"
+            android:layout_toStartOf="@+id/linearLayout">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GRUPO"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:id="@+id/grupoDadosTecnicoEquiptextView"
+                android:layout_gravity="center_horizontal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dados téc. equipamento"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                android:id="@+id/dadosTecEquiptextView"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tipo do equipamento:"
+                android:textColor="#000000"
+                android:id="@+id/tipoEquiptextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/tipoEquipeditText" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Capacidade reservatórios:"
+                android:textColor="#000000"
+                android:id="@+id/capacidadeReservtextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/capacidadeReserveditText" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tipos de lubrificantes:"
+                android:textColor="#000000"
+                android:id="@+id/tiposLubrificantestextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/tiposLubrificanteseditText" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pontos de lubrificações:"
+                android:textColor="#000000"
+                android:id="@+id/pontosLubrifictextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/pontosLubrificeditText" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Interpretação do manual equipamento:"
+                android:textColor="#000000"
+                android:id="@+id/interpManualEquiptextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/interpManualEquipeditText" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="270dp"
+            android:layout_height="300dp"
+            android:background="#CD661D"
+            android:id="@+id/linearLayout95"
+            android:layout_margin="2dp"
+            android:layout_below="@+id/linearLayout96"
+            android:layout_toEndOf="@+id/linearLayout162">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GRUPO"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:id="@+id/grupoRelatVerfReaptextView"
+                android:layout_gravity="center_horizontal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Relatorios, verificaç./reapertos"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                android:id="@+id/relatVerfReaptextView"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Check list diario:"
+                android:textColor="#000000"
+                android:id="@+id/chekcListDiartextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/chekcListDiareditText" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Relatório diário do equipamento:"
+                android:textColor="#000000"
+                android:id="@+id/relatorioDiarEquitextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/relatorioDiarEquieditText" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Preenchimento livro de ocorrências:"
+                android:textColor="#000000"
+                android:id="@+id/preenchimLivroOcorretextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/preenchimLivroOcorreeditText" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reaperto do equipamento:"
+                android:textColor="#000000"
+                android:id="@+id/reapertoEquiptextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/reapertoEquipeditText" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="190dp"
+            android:layout_height="65dp"
+            android:id="@+id/linearLayout93"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_alignTop="@+id/linearLayout5"
+            android:layout_alignStart="@+id/linearLayout">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ÍNDICE DE PONTUAÇÃO"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:id="@+id/textView40"
+                android:layout_gravity="center_horizontal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Geral"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:textSize="15dp"
+                android:id="@+id/textView41"
+                android:layout_gravity="center_horizontal"/>
+           >
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="60dp"
+            android:layout_height="65dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:id="@+id/linearLayout94"
+            android:layout_alignTop="@+id/linearLayout93"
+            android:layout_alignEnd="@+id/linearLayout">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RANGE"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:id="@+id/textView52" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0-9"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:textSize="15dp"
+                android:id="@+id/textView54"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="270dp"
+            android:layout_height="300dp"
+            android:background="#228B22"
+            android:id="@+id/linearLayout162"
+           android:layout_margin="2dp"
+            android:layout_below="@+id/linearLayout97"
+            android:layout_alignParentStart="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GRUPO"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:id="@+id/grupoMeioAmbtextView"
+                android:layout_gravity="center_horizontal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meio ambiente"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                android:id="@+id/textView"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Possui kit de contençao:"
+                android:textColor="#000000"
+                android:id="@+id/possuiKitConttextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/possuiKitConteditText" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sabe usar sistema anti chama:"
+                android:textColor="#000000"
+                android:id="@+id/sabUsarSitAntChamtextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/sabUsarSitAntChameditText" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Danos a canaletas/estradas:"
+                android:textColor="#000000"
+                android:id="@+id/danosCanaEstratextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/danosCanaEstraeditText" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Danos a mata nativa:"
+                android:textColor="#000000"
+                android:id="@+id/danosMataNativatextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/danosMataNativaeditText" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="270dp"
+            android:layout_height="300dp"
+            android:id="@+id/linearLayout5"
+            android:background="#B0C4DE"
+            android:layout_margin="2dp"
+            android:layout_alignTop="@+id/linearLayout37"
+            android:layout_toEndOf="@+id/linearLayout162">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GRUPO"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:id="@+id/grupoTrabalhoEquiptextView"
+                android:layout_gravity="center_horizontal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trabalho em equipe"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:id="@+id/trabalhoEquiptextView"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cooperação na equipe:"
+                android:textColor="#000000" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/cooperacaoEquieditText" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comunicação:"
+                android:textColor="#000000"
+                android:id="@+id/comunicaotextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/comunicaoeditText" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Segue normas de trabalho:"
+                android:textColor="#000000"
+                android:id="@+id/segueNormasTrabatextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/segueNormasTrabaeditText" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Assiduidade:"
+                android:textColor="#000000"
+                android:id="@+id/assiduidadetextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/assiduidadeeditText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="270dp"
+            android:layout_height="300dp"
+            android:background="#BEBEBE"
+            android:id="@+id/linearLayout96"
+           android:layout_margin="2dp"
+            android:layout_alignTop="@+id/linearLayout97"
+            android:layout_toEndOf="@+id/linearLayout162">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GRUPO"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:id="@+id/grupoPlanejamentotextView"
+                android:layout_gravity="center_horizontal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Planejamento"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                android:id="@+id/planejamentotextView"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Posição do equipamento:"
+                android:textColor="#000000"
+                android:id="@+id/posicaoEquiptextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/posicaoEquipeditText" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sentido de execução do trabalho:"
+                android:textColor="#000000"
+                android:id="@+id/sentidoExecuTrabtextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/sentidoExecuTrabeditText" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Posição das pilhas/linhas:"
+                android:textColor="#000000"
+                android:id="@+id/posicaoPilhasLinhastextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/posicaoPilhasLinhaseditText" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Leitura de mapas:"
+                android:textColor="#000000"
+                android:id="@+id/leituraMapastextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/leituraMapaseditText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="270dp"
+            android:layout_height="240dp"
+            android:id="@+id/linearLayout97"
+            android:background="#4876FF"
+            android:layout_margin="2dp"
+            android:layout_below="@+id/linearLayout5"
+            android:layout_alignParentStart="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GRUPO"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:id="@+id/grupoPainelAlavancRegultextView"
+                android:layout_gravity="center_horizontal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Painel, alavancas e regulagens"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                android:id="@+id/painelAlavancRegtextView"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Conhecimento indicadores/painel:"
+                android:textColor="#000000"
+                android:id="@+id/conhecimIndicadoresPaintextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/conhecimIndicadoresPaineditText"
+                android:numeric="decimal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Utilização correta funções/joystick:"
+                android:textColor="#000000"
+                android:id="@+id/utilizacaoCorretaJoystitextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/utilizacaoCorretaJoystieditText" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Regulagens e calibrações:"
+                android:textColor="#000000"
+                android:id="@+id/regulagCalibratextView" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:id="@+id/regulagCalibraeditText" />
+        </LinearLayout>
+
+
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:id="@+id/imageView3"
+            android:src="@drawable/logo_timber"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@+id/linearLayout98"
+            android:layout_toEndOf="@+id/linearLayout" />
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="46dp"
+            android:text="Salvar"
+            android:layout_margin="3dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:id="@+id/salvarRelatorioOp"
+            android:onClick="SalvarRelatorioOp"
+            android:background="#DAA520"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/linearLayout"
+            android:layout_alignEnd="@+id/linearLayout" />
+
+
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="46dp"
+            android:text="garar resultado"
+            android:background="#228B22"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:id="@+id/onClick_btnSomar"
+            android:layout_alignTop="@+id/salvarRelatorioOp"
+            android:layout_toStartOf="@+id/salvarRelatorioOp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pré-visualização do resultado"
+            android:id="@+id/textView306"
+            android:textColor="#000"
+            android:textSize="17dp"
+            android:textStyle="italic"
+            android:layout_above="@+id/relativeLayout2"
+            android:layout_toEndOf="@+id/textView481" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="770dp"
+            android:layout_height="75dp"
+            android:id="@+id/linearLayout322"
+            android:layout_alignBottom="@+id/linearLayout"
+            android:layout_alignStart="@+id/relativeLayout2"
+            android:layout_alignEnd="@+id/linearLayout39">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextObsRelatorioOp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Obs:"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:id="@+id/textView481"
+            android:layout_above="@+id/linearLayout322"
+            android:layout_alignStart="@+id/linearLayout322" />
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="700dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/salvarRelatorioOp"
+            android:layout_alignStart="@+id/linearLayout97"
+            android:id="@+id/relativeLayout2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Segurança"
+                android:textColor="#CD0000"
+                android:id="@+id/textView48"/>
+
+            <EditText
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editTextNotaSeguranca"
+                android:inputType="numberDecimal"
+                android:textColor="#000"
+                android:layout_below="@+id/textView48"
+                android:layout_alignStart="@+id/textView48" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Producão"
+                android:textColor="#FF4500"
+                android:id="@+id/textView49"
+                android:layout_below="@+id/editTextNotaSeguranca"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:id="@+id/editTextNotaProducao"
+                android:layout_below="@+id/textView49"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Planejamento"
+                android:textColor="#BEBEBE"
+                android:id="@+id/textView50"
+                android:layout_below="@+id/editTextNotaProducao"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:id="@+id/editTextNotaPlanejamento"
+                android:layout_below="@+id/textView50"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Simulador"
+                android:textColor="#8B7D7B"
+                android:id="@+id/textView59"
+                android:layout_toEndOf="@+id/editTextNotaSeguranca"/>
+
+            <EditText
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:id="@+id/editTextNotaSimulador"
+                android:layout_alignTop="@+id/editTextNotaSeguranca"
+                android:layout_alignStart="@+id/textView59" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meio ambiente"
+                android:textColor="#228B22"
+                android:id="@+id/textView60"
+                android:layout_below="@+id/editTextNotaSimulador"
+                android:layout_alignStart="@+id/editTextNotaSimulador" />
+
+            <EditText
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:id="@+id/editTextNotameioAmbiente"
+                android:layout_alignTop="@+id/editTextNotaProducao"
+                android:layout_toEndOf="@+id/editTextNotaProducao" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trabalho em equipe"
+                android:textColor="#B0C4DE"
+                android:id="@+id/textView61"
+                android:layout_below="@+id/editTextNotameioAmbiente"
+                android:layout_alignStart="@+id/textView60" />
+
+            <EditText
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:id="@+id/editNotaTextTrabalhoEquipe"
+                android:layout_alignTop="@+id/editTextNotaPlanejamento"
+                android:layout_alignStart="@+id/textView61" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Painel, alavancas e regulagens"
+                android:id="@+id/textView350"
+                android:textColor="#4876FF"
+                android:layout_toEndOf="@+id/textView61" />
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:id="@+id/editTextNotaPainelAlavancasRegulagens"
+                android:layout_below="@+id/textView350"
+                android:layout_toEndOf="@+id/editTextNotameioAmbiente" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Relatorios, verificaç./reapertos"
+                android:id="@+id/textView358"
+                android:textColor="#CD661D"
+                android:layout_below="@+id/editTextNotaPainelAlavancasRegulagens"
+                android:layout_toEndOf="@+id/editTextNotaSimulador" />
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:id="@+id/editTextNotaRelatoriosVerificaçReapertos"
+                android:layout_alignTop="@+id/editTextNotameioAmbiente"
+                android:layout_alignStart="@+id/editTextNotaPainelAlavancasRegulagens" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dados téc. equipamento"
+                android:textColor="#FF8C00"
+                android:id="@+id/textView366"
+                android:layout_below="@+id/editTextNotaRelatoriosVerificaçReapertos"
+                android:layout_toEndOf="@+id/editNotaTextTrabalhoEquipe" />
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:id="@+id/editTextDadosTécEquipamento"
+                android:layout_below="@+id/textView366"
+                android:layout_toEndOf="@+id/editNotaTextTrabalhoEquipe" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Técnicas de operação"
+                android:textColor="#DAA520"
+                android:id="@+id/textView385"
+                android:layout_toEndOf="@+id/editTextDadosTécEquipamento"/>
+
+            <EditText
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:id="@+id/editNotaTécnicasOperação"
+                android:layout_above="@+id/textView60"
+                android:layout_toEndOf="@+id/editTextNotaPainelAlavancasRegulagens" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Avaliação de qualidade"
+                android:textColor="#008B8B"
+                android:id="@+id/textView390"
+                android:layout_below="@+id/editNotaTécnicasOperação"
+                android:layout_alignEnd="@+id/editNotaTécnicasOperação" />
+
+            <EditText
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:id="@+id/editTextAvaliaçãoQualidade"
+                android:layout_alignTop="@+id/editTextNotaRelatoriosVerificaçReapertos"
+                android:layout_alignStart="@+id/textView390" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nota geral"
+                android:textColor="#000"
+                android:id="@+id/textView406"
+                android:layout_below="@+id/editTextAvaliaçãoQualidade"
+                android:layout_alignStart="@+id/editTextAvaliaçãoQualidade" />
+
+            <EditText
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:id="@+id/editTextNotaGeral"
+                android:layout_below="@+id/textView406"
+                android:layout_alignStart="@+id/textView406" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>

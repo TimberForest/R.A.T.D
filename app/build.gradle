@@ -1,0 +1,27 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "21.1.2"
+    //compileOptions . encoding =  "ISO-8859-1 "
+    defaultConfig {
+        applicationId "br.com.timberforest.ratd"
+        minSdkVersion 17
+        targetSdkVersion 22
+        versionName '1.1'
+    }
+    buildTypes {
+        RATD {
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'com.android.support:design:22.2.1'
+    testCompile 'junit:junit:4.12'
+    compile 'io.realm:realm-android:0.84.1'
+}

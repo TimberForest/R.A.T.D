@@ -1,0 +1,991 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="8dp"
+    android:background="#FFD700"
+    android:paddingBottom="8dp"
+    tools:context="com.timberforest.andreives.relatorios.testeActivity">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF">
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:id="@+id/imageView5"
+                android:src="@drawable/ponsse_menucheck"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MANUTENÇÃO/FORWARDER"
+                android:id="@+id/textView79"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:background="#FFD700"
+                android:textSize="20dp"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="220dp"
+                android:layout_height="118dp"
+                android:layout_margin="2dp"
+                android:layout_below="@+id/textView79"
+                android:layout_alignParentStart="true"
+                android:id="@+id/linearLayout108">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cliente:"
+                    android:textColor="#000000"
+                    android:textSize="17dp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textSize="15dp"
+                    android:id="@+id/editTextClienteManuForwarder" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Telefone n°:"
+                    android:textColor="#000000"
+                    android:textSize="17dp" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textSize="15dp"
+                    android:id="@+id/editTextTelefoneClienteManuForwarder" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="220dp"
+                android:layout_height="118dp"
+                android:layout_margin="2dp"
+                android:layout_below="@+id/textView79"
+                android:layout_toEndOf="@+id/linearLayout108"
+                android:id="@+id/linearLayout109">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Data/hora:"
+                    android:textColor="#000000"
+                    android:textSize="17dp" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="date"
+                    android:focusable="false"
+                    android:textColor="#000000"
+                    android:textSize="15dp"
+                    android:id="@+id/textViewDataManutencaoForwarder" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Modelo da forwarder:"
+                    android:textColor="#000000"
+                    android:textSize="17dp"/>
+
+                <Spinner
+                    android:spinnerStyle="@android:style/Widget.Spinner.DropDown"
+                    android:layout_width="match_parent"
+                    android:spinnerMode="dialog"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinnerModeloModeloForwarder" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="220dp"
+                android:layout_height="118dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_alignTop="@+id/linearLayout109"
+                android:layout_toEndOf="@+id/linearLayout109"
+                android:id="@+id/linearLayout110">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ordem de serviço n°:"
+                    android:textColor="#000000"
+                    android:textSize="17dp" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:textSize="15dp"
+                    android:id="@+id/editTextordemServicoManuForwarder" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N° de série:"
+                    android:textColor="#000000"
+                    android:textSize="17dp"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:textSize="15dp"
+                    android:id="@+id/editTextNumSerieManuForwarder" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="      Mecanismo de giro e coluna vertical"
+                android:id="@+id/textView86"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:background="#FFD700"
+                android:textSize="20dp"
+                android:layout_below="@+id/linearLayout110"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="720dp"
+                android:layout_height="32dp"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:background="#D3D3D3"
+                android:textSize="17dp"
+                android:text="Parafusos de fixação da base, aperto:"
+                android:id="@+id/textView80"
+                android:layout_below="@+id/textView86"
+                android:layout_alignParentStart="true" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="164dp"
+                android:layout_alignTop="@+id/textView80"
+                android:layout_toEndOf="@+id/textView80"
+                android:id="@+id/relativeLayout3">
+
+                <RadioGroup
+                    android:layout_width="220dp"
+                    android:layout_height="32dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/radioGroup6ManuForwarder"
+                    android:layout_below="@+id/radioGroup14ManuForwarder"
+                    android:layout_alignParentStart="true">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:textSize="16dp"
+                        android:text="Completo"
+                        android:id="@+id/radioButton10CompletoManuForwarder"
+                        android:checked="false" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="N/A"
+                        android:id="@+id/radioButton106NAManuForwarder"
+                        android:checked="false" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="220dp"
+                    android:layout_height="32dp"
+                    android:background="#D3D3D3"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/radioGroup6ManuForwarder"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/radioGroup7ManuForwarder">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:textSize="16dp"
+                        android:text="Completo"
+                        android:id="@+id/radioButton11CompletoManuForwarder"
+                        android:checked="false" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="N/A"
+                        android:id="@+id/radioButton107NAManuForwarder"
+                        android:checked="false" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/radioGroup7ManuForwarder"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/radioGroup8ManuForwarder">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:textSize="16dp"
+                        android:text="Completo"
+                        android:id="@+id/radioButton12CompletoManuForwarder"
+                        android:checked="false" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="N/A"
+                        android:id="@+id/radioButton108NAManuForwarder"
+                        android:checked="false" />
+
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#D3D3D3"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/radioGroup8ManuForwarder"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/radioGroup20ManuForwarder">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:textSize="16dp"
+                        android:text="Completo"
+                        android:id="@+id/radioButton13CompletoManuForwarder"
+                        android:checked="false" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="N/A"
+                        android:id="@+id/radioButton109NAManuForwarder"
+                        android:checked="false" />
+
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="220dp"
+                    android:layout_height="32dp"
+                    android:background="#D3D3D3"
+                    android:orientation="horizontal"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/radioGroup14ManuForwarder">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:textSize="16dp"
+                        android:text="Completo"
+                        android:id="@+id/radioButton14CompletoManuForwarder" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="N/A"
+                        android:id="@+id/radioButton105NAManuForwarder"
+                        android:checked="false" />
+                </RadioGroup>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:background="#CD2626"
+                    android:hint="Nm:"
+                    android:textSize="17dp"
+                    android:inputType="number"
+                    android:id="@+id/editText3NmManuForwarder"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/radioGroup14ManuForwarder" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:background="#FF3030"
+                    android:hint="Nm:"
+                    android:textSize="17dp"
+                    android:inputType="number"
+                    android:id="@+id/editText38NmManuForwarder"
+                    android:layout_below="@+id/radioGroup14ManuForwarder"
+                    android:layout_toEndOf="@+id/radioGroup6ManuForwarder" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:background="#CD2626"
+                    android:hint="Nm:"
+                    android:textSize="17dp"
+                    android:inputType="number"
+                    android:id="@+id/editText39NmManuForwarder"
+                    android:layout_alignTop="@+id/radioGroup7ManuForwarder"
+                    android:layout_toEndOf="@+id/radioGroup7ManuForwarder" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="720dp"
+                android:layout_height="32dp"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:background="#fff"
+                android:textSize="17dp"
+                android:text="Parafusos de fixação do cilindro de giro, aperto:"
+                android:id="@+id/textView81"
+                android:layout_below="@+id/textView80"
+                android:layout_alignStart="@+id/linearLayout108" />
+
+            <TextView
+                android:layout_width="720dp"
+                android:layout_height="32dp"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:background="#D3D3D3"
+                android:textSize="17dp"
+                android:text="Troca do óleo da base:"
+                android:id="@+id/textView82"
+                android:layout_below="@+id/textView81"
+                android:layout_alignParentStart="true"
+                android:layout_alignEnd="@+id/textView623" />
+
+            <TextView
+                android:layout_width="720dp"
+                android:layout_height="32dp"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:background="#fff"
+                android:textSize="17dp"
+                android:text="Mancais da base, verificação:"
+                android:id="@+id/textView623"
+                android:layout_below="@+id/textView82"
+                android:layout_alignParentStart="true"
+                android:layout_alignEnd="@+id/textView624" />
+
+            <TextView
+                android:layout_width="720dp"
+                android:layout_height="32dp"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:background="#D3D3D3"
+                android:textSize="17dp"
+                android:text="Fixações do rotor e da garra, aperto:"
+                android:id="@+id/textView624"
+                android:layout_below="@+id/textView623"
+                android:layout_alignParentStart="true"
+                android:layout_alignEnd="@+id/textView81" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="      Lanças"
+                android:id="@+id/textView625"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:background="#FFD700"
+                android:textSize="20dp"
+                android:layout_below="@+id/textView624"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="720dp"
+                android:layout_height="32dp"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:background="#fff"
+                android:textSize="17dp"
+                android:text="Fixação do pino, aperto:"
+                android:id="@+id/textView626"
+                android:layout_below="@+id/textView625"
+                android:layout_alignParentStart="true" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@+id/textView625"
+                android:layout_toEndOf="@+id/textView626"
+                android:id="@+id/relativeLayout4">
+
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:textColor="#000000"
+                    android:orientation="horizontal"
+                    android:background="#D3D3D3"
+                    android:layout_marginTop="32dp"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/radioGroup2ManuForwarder">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:textSize="16dp"
+                        android:text="Completo"
+                        android:id="@+id/radioButton5CompletoManuForwarder"
+                        android:checked="false" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="N/A"
+                        android:id="@+id/radioButton111NAManuForwarder"
+                        android:checked="false" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/radioGroup2ManuForwarder"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/radioGroup3ManuForwarder">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:textSize="16dp"
+                        android:text="Completo"
+                        android:id="@+id/radioButton6CompletoManuForwarder"
+                        android:checked="false" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="N/A"
+                        android:id="@+id/radioButton112NAManuForwarder"
+                        android:checked="false" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:textColor="#000000"
+                    android:background="#D3D3D3"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/radioGroup3ManuForwarder"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/radioGroup4ManuForwarder">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:textSize="16dp"
+                        android:text="Completo"
+                        android:id="@+id/radioButton7CompletoManuForwarder"
+                        android:checked="false" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="N/A"
+                        android:id="@+id/radioButton113NAManuForwarder"
+                        android:checked="false" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/radioGroup4ManuForwarder"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/radioGroup30ManuForwarder">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:textSize="16dp"
+                        android:text="Completo"
+                        android:id="@+id/radioButton8CompletoManuForwarder"
+                        android:checked="false" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="N/A"
+                        android:id="@+id/radioButton114NAManuForwarder"
+                        android:checked="false" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:layout_width="220dp"
+                    android:layout_height="32dp"
+                    android:orientation="horizontal"
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/radioGroup5ManuForwarder"
+                    android:layout_alignParentStart="true">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:textSize="16dp"
+                        android:text="Completo"
+                        android:id="@+id/radioButton9CompletoManuForwarder"
+                        android:checked="false" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="N/A"
+                        android:id="@+id/radioButton110NAManuForwarder"
+                        android:checked="false" />
+                </RadioGroup>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:background="#FF3030"
+                    android:hint="Nm:"
+                    android:textSize="17dp"
+                    android:inputType="number"
+                    android:id="@+id/editText40NmManuForwarder"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/radioGroup5ManuForwarder" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="720dp"
+                android:layout_height="32dp"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:background="#D3D3D3"
+                android:textSize="17dp"
+                android:text="Verificação da tensão da corrente, ajuste e engraxamento:"
+                android:id="@+id/textView627"
+                android:layout_below="@+id/textView626"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/relativeLayout4" />
+
+            <TextView
+                android:layout_width="720dp"
+                android:layout_height="32dp"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:background="#fff"
+                android:textSize="17dp"
+                android:text="Ajuste, engraxamento e verificação de condição das mangueiras internas:"
+                android:id="@+id/textView628"
+                android:layout_below="@+id/textView627"
+                android:layout_alignParentStart="true"
+                android:layout_alignEnd="@+id/textView627" />
+
+            <TextView
+                android:layout_width="720dp"
+                android:layout_height="32dp"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:background="#D3D3D3"
+                android:textSize="17dp"
+                android:text="Ajuste da folga da extensão e verificação da condição do coxim:"
+                android:id="@+id/textView629"
+                android:layout_below="@+id/textView628"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/relativeLayout4" />
+
+            <TextView
+                android:layout_width="720dp"
+                android:layout_height="32dp"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:background="#fff"
+                android:textSize="17dp"
+                android:text="Fixação do tubo hidráulico, verificação"
+                android:id="@+id/textView630"
+                android:layout_below="@+id/textView629"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/relativeLayout4" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="      Cilindros"
+                android:id="@+id/textView631"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:background="#FFD700"
+                android:textSize="20dp"
+                android:layout_below="@+id/textView630"
+                android:layout_alignEnd="@+id/relativeLayout4" />
+
+            <TextView
+                android:layout_width="720dp"
+                android:layout_height="32dp"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:background="#D3D3D3"
+                android:textSize="17dp"
+                android:text="Trava do pino de fixação do cilindro, verificação:"
+                android:id="@+id/textView632"
+                android:layout_below="@+id/textView631"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="720dp"
+                android:layout_height="32dp"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:background="#fff"
+                android:textSize="17dp"
+                android:text="Verificação de vazamento de óleo:"
+                android:id="@+id/textView633"
+                android:layout_below="@+id/textView632"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/radioGroup13ManuForwarder" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="      Tarefas adicionais acordadas separadamente:"
+                android:id="@+id/textView634"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:background="#FFD700"
+                android:textSize="20dp"
+                android:layout_below="@+id/textView633"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="600dp"
+                android:layout_height="32dp"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:background="#D3D3D3"
+                android:textSize="17dp"
+                android:text="Verificação da movimentação e da velocidade do movimento do carregador"
+                android:id="@+id/textView635"
+                android:layout_below="@+id/textView634"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="600dp"
+                android:layout_height="32dp"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:background="#fff"
+                android:textSize="17dp"
+                android:text="Funcionamento do sensor de amortecimento da lança de içamento, testes"
+                android:id="@+id/textView636"
+                android:layout_below="@+id/textView635"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="600dp"
+                android:layout_height="32dp"
+                android:gravity="center_vertical"
+                android:textColor="#000000"
+                android:background="#D3D3D3"
+                android:textSize="17dp"
+                android:text="Funcionamento do acumulador de pressão de içamento e giro, testes"
+                android:id="@+id/textView637"
+                android:layout_below="@+id/textView636"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Notas:"
+                android:id="@+id/textView638"
+                android:textStyle="italic"
+                android:textColor="#000000"
+                android:background="#FFD700"
+                android:textSize="20dp"
+                android:layout_below="@+id/textView637"
+                android:layout_alignParentStart="true" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@+id/textView638"
+                android:layout_alignParentStart="true"
+                android:id="@+id/linearLayout138">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="17dp"
+                    android:id="@+id/editTextNotasManuForwarder" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="nome do mecanico..."
+                android:id="@+id/textViewNomeMecanicoForwarder"
+                android:layout_below="@+id/linearLayout138"
+                android:layout_alignParentStart="true" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView14"
+                android:src="@drawable/rodape_ponsse"
+                android:layout_below="@+id/textViewNomeMecanicoForwarder"
+                android:layout_alignParentStart="true" />
+
+            <RadioGroup
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_alignTop="@+id/linearLayout110"
+                android:layout_toEndOf="@+id/linearLayout110"
+                android:id="@+id/radioGroupBasicoCompManuForwarder"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Básica"
+                    android:textColor="#000000"
+                    android:textSize="17dp"
+                    android:id="@+id/radioButtonBasicoManuForwarder"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Completa"
+                    android:textColor="#000000"
+                    android:textSize="17dp"
+                    android:id="@+id/radioButton2CompletoManuForwarder"
+                    android:checked="false" />
+            </RadioGroup>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tarefas adicionais"
+                android:textColor="#000000"
+                android:textSize="17dp"
+                android:id="@+id/checkBox505TarefasAdicioanisManuForwarder"
+                android:layout_below="@+id/radioGroupBasicoCompManuForwarder"
+                android:layout_toEndOf="@+id/linearLayout110"
+                android:checked="false" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#000000"
+                android:orientation="horizontal"
+                android:background="#fff"
+                android:layout_below="@+id/textView632"
+                android:layout_toEndOf="@+id/textView632"
+                android:id="@+id/radioGroup13ManuForwarder">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="16dp"
+                    android:text="Completo"
+                    android:id="@+id/radioButton3CompletoManuForwarder"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N/A"
+                    android:id="@+id/radioButton116NAManuForwarder"
+                    android:checked="false" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#D3D3D3"
+                android:orientation="horizontal"
+                android:textSize="17dp"
+                android:layout_below="@+id/textView631"
+                android:layout_toEndOf="@+id/textView632"
+                android:id="@+id/radioGroup31ManuForwarder">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="16dp"
+                    android:text="Completo"
+                    android:id="@+id/radioButton4CompletoManuForwarder"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N/A"
+                    android:id="@+id/radioButton115NAManuForwarder"
+                    android:checked="false" />
+            </RadioGroup>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selecionado"
+                android:textSize="17dp"
+                android:background="#D3D3D3"
+                android:id="@+id/checkBox237Selecionado"
+                android:layout_alignTop="@+id/textView635"
+                android:layout_toEndOf="@+id/textView635"
+                android:checked="false" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selecionado"
+                android:textSize="17dp"
+                android:id="@+id/checkBox238Selecionado"
+                android:layout_alignTop="@+id/textView636"
+                android:layout_toEndOf="@+id/textView636"
+                android:checked="false" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selecionado"
+                android:textSize="17dp"
+                android:background="#D3D3D3"
+                android:id="@+id/checkBox239Selecionado"
+                android:layout_below="@+id/textView636"
+                android:layout_toEndOf="@+id/textView636"
+                android:checked="false" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#D3D3D3"
+                android:orientation="horizontal"
+                android:textSize="17dp"
+                android:layout_below="@+id/textView634"
+                android:layout_toEndOf="@+id/checkBox237Selecionado"
+                android:id="@+id/radioGroup10ManuForwarder">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="16dp"
+                    android:text="Concluída"
+                    android:id="@+id/radioButton15CompletoManuForwarder"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N/A"
+                    android:id="@+id/radioButton16NAManuForwarder"
+                    android:checked="false" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#000000"
+                android:orientation="horizontal"
+                android:background="#fff"
+                android:id="@+id/radioGroup9ManuForwarder"
+                android:layout_below="@+id/radioGroup10ManuForwarder"
+                android:layout_alignStart="@+id/radioGroup10ManuForwarder">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="16dp"
+                    android:text="Concluída"
+                    android:id="@+id/radioButton17CompletoManuForwarder"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N/A"
+                    android:id="@+id/radioButton18NAManuForwarder"
+                    android:checked="false" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#D3D3D3"
+                android:orientation="horizontal"
+                android:textSize="17dp"
+                android:layout_below="@+id/radioGroup9ManuForwarder"
+                android:layout_alignStart="@+id/radioGroup9ManuForwarder"
+                android:id="@+id/radioGroup11ManuForwarder">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="16dp"
+                    android:text="Concluída"
+                    android:id="@+id/radioButton19CompletoManuForwarder"
+                    android:checked="false" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N/A"
+                    android:id="@+id/radioButton20NAManuForwarder"
+                    android:checked="false" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quantidade de eixos:"
+                android:textColor="#000000"
+                android:textSize="17dp"
+                android:id="@+id/textView957"
+                android:layout_alignTop="@+id/radioGroupBasicoCompManuForwarder"
+                android:layout_toEndOf="@+id/radioGroupBasicoCompManuForwarder" />
+
+            <RadioGroup
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textView957"
+                android:layout_alignStart="@+id/textView957"
+                android:id="@+id/radioGroupQtdeixoManuForwarder"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6x6"
+                    android:id="@+id/radioButton43" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8x8"
+                    android:id="@+id/radioButton51"
+                    android:layout_alignBottom="@+id/imageView5"
+                    android:layout_toEndOf="@+id/checkBox505TarefasAdicioanisManuForwarder" />
+            </RadioGroup>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Salvar"
+                android:id="@+id/buttonSalvarManuForwarder"
+                android:layout_below="@+id/radioGroupBasicoCompManuForwarder"
+                android:layout_toEndOf="@+id/radioGroupQtdeixoManuForwarder" />
+
+        </RelativeLayout>
+</ScrollView>

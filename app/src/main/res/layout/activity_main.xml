@@ -1,0 +1,124 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@color/branco"
+    android:orientation="vertical">
+
+    <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="267dp"
+            android:layout_height="108dp"
+            android:onClick="selecionarOpcao"
+            android:clickable="true"
+            android:textSize="20sp"
+            android:text="Menu de serviços"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:drawableTop="@drawable/botao_ponsse_400px"
+            android:id="@+id/ServicosPonsseButton"
+            />
+
+        <TextView
+            android:layout_width="237dp"
+            android:layout_height="90dp"
+            android:onClick="selecionarOpcao"
+            android:clickable="true"
+            android:text="Menu de serviços"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"
+            android:drawableTop="@drawable/logo_log_max_botao"
+            android:id="@+id/ServicosLogmaxButton"
+            />
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="43dp"
+            android:layout_marginRight="43dp"
+            android:background="@drawable/logo_timber_forest">
+
+        </LinearLayout>
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="365dp"
+            android:layout_height="53dp"
+            android:text="Relatários de assistência técnica"
+            android:onClick="selecionarOpcao"
+            android:clickable="true"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_margin="5dp"
+            android:background="#DAA520"
+            android:gravity="center"
+            android:id="@+id/RelatoriosAssistenciaTecnicaButton"
+            />
+
+        <TextView
+            android:layout_width="365dp"
+            android:layout_height="53dp"
+            android:text="Relatório de avaliação operacional"
+            android:onClick="selecionarOpcao"
+            android:clickable="true"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:background="#DAA520"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:id="@+id/RelatoriosAvaliacaoOperacionalButton"
+            />
+        <TextView
+            android:layout_width="365dp"
+            android:layout_height="53dp"
+            android:text="Perfil do mecânico"
+            android:onClick="selecionarOpcao"
+            android:clickable="true"
+            android:layout_margin="5dp"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:background="#DAA520"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:id="@+id/PerfilMecanicoButton"
+            />
+
+    </LinearLayout>
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/empresas_parceiras">
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

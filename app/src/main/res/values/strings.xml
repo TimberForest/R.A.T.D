@@ -1,0 +1,281 @@
+<resources>
+    <string name="nome_icone">RATD</string>
+    <string name="app_name">Relatório de assistência técnica digital</string>
+    <!--Telas relatórios de assistencia técnica-->
+    <string name="title_activity_formulario_detail">Serviço realizado</string>
+    <string name="title_activity_formulario_list">Lista de RATDs</string>
+    <string name="title_activity_form1_dados">Preenchimento do relatório de assistência técnica</string>
+    <string name="title_activity_camera">Tirar foto de horimetro, chassi e defeito</string>
+
+    <!--Telas Mecânico-->
+    <string name="title_activity_mecanico_detail">Dados cadastrais do mecânico</string>
+    <string name="title_activity_mecanico_form">Preenchimento do perfil do mecânico</string>
+    <string name="title_activity_mecanico_list">Lista de mecânicos</string>
+
+    <!--Campos obrigatórios relatórios de assistência técnicas-->
+    <string name="chassi_required">Campo Chassi obrigatório!</string>
+    <string name="cliente_required">Campo Cliente obrigatório!</string>
+    <string name="modelo_required">Campo Modelo obrigatório!</string>
+    <string name="horimetro_required">Campo Horimetro obrigatório!</string>
+    <string name="cidade_cliente_required">Campo Cidade obrigatório!</string>
+    <string name="estado_cliente_required">Campo Estado obrigatório!</string>
+    <string name="local_da_obra_required">Campo Local Da Obra obrigatório!</string>
+    <string name="defeito_constatado_required">Campo Defeito Constatado obrigatório!</string>
+    <string name="procedimento_adotado_required">Campo Procedimento Adotado obrigatório!</string>
+    <string name="km_rodados_required">Campo Km Rodados obrigatório!</string>
+    <string name="hrs_trabalhadas_required">Campo Horas Trabalhadas obrigatório!</string>
+    <string name="hrs_deslocamento_required">Campo Horas Deslocamento obrigatório!</string>
+    <string name="hrs_extra_trabalhadas_required">Campo Horas Extras Trabalhadas obrigatório!</string>
+    <string name="hrs_extra_deslocamento_required">Campo Horas Extra Deslocamento obrigatório!</string>
+    <string name="codigo_peca_required">Campo Codigo Peça obrigatório!</string>
+    <string name="quantidade_required">Campo Quantidade obrigatório!</string>
+    <string name="descricao_required">Campo Descriçao obrigatório!</string>
+
+    <!--Campos obrigatórios perfil mecânico-->
+    <string name="nome_required">Campo Nome obrigatório!</string>
+    <string name="matricula_required">Campo Matrícula obrigatório!</string>
+    <string name="cargo_funcao_required">Campo Cargo/Função obrigatório!</string>
+    <string name="filial_required">Campo Filial obrigatório!</string>
+    <string name="cidade_required">Campo Cidade obrigatório!</string>
+    <string name="estado_required">Campo Estado obrigatório!</string>
+
+    <!--Campos obrigatórios relatório operacional-->
+    <string name="capacete_required">Campo Capacete obrigatório!</string>
+    <string name="oculos_prot_required">Campo Óculos de proteção de obrigatório!</string>
+    <string name="luva_required">Campo Luva obrigatório!</string>
+    <string name="camisa_manga_required">Campo Camisa manga longa c/ faixa reflet obrigatório!</string>
+    <string name="calca_required">Campo Calça c/ faixa refletiva obrigatório!</string>
+    <string name="sapato_norma_required">Campo p/ Sapato uso normal obrigatório!</string>
+    <string name="sapato_operador_required">Campo Sapato p/ operação obrigatório!</string>
+    <string name="distancia_entre_maquina_required">Campo Distância entre máquinas obrigatório!</string>
+    <string name="estacionamento_local_adequado_required">Campo Estacionamento em local adequado obrigatório!</string>
+    <string name="distancia_operador_abastecimento">Campo Distância do oper. no abastecimento obrigatório!</string>
+    <string name="possui_kit_contencao">Campo Possui kit de contençao obrigatório!</string>
+    <string name="usar_ant_chama_required">Campo Sabe usar sist. anti chama obrigatório!</string>
+    <string name="danos_canaleletas_required">Campo Danos a canaletas/estradas obrigatório!</string>
+    <string name="danos_mata_required">Campo Danos a mata nativa obrigatório!</string>
+    <string name="tipo_equipamento_required">Campo Tipo do equipamento obrigatório!</string>
+    <string name="capacidade_reservatorio_required">Campo Capacidade reservatórios  obrigatório!</string>
+    <string name="capacidade_required">Campo Capacidade reservatórios obrigatório!</string>
+    <string name="tipos_lubrificante_required">Campo Tipos de lubrificantes obrigatório!</string>
+    <string name="pontos_lubrificacao_required">Campo Pontos de lubrificações obrigatório!</string>
+    <string name="interpret_manual_required">Campo Interpretação do manual eq. obrigatório!</string>
+    <string name="desempenho_geral_qualidade_required">Campo Desempenho geral obrigatório!</string>
+    <string name="check_list_required">Campo Check list diario obrigatório!</string>
+    <string name="relatorio_diario_equip_required">Campo Relatório diário do equipamento obrigatório!</string>
+    <string name="preenchimento_livro_ocorrencia_required">Campo Preenchimento livro de ocorrências obrigatório!</string>
+    <string name="reaperto_equip_required">Campo Reaperto do equipamento obrigatório!</string>
+    <string name="conhecimento_indicador_painal_required">Campo Conhecimento indicadores/painel obrigatório!</string>
+    <string name="utilizacao_funcao_joystick_required">Campo Utilização correta funções/joystick obrigatório!</string>
+    <string name="regulagens_calibracoes_required">Campo Regulagens e calibrações obrigatório!</string>
+    <string name="comunicacao_required">Campo Comunicação obrigatório!</string>
+    <string name="segue_normas_trab_required">Campo Segue normas de trabalho obrigatório!</string>
+    <string name="assiduidade_required">Campo Assiduidade obrigatório!</string>
+    <string name="desempenho_geral_producao_required">Campo Desempenho geral obrigatório!</string>
+    <string name="posicao_pilhas_required">Campo Posição das pilhas/linhas obrigatório!</string>
+    <string name="leitura_mapas_required">Campo Leitura de mapas obrigatório!</string>
+    <string name="cooperacao_equipe_required">Campo Cooperação na equipe obrigatório!</string>
+    <string name="movimento_suave_sincronizado_required">Campo Movimentos suaves/sincronizados obrigatório!</string>
+    <string name="manobrabilidade_equipamento_required">Campo Manobrabilidade do equipamento obrigatório!</string>
+    <string name="posicao_equip_required">Campo Posição do equipamento obrigatório!</string>
+    <string name="sentido_exec_trab_required">Campo Sentido de execução do trab. obrigatório!</string>
+    <string name="desempenho_geral_simulador_required">Campo Desempenho geral obrigatório!</string>
+    <string name="proced_subir_descer_required">Campo Procedimento subir/descer da maq. obrigatório!</string>
+    <string name="utilizacao_saida_emergencia_required">Campo Utilização da saída de emergência obrigatório!</string>
+    <string name="utili_sis_anti_chama_required">Campo Sabe usar sist. anti chama obrigatório!</string>
+    <string name="nome_empresa_aval_required">Campo Nome da emprasa obrigatório!</string>
+    <string name="nome_op_aval_required">Campo Nome do operador obrigatório!</string>
+    <string name="id_frota_maq_required">Campo Identificação de frota da máquina obrigatório!</string>
+    <string name="nome_mecanico_aval_required">Campo Nome mecânico avaliador obrigatório!</string>
+
+    <string name="nome_subir_descer_prancha_maq_required">Campo Subir/descer na prancha c/ a máquina obrigatório!</string>
+    <string name="nome_fixar_maq_prancha_required">Campo Fixar a máquina em cima da prancha obrigatório!</string>
+
+    <string name="calcular_nota_seguranca_required">Pressione o botão GERAR RESULTADO para poder salvar o relatório!</string>
+
+    <string name="range_required">Range de pontuaçao deve ser entre 0 e 9!</string>
+
+    <string name="tamanho_numero_required">Pontuação deve conter apenas um número!</string>
+    <string name="tamanho_numero_trabalho_equipe_required">Pontuação deve conter apenas um número!</string>
+    <string name="tamanho_numero_reaperto_verificacoes_required">Pontuação deve conter apenas um número entre 0 e 9!</string>
+
+    <!--Telas  relatórios operacionas-->
+    <string name="title_activity_form_relatorio_operacional">Preenchimento relatório operacional</string>
+    <string name="title_activity_relatorio_opreacional_detail">Resultado da avaliação operacional</string>
+    <string name="title_activity_relatorio_operacional_list">Lista de relatórios operacionais</string>
+
+    <!--Telas serviços Ponsse-->
+
+    <!--Listas-->
+    <string name="title_activity_check_list_ponsse">Menu de serviços Ponsse</string>
+    <string name="title_activity_manutencao_cabecote_list">Lista de manutenções realizadas nos HARVESTERS</string>
+    <string name="title_activity_manutencao_grua_list">Lista de manutenções realizadas nas GRUAS</string>
+    <string name="title_activity_manutencao_forwarder_list">Lista de manutenções realizadas nos FORWARDERS</string>
+    <string name="title_activity_list_garantia_forwarder_ponsse">Lista de garantias dos FORWARDERS</string>
+    <string name="title_activity_list_garantia_harvester_ponsse">Lista de garantias dos HARVESTERS</string>
+    <string name="title_activity_list_manutencao_propgramada_maquina_base">Lista de manutenções programadas das MÁQUINAS BASE</string>
+
+    <!--Form-->
+    <string name="title_activity_form_garantia_cabecote_ponsse">Preencher formulário de garantia do HARVESTER</string>
+    <string name="title_activity_manutencaoprograma_guindaste">Preencher formulário de manutenção pragramada básica/completa da GRUA</string>
+    <string name="title_activity_form_manutencao_forwarder">Preencher formulário de manutenção pragramada básica/completa do FORWARDER</string>
+    <string name="title_activity_manutencao_cabecote">Preencher formulário de manutenção pragramada básica/completa do HARVESTER</string>
+    <string name="title_activity_form_manutencao_programada_maquina_base">Preencher formulário de manutenção pragramada básica/completa da MÁQUINA BASE</string>
+    <string name="title_activity_form_garantia_forwarder">Preencher formulário de garantia do FORWARDER</string>
+
+    <!--Detail-->
+    <string name="title_activity_manutencao_programada_forwarder_detail">Serviço realizado</string>
+    <string name="title_activity_manutencao_programada_guindaste_detail">Serviço realizado</string>
+    <string name="title_activity_manutencao_detail">Serviço realizado</string>
+    <string name="title_activity_detail_garantia_forwarder_ponsse">Serviço realizado</string>
+    <string name="title_activity_detail_garantia_cabecote_ponsse">Serviço realizado</string>
+    <string name="title_activity_manutencao_programada_maquina_base_detail">Serviço realizado</string>
+
+
+    <!--guia de manutenção Log Max-->
+
+    <!--dashboard-->
+    <string name="title_activity_servicos_log_max">Menu de serviços Log Max</string>
+
+    <!--listas-->
+    <string name="title_activity_guia_manutencao_logmax_list">Lista de guias de manutenções</string>
+
+    <!--Form-->
+    <string name="title_activity_form_guia_manutencao_logmax">Formulário de guia de manutenção</string>
+    <string name="title_activity_form_controle_instalacao_certificado_garantia">Preencher formulário de controle de instalação e certificado de garantia</string>
+
+    <!--detail-->
+    <string name="title_activity_guia_manutencao_logmax_detail">Serviço realizado</string>
+    <string name="title_activity_detail_controle_instalacao_certificado_garantia">Serviço realizado</string>
+
+    <string name="title_activity_numero10">Facas superiores.</string>
+    <string name="title_activity_numero2">Faca de desgalhar (lado esquerdo).</string>
+    <string name="title_activity_numero3">Pistão do lado esquerdo do cilindro da faca de desgalhar.</string>
+    <string name="title_activity_numero4">Chapa lado esquerdo do cilindro da faca de desgalhar.</string>
+    <string name="title_activity_numero5">Chapa lado direto do cilindro da faca de desgalhar.</string>
+    <string name="title_activity_numero6">Pistão do lado direto do cilindro da faca de desgalhar.</string>
+    <string name="title_activity_numero7">Faca(s) de baixo.</string>
+    <string name="title_activity_numero8">Pistão, cilindro da faca de baixo.</string>
+    <string name="title_activity_numero9">Haste do cilindro da faca de baixo.</string>
+    <string name="title_activity_numero11">Braços dos rolos.</string>
+    <string name="title_activity_numero12">Cilindro do rolo, lado do pistão.</string>
+    <string name="title_activity_numero13">Cilindro do rolo, lado da haste.</string>
+    <string name="title_activity_numero14">Bucha da roda medidora lado direito.</string>
+    <string name="title_activity_numero15">Bucha da roda medidora lado esquerdo/cilindro da roda medidora.</string>
+    <string name="title_activity_numero16">Cilindro do tilt, lado da haste.</string>
+    <string name="title_activity_numero17">Cilindro do tilt, lado do pistão.</string>
+    <string name="title_activity_numero18">Braço do tilt.</string>
+    <string name="title_activity_numero19">Pino rotator.</string>
+    <string name="title_activity_numero20">Serra 518.</string>
+    <string name="title_activity_numero20s">Serra -98B, Serra -98XL.</string>
+    <string name="title_activity_numero21">Cilindro da serra.</string>
+    <string name="title_activity_numero22">Cilindro da serra, serra superior.</string>
+    <string name="title_activity_letra_a">Verifique o torque nos parafusos dos motores dos rolos.</string>
+    <string name="title_activity_letra_at">Verifique torque nos parafusos do sistema de redução.</string>
+    <string name="title_activity_letra_b">Verifique o torque nos parafusos dos rolos.</string>
+    <string name="title_activity_letra_ba">Aperte os parafusos conforme o manual.</string>
+    <string name="title_activity_letra_c">Verifique em todos os pinos, se não há trinca.</string>
+    <string name="title_activity_letra_cv">Verifique se há trincas em todos os pinos.</string>
+    <string name="title_activity_letra_d">Verifique o torque dos parafusos nos pinos das facas de desgalhar.</string>
+    <string name="title_activity_letra_e">Verifique a trava no pino para a faca de baixo.</string>
+    <string name="title_activity_letra_f">Verifique anel trava na faca superior.</string>
+    <string name="title_activity_letra_g">Verifique os parafusos do rotator.</string>
+    <string name="title_activity_letra_h">Verifique espaçador, parafuso de fixação e mola da faca superior.</string>
+    <string name="title_activity_letra_i">Verifique se os parafusos e as conexões dos comandos hidráulicos estão apertadas e se os parafusos de todas as proteções estão apertados.</string>
+    <string name="title_activity_letra_il">Limpar o filtro piloto da válvula L90.</string>
+    <string name="title_activity_letra_ic">Verifique as configurações das pressões hidráulicas.</string>
+    <string name="title_activity_letra_j">Verifique os parafusos da base de amortecimento.</string>
+    <string name="title_activity_letra_k">Verifique todos os coxins de amortecimento.</string>
+    <string name="title_activity_letra_l">Verifique corrente da serra e o sabre.</string>
+    <string name="title_activity_letra_m">Verifique condições das facas.</string>
+    <string name="title_activity_letra_n">Verifique condições dos rolos.</string>
+    <string name="title_activity_letra_nv">Virar os rolos(borracha e flex drive), virar os rolos de aço a cada 1500H, verifique parafusos da a placa de cobertura, Tireco.</string>
+    <string name="title_activity_letra_nvt">Verifique todos os parafusos do espaçador do braço do rolo.</string>
+    <string name="title_activity_letra_o">Verifique o torque dos parafusos do braço do tilt.</string>
+    <string name="title_activity_letra_p">Limpar o filtro de piloto na válvula L90.</string>
+    <string name="title_activity_letra_r">Verifique as configurações das pressões hidráulicas.</string>
+    <string name="title_activity_letra_s">Limpar e engraxar, se necessário, a área de contato com o chassi.</string>
+    <string name="title_activity_letra_t">Trocar o óleo do sistema de redução.</string>
+    <string name="title_activity_letra_tv">Verifique o nível de óleo do sistema de redução.</string>
+    <string name="title_activity_letra_u">Tangue de óleo da lubrificação (use óleos biodegradáveis para corrente).</string>
+    <string name="title_activity_letra_w">Verifique o sensor da faca superior.</string>
+    <string name="title_activity_letra_of">Limpe a bomba de lubrificação.</string>
+
+    <string name="hrsgarantia_teste">200hdegarantiademanutenção</string>
+    <string name="hrsgarantia_teste_detail">200 h de garantia de manutenção</string>
+
+    <string name="salvar">Salvar</string>
+
+    <string name="save_me">Save Me</string>
+
+
+    <!--Mensagens Toast-->
+    <string name="relatorio_assistencia_tecnica_salvo">Relatório de assistência técnica salvo com sucesso!</string>
+    <string name="relatorio_avaliacao_operacional_salvo">Relatório de avalicação operacional salvo com sucesso!</string>
+    <string name="mecanicoSalvo">Perfil do mecânico salvo com sucesso!</string>
+    <string name="garantiaForwarderPonsseSalvo">Garantia do forwarder Ponsse salvo com sucesso!</string>
+
+    <string name="modelo_forwarder">Modelo da máquina</string>
+
+    <string name="title_activity_dash_revisao500hrs_log_max_modelos">
+        DashRevisao500hrsLogMaxModelosActivity
+    </string>
+    <string name="title_activity_form_revisao500_hrs4000_b">FormRevisao500Hrs4000BActivity</string>
+    <string name="title_activity_form_revisao500_hrs5000_d">FormRevisao500Hrs5000DActivity</string>
+    <string name="title_activity_form_revisao500_hrs6000_b">Preencher formulário de revisão</string>
+    <string name="title_activity_form_revisao500_hrs_e6">Preencher formulário de revisão</string>
+    <string name="title_activity_revisao500_hrs7000_c">Preencher formulário de revisão</string>
+    <string name="title_activity_form_revisao500_hrs7000_c">Preencher formuário de revisão</string>
+    <string name="title_activity_form_revisao500_hrs7000_xt">Preencher formulério de revisão
+    </string>
+    <string name="title_activity_form_revisao500_hrs10000_xt">Preencher formulério de revisão
+    </string>
+    <string name="title_activity_desenho_bloco_hidraulico_cabecote_log_max">
+        DesenhoBlocoHidraulicoCabecoteLogMaxActivity
+    </string>
+    <string name="title_activity_desenho_bloco_hidraulico_cabecote_log_max6000">
+        DesenhoBlocoHidraulicoCabecoteLogMax6000Activity
+    </string>
+    <string name="action_settings">Settings</string>
+
+    <string name="coding">200h de garantia de manutenção </string>
+    <string name="writing">1800h de garantia de manutenção</string>
+
+    <string name="jogging">Jogging</string>
+
+    <string name="voltar">Voltar</string>
+    <string name="telefone_obrigatorio">O telefone é de preenchimento obrigatório!</string>
+    <string name="endereco_obrigatorio">O endereço é de preenchimento obrigatório!</string>
+    <string name="modelo_obrigatorio">O Modelo é de preenchimento obrigatório!</string>
+    <string name="qtd_horas_obrigatorio">A quantidade horas revisão é de preenchimento obrigatório!</string>
+    <string name="qtd_eixo_obrigatorio">A quantidade de eixos é de preenchimento obrigatório!</string>
+    <string name="data_nascimento_obrigatorio">A data é de preenchimento obrigatório!</string>
+    <string name="cliente_obrigatorio">O cliente é de preenchimento obrigatório!</string>
+    <string name="num_serie_obrigatorio">O número de série é de preenchimento obrigatório!</string>
+    <string name="horas_motor_obrigatorio">Horas motor é de preenchimento obrigatório!</string>
+    <string name="ordem_servico_obrigatorio">Ordem de serviço é de preenchimento obrigatório!</string>
+    <string name="registro_salvo_sucesso">Registro salvo com sucesso!</string>
+
+    <string name="grau_qtd_obrigatorio">O Grau/Quantidade: é de preenchimento obrigatório!</string>
+    <string name="notas_obrigatorio">Notas é de preenchimento obrigatório!</string>
+    <string name="c_obrigatorio">O °C: é de preenchimento obrigatório!</string>
+    <string name="nm_obrigatorio">O Nm: é de preenchimento obrigatório!</string>
+    <string name="da_padrao_obrigatorio">O DA: padrão é de preenchimento obrigatório!</string>
+    <string name="ajustado_obrigatorio">O ajustado é de preenchimento obrigatório!</string>
+    <string name="db_padrao_obrigatorio">O DB: padrão é de preenchimento obrigatório!</string>
+    <string name="pressao_alimentacao_obrigatorio">O Pressão alimentação é de preenchimento obrigatório!</string>
+    <string name="pressao_reserva_obrigatorio">O Pressão de reserva: padrão é de preenchimento obrigatório!</string>
+    <string name="pressao_maxima_padrao_obrigatorio">O Pressão máxima: padrão é de preenchimento obrigatório!</string>
+    <string name="valor_padrao_obrigatorio">O Valor padrão é de preenchimento obrigatório!</string>
+
+    <string name="basico_completo_na">Selecione o Básico ou Completo ou N/A!</string>
+
+    <string name="completo_na">Selecione o Completo ou N/A!</string>
+
+    <string name="concluido_na">Selecione o Concluído ou N/A!</string>
+
+    <string name="basico_completo">Selecione o Básio ou Completo!</string>
+
+    <string name="grau_qtd_obrigatorio_valor">O Grau/Quantidade/Valor: é de preenchimento obrigatório!</string>
+
+</resources>

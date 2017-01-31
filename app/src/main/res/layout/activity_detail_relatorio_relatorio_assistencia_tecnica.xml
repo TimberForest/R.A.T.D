@@ -1,0 +1,689 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="3dp"
+    android:paddingRight="3dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:background="#FFFFFF"
+    tools:context=".detail.relatorioAssistenciaTecnica.DetailRelatorioAssistenciaTecnicaActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="190dp"
+        android:layout_height="122dp"
+        android:layout_alignTop="@+id/linearLayout2"
+        android:layout_toEndOf="@+id/linearLayout2"
+        android:id="@+id/linearLayout36">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:id="@+id/textRelatorDetailFormulario"
+            android:layout_margin="1px"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:id="@+id/textChassiDetailFormulario"
+            android:layout_margin="1pt"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/textDistribuidorDetailFormulario"
+            android:layout_margin="1px"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:id="@+id/textClienteDetailFormulario"
+            android:layout_margin="1pt"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:id="@+id/textLocalObraDetailFormulario"
+            android:layout_margin="1px"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="150dp"
+        android:layout_height="110dp"
+        android:id="@+id/linearLayout"
+        android:layout_below="@+id/linearLayout11"
+        android:layout_toEndOf="@+id/linearLayout3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/textDataDetailFormulario"
+            android:layout_margin="1px"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7"
+            android:id="@+id/textModeloDetailFormulario"
+            android:layout_margin="1pt"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/textCidadeDistDetailFormulario"
+            android:layout_margin="1px"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9"
+            android:id="@+id/textCidadeCliDetailFormulario"
+            android:layout_margin="1pt"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:id="@+id/textMatTranspDetailFormualario"
+            android:layout_margin="1px"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="90dp"
+        android:layout_height="100dp"
+        android:id="@+id/linearLayout4"
+        android:layout_alignTop="@+id/linearLayout5"
+        android:layout_toEndOf="@+id/linearLayout5">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/textNumRelatorioDetailFormulario"
+            android:layout_margin="1px"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12"
+            android:id="@+id/textLeituraHorimetroDetailFormulario"
+            android:layout_margin="1pt"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/textEstadoDistDetailFormulario"
+            android:layout_margin="1px"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="14"
+            android:id="@+id/textEstadoCliDetailFormulario"
+            android:layout_margin="1pt"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="145dp"
+        android:layout_height="122dp"
+        android:id="@+id/linearLayout2"
+        android:layout_alignTop="@+id/linearLayout"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Relator(MEC):"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:id="@+id/textView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chassi Nº:"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:id="@+id/textView3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Distr./Post.As.Tec.:"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:id="@+id/textView4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cliente:"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:id="@+id/textView5" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Local da Obra:"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:id="@+id/textView6" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="93dp"
+        android:layout_height="110dp"
+        android:id="@+id/linearLayout3"
+        android:layout_above="@+id/linearLayout12"
+        android:layout_toEndOf="@+id/linearLayout36">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data/Hora:"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:id="@+id/textView7" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modelo:"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:id="@+id/textView8" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cidade:"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:id="@+id/textView9" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cidade:"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:id="@+id/textView10" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mat. Transp:"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:id="@+id/textView11" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:id="@+id/linearLayout5"
+        android:layout_below="@+id/linearLayout11"
+        android:layout_toEndOf="@+id/linearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Relatório Nº:"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:id="@+id/textView12" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Leitura Horimetro:"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:id="@+id/textView13" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estado:"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:id="@+id/textView14" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estado:"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:id="@+id/textView15" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="117dp"
+        android:id="@+id/linearLayout6"
+        android:layout_below="@+id/linearLayout14"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textProcedimentoAdotDetailFormulario"
+            android:layout_margin="1px"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="117dp"
+        android:id="@+id/linearLayout7"
+        android:layout_below="@+id/linearLayout8"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textDefeitoConstDetailFormulario"
+            android:layout_margin="1px"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="155dp"
+        android:layout_height="20dp"
+        android:id="@+id/linearLayout8"
+        android:layout_below="@+id/linearLayout12"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Defeito Constatado:"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:id="@+id/textView16" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="210dp"
+        android:layout_height="120dp"
+        android:id="@+id/linearLayout10"
+        android:layout_alignTop="@+id/linearLayout4"
+        android:layout_toEndOf="@+id/linearLayout4">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Km Rodados:"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:id="@+id/textView18" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Horas Trabalhadas:"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:id="@+id/textView19" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Horas Deslocamento:"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:id="@+id/textView20" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Horas Extras Trabalhadas:"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:id="@+id/textView21" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Horas Extras Deslocamento:"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:id="@+id/textView22" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="70dp"
+        android:layout_height="120dp"
+        android:id="@+id/linearLayout13"
+        android:layout_alignTop="@+id/linearLayout10"
+        android:layout_toEndOf="@+id/linearLayout10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textKmRodadoDetailFormulario"
+            android:layout_margin="1px"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textHrsTrabalDetailFormulario"
+            android:layout_margin="1pt"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textHrsDeslocDetailFormulario"
+            android:layout_margin="1px"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textHrsExtrTrabDetailFormulario"
+            android:layout_margin="1pt"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textHrsExtrDeslocDetailFormulario"
+            android:layout_margin="1px"/>
+    </LinearLayout>
+
+    como <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="420dp"
+    android:layout_height="25dp"
+    android:id="@+id/linearLayout11"
+    android:layout_alignParentTop="true"
+    android:layout_alignStart="@+id/linearLayout12">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RELATÓRIO DE ASSISTÊNCIA TÉCNICA DIGITAL (RATD)"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        android:id="@+id/textView23"
+        android:layout_below="@+id/linearLayout"
+        android:layout_toStartOf="@+id/linearLayout" />
+</LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="300dp"
+        android:layout_height="25dp"
+        android:id="@+id/linearLayout12"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OCORRÊNCIAS E SOLUÇÕES ADOTADAS"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:id="@+id/textView24"
+            android:layout_below="@+id/linearLayout"
+            android:layout_toStartOf="@+id/linearLayout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="80dp"
+        android:layout_height="25dp"
+        android:id="@+id/linearLayout15"
+        android:layout_below="@+id/textView25"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Código:"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:id="@+id/textView26" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PEÇAS SUBSTITUIDAS"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        android:id="@+id/textView25"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/linearLayout6"
+        android:layout_alignStart="@+id/linearLayout12" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="190dp"
+        android:layout_height="20dp"
+        android:id="@+id/linearLayout14"
+        android:layout_below="@+id/linearLayout7"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Procedimento Adotado:"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:id="@+id/textView17" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:id="@+id/linearLayout9"
+        android:layout_below="@+id/textView25"
+        android:layout_toEndOf="@+id/linearLayout15">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quant.:"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:id="@+id/textView27" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="90dp"
+        android:layout_height="25dp"
+        android:id="@+id/linearLayout21"
+        android:layout_alignTop="@+id/linearLayout9"
+        android:layout_toEndOf="@+id/linearLayout8">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descrição:"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:id="@+id/textView28" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="80dp"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/linearLayout15"
+        android:layout_toStartOf="@+id/linearLayout9"
+        android:layout_alignEnd="@+id/linearLayout15"
+        android:id="@+id/linearLayout26">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textCodigoDetailFormulario"
+            android:layout_margin="1px"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="70dp"
+        android:layout_height="fill_parent"
+        android:layout_alignStart="@+id/linearLayout9"
+        android:layout_alignTop="@+id/linearLayout26"
+        android:layout_toStartOf="@+id/linearLayout21"
+        android:id="@+id/linearLayout27"
+        android:layout_alignEnd="@+id/linearLayout8">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textQtdDetailFormulario"
+            android:layout_margin="1px"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="485dp"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout28"
+        android:layout_alignParentBottom="true"
+        android:layout_alignTop="@+id/linearLayout27"
+        android:layout_toEndOf="@+id/linearLayout27">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textDescricaoDetailFormulario"
+            android:layout_margin="1px"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView4"
+        android:src="@drawable/logo_timber"
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@+id/linearLayout4"
+        android:layout_alignEnd="@+id/linearLayout7"
+        android:layout_toEndOf="@+id/linearLayout13" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="80dp"
+        android:layout_height="25dp"
+        android:id="@+id/linearLayout29"
+        android:layout_above="@+id/linearLayout30"
+        android:layout_alignStart="@+id/linearLayout30">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Código:"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:id="@+id/textView45" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="80dp"
+        android:layout_height="fill_parent"
+        android:id="@+id/linearLayout30"
+        android:layout_alignTop="@+id/linearLayout28"
+        android:layout_toStartOf="@+id/linearLayout32">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textCodigoDetailFormulario1"
+            android:layout_margin="1px"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:id="@+id/linearLayout31"
+        android:layout_alignTop="@+id/linearLayout29"
+        android:layout_alignStart="@+id/linearLayout32">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quant.:"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:id="@+id/textCodigo1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="70dp"
+        android:layout_height="fill_parent"
+        android:id="@+id/linearLayout32"
+        android:layout_alignTop="@+id/linearLayout30"
+        android:layout_toStartOf="@+id/linearLayout321">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textQtdDetailFormulario1"
+            android:layout_margin="1px"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="90dp"
+        android:layout_height="25dp"
+        android:id="@+id/linearLayout157"
+        android:layout_alignTop="@+id/linearLayout31"
+        android:layout_alignStart="@+id/linearLayout321">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descrição:"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:id="@+id/textDescricao1"
+            android:layout_alignTop="@+id/linearLayout157"
+            android:layout_alignStart="@+id/linearLayout321" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="485dp"
+        android:layout_height="fill_parent"
+        android:id="@+id/linearLayout321"
+        android:layout_alignTop="@+id/linearLayout32"
+        android:layout_alignParentEnd="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textDescricaoDetailFormulario1"
+            android:layout_margin="1px"/>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

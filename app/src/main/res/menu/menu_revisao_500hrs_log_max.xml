@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".dashboards.DashRevisao500hrsLogMaxModelosActivity">
+    <item
+        android:id="@+id/action_voltar"
+        app:showAsAction="ifRoom"
+        android:title="Voltar"
+        android:icon="@drawable/ic_reply_white_48dp"/>
+</menu>

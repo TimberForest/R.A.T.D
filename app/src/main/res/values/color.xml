@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="amarelo_padrao">#FFD700</color>
+    <color name="vermelho_claro">#FF3030</color>
+    <color name="vermelhor_escuro">#CD2626</color>
+    <color name="preto">#000000</color>
+    <color name="branco">#fff</color>
+
+</resources>

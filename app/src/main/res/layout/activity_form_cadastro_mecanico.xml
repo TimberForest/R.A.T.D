@@ -1,0 +1,146 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".formulariosActivity.cadastroMecanico.FormMecanicoActivity">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome:"
+            android:textColor="#000000"
+            android:textSize="17dp"
+            android:id="@+id/textNomeMecanico" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editNomeMecanico"
+            android:inputType="textCapWords"
+            android:textSize="@dimen/campos_edt_forms"
+            android:imeOptions="actionNext"
+            android:maxLength="50"
+            android:ems="25"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Matrícula:"
+            android:textColor="#000000"
+            android:textSize="17dp"
+            android:id="@+id/textMatriculaMecanico" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editMatriculaMecanico"
+            android:inputType="numberDecimal"
+            android:textSize="@dimen/campos_edt_forms"
+            android:maxLength="8"
+            android:ems="5"
+            android:imeOptions="actionNext"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cargo/Função:"
+            android:textColor="#000000"
+            android:textSize="17dp"
+            android:id="@+id/textCargoMecanico" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editCargoMecanico"
+            android:inputType="textCapWords"
+            android:textSize="@dimen/campos_edt_forms"
+            android:maxLength="10"
+            android:ems="10"
+            android:imeOptions="actionNext"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filial:"
+            android:textColor="#000000"
+            android:textSize="17dp"
+            android:id="@+id/textFilialMecanico" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editFilialMecanico"
+            android:inputType="textCapWords"
+            android:textSize="@dimen/campos_edt_forms"
+            android:maxLength="30"
+            android:ems="17"
+            android:imeOptions="actionNext"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+            android:imeOptions="actionNext"
+            android:text="Cidade:"
+            android:textColor="#000000"
+            android:textSize="17dp"
+            android:id="@+id/textCidadeMecanico" />
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editCidadeMecanico"
+            android:inputType="textCapWords"
+            android:textSize="@dimen/campos_edt_forms"
+            android:maxLength="30"
+            android:ems="17"
+            android:imeOptions="actionNext"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estado:"
+            android:textColor="#000000"
+            android:textSize="17dp"
+            android:id="@+id/textViewEstadoMecanico" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editEstadoMecanico"
+            android:inputType="textCapCharacters"
+            android:textSize="@dimen/campos_edt_forms"
+            android:maxLength="2"
+            android:ems="2"
+            android:imeOptions="actionGo"/>
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="46dp"
+            android:text="Salvar"
+            android:clickable="true"
+            android:gravity="center"
+            android:id="@+id/salavarPerfilMecanico"
+            android:onClick="salavarPerfilMecanico"
+            android:background="#DAA520"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+
+    </LinearLayout>
+</LinearLayout>

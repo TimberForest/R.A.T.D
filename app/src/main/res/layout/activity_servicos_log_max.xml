@@ -1,0 +1,124 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/fundo_degrade_dashboard_logmax"
+    tools:context=".dashboards.ServicosLogMaxActivity">
+
+    <ImageView
+        android:layout_width="700dp"
+        android:layout_height="420dp"
+        android:id="@+id/imageView10"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/cabecote_logmax_home_servicos"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginTop="170dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/imageView10"
+        android:id="@+id/linearLayout316">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="guia de manutenção"
+            android:onClick="selecionarOpcao"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:background="#EE0000"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:id="@+id/GuiaManutencao" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="controle de instalação /certificado de garantia"
+            android:onClick="selecionarOpcao"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:background="#EE0000"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:id="@+id/InstalacaoCertificadoGarantia" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="revisão 500 horas"
+            android:onClick="selecionarOpcao"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:background="#EE0000"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:id="@+id/revisao500Hrs" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="check list sensores"
+            android:onClick="abrirManutencaoProgGrua"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:background="#EE0000"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:id="@+id/button5" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Manuais de serviço"
+            android:onClick="manualServiço"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:background="#EE0000"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:id="@+id/button6" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Catálago de peças"
+            android:onClick="CatalogoPeças"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:background="#EE0000"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:id="@+id/button7" />
+
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView11"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/logo_timber_logmax"
+        android:layout_toEndOf="@+id/linearLayout316"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/imageView10" />
+
+
+</RelativeLayout>
