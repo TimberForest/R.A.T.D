@@ -14,7 +14,7 @@ import br.com.timberforest.ratd.dashboards.MainActivity;
 public class SplashScreen extends AppCompatActivity {
 
     WebView webView;
-    private static int SPLASH_TIME_OUT = 5000;
+    private static int SPLASH_TIME_OUT = 4000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

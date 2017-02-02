@@ -3,10 +3,12 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,11 +22,14 @@ import br.com.timberforest.ratd.dao.ambienteBancoDados.DatabaseFactory;
 import br.com.timberforest.ratd.sharedPreferences.SharedPreferencesDeslocamento;
 import br.com.timberforest.ratd.sharedPreferences.SharedPreferencesEmailActivity;
 
-public class MainActivity extends ActionBarActivity {
+import static br.com.timberforest.ratd.R.id.webView;
+
+public class MainActivity extends AppCompatActivity {
 
     private SharedPreferencesDeslocamento sharedPreferencesDeslocamento = new SharedPreferencesDeslocamento();
     public static final String PREF_NAME = "Preferences";
     TextView btn_ponto_digital;
+    WebView webView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +45,8 @@ public class MainActivity extends ActionBarActivity {
                 sharedPreferencesDeslocamento.fimDesl();
             }
         });*/
+        webView = (WebView) findViewById(R.id.webView);
+        webView.loadUrl("file:///android_asset/animacao_main.html");
 
     }
 

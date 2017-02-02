@@ -6,5 +6,7 @@
     <color name="vermelhor_escuro">#CD2626</color>
     <color name="preto">#000000</color>
     <color name="branco">#fff</color>
+    <color name="vermelho_log_max">#c02833</color>
+    <color name="amarelo_ponsse">#fed900</color>
 
 </resources>

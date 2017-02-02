@@ -38,12 +38,6 @@ public class CadastroMecanicoListAdapter extends ArrayAdapter<CadastroMecanico>{
         textView.setText(mecanico.getNome());
         textView1.setText(mecanico.getFilial());
 
-
-
-        //Baixando imagem remota
-        ImageView imageView = (ImageView) rowView.findViewById(R.id.icon);
-        imageView.setImageResource(R.drawable.perfil_mecanico);
-
         return rowView;
     }
 

@@ -42,7 +42,7 @@ public class RelatorioOperacionalListAdapter extends ArrayAdapter<RelatorioAvali
 
         //Baixando imagem remota
         ImageView imageView = (ImageView) rowView.findViewById(R.id.icon_relatorio_operacional);
-        imageView.setImageResource(R.drawable.avaliacao_operacional);
+        imageView.setImageResource(R.drawable.ic_check_list);
 
         return rowView;
     }

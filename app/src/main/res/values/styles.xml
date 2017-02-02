@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <!-- Base application theme. -->
@@ -24,6 +25,99 @@
 
     <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
         <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="FontesEdtEmail">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/preto</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:inputType">textEmailAddress</item>
+    </style>
+
+    <style name="FontesTxt">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/preto</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">2dp</item>
+    </style>
+
+    <style name="FontesBotaoGrandeAmarelo">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/preto</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:background">@drawable/screen_border_botao_grande_amarelo</item>
+    </style>
+
+    <style name="BotaoSimplesAmarelo">
+        <item name="android:textSize">22sp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textColor">@color/preto</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">365dp</item>
+        <item name="android:layout_height">53dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:onClick">selecionarOpcao</item>
+        <item name="android:background">@drawable/screen_border</item>
+    </style>
+
+    //Botões de Clique
+    <style name="BotoesBranco">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/preto</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:background">@drawable/screen_border_botao_grande_branco</item>
+    </style>
+
+    <style name="BotaoClick">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:onClick">selecionarOpcao</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <!--Titulos-->
+    <style name="TextosTitulos">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/preto</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@color/amarelo_padrao</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!--Linear Layout-->
+    <style name="LinearPadrão">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@color/amarelo_padrao</item>
+        <item name="android:padding">16dp</item>
+    </style>
+    
+    <style name="LinearBasico">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
     </style>
 
 </resources>

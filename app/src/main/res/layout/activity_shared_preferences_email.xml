@@ -2,11 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_shared_preferences_email"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp"
-    android:orientation="vertical"
-    android:background="@color/amarelo_padrao"
+    style="@style/LinearPadrão"
     tools:context=".sharedPreferences.SharedPreferencesEmailActivity">
 
     <LinearLayout
@@ -16,66 +12,36 @@
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="Configurações Gerais"
             android:id="@+id/txtTitulo"
-            android:textStyle="bold"
-            android:textColor="#000000"
-            android:background="#FFD700"
-            android:textSize="30dp"
-            android:layout_gravity="center" />
+            style="@style/TextosTitulos" />
 
         <TextView
-            android:id="@+id/txtEmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/FontesTxt"
             android:text="Emails para envio de Relatórios: Padrão"
-            android:padding="5dp"
-            android:typeface="monospace"
-            android:layout_marginLeft="10dp"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
+            />
 
         <EditText
             android:id="@+id/edt_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:layout_marginLeft="10dp"
-            android:inputType="textEmailAddress"
-            android:hint="Insira os e-mails !"
-            >
+            style="@style/FontesEdtEmail"
+            android:hint="Insira os e-mails !">
             <requestFocus />
         </EditText>
 
         <TextView
-            android:id="@+id/txtEmail_rigesa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Emails para envio de Relatórios: Padrão + Rigesa:"
-            android:padding="5dp"
-            android:typeface="monospace"
-            android:layout_marginLeft="10dp"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
+            style="@style/FontesTxt"
+            android:text="Emails para envio de Relatórios: Padrão + Rigesa:" />
 
         <EditText
             android:id="@+id/edt_email_rigesa"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:layout_marginLeft="10dp"
-            android:inputType="textEmailAddress"
+            style="@style/FontesEdtEmail"
             android:hint="Insira os e-mails !"
             >
         </EditText>
 
         <Button
             android:text="Salvar Informações"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            style="@style/BotaoSimplesAmarelo"
             android:id="@+id/btn_salvar"
             android:onClick="SalvarConfig"
             />

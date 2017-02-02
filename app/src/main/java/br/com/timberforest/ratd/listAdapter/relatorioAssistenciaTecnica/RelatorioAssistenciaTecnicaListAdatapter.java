@@ -40,7 +40,7 @@ public class RelatorioAssistenciaTecnicaListAdatapter extends ArrayAdapter<Relat
 
         //Baixando imagem remota
         ImageView imageView = (ImageView) rowView.findViewById(R.id.icon);
-        imageView.setImageResource(R.drawable.lista_relatorio);
+        imageView.setImageResource(R.drawable.ic_assist_tec);
 
         return rowView;
     }
