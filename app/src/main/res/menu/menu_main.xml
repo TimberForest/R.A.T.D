@@ -2,4 +2,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
 
+    <item
+        android:id="@+id/action_ponto_digital"
+        app:showAsAction="ifRoom"
+        android:title="Voltar"
+        android:icon="@drawable/ic_action_ponto_digital"/>
+
+    <item
+        android:id="@+id/action_config"
+        app:showAsAction="ifRoom"
+        android:title="Voltar"
+        android:icon="@drawable/action_config"/>
+
+    <item
+        android:id="@+id/action_voltar"
+        app:showAsAction="ifRoom"
+        android:title="Voltar"
+        android:icon="@drawable/ic_reply_white_48dp"/>
 </menu>

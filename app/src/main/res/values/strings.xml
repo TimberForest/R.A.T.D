@@ -278,4 +278,15 @@
 
     <string name="grau_qtd_obrigatorio_valor">O Grau/Quantidade/Valor: é de preenchimento obrigatório!</string>
 
+    <!--Relatório de Assistencia técnica-->
+    <string name="inicio_do_deslocamento">Inicio do Deslocamento</string>
+    <string name="inicio_do_trabalho">Inicio do Trabalho</string>
+    <string name="inicio_do_almoço">Inicio do Almoço</string>
+    <string name="fim_do_almoço">Fim do Almoço</string>
+    <string name="fim_do_trabalho">Fim do Trabalho</string>
+    <string name="fim_do_deslocamento">Fim do Deslocamento</string>
+
+    <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

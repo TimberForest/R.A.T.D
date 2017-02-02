@@ -8,42 +8,6 @@
         android:orientation="vertical"
         android:layout_width="410dp"
         android:layout_height="325dp"
-        android:id="@+id/linearLayout19"
-        android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/linearLayout23">
-
-        <TextView
-            android:id="@+id/btn_foto_horimetro"
-            android:layout_width="fill_parent"
-            android:layout_height="56dp"
-            android:text="Fotografar Horimetro"
-            android:clickable="true"
-            android:gravity="center"
-            android:background="#DAA520"
-            android:textColor="#000000"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_below="@+id/btn_foto_chassi"
-            android:layout_toEndOf="@+id/image_chassi" />
-
-        <ImageView
-            android:id="@+id/image_horimetro"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_launcher"
-            android:layout_gravity="center_horizontal"
-            android:layout_above="@+id/btn_foto_horimetro"
-            android:layout_toStartOf="@+id/btn_foto_chassi" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="410dp"
-        android:layout_height="325dp"
         android:id="@+id/linearLayout20"
         android:layout_marginLeft="2dp"
         android:layout_marginRight="2dp"
@@ -57,7 +21,7 @@
             android:text="Fotografar Chassi"
             android:clickable="true"
             android:textColor="#000000"
-            android:background="#DAA520"
+            android:background="@drawable/screen_border"
             android:textSize="22sp"
             android:gravity="center"
             android:textStyle="bold"
@@ -90,7 +54,7 @@
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="56dp"
-            android:background="#DAA520"
+            android:background="@drawable/screen_border"
             android:textColor="#000000"
             android:clickable="true"
             android:gravity="center"
@@ -123,7 +87,7 @@
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="56dp"
-            android:background="#DAA520"
+            android:background="@drawable/screen_border"
             android:textColor="#000000"
             android:gravity="center"
             android:clickable="true"
@@ -155,7 +119,7 @@
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="56dp"
-            android:background="#DAA520"
+            android:background="@drawable/screen_border"
             android:textColor="#000000"
             android:clickable="true"
             android:gravity="center"
@@ -185,7 +149,7 @@
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="56dp"
-            android:background="#DAA520"
+            android:background="@drawable/screen_border"
             android:textColor="#000000"
             android:clickable="true"
             android:gravity="center"
@@ -202,6 +166,42 @@
             android:id="@+id/image_defeito3"
             android:layout_gravity="center_horizontal"
             android:src="@drawable/ic_launcher"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="410dp"
+        android:layout_height="325dp"
+        android:id="@+id/linearLayout19"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/linearLayout23">
+
+        <TextView
+            android:id="@+id/btn_foto_horimetro"
+            android:layout_width="fill_parent"
+            android:layout_height="56dp"
+            android:text="Fotografar Horimetro"
+            android:clickable="true"
+            android:gravity="center"
+            android:background="@drawable/screen_border"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_below="@+id/btn_foto_chassi"
+            android:layout_toEndOf="@+id/image_chassi" />
+
+        <ImageView
+            android:id="@+id/image_horimetro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher"
+            android:layout_gravity="center_horizontal"
+            android:layout_above="@+id/btn_foto_horimetro"
+            android:layout_toStartOf="@+id/btn_foto_chassi" />
     </LinearLayout>
 
 </RelativeLayout>

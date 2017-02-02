@@ -40,97 +40,6 @@
                 android:checked="false"
                 android:layout_alignTop="@+id/checkBox2"
                 android:layout_toStartOf="@+id/checkBox2" />
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="450dp"
-                android:layout_height="320dp"
-                android:id="@+id/coluna1"
-                android:background="#CFCFCF"
-                android:focusableInTouchMode="true"
-                android:layout_below="@+id/checkBox"
-                android:layout_alignParentStart="true"
-                android:layout_toStartOf="@+id/checkBox2"
-                android:layout_alignEnd="@+id/checkBox2">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Relator (Mecânico):"
-                    android:textColor="#000000"
-                    android:textSize="17dp"
-                    android:id="@+id/textRelatoMec" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="text"
-                    android:layout_margin="8dp"
-                    android:textColor="#000000"
-                    android:textSize="15dp"
-                    android:id="@+id/editGetRelatoMec"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Chassi:"
-                    android:textColor="#000000"
-                    android:textSize="17dp"/>
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textCapWords"
-                    android:textSize="15dp"
-                    android:id="@+id/editGetChassiN"
-                    android:imeOptions="actionNext"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Distribuidor/Posto de Assistência Técnica:"
-                    android:textColor="#000000"
-                    android:textSize="17dp"
-                    android:id="@+id/textDistribAssTec" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"
-                    android:layout_margin="9dp"
-                    android:textColor="#000000"
-                    android:textSize="15dp"
-                    android:id="@+id/editGetDistAssiTec" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Cliente:"
-                    android:textColor="#000000"
-                    android:textSize="17dp"
-                    android:id="@+id/texCliente" />
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textCapWords"
-                    android:textSize="15dp"
-                    android:id="@+id/editGetCliente"
-                    android:imeOptions="actionNext"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Local Da Obra:"
-                    android:textColor="#000000"
-                    android:textSize="17dp"
-                    android:id="@+id/textLocalObra"/>
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textCapWords"
-                    android:textSize="15dp"
-                    android:id="@+id/editGetLocalObra"
-                    android:imeOptions="actionNext"/>
-
-
-            </LinearLayout>
 
             <LinearLayout
                 android:orientation="vertical"
@@ -233,6 +142,7 @@
                     android:textColor="#000000"
                     android:textSize="17dp"
                     android:id="@+id/textRelatNum" />
+
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -240,6 +150,7 @@
                     android:inputType="textCapWords"
                     android:textSize="15dp"
                     android:id="@+id/editGetRelatNum"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -443,75 +354,7 @@
                     android:id="@+id/editHrsExtrDesloc"
                     android:layout_gravity="center_horizontal" />
             </LinearLayout>
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="80dp"
-                android:layout_marginTop="10dp"
-                android:layout_height="215dp"
-                android:background="#FFC125"
-                android:id="@+id/ColunaCodigo"
-                android:layout_below="@+id/textView101"
-                android:layout_toEndOf="@+id/Coluna1Desloc">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Código:"
-                    android:textColor="#000000"
-                    android:textSize="17dp"
-                    android:id="@+id/textCodPec" />
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/editGetCodPec"
-                    android:textSize="15dp"
-                    android:imeOptions="actionNext"/>
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="70dp"
-                android:layout_marginTop="10dp"
-                android:layout_height="215dp"
-                android:background="#EEB422"
-                android:id="@+id/ColunaQuantidade"
-                android:layout_below="@+id/textView101"
-                android:layout_toEndOf="@+id/ColunaCodigo">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Quant:"
-                    android:textColor="#000000"
-                    android:textSize="17dp"
-                    android:id="@+id/textQtdpeca" />
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/editGetPecaQtd"
-                    android:textSize="15dp"
-                    android:imeOptions="actionNext"/>
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="485dp"
-
-                android:layout_height="215dp"
-                android:background="#CD9B1D"
-                android:id="@+id/ColunaDescricao"
-                android:layout_alignTop="@+id/ColunaQuantidade"
-                android:layout_toEndOf="@+id/ColunaQuantidade">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Descrição:"
-                    android:textColor="#000000"
-                    android:textSize="17dp"
-                    android:id="@+id/textDescrPeca" />
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/editGetDescPec"
-                    android:textSize="15dp"/>
-            </LinearLayout>
             <TextView
                 android:layout_width="150dp"
                 android:layout_height="46dp"
@@ -521,7 +364,7 @@
                 android:id="@+id/cmdProximo"
                 android:layout_gravity="right"
                 android:onClick="salvar"
-                android:background="#DAA520"
+                android:background="@drawable/screen_border"
                 android:textColor="#000000"
                 android:textSize="22sp"
                 android:textStyle="bold"
@@ -538,7 +381,7 @@
                 android:gravity="center"
                 android:onClick="abrirCamera"
                 android:id="@+id/btnCamera"
-                android:background="#DAA520"
+                android:background="@drawable/screen_border"
                 android:textColor="#000000"
                 android:textSize="22sp"
                 android:textStyle="bold"
@@ -552,12 +395,14 @@
                 android:layout_height="215dp"
                 android:layout_marginTop="5dp"
                 android:id="@+id/linearLayout33"
-                android:background="#FFC125"
+                android:background="@color/preto"
                 android:layout_below="@+id/ColunaCodigo"
                 android:layout_alignStart="@+id/ColunaCodigo">
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/amarelo_padrao"
+                    android:layout_margin="1dp"
                     android:text="Código:"
                     android:textColor="#000000"
                     android:textSize="17dp"
@@ -566,7 +411,9 @@
                     android:layout_toEndOf="@+id/Coluna1Desloc" />
                 <EditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/amarelo_padrao"
+                    android:layout_margin="1dp"
                     android:id="@+id/editGetCodPec1"
                     android:textSize="15dp"
                     android:imeOptions="actionNext"
@@ -580,12 +427,14 @@
                 android:layout_height="215dp"
                 android:layout_marginTop="5dp"
                 android:id="@+id/linearLayout34"
-                android:background="#EEB422"
+                android:background="@color/preto"
                 android:layout_below="@+id/ColunaCodigo"
                 android:layout_toEndOf="@+id/linearLayout33">
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/amarelo_padrao"
+                    android:layout_margin="1dp"
                     android:text="Quant:"
                     android:textColor="#000000"
                     android:textSize="17dp"
@@ -594,36 +443,14 @@
                     android:layout_toStartOf="@+id/linearLayout35" />
                 <EditText
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/amarelo_padrao"
+                    android:layout_margin="1dp"
                     android:id="@+id/editGetPecaQtd1"
                     android:textSize="15dp"
                     android:layout_alignBottom="@+id/cmdProximo"
                     android:layout_alignStart="@+id/textView34"
                     android:layout_toStartOf="@+id/linearLayout35" />
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="485dp"
-                android:layout_height="215dp"
-                android:layout_marginTop="5dp"
-                android:background="#CD9B1D"
-                android:id="@+id/linearLayout35"
-                android:layout_below="@+id/ColunaDescricao"
-                android:layout_alignStart="@+id/ColunaDescricao">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Descrição:"
-                    android:textColor="#000000"
-                    android:textSize="17dp"
-                    android:id="@+id/textView35" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/editGetDescPec1"
-                    android:textSize="15dp" />
             </LinearLayout>
 
             <TextView
@@ -636,5 +463,207 @@
                 android:id="@+id/textView152"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="485dp"
+                android:layout_height="215dp"
+                android:background="@color/preto"
+                android:id="@+id/linearLayout35"
+                android:layout_alignParentBottom="true"
+                android:layout_toEndOf="@+id/linearLayout34">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Descrição:"
+                    android:textColor="#000000"
+                    android:textSize="17dp"
+                    android:background="@color/amarelo_padrao"
+                    android:layout_margin="1dp"
+                    android:id="@+id/textView35" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/amarelo_padrao"
+                    android:layout_margin="1dp"
+                    android:id="@+id/editGetDescPec1"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="70dp"
+                android:layout_height="215dp"
+                android:background="@color/preto"
+                android:id="@+id/ColunaQuantidade"
+                android:layout_alignTop="@+id/ColunaCodigo"
+                android:layout_toEndOf="@+id/ColunaCodigo">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Quant:"
+                    android:textColor="#000000"
+                    android:textSize="17dp"
+                    android:background="@color/amarelo_padrao"
+                    android:layout_margin="1dp"
+                    android:id="@+id/textQtdpeca" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/editGetPecaQtd"
+                    android:background="@color/amarelo_padrao"
+                    android:textSize="15dp"
+                    android:layout_margin="1dp"
+                    android:imeOptions="actionNext"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="485dp"
+
+                android:layout_height="215dp"
+                android:background="@color/preto"
+                android:id="@+id/ColunaDescricao"
+                android:layout_alignTop="@+id/ColunaQuantidade"
+                android:layout_toEndOf="@+id/ColunaQuantidade">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Descrição:"
+                    android:textColor="#000000"
+                    android:textSize="17dp"
+                    android:layout_margin="1dp"
+                    android:background="@color/amarelo_padrao"
+                    android:id="@+id/textDescrPeca" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/editGetDescPec"
+                    android:layout_margin="1dp"
+                    android:background="@color/amarelo_padrao"
+                    android:textSize="15dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="80dp"
+                android:layout_height="215dp"
+                android:background="@color/preto"
+                android:id="@+id/ColunaCodigo"
+                android:layout_alignTop="@+id/Coluna1Desloc"
+                android:layout_toEndOf="@+id/Coluna1Desloc">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Código:"
+                    android:textColor="#000000"
+                    android:textSize="17dp"
+                    android:background="@color/amarelo_padrao"
+                    android:layout_margin="1dp"
+                    android:id="@+id/textCodPec" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/editGetCodPec"
+                    android:textSize="15dp"
+                    android:background="@color/amarelo_padrao"
+                    android:layout_margin="1dp"
+                    android:imeOptions="actionNext"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="450dp"
+                android:layout_height="320dp"
+                android:id="@+id/coluna1"
+                android:background="#CFCFCF"
+                android:focusableInTouchMode="true"
+                android:layout_below="@+id/checkBox"
+                android:layout_alignParentStart="true">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Relator (Mecânico):"
+                    android:textColor="#000000"
+                    android:textSize="17dp"
+                    android:id="@+id/textRelatoMec" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:layout_margin="8dp"
+                    android:textColor="#000000"
+                    android:textSize="15dp"
+                    android:id="@+id/editGetRelatoMec"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chassi:"
+                    android:textColor="#000000"
+                    android:textSize="17dp"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textCapWords"
+                    android:textSize="15dp"
+                    android:id="@+id/editGetChassiN"
+                    android:imeOptions="actionNext"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Distribuidor/Posto de Assistência Técnica:"
+                    android:textColor="#000000"
+                    android:textSize="17dp"
+                    android:id="@+id/textDistribAssTec" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:layout_margin="9dp"
+                    android:textColor="#000000"
+                    android:textSize="15dp"
+                    android:id="@+id/editGetDistAssiTec" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cliente:"
+                    android:textColor="#000000"
+                    android:textSize="17dp"
+                    android:id="@+id/texCliente" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textCapWords"
+                    android:textSize="15dp"
+                    android:id="@+id/editGetCliente"
+                    android:imeOptions="actionNext"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Local Da Obra:"
+                    android:textColor="#000000"
+                    android:textSize="17dp"
+                    android:id="@+id/textLocalObra"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textCapWords"
+                    android:textSize="15dp"
+                    android:id="@+id/editGetLocalObra"
+                    android:imeOptions="actionNext"/>
+
+
+            </LinearLayout>
         </RelativeLayout>
 </ScrollView>

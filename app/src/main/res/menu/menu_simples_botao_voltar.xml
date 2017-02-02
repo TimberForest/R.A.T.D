@@ -4,12 +4,6 @@
     tools:context=".listActivity.cadastroMecanico.ListCadastroMecanicoActivity">
 
     <item
-        android:id="@+id/action_config"
-        app:showAsAction="ifRoom"
-        android:title="Voltar"
-        android:icon="@drawable/action_config"/>
-
-    <item
         android:id="@+id/action_voltar"
         app:showAsAction="ifRoom"
         android:title="Voltar"

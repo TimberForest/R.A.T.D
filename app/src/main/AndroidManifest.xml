@@ -8,83 +8,86 @@
         android:label="@string/nome_icone"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".dashboards.MainActivity"
-            android:screenOrientation="landscape"
+            android:name=".utilitarios.SplashScreen"
             android:configChanges="orientation|keyboardHidden"
-            android:label="@string/nome_icone">
+            android:label="@string/nome_icone"
+            android:screenOrientation="landscape">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"
-                        />
+                <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
+            android:name=".dashboards.MainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/nome_icone"
+            android:screenOrientation="landscape" />
+        <activity
             android:name=".detail.cadastroMecanico.DetailMecanicoActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_mecanico_detail"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".formulariosActivity.cadastroMecanico.FormMecanicoActivity"
-            android:label="@string/title_activity_mecanico_form"
-            android:screenOrientation="landscape"
             android:configChanges="orientation|keyboardHidden"
-            />
+            android:label="@string/title_activity_mecanico_form"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".listActivity.cadastroMecanico.ListCadastroMecanicoActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_mecanico_list"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".detail.relatorioAssistenciaTecnica.DetailRelatorioAssistenciaTecnicaActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_formulario_detail"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".listActivity.relatorioAssistenciaTecnica.ListRelatorioAssistenciaTecnicaActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_formulario_list"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".formulariosActivity.relatorioAssistenciaTecnica.FormRelatorioAssistenciaTecnicaActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_form1_dados"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".model.relatorioAssitenciaTecnica.CameraActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_camera"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".formulariosActivity.relatorioAvaliacaoOperacional.RelatorioOperacionalFormActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_form_relatorio_operacional"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".detail.relatorioAvaliacaoOperacional.DetailRelatorioOperacionalActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_relatorio_opreacional_detail"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".listActivity.relatorioAvaliacaoOperacional.ListRelatorioAvaliacaoOperacionalActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_relatorio_operacional_list"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".dashboards.ServicosPonsseActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_check_list_ponsse"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".detail.servicosPonsse.DetailManutencaoProgramadaGruaPonsseActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_manutencao_programada_guindaste_detail"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".listActivity.servicosPonsse.ListManutencaoProgramadaGruaPonsseActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_manutencao_grua_list"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <!--
             <activity
             android:name=".formulariosActivity.servicosPonsse.FormManutencaoProgramadaGruaPonsseActivity"
@@ -92,289 +95,289 @@
         -->
         <activity
             android:name=".formulariosActivity.servicosPonsse.FormManutencaoPragramadaCabecotePonsseActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_manutencao_cabecote"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".detail.servicosPonsse.DetailManutencaoProgramadaCabecotePonsseActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_manutencao_detail"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".listActivity.servicosPonsse.ListManutencaoProgramadaCabecotePonsseActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_manutencao_cabecote_list"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".detail.servicosPonsse.DetailManutencaoProgramadaForwarderPonsseActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_manutencao_programada_forwarder_detail"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".formulariosActivity.servicosPonsse.FormManutencaoProgramadaForwarderPonsseActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_form_manutencao_forwarder"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".listActivity.servicosPonsse.ListManutencaoProgramadaForwarderPonsseActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_manutencao_forwarder_list"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".detail.servicosPonsse.DetailManutencaoProgramadaMaquinaBasePonsseActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_manutencao_programada_maquina_base_detail"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".formulariosActivity.servicosPonsse.FormManutencaoProgramadaMaquinaBasePonsseActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_form_manutencao_programada_maquina_base"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".dashboards.ServicosLogMaxActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_servicos_log_max"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".detail.servicosLogmax.DetailGuiaManutencaoLogmaxActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_guia_manutencao_logmax_detail"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".listActivity.servicosLogmax.ListGuiaManutencaoLogmaxActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_guia_manutencao_logmax_list"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".formulariosActivity.servicosLogmax.FormGuiaManutencaoLogmaxActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_form_guia_manutencao_logmax"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".detail.servicosLogmax.DetailControleInstalacaoCertificadoGarantiaLogmaxActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_detail_controle_instalacao_certificado_garantia"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".formulariosActivity.servicosLogmax.FormControleInstalacaoCertificadoGarantiaLogmaxActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_form_controle_instalacao_certificado_garantia"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".listActivity.servicosLogmax.ListControleInstalacaoCertificadoGarantiaLogmaxActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_form_controle_instalacao_certificado_garantia"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".listActivity.servicosPonsse.ListManutencaoProgramadaMaquinaBaseActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_list_manutencao_propgramada_maquina_base"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.Numero1Activity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_numero10"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.Numero2Activity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_numero2"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".listActivity.servicosPonsse.ListGarantiaForwarderPonsseActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_list_garantia_forwarder_ponsse"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.Numero3Activity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_numero3"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.Numero4Activity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_numero4"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.Numero5Activity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_numero5"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.Numero6Activity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_numero6"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.Numero7Activity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_numero7"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.Numero8Activity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_numero8"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.Numero9Activity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_numero9"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.Numero10Activity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_numero10"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.Numero11Activity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_numero11"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.Numero12Activity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_numero12"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.Numero13Activity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_numero13"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.Numero14Activity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_numero14"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.Numero15Activity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_numero15"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.Numero16Activity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_numero16"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.Numero17Activity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_numero17"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.Numero18Activity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_numero18"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.Numero19Activity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_numero19"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.Numero20Activity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_numero20"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.Numero20sActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_numero20s"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.Numero21Activity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_numero21"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.Numero22Activity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_numero22"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.LetraAActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_letra_a"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.LetraAtActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_letra_at"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.LetraBActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_letra_b"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.LetraBaActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_letra_ba"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.LetraCActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_letra_c"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.LetraCvActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_letra_cv"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.LetraDActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_letra_d"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.LetraEActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_letra_e"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.LetraFActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_letra_f"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.LetraGActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_letra_g"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.LetraHActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_letra_h"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.LetraIActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_letra_i"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.LetraIcActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_letra_ic"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.LetraIlActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_letra_il"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.LetraJActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_letra_j"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.LetraKActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_letra_k"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.LetraLActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_letra_l"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.LetraMActivity"
             android:label="@string/title_activity_letra_m" />
@@ -383,64 +386,64 @@
             android:label="@string/title_activity_letra_n" />
         <activity
             android:name=".guiaManutencaoLogmax.LetraNvActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_letra_nv"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.LetraNvtActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_letra_nvt"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.LetraPActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_letra_p"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.LetraRActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_letra_r"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.LetraSActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_letra_s"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.LetraTActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_letra_t"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.LetraTvActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_letra_tv"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.LetraUActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_letra_u"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.LetraWActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_letra_w"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".guiaManutencaoLogmax.LetraOActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_letra_of"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".detail.servicosPonsse.DetailGarantiaForwarderPonsseActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_detail_garantia_forwarder_ponsse"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".formulariosActivity.servicosPonsse.FormGarantiaForwarderPonsseActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_form_garantia_forwarder"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <!--
             <activity
             android:name=".listActivity.servicosPonsse.ListGarantiaForwarderPonsseActivity"
@@ -450,9 +453,9 @@
         -->
         <activity
             android:name=".detail.servicosPonsse.DetailGarantiaHarvesterPonsseActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_detail_garantia_cabecote_ponsse"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <!--
             <activity
             android:name=".formulariosActivity.servicosPonsse.FormGarantiaHarvesterPonsseActivity"
@@ -462,9 +465,9 @@
         -->
         <activity
             android:name=".listActivity.servicosPonsse.ListGarantiaHarvesterPonsseActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_list_garantia_harvester_ponsse"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <!--
             <activity
             android:name=".listActivity.servicosPonsse.ListManutencaoProgGruaPonsseActivity"
@@ -474,66 +477,66 @@
         -->
         <activity
             android:name=".dashboards.DashRevisao500hrsLogMaxModelosActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_dash_revisao500hrs_log_max_modelos"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".formulariosActivity.servicosLogmax.revisao500Hrs.FormRevisao500Hrs4000BActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_form_revisao500_hrs4000_b"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".formulariosActivity.servicosLogmax.revisao500Hrs.FormRevisao500Hrs5000DActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_form_revisao500_hrs5000_d"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".formulariosActivity.servicosLogmax.revisao500Hrs.FormRevisao500Hrs6000BActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_form_revisao500_hrs6000_b"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".formulariosActivity.servicosLogmax.revisao500Hrs.FormRevisao500HrsE6Activity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_form_revisao500_hrs_e6"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".formulariosActivity.servicosLogmax.revisao500Hrs.FormRevisao500Hrs7000CActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_form_revisao500_hrs7000_c"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".formulariosActivity.servicosLogmax.revisao500Hrs.FormRevisao500Hrs7000XTActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_form_revisao500_hrs7000_xt"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden" />
+            android:screenOrientation="landscape" />
         <activity
             android:name=".formulariosActivity.servicosLogmax.revisao500Hrs.FormRevisao500Hrs10000XTActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_form_revisao500_hrs10000_xt"
-            android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".formulariosActivity.servicosLogmax.revisao500Hrs.DesenhoBlocoHidraulicoCabecoteLogMax5000Activity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_desenho_bloco_hidraulico_cabecote_log_max"
-            android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".formulariosActivity.servicosLogmax.revisao500Hrs.DesenhoBlocoHidraulicoCabecoteLogMax6000Activity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_desenho_bloco_hidraulico_cabecote_log_max6000"
-            android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
-
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".sharedPreferences.SharedPreferencesEmailActivity"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".sharedPreferences.SharedPreferencesDeslocamento"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape" />
+        <activity android:name=".utilitarios.AssinaturaDigital"></activity>
     </application>
 
 </manifest>

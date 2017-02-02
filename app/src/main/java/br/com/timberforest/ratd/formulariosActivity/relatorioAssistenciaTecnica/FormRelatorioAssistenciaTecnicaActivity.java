@@ -26,7 +26,8 @@ import br.com.timberforest.ratd.model.relatorioAssitenciaTecnica.CameraActivity;
 import br.com.timberforest.ratd.model.relatorioAssitenciaTecnica.RelatorioAssistenciaTecnica;
 
 import br.com.timberforest.ratd.utilitarios.Utils;
-public class FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
+public class
+FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
 
     RelatorioAssistenciaTecnicaDao relatorioAssistenciaTecnicaDao = new RelatorioAssistenciaTecnicaDao();
 
