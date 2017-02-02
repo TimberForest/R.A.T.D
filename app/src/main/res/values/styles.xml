@@ -72,7 +72,7 @@
         <item name="android:background">@drawable/screen_border</item>
     </style>
 
-    //Botões de Clique
+    <!--Botões de Clique-->
     <style name="BotoesBranco">
         <item name="android:textSize">22sp</item>
         <item name="android:textColor">@color/preto</item>
@@ -118,6 +118,15 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="EdtNumRelatorioOperacional">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:inputType">number</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:ems">2</item>
+        <item name="android:maxLength">1</item>
     </style>
 
 </resources>
