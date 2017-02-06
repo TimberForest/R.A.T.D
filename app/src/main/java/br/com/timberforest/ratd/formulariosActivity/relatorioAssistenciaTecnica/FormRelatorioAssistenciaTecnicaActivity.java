@@ -53,7 +53,7 @@ FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_form_relatorio_assistencia_tecnica);
+        setContentView(R.layout.form_relatorio_assistencia_tecnica);
 
         initViews();
         CadastroMecanicoDao cadastroMecanicoDao = new CadastroMecanicoDao();
@@ -111,6 +111,7 @@ FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
     public void abrirCamera (View view){
         startActivity(new Intent(this,CameraActivity.class));
     }
+
     public String getDateTime() {
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy  HH:mm:ss");
         Date date = new Date();

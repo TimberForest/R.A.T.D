@@ -20,29 +20,29 @@
             </intent-filter>
         </activity>
 
-<!--        <activity
-            android:name=".utilitarios.SplashScreen"
-            android:configChanges="orientation|keyboardHidden"
-            android:label="@string/nome_icone"
-            android:screenOrientation="landscape">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <activity
-            android:name=".dashboards.MainActivity"
-            android:configChanges="orientation|keyboardHidden"
-            android:label="@string/app_name"
-            android:screenOrientation="landscape" />
-            -->
         <activity
             android:name=".utilitarios.SplashScreen"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/app_name"
             android:screenOrientation="landscape" />
+
+        <!--        <activity
+                    android:name=".utilitarios.SplashScreen"
+                    android:configChanges="orientation|keyboardHidden"
+                    android:label="@string/nome_icone"
+                    android:screenOrientation="landscape">
+                    <intent-filter>
+                        <action android:name="android.intent.action.MAIN" />
+                        <category android:name="android.intent.category.LAUNCHER" />
+                    </intent-filter>
+                </activity>
+                <activity
+                    android:name=".dashboards.MainActivity"
+                    android:configChanges="orientation|keyboardHidden"
+                    android:label="@string/app_name"
+                    android:screenOrientation="landscape" />
+                    -->
+
 
         <activity
             android:name=".detail.cadastroMecanico.DetailMecanicoActivity"
@@ -555,8 +555,9 @@
             android:screenOrientation="landscape" />
         <activity
             android:name=".sharedPreferences.SharedPreferencesDeslocamento"
-            android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="landscape" />
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden"/>
     </application>
 
 </manifest>

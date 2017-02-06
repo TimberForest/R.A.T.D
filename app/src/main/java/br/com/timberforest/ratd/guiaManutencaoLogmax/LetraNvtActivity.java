@@ -11,7 +11,7 @@ public class LetraNvtActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_letra_nvt);
+        setContentView(R.layout.activity_letra_n);
     }
     @Override
           public boolean onCreateOptionsMenu(Menu menu) {

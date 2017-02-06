@@ -26,9 +26,6 @@ import static br.com.timberforest.ratd.R.id.webView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private SharedPreferencesDeslocamento sharedPreferencesDeslocamento = new SharedPreferencesDeslocamento();
-    public static final String PREF_NAME = "Preferences";
-    TextView btn_ponto_digital;
     WebView webView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,34 +33,11 @@ public class MainActivity extends AppCompatActivity {
         DatabaseFactory.initDatabaseConnection(this);
         setContentView(R.layout.activity_main);
 
-//        btn_ponto_digital = (TextView) findViewById(R.id.btn_ponto_digital);
-
-        //atualizarBotao();
-        /*btn_ponto_digital.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                sharedPreferencesDeslocamento.fimDesl();
-            }
-        });*/
         webView = (WebView) findViewById(R.id.webView);
         webView.loadUrl("file:///android_asset/animacao_main.html");
 
     }
 
-    public void atualizarBotao() {
-        SharedPreferences sharedPreferences = getSharedPreferences(PREF_NAME, 0);
-        String iniDesl = sharedPreferences.getString("inicio_deslocamento", "");
-        String iniTrab = sharedPreferences.getString("inicio_trabalho", "");
-        String iniAlm = sharedPreferences.getString("inicio_almoço", "");
-        String fimAlm = sharedPreferences.getString("fim_almoço", "");
-        String fimTrab = sharedPreferences.getString("fim_trabalho", "");
-        String fimDesl = sharedPreferences.getString("fim_deslocamento", "");
-
-        if (fimDesl.equals("")) {
-            btn_ponto_digital.setText("Inicio Deslocamento");
-        }
-
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -108,5 +82,4 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
-
 }

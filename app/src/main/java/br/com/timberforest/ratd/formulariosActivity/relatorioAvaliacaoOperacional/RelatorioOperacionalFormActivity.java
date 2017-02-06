@@ -1293,47 +1293,47 @@ public class RelatorioOperacionalFormActivity extends ActionBarActivity {
             try
             {
                 resultadoNotaSeguranca = getDouble(edtCapacete.getText().toString()) + getDouble(edtOculosProt.getText().toString())+getDouble(edtluva.getText().toString())+
-                getDouble(edtCamisaManga.getText().toString())+getDouble(edtCalca.getText().toString())+getDouble(edtSapatoNormal.getText().toString())+getDouble(edtSapatoOp.getText().toString())+
-                getDouble(edtDistanciaEntreMaq.getText().toString())+getDouble(edtEstacionamentoLocalAdeq.getText().toString())+getDouble(edtDistanciaOpAbast.getText().toString())+
-                getDouble(edtProcedSubirDescer.getText().toString())+getDouble(edtUtilizacaoSaidaEmergencia.getText().toString())+getDouble(edtProcedSubirDescer.getText().toString())+
-                getDouble(edtFixarMaqPrancha.getText().toString());
+                        getDouble(edtCamisaManga.getText().toString())+getDouble(edtCalca.getText().toString())+getDouble(edtSapatoNormal.getText().toString())+getDouble(edtSapatoOp.getText().toString())+
+                        getDouble(edtDistanciaEntreMaq.getText().toString())+getDouble(edtEstacionamentoLocalAdeq.getText().toString())+getDouble(edtDistanciaOpAbast.getText().toString())+
+                        getDouble(edtProcedSubirDescer.getText().toString())+getDouble(edtUtilizacaoSaidaEmergencia.getText().toString())+getDouble(edtProcedSubirDescer.getText().toString())+
+                        getDouble(edtFixarMaqPrancha.getText().toString());
 
                 resultadoNotaMeioAmbiente = getDouble(edtPossuiKitCont.getText().toString()) + getDouble(edtSabeUsarSisAntChama.getText().toString())+ getDouble(edtDanosCanaletaEstrada.getText().toString())+
-                getDouble(edtDanosMataNativa.getText().toString());
+                        getDouble(edtDanosMataNativa.getText().toString());
 
                 resultadoNotaPlanejamento = getDouble(edtPosicionamEquip.getText().toString()) + getDouble(edtSentidoExecTrabal.getText().toString())+ getDouble(edtPosicionamPilhasLinhas.getText().toString())+
-                getDouble(edtLeituraMapas.getText().toString());
+                        getDouble(edtLeituraMapas.getText().toString());
 
                 resultadoNotaSimulador = getDouble(edtDesempenhoGerSimulador.getText().toString());
 
                 resultadoNotaRelatoriosVerificacoesReaperto = getDouble(edtCheckListDiar.getText().toString()) + getDouble(edtRelatorioDiarEquip.getText().toString())+ getDouble(edtPreenchimentoCorretoLivOcorr.getText().toString())+
-                getDouble(edtReapertoEqui.getText().toString());
+                        getDouble(edtReapertoEqui.getText().toString());
 
                 resultadoNotaPainelAlavancaRegulag = getDouble(edtConhecimentoIndicador.getText().toString()) + getDouble(edtUtilizacaoCorretoJoyStick.getText().toString())+ getDouble(edtRegulagenCalibracao.getText().toString());
 
                 resultadoNotaTecnicasOp = getDouble(edtMovimentosSuavesSincro.getText().toString()) + getDouble(edtManobrabilidade.getText().toString());
 
                 resultadoNotaDadosTecEq = getDouble(edtTipoEquip.getText().toString()) + getDouble(edtCapacidadeReservatorio.getText().toString())+ getDouble(edtTiposLubrificante.getText().toString())+
-                getDouble(edtPontosLubrificacao.getText().toString())+getDouble(edtInterpretecaoManualEquip.getText().toString());
+                        getDouble(edtPontosLubrificacao.getText().toString())+getDouble(edtInterpretecaoManualEquip.getText().toString());
 
                 resultadoNotaTrabalhoEquipe = getDouble(edtCooperacaoEquip.getText().toString()) + getDouble(edtComunicacao.getText().toString())+ getDouble(edtSegueNormasTrab.getText().toString())+
-                getDouble(edtAssiduidade.getText().toString());
+                        getDouble(edtAssiduidade.getText().toString());
 
                 resultadoNotaAvaliacaoQualidade = getDouble(edtDesempenhoGerQualidade.getText().toString());
 
                 resultadoNotaProducao = getDouble(edtDesempenhoGerProducao.getText().toString());
 
                 resultadoNotaGeral = getDouble(edtCapacete.getText().toString()) + getDouble(edtOculosProt.getText().toString())+getDouble(edtluva.getText().toString())+
-                getDouble(edtCamisaManga.getText().toString())+getDouble(edtCalca.getText().toString())+getDouble(edtSapatoNormal.getText().toString())+getDouble(edtSapatoOp.getText().toString())+
-                getDouble(edtDistanciaEntreMaq.getText().toString())+getDouble(edtEstacionamentoLocalAdeq.getText().toString())+getDouble(edtDistanciaOpAbast.getText().toString())+
-                getDouble(edtProcedSubirDescer.getText().toString())+getDouble(edtUtilizacaoSaidaEmergencia.getText().toString())+getDouble(edtProcedSubirDescer.getText().toString())+
-                getDouble(edtFixarMaqPrancha.getText().toString())+getDouble(edtPossuiKitCont.getText().toString()) + getDouble(edtSabeUsarSisAntChama.getText().toString())+ getDouble(edtDanosCanaletaEstrada.getText().toString())+
-                getDouble(edtDanosMataNativa.getText().toString())+getDouble(edtPosicionamEquip.getText().toString()) + getDouble(edtSentidoExecTrabal.getText().toString())+ getDouble(edtPosicionamPilhasLinhas.getText().toString())+
-                getDouble(edtLeituraMapas.getText().toString())+getDouble(edtDesempenhoGerSimulador.getText().toString())+getDouble(edtCheckListDiar.getText().toString()) + getDouble(edtRelatorioDiarEquip.getText().toString())+ getDouble(edtPreenchimentoCorretoLivOcorr.getText().toString())+
-                getDouble(edtReapertoEqui.getText().toString())+getDouble(edtConhecimentoIndicador.getText().toString()) + getDouble(edtUtilizacaoCorretoJoyStick.getText().toString())+ getDouble(edtRegulagenCalibracao.getText().toString())+
-                getDouble(edtMovimentosSuavesSincro.getText().toString()) + getDouble(edtManobrabilidade.getText().toString())+ getDouble(edtTipoEquip.getText().toString()) + getDouble(edtCapacidadeReservatorio.getText().toString())+ getDouble(edtTiposLubrificante.getText().toString())+
-                getDouble(edtPontosLubrificacao.getText().toString())+getDouble(edtInterpretecaoManualEquip.getText().toString())+getDouble(edtCooperacaoEquip.getText().toString()) + getDouble(edtComunicacao.getText().toString())+ getDouble(edtSegueNormasTrab.getText().toString())+
-                getDouble(edtAssiduidade.getText().toString())+getDouble(edtDesempenhoGerQualidade.getText().toString())+getDouble(edtDesempenhoGerProducao.getText().toString());
+                        getDouble(edtCamisaManga.getText().toString())+getDouble(edtCalca.getText().toString())+getDouble(edtSapatoNormal.getText().toString())+getDouble(edtSapatoOp.getText().toString())+
+                        getDouble(edtDistanciaEntreMaq.getText().toString())+getDouble(edtEstacionamentoLocalAdeq.getText().toString())+getDouble(edtDistanciaOpAbast.getText().toString())+
+                        getDouble(edtProcedSubirDescer.getText().toString())+getDouble(edtUtilizacaoSaidaEmergencia.getText().toString())+getDouble(edtProcedSubirDescer.getText().toString())+
+                        getDouble(edtFixarMaqPrancha.getText().toString())+getDouble(edtPossuiKitCont.getText().toString()) + getDouble(edtSabeUsarSisAntChama.getText().toString())+ getDouble(edtDanosCanaletaEstrada.getText().toString())+
+                        getDouble(edtDanosMataNativa.getText().toString())+getDouble(edtPosicionamEquip.getText().toString()) + getDouble(edtSentidoExecTrabal.getText().toString())+ getDouble(edtPosicionamPilhasLinhas.getText().toString())+
+                        getDouble(edtLeituraMapas.getText().toString())+getDouble(edtDesempenhoGerSimulador.getText().toString())+getDouble(edtCheckListDiar.getText().toString()) + getDouble(edtRelatorioDiarEquip.getText().toString())+ getDouble(edtPreenchimentoCorretoLivOcorr.getText().toString())+
+                        getDouble(edtReapertoEqui.getText().toString())+getDouble(edtConhecimentoIndicador.getText().toString()) + getDouble(edtUtilizacaoCorretoJoyStick.getText().toString())+ getDouble(edtRegulagenCalibracao.getText().toString())+
+                        getDouble(edtMovimentosSuavesSincro.getText().toString()) + getDouble(edtManobrabilidade.getText().toString())+ getDouble(edtTipoEquip.getText().toString()) + getDouble(edtCapacidadeReservatorio.getText().toString())+ getDouble(edtTiposLubrificante.getText().toString())+
+                        getDouble(edtPontosLubrificacao.getText().toString())+getDouble(edtInterpretecaoManualEquip.getText().toString())+getDouble(edtCooperacaoEquip.getText().toString()) + getDouble(edtComunicacao.getText().toString())+ getDouble(edtSegueNormasTrab.getText().toString())+
+                        getDouble(edtAssiduidade.getText().toString())+getDouble(edtDesempenhoGerQualidade.getText().toString())+getDouble(edtDesempenhoGerProducao.getText().toString());
 
                 MostraResultado();
 

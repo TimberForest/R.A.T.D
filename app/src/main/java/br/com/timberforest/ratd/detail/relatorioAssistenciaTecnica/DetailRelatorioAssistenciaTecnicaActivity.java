@@ -120,10 +120,6 @@ public class DetailRelatorioAssistenciaTecnicaActivity extends ActionBarActivity
             startActivity(intent);
         }
         if (item.getItemId() == R.id.action_enviar) {
-
-            //CHAMANDO O BOTÃO ENVIAR E-MAIL !!!!!!!
-
-//            SharedPreferencesEmailActivity sharedPreferencesEmailActivity = new SharedPreferencesEmailActivity();
             SharedPreferences sharedPreferences = getSharedPreferences(PREF_NAME, 0);
             String email = sharedPreferences.getString("email", "");
             EnviarEmail.enviarEmail(this, email);
@@ -134,9 +130,6 @@ public class DetailRelatorioAssistenciaTecnicaActivity extends ActionBarActivity
             SharedPreferences sharedPreferences = getSharedPreferences(PREF_NAME, 0);
             String email = sharedPreferences.getString("email_rigesa", "");
             EnviarEmail.enviarEmail(this, email);
-           /* Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:cassiano@rodoparana.com.br;rafael.sontos@rodoparana.com.br;cesar.massucheto@rodoparana.com.br;cesar.ferreira@westrock.com;osmar.jarschel@westrock.com;nick.janssen@westrock.com;joao.abujamra@westrock.com;" +
-                    "helio.oliveira@westrock.com;andre.vieira@rodoparana.com.br"));
-            startActivity(intent);*/
         }
         if (item.getItemId() == R.id.action_assinatura) {
             Intent i = new Intent(Intent.ACTION_MAIN);
@@ -145,9 +138,6 @@ public class DetailRelatorioAssistenciaTecnicaActivity extends ActionBarActivity
             i.addCategory(Intent.CATEGORY_LAUNCHER);
             startActivity(i);
         }
-        /*if (item.getItemId() == R.id.action_voltar) {
-           super.finish();
-        }*/
         return super.onOptionsItemSelected(item);
     }
     @Override

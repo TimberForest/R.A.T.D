@@ -11,7 +11,7 @@ public class Numero20sActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_numero20s);
+        setContentView(R.layout.activity_numero20);
     }
 
     @Override

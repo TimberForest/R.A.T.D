@@ -11,7 +11,7 @@ public class LetraBaActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_letra_ba);
+        setContentView(R.layout.activity_letra_b);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

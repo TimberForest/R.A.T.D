@@ -21,10 +21,12 @@
             android:layout_width="400dp"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <Button
                 android:text="@string/inicio_do_deslocamento"
                 style="@style/FontesBotaoGrandeAmarelo"
                 android:id="@+id/btn_ini_desl" />
+
             <Button
                 android:text="@string/inicio_do_trabalho"
                 android:id="@+id/btn_ini_trab"
@@ -73,8 +75,46 @@
                 style="@style/BotoesBranco"
                 android:id="@+id/txt_fim_desl" />
         </LinearLayout>
-    </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:text="Km Inicial"
+                style="@style/FontesBotaoGrandeAmarelo"
+                android:id="@+id/btn_km_inicial" />
+
+            <EditText
+                style="@style/BotoesBranco"
+                android:inputType="number"
+                android:hint="Informe o KM"
+                android:id="@+id/edt_km_inicial" />
+
+            <Button
+                android:text="Km Final"
+                style="@style/FontesBotaoGrandeAmarelo"
+                android:id="@+id/btn_km_final" />
+
+            <EditText
+                style="@style/BotoesBranco"
+                android:inputType="number"
+                android:hint="Informe o KM"
+                android:id="@+id/edt_km_final" />
+
+            <Button
+                android:text="Km Rodados"
+                android:id="@+id/btn_km_rodado"
+                style="@style/FontesBotaoGrandeAmarelo"
+                android:background="#D3D3D3"/>
+
+            <TextView
+                style="@style/BotoesBranco"
+                android:id="@+id/txt_km_rodado" />
+
+        </LinearLayout>
+    </LinearLayout>
     <Button
         android:text="LIMPAR"
         android:layout_width="match_parent"

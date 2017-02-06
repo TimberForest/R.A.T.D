@@ -12,9 +12,6 @@ import br.com.timberforest.ratd.model.relatorioAvaliacaoOperacional.RelatorioAva
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by andre.vieira on 16/09/2015.
- */
 public class RelatorioAvaliacaoOperacionalDao {
     private DatabaseConnection dbHelper;
     private SQLiteDatabase database;
