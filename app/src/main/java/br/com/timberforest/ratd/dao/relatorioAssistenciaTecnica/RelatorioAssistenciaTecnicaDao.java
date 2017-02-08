@@ -1,17 +1,26 @@
 package br.com.timberforest.ratd.dao.relatorioAssistenciaTecnica;
 import android.content.ContentValues;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
 
 import br.com.timberforest.ratd.dao.ambienteBancoDados.DatabaseConnection;
 import br.com.timberforest.ratd.dao.ambienteBancoDados.DatabaseFactory;
+import br.com.timberforest.ratd.formulariosActivity.relatorioAssistenciaTecnica.FormRelatorioAssistenciaTecnicaActivity;
+import br.com.timberforest.ratd.listActivity.relatorioAssistenciaTecnica.ListRelatorioAssistenciaTecnicaActivity;
 import br.com.timberforest.ratd.model.relatorioAssitenciaTecnica.RelatorioAssistenciaTecnica;
+import br.com.timberforest.ratd.sharedPreferences.SharedPreferencesDeslocamento;
 
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class RelatorioAssistenciaTecnicaDao {
+import static br.com.timberforest.ratd.sharedPreferences.SharedPreferencesDeslocamento.PREFS_NAME;
+
+public class RelatorioAssistenciaTecnicaDao extends AppCompatActivity {
     private DatabaseConnection dbHelper;
     private SQLiteDatabase database;
 
@@ -38,11 +47,15 @@ public class RelatorioAssistenciaTecnicaDao {
         values.put("materialTransp", relatorioAssistenciaTecnica.getMaterialTransp());
         values.put("defeitoCost", relatorioAssistenciaTecnica.getDefeitoCostatado());
         values.put("procedimentosAdot", relatorioAssistenciaTecnica.getProcedAdot());
+
+        values.put("inicioDeslocamento", relatorioAssistenciaTecnica.getInicioDeslocamento());
+        values.put("inicioTrabalho", relatorioAssistenciaTecnica.getInicioTrabalho());
+        values.put("inicioAlmoco", relatorioAssistenciaTecnica.getInicioAlmoco());
+        values.put("fimAlmoco", relatorioAssistenciaTecnica.getFimAlmoco());
+        values.put("fimTrabalho", relatorioAssistenciaTecnica.getFimTrabalho());
+        values.put("fimDeslocamento", relatorioAssistenciaTecnica.getFimDeslocamento());
         values.put("kmRodado", relatorioAssistenciaTecnica.getKmRodad());
-        values.put("horaTrabal", relatorioAssistenciaTecnica.getHrsTrablh());
-        values.put("horaDesloc", relatorioAssistenciaTecnica.getHrsDesloc());
-        values.put("horaExtraTrab", relatorioAssistenciaTecnica.getHrsExtrTrab());
-        values.put("horaExtraDesl", relatorioAssistenciaTecnica.getHrsExtrDesloc());
+
         values.put("codigoPeca", relatorioAssistenciaTecnica.getGetCodPec());
         values.put("quantidade", relatorioAssistenciaTecnica.getPecaQtd());
         values.put("descricao", relatorioAssistenciaTecnica.getGetDescPec());
@@ -56,6 +69,8 @@ public class RelatorioAssistenciaTecnicaDao {
             database.update("RelatorioAssistenciaTecnica",values, "id="+ relatorioAssistenciaTecnica.getIdFormulario(),null);
         }
     }
+
+
     public void excluir(RelatorioAssistenciaTecnica relatorioAssistenciaTecnica){
         if(relatorioAssistenciaTecnica !=null && relatorioAssistenciaTecnica.getIdFormulario()!=null){
             database.delete("RelatorioAssistenciaTecnica","id="+ relatorioAssistenciaTecnica.getIdFormulario(),null);
@@ -65,8 +80,8 @@ public class RelatorioAssistenciaTecnicaDao {
         List<RelatorioAssistenciaTecnica> relatorioAssistenciaTecnicas = new ArrayList<>();
         Cursor cursor= database.rawQuery("select id, relator, data, numeroRelatorio, chassi, modelo,horimetro, distribuidorPostoAss," +
                 "cidadeDist, estadoDist, cliente , cidadeCli, estadoCli, localObra, materialTransp, defeitoCost,  " +
-                "procedimentosAdot, kmRodado, horaTrabal, horaDesloc," +
-                "horaExtraTrab, horaExtraDesl, codigoPeca, quantidade, descricao, codigoPeca1, quantidade1, descricao1 from RelatorioAssistenciaTecnica", null);
+                "procedimentosAdot, kmRodado, inicioDeslocamento, inicioTrabalho, inicioAlmoco, fimAlmoco, fimTrabalho, fimDeslocamento, " +
+                "codigoPeca, quantidade, descricao, codigoPeca1, quantidade1, descricao1 from RelatorioAssistenciaTecnica", null);
         cursor.moveToFirst();
         while (!cursor.isAfterLast()){
             RelatorioAssistenciaTecnica form = new RelatorioAssistenciaTecnica();
@@ -88,16 +103,18 @@ public class RelatorioAssistenciaTecnicaDao {
             form.setDefeitoCostatado(cursor.getString(15));
             form.setProcedAdot(cursor.getString(16));
             form.setKmRodad(cursor.getString(17));
-            form.setHrsTrablh(cursor.getString(18));
-            form.setHrsDesloc(cursor.getString(19));
-            form.setHrsExtrTrab(cursor.getString(20));
-            form.setHrsExtrDesloc(cursor.getString(21));
-            form.setGetCodPec(cursor.getString(22));
-            form.setPecaQtd(cursor.getString(23));
-            form.setGetDescPec(cursor.getString(24));
-            form.setGetCodPec1(cursor.getString(25));
-            form.setGetPecaQtd1(cursor.getString(26));
-            form.setGetDescPec1(cursor.getString(27));
+            form.setInicioDeslocamento(cursor.getString(18));
+            form.setInicioTrabalho(cursor.getString(19));
+            form.setInicioAlmoco(cursor.getString(20));
+            form.setFimAlmoco(cursor.getString(21));
+            form.setFimTrabalho(cursor.getString(22));
+            form.setFimDeslocamento(cursor.getString(23));
+            form.setGetCodPec(cursor.getString(24));
+            form.setPecaQtd(cursor.getString(25));
+            form.setGetDescPec(cursor.getString(26));
+            form.setGetCodPec1(cursor.getString(27));
+            form.setGetPecaQtd1(cursor.getString(28));
+            form.setGetDescPec1(cursor.getString(29));
             relatorioAssistenciaTecnicas.add(form);
             cursor.moveToNext();
         }
@@ -107,8 +124,7 @@ public class RelatorioAssistenciaTecnicaDao {
     public RelatorioAssistenciaTecnica buscaPorId(Long idFormulario){
         Cursor cursor= database.rawQuery("select id, relator, data,numeroRelatorio, chassi, modelo, horimetro, distribuidorPostoAss, " +
                 "cidadeDist, estadoDist, cliente, cidadeCli, estadoCli, localObra, materialTransp, defeitoCost,  " +
-                "procedimentosAdot, kmRodado, horaTrabal, horaDesloc," +
-                "horaExtraTrab, horaExtraDesl, codigoPeca, quantidade, " +
+                "procedimentosAdot, kmRodado, inicioDeslocamento, inicioTrabalho, inicioAlmoco, fimAlmoco, fimTrabalho, fimDeslocamento, codigoPeca, quantidade, " +
                 "descricao, codigoPeca1, quantidade1, descricao1 from RelatorioAssistenciaTecnica where id="+idFormulario,null);
         cursor.moveToFirst();
         if(!cursor.isAfterLast()){
@@ -131,16 +147,18 @@ public class RelatorioAssistenciaTecnicaDao {
             form.setDefeitoCostatado(cursor.getString(15));
             form.setProcedAdot(cursor.getString(16));
             form.setKmRodad(cursor.getString(17));
-            form.setHrsTrablh(cursor.getString(18));
-            form.setHrsDesloc(cursor.getString(19));
-            form.setHrsExtrTrab(cursor.getString(20));
-            form.setHrsExtrDesloc(cursor.getString(21));
-            form.setGetCodPec(cursor.getString(22));
-            form.setPecaQtd(cursor.getString(23));
-            form.setGetDescPec(cursor.getString(24));
-            form.setGetCodPec1(cursor.getString(25));
-            form.setGetPecaQtd1(cursor.getString(26));
-            form.setGetDescPec1(cursor.getString(27));
+            form.setInicioDeslocamento(cursor.getString(18));
+            form.setInicioTrabalho(cursor.getString(19));
+            form.setInicioAlmoco(cursor.getString(20));
+            form.setFimAlmoco(cursor.getString(21));
+            form.setFimTrabalho(cursor.getString(22));
+            form.setFimDeslocamento(cursor.getString(23));
+            form.setGetCodPec(cursor.getString(24));
+            form.setPecaQtd(cursor.getString(25));
+            form.setGetDescPec(cursor.getString(26));
+            form.setGetCodPec1(cursor.getString(27));
+            form.setGetPecaQtd1(cursor.getString(28));
+            form.setGetDescPec1(cursor.getString(29));
 
             cursor.close();
             return form;

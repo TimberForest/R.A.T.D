@@ -5,7 +5,8 @@ import android.content.Intent;
 import android.net.Uri;
 
 /**
- * Created by andre.vieira on 26/01/2017.
+ * Created by Cayo Sander on 26/01/2017.
+ * email: cayo.muniz@fatec.sp.gov.br
  */
 
 public class EnviarEmail {

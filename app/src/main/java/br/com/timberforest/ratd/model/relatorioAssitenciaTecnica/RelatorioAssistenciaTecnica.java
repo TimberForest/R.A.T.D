@@ -27,11 +27,15 @@ public class RelatorioAssistenciaTecnica implements Serializable{
     private String materialTransp;
     private String defeitoCostatado;
     private String procedAdot;
+
     private String kmRodad;
-    private String hrsTrablh;
-    private String hrsDesloc;
-    private String hrsExtrTrab;
-    private String hrsExtrDesloc;
+    private String inicioDeslocamento;
+    private String inicioTrabalho;
+    private String inicioAlmoco;
+    private String fimAlmoco;
+    private String fimTrabalho;
+    private String fimDeslocamento;
+
     private String getCodPec;
     private String getPecaQtd;
     private String getDescPec;
@@ -45,8 +49,9 @@ public class RelatorioAssistenciaTecnica implements Serializable{
     public RelatorioAssistenciaTecnica(String relator, String data, String numeroRelatorio, String numeroChassi,
                                        String modelo, String horimetro, String distribuidorAssisTec, String cidadeDistr,
                                        String estadoDistr, String cliente, String cidadeCli, String estadoCli, String localObra,
-                                       String materialTransp, String defeitoCostatado, String procedAdot, String kmRodad, String hrsExtrTrab,
-                                       String hrsDesloc, String getCodPec, String getPecaQtd, String getDescPec, String getCodPec1, String getPecaQtd1, String getDescPec1){
+                                       String materialTransp, String defeitoCostatado, String procedAdot, String kmRodad, String inicioDeslocamento,
+                                       String inicioTrabalho, String inicioAlmoco, String fimAlmoco, String fimTrabalho, String fimDeslocamento,
+                                       String getCodPec, String getPecaQtd, String getDescPec, String getCodPec1, String getPecaQtd1, String getDescPec1){
         this.relator= relator;
         this.data= data;
         this.numeroRelatorio= numeroRelatorio;
@@ -64,8 +69,12 @@ public class RelatorioAssistenciaTecnica implements Serializable{
         this.defeitoCostatado= defeitoCostatado;
         this.procedAdot= procedAdot;
         this.kmRodad= kmRodad;
-        this.hrsExtrTrab= hrsExtrTrab;
-        this.hrsExtrDesloc= hrsDesloc;
+        this.inicioDeslocamento=inicioDeslocamento;
+        this.inicioTrabalho=inicioTrabalho;
+        this.inicioAlmoco=inicioAlmoco;
+        this.fimAlmoco=fimAlmoco;
+        this.fimTrabalho=fimTrabalho;
+        this.fimDeslocamento=fimDeslocamento;
         this.getCodPec= getCodPec;
         this.getPecaQtd= getPecaQtd;
         this.getDescPec= getDescPec;
@@ -101,30 +110,7 @@ public class RelatorioAssistenciaTecnica implements Serializable{
     public void setKmRodad(String kmRodad) {
         this.kmRodad = kmRodad;
     }
-    @JavascriptInterface
-    public String getHrsTrablh() {
-        return hrsTrablh;
-    }
 
-    public void setHrsTrablh(String hrsTrablh) {
-        this.hrsTrablh = hrsTrablh;
-    }
-    @JavascriptInterface
-    public String getHrsDesloc() {
-        return hrsDesloc;
-    }
-
-    public void setHrsDesloc(String hrsDesloc) {
-        this.hrsDesloc = hrsDesloc;
-    }
-    @JavascriptInterface
-    public String getHrsExtrTrab() {
-        return hrsExtrTrab;
-    }
-
-    public void setHrsExtrTrab(String hrsExtrTrab) {
-        this.hrsExtrTrab = hrsExtrTrab;
-    }
     @JavascriptInterface
     public String getGetCodPec() {
         return getCodPec;
@@ -148,15 +134,6 @@ public class RelatorioAssistenciaTecnica implements Serializable{
 
     public void setGetDescPec(String getDescPec) {
         this.getDescPec = getDescPec;
-    }
-
-    @JavascriptInterface
-    public String getHrsExtrDesloc() {
-        return hrsExtrDesloc;
-    }
-
-    public void setHrsExtrDesloc(String hrsExtrDesloc) {
-        this.hrsExtrDesloc = hrsExtrDesloc;
     }
 
     public static long getSerialVersionUID() {
@@ -306,6 +283,55 @@ public class RelatorioAssistenciaTecnica implements Serializable{
 
     public void setGetDescPec1(String getDescPec1) {
         this.getDescPec1 = getDescPec1;
+    }
+
+    @JavascriptInterface
+    public String getInicioDeslocamento() {
+        return inicioDeslocamento;
+    }
+
+    public void setInicioDeslocamento(String inicioDeslocamento) {
+        this.inicioDeslocamento = inicioDeslocamento;
+    }
+    @JavascriptInterface
+    public String getInicioTrabalho() {
+        return inicioTrabalho;
+    }
+
+    public void setInicioTrabalho(String inicioTrabalho) {
+        this.inicioTrabalho = inicioTrabalho;
+    }
+    @JavascriptInterface
+    public String getInicioAlmoco() {
+        return inicioAlmoco;
+    }
+
+    public void setInicioAlmoco(String inicioAlmoco) {
+        this.inicioAlmoco = inicioAlmoco;
+    }
+    @JavascriptInterface
+    public String getFimAlmoco() {
+        return fimAlmoco;
+    }
+
+    public void setFimAlmoco(String fimAlmoco) {
+        this.fimAlmoco = fimAlmoco;
+    }
+    @JavascriptInterface
+    public String getFimTrabalho() {
+        return fimTrabalho;
+    }
+
+    public void setFimTrabalho(String fimTrabalho) {
+        this.fimTrabalho = fimTrabalho;
+    }
+    @JavascriptInterface
+    public String getFimDeslocamento() {
+        return fimDeslocamento;
+    }
+
+    public void setFimDeslocamento(String fimDeslocamento) {
+        this.fimDeslocamento = fimDeslocamento;
     }
 
     @JavascriptInterface

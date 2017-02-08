@@ -9,9 +9,16 @@
         android:text="Ponto Digital"
         style="@style/TextosTitulos" />
 
+<!--    <Button
+        android:text="LIMPAR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/btn_limpar" />-->
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="match_parent"
         android:background="@drawable/screen_border_botao_grande_branco"
         android:padding="5dp"
         android:gravity="center"
@@ -115,10 +122,4 @@
 
         </LinearLayout>
     </LinearLayout>
-    <Button
-        android:text="LIMPAR"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:id="@+id/btn_limpar" />
 </LinearLayout>

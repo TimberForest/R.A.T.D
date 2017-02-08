@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 public class DatabaseConnection extends SQLiteOpenHelper {
     private static final String DATABASE_NAME="RATDTESTE.db";
-    private static final int DATABASE_VERSION=1;
+    private static final int DATABASE_VERSION=2;
 
     public DatabaseConnection(Context context){
         super(context,DATABASE_NAME,null,DATABASE_VERSION);
@@ -34,11 +34,13 @@ public class DatabaseConnection extends SQLiteOpenHelper {
                 "materialTransp text," +
                 "defeitoCost text," +
                 "procedimentosAdot text," +
+                "inicioDeslocamento text,"+
+                "inicioTrabalho text,"+
+                "inicioAlmoco text,"+
+                "fimAlmoco text,"+
+                "fimTrabalho text,"+
+                "fimDeslocamento text,"+
                 "kmRodado text," +
-                "horaTrabal text," +
-                "horaDesloc text," +
-                "horaExtraTrab text," +
-                "horaExtraDesl text," +
                 "codigoPeca text," +
                 "quantidade text," +
                 "descricao text," +
@@ -127,7 +129,7 @@ public class DatabaseConnection extends SQLiteOpenHelper {
                 "notaGeral INTEGER"+
                 ")");
 
-        db.execSQL("create table tb_manutencaop_rogramada_grua("+
+  /*      db.execSQL("create table tb_manutencaop_rogramada_grua("+
                 "id_      INTEGER PRIMARY KEY AUTOINCREMENT                 ,"+
                 "ds_telefone            TEXT    NOT NULL                    ,"+
                 "fl_modelo              TEXT    NOT NULL                    ,"+
@@ -177,7 +179,7 @@ public class DatabaseConnection extends SQLiteOpenHelper {
 
                 ")");
 
-
+*/
 
             /*db.execSQL("create table GarantiaForwarder("+
                     "id integer primary key autoincrement,"+
@@ -431,7 +433,18 @@ public class DatabaseConnection extends SQLiteOpenHelper {
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS GarantiaForwarder");
-        onCreate(db);
+
+/*        if (newVersion > oldVersion) {
+            db.execSQL("ALTER TABLE RelatorioAssistenciaTecnica RENAME COLUMN horaTrabal TO inicioDeslocamento;");
+            db.execSQL("ALTER TABLE RelatorioAssistenciaTecnica RENAME COLUMN horaExtraDesl TO inicioTrabalho;");
+            db.execSQL("ALTER TABLE RelatorioAssistenciaTecnica RENAME COLUMN horaExtraTrab TO inicioAlmoco;");
+            db.execSQL("ALTER TABLE RelatorioAssistenciaTecnica RENAME COLUMN horaDesloc TO fimAlmoco;");
+            db.execSQL("ALTER TABLE RelatorioAssistenciaTecnica RENAME COLUMN cod_fun TO fimTrabalho;");
+            db.execSQL("ALTER TABLE RelatorioAssistenciaTecnica ADD COLUMN fimDeslocamento;");
+            onCreate(db);
+
+
+
+        }*/
     }
 }

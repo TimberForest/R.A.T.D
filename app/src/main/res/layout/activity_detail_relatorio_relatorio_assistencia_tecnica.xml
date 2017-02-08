@@ -332,57 +332,8 @@
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="210dp"
-        android:layout_height="120dp"
-        android:id="@+id/linearLayout10"
-        android:layout_alignTop="@+id/linearLayout4"
-        android:layout_toEndOf="@+id/linearLayout4">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Km Rodados:"
-            android:textColor="#000000"
-            android:textSize="16dp"
-            android:id="@+id/textView18" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Horas Trabalhadas:"
-            android:textColor="#000000"
-            android:textSize="16dp"
-            android:id="@+id/textView19" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Horas Deslocamento:"
-            android:textColor="#000000"
-            android:textSize="16dp"
-            android:id="@+id/textView20" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Horas Extras Trabalhadas:"
-            android:textColor="#000000"
-            android:textSize="16dp"
-            android:id="@+id/textView21" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Horas Extras Deslocamento:"
-            android:textColor="#000000"
-            android:textSize="16dp"
-            android:id="@+id/textView22" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
         android:layout_width="70dp"
-        android:layout_height="120dp"
+        android:layout_height="160dp"
         android:id="@+id/linearLayout13"
         android:layout_alignTop="@+id/linearLayout10"
         android:layout_toEndOf="@+id/linearLayout10">
@@ -390,31 +341,43 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/textInicioDeslocamentoDetailFormulario"
+            android:layout_margin="1pt"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textInicioTrabalhoDetailFormulario"
+            android:layout_margin="1px"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textInicioAlmocoDetailFormulario"
+            android:layout_margin="1pt"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textFimAlmocoDetailFormulario"
+            android:layout_margin="1px"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textFimTrabalhoDetailFormulario"
+            android:layout_margin="1pt"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textFimDeslocamentoDetailFormulario"
+            android:layout_margin="1px"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/textKmRodadoDetailFormulario"
-            android:layout_margin="1px"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textHrsTrabalDetailFormulario"
-            android:layout_margin="1pt"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textHrsDeslocDetailFormulario"
-            android:layout_margin="1px"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textHrsExtrTrabDetailFormulario"
-            android:layout_margin="1pt"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textHrsExtrDeslocDetailFormulario"
             android:layout_margin="1px"/>
     </LinearLayout>
 
@@ -441,6 +404,7 @@
         android:orientation="vertical"
         android:layout_width="300dp"
         android:layout_height="25dp"
+        android:layout_marginTop="50dp"
         android:id="@+id/linearLayout12"
         android:layout_below="@+id/linearLayout"
         android:layout_centerHorizontal="true">
@@ -683,7 +647,69 @@
             android:layout_margin="1px"/>
     </LinearLayout>
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="210dp"
+        android:layout_height="160dp"
+        android:id="@+id/linearLayout10"
+        android:layout_below="@+id/linearLayout11"
+        android:layout_toEndOf="@+id/linearLayout4">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inicio Do Deslocamento:"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inicio do trabalho:"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inicio do Almoço:"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="im do Almoço:"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fim do Trabalho:"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fim do Deslocamento:"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Km Rodados:"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            />
+    </LinearLayout>
 
 
 </RelativeLayout>

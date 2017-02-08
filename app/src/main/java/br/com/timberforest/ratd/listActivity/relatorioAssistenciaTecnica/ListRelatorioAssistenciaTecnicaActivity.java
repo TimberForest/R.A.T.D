@@ -8,12 +8,14 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import br.com.timberforest.ratd.dashboards.MainActivity;
 import br.com.timberforest.ratd.listAdapter.relatorioAssistenciaTecnica.RelatorioAssistenciaTecnicaListAdatapter;
 import br.com.timberforest.ratd.R;
 import br.com.timberforest.ratd.dao.relatorioAssistenciaTecnica.RelatorioAssistenciaTecnicaDao;
 import br.com.timberforest.ratd.detail.relatorioAssistenciaTecnica.DetailRelatorioAssistenciaTecnicaActivity;
 import br.com.timberforest.ratd.formulariosActivity.relatorioAssistenciaTecnica.FormRelatorioAssistenciaTecnicaActivity;
 import br.com.timberforest.ratd.model.relatorioAssitenciaTecnica.RelatorioAssistenciaTecnica;
+import br.com.timberforest.ratd.sharedPreferences.SharedPreferencesDeslocamento;
 
 import java.util.List;
 public class ListRelatorioAssistenciaTecnicaActivity extends ActionBarActivity {
@@ -62,7 +64,8 @@ public class ListRelatorioAssistenciaTecnicaActivity extends ActionBarActivity {
             buscaFormularios();
         }
         if(item.getItemId()==R.id.action_voltar) {
-            super.finish();
+            Intent intent = new Intent(ListRelatorioAssistenciaTecnicaActivity.this, MainActivity.class);
+            startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
     }

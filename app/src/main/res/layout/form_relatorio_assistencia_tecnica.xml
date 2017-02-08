@@ -423,14 +423,8 @@
                 android:layout_height="180dp"
                 android:id="@+id/editGetDefeitoConstado"
                 android:textSize="15dp"
+                android:gravity="top"
                 android:imeOptions="actionNext"/>
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="180dp"
-                android:id="@+id/editGetProcAdot"
-                android:textSize="15dp"
-                android:imeOptions="actionDone"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -439,6 +433,16 @@
                 android:textColor="#000000"
                 android:textSize="17dp"
                 android:id="@+id/textProcedAdot" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:id="@+id/editGetProcAdot"
+                android:textSize="15dp"
+                android:gravity="top"
+                android:imeOptions="actionDone"/>
+
+
 
         </LinearLayout>
         <TextView
@@ -466,7 +470,24 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Km Rodados:"
+                    android:text="Inicio do Deslocamento:"
+                    android:textColor="#000000"
+                    android:textSize="17dp"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:textSize="15dp"
+                    android:paddingLeft="40dp"
+                    android:id="@+id/edt_inicio_deslocamento" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Inicio do Trabalho:"
                     android:textColor="#000000"
                     android:textSize="17dp"
                     android:id="@+id/textKmRodad" />
@@ -477,12 +498,13 @@
                     android:ems="10"
                     android:inputType="numberDecimal"
                     android:textSize="15dp"
-                    android:id="@+id/editGetKmRodad" />
+                    android:paddingLeft="40dp"
+                    android:id="@+id/edt_inicio_trabalho" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Horas Trabalhadas:"
+                    android:text="Inicio do Almoço:"
                     android:textColor="#000000"
                     android:textSize="17dp"
                     android:id="@+id/textHrsTrablh" />
@@ -492,11 +514,12 @@
                     android:ems="10"
                     android:inputType="numberDecimal"
                     android:textSize="15dp"
-                    android:id="@+id/editGetHrsTrablh" />
+                    android:paddingLeft="40dp"
+                    android:id="@+id/edt_inicio_almoco" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Horas Deslocamento:"
+                    android:text="Fim do Almoço:"
                     android:textColor="#000000"
                     android:textSize="17dp"
                     android:id="@+id/textHrsDesloc" />
@@ -506,11 +529,12 @@
                     android:ems="10"
                     android:inputType="numberDecimal"
                     android:textSize="15dp"
-                    android:id="@+id/editGetHrsDesloc" />
+                    android:paddingLeft="40dp"
+                    android:id="@+id/edt_fim_almoco" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Horas Extras Trabalhadas:"
+                    android:text="Fim do Trabalho:"
                     android:textColor="#000000"
                     android:textSize="17dp"
                     android:id="@+id/textHorExtrTrab" />
@@ -520,15 +544,16 @@
                     android:ems="10"
                     android:inputType="numberDecimal"
                     android:textSize="15dp"
-                    android:id="@+id/editGetHrsExtrTrab"
+                    android:paddingLeft="40dp"
+                    android:id="@+id/edt_fim_trabalho"
                     android:layout_gravity="center_horizontal" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Horas Extras Deslocamento:"
+                    android:text="Fim do deslocamento:"
                     android:textColor="#000000"
                     android:textSize="17dp"
-                    android:id="@+id/textHorExtrDesloc" />
+                    />
 
                 <EditText
                     android:layout_width="match_parent"
@@ -536,8 +561,24 @@
                     android:ems="10"
                     android:inputType="numberDecimal"
                     android:textSize="15dp"
-                    android:id="@+id/editHrsExtrDesloc"
+                    android:id="@+id/edt_fim_deslocamento"
+                    android:paddingLeft="40dp"
                     android:layout_gravity="center_horizontal" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Km Rodados:"
+                    android:textColor="#000000"
+                    android:textSize="17dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:textSize="15dp"
+                    android:paddingLeft="40dp"
+                    android:id="@+id/edt_km_rodado" />
 
             </LinearLayout>
 
@@ -554,17 +595,17 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_marginLeft="5dp"
                         android:text="Código:"
                         android:textColor="#000000"
                         android:textSize="17dp"
                         android:id="@+id/textCodPec" />
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_marginLeft="5dp"
                         android:text="Quant:"
                         android:textColor="#000000"
                         android:textSize="17dp"
@@ -572,6 +613,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
                         android:layout_weight="3"
                         android:text="Descrição:"
                         android:textColor="#000000"
@@ -587,33 +629,32 @@
                     android:orientation="horizontal">
 
                     <EditText
-                        android:layout_width="wrap_content"
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
                         android:id="@+id/editGetCodPec"
                         android:textSize="15dp"
                         android:text="0"
                         android:layout_margin="1dp"
+                        android:gravity="top"
                         android:background="@color/amarelo_padrao"
                         android:imeOptions="actionNext"/>
 
                     <EditText
-                        android:layout_width="wrap_content"
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
                         android:id="@+id/editGetPecaQtd"
                         android:textSize="15dp"
                         android:text="0"
-                        android:inputType="number"
+                        android:gravity="top"
                         android:layout_margin="1dp"
                         android:background="@color/amarelo_padrao"
                         android:imeOptions="actionNext"/>
 
                     <EditText
-                        android:layout_width="wrap_content"
+                        android:layout_width="340dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="3"
                         android:text="0"
+                        android:gravity="top"
                         android:id="@+id/editGetDescPec"
                         android:inputType="textAutoComplete"
                         android:imeOptions="actionGo"
