@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 public class DatabaseConnection extends SQLiteOpenHelper {
     private static final String DATABASE_NAME="RATDTESTE.db";
-    private static final int DATABASE_VERSION=2;
+    private static final int DATABASE_VERSION=3;
 
     public DatabaseConnection(Context context){
         super(context,DATABASE_NAME,null,DATABASE_VERSION);
@@ -34,6 +34,7 @@ public class DatabaseConnection extends SQLiteOpenHelper {
                 "materialTransp text," +
                 "defeitoCost text," +
                 "procedimentosAdot text," +
+                "pendencias text," +
                 "inicioDeslocamento text,"+
                 "inicioTrabalho text,"+
                 "inicioAlmoco text,"+
@@ -439,9 +440,8 @@ public class DatabaseConnection extends SQLiteOpenHelper {
             db.execSQL("ALTER TABLE RelatorioAssistenciaTecnica RENAME COLUMN horaExtraDesl TO inicioTrabalho;");
             db.execSQL("ALTER TABLE RelatorioAssistenciaTecnica RENAME COLUMN horaExtraTrab TO inicioAlmoco;");
             db.execSQL("ALTER TABLE RelatorioAssistenciaTecnica RENAME COLUMN horaDesloc TO fimAlmoco;");
-            db.execSQL("ALTER TABLE RelatorioAssistenciaTecnica RENAME COLUMN cod_fun TO fimTrabalho;");
-            db.execSQL("ALTER TABLE RelatorioAssistenciaTecnica ADD COLUMN fimDeslocamento;");
-            onCreate(db);
+            db.execSQL("ALTER TABLE RelatorioAssistenciaTecnica RENAME COLUMN cod_fun TO fimTrabalho;");*//*
+            db.execSQL("ALTER TABLE RelatorioAssistenciaTecnica ADD COLUMN pendencias text;");
 
 
 

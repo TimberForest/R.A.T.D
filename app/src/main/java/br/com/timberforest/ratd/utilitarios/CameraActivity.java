@@ -1,4 +1,4 @@
-package br.com.timberforest.ratd.model.relatorioAssitenciaTecnica;
+package br.com.timberforest.ratd.utilitarios;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -13,6 +13,7 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
 import br.com.timberforest.ratd.R;
+import br.com.timberforest.ratd.model.relatorioAssitenciaTecnica.RelatorioAssistenciaTecnica;
 
 import java.io.File;
 

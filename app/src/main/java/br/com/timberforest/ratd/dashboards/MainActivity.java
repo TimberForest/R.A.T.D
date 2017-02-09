@@ -63,6 +63,14 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    public void finish() {
+        Toast.makeText(getApplicationContext(), "R.A.T.D. finalizado  !", Toast.LENGTH_LONG).show();
+        super.finish();
+        android.os.Process.killProcess(android.os.Process.myPid());
+    }
+
     public void selecionarOpcao(View view) {
         switch (view.getId()) {
             case R.id.btn_ponsse:

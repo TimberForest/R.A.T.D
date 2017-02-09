@@ -11,6 +11,8 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 import br.com.timberforest.ratd.R;
 import br.com.timberforest.ratd.dao.relatorioAssistenciaTecnica.RelatorioAssistenciaTecnicaDao;
 import br.com.timberforest.ratd.formulariosActivity.relatorioAssistenciaTecnica.FormRelatorioAssistenciaTecnicaActivity;
@@ -48,6 +50,7 @@ public class DetailRelatorioAssistenciaTecnicaActivity extends ActionBarActivity
         TextView textFormularioMaterialTransp = (TextView) findViewById(R.id.textMatTranspDetailFormualario);
         TextView textFormularioDefeitoConstatado = (TextView) findViewById(R.id.textDefeitoConstDetailFormulario);
         TextView textFormularioProcedAdot = (TextView) findViewById(R.id.textProcedimentoAdotDetailFormulario);
+        TextView textFormularioPendencias = (TextView) findViewById(R.id.textPendenciasAdotDetailFormulario);
         TextView textFormularioKmRodad = (TextView) findViewById(R.id.textKmRodadoDetailFormulario);
         TextView textFormularioInicioDeslocamento = (TextView) findViewById(R.id.textInicioDeslocamentoDetailFormulario);
         TextView textFormularioInicioTrabalho = (TextView) findViewById(R.id.textInicioTrabalhoDetailFormulario);
@@ -78,6 +81,7 @@ public class DetailRelatorioAssistenciaTecnicaActivity extends ActionBarActivity
         textFormularioMaterialTransp.setText(relatorioAssistenciaTecnica.getMaterialTransp());
         textFormularioDefeitoConstatado.setText(relatorioAssistenciaTecnica.getDefeitoCostatado());
         textFormularioProcedAdot.setText(relatorioAssistenciaTecnica.getProcedAdot());
+        textFormularioPendencias.setText(relatorioAssistenciaTecnica.getPendencias());
         textFormularioKmRodad.setText(relatorioAssistenciaTecnica.getKmRodad());
         textFormularioInicioDeslocamento.setText(relatorioAssistenciaTecnica.getInicioDeslocamento());
         textFormularioInicioTrabalho.setText(relatorioAssistenciaTecnica.getInicioTrabalho());

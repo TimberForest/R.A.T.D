@@ -1,11 +1,12 @@
 package br.com.timberforest.ratd.formulariosActivity.relatorioAssistenciaTecnica;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AlertDialog;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -13,26 +14,21 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
-import android.content.res.Resources;
-import android.text.TextUtils;
 import android.widget.TextView;
 import android.widget.Toast;
-import java.util.Date;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
-//import br.com.timberforest.ratd.R;
 import br.com.timberforest.ratd.R;
-import br.com.timberforest.ratd.dao.relatorioAssistenciaTecnica.RelatorioAssistenciaTecnicaDao;
 import br.com.timberforest.ratd.dao.cadastroMecanico.CadastroMecanicoDao;
-import br.com.timberforest.ratd.dashboards.MainActivity;
+import br.com.timberforest.ratd.dao.relatorioAssistenciaTecnica.RelatorioAssistenciaTecnicaDao;
 import br.com.timberforest.ratd.listActivity.relatorioAssistenciaTecnica.ListRelatorioAssistenciaTecnicaActivity;
 import br.com.timberforest.ratd.model.CadastroMecanico.CadastroMecanico;
-import br.com.timberforest.ratd.model.relatorioAssitenciaTecnica.CameraActivity;
+import br.com.timberforest.ratd.utilitarios.CameraActivity;
 import br.com.timberforest.ratd.model.relatorioAssitenciaTecnica.RelatorioAssistenciaTecnica;
 import br.com.timberforest.ratd.sharedPreferences.SharedPreferencesDeslocamento;
 import br.com.timberforest.ratd.utilitarios.Utils;
-
 import static br.com.timberforest.ratd.sharedPreferences.SharedPreferencesDeslocamento.PREFS_NAME;
 
 public class FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
@@ -43,27 +39,9 @@ public class FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
 
     private RelatorioAssistenciaTecnica relatorioAssistenciaTecnica;
     private Resources resources;
-    private EditText edtChassi;
-    private EditText edtCliente;
-    private EditText edtModelo;
-    private EditText edtHorimetro;
-    private EditText edtCidadeCliente;
-    private EditText edtEstadoCliente;
-    private EditText edtLocalDaObra;
-    private EditText edtDefeitoConstatado;
-    private EditText edtProcedimentoAdotado;
+    private EditText edtChassi, edt_inicio_trabalho, edt_inicio_deslocamento, edt_inicio_almoco, edtCliente,edtModelo, edtHorimetro, edtEstadoCliente, edtCidadeCliente,edtLocalDaObra,edtDefeitoConstatado,
+    edtProcedimentoAdotado,edt_fim_almoco, edt_fim_trabalho,edt_fim_deslocamento,edt_km_rodado,edtCodigoPeca,edtQuantidade,edtDescricao, edt_pendencias;
 
-    private EditText edt_inicio_trabalho;
-    private EditText edt_inicio_deslocamento;
-    private EditText edt_inicio_almoco;
-    private EditText edt_fim_almoco;
-    private EditText edt_fim_trabalho;
-    private EditText edt_fim_deslocamento;
-    private EditText edt_km_rodado;
-
-    private EditText edtCodigoPeca;
-    private EditText edtQuantidade;
-    private EditText edtDescricao;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -111,7 +89,7 @@ public class FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
             Utils.setTextEditText(this, R.id.editGetMaterialTransp, relatorioAssistenciaTecnica.getMaterialTransp());
             Utils.setTextEditText(this, R.id.editGetDefeitoConstado, relatorioAssistenciaTecnica.getDefeitoCostatado());
             Utils.setTextEditText(this, R.id.editGetProcAdot, relatorioAssistenciaTecnica.getProcedAdot());
-
+            Utils.setTextEditText(this, R.id.edt_pendencias, relatorioAssistenciaTecnica.getPendencias());
             Utils.setTextEditText(this, R.id.edt_inicio_deslocamento, relatorioAssistenciaTecnica.getInicioDeslocamento());
             Utils.setTextEditText(this, R.id.edt_inicio_trabalho, relatorioAssistenciaTecnica.getInicioTrabalho());
             Utils.setTextEditText(this, R.id.edt_inicio_almoco, relatorioAssistenciaTecnica.getInicioAlmoco());
@@ -130,13 +108,40 @@ public class FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
             relatorioAssistenciaTecnica = new RelatorioAssistenciaTecnica();
         }
     }
+
+    //botão voltar do device
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if ((keyCode == KeyEvent.KEYCODE_BACK)) {
-            
+            voltarListaAssistenciaTecnica();
         }
-
         return super.onKeyDown(keyCode, event);
+    }
+
+    public void voltarListaAssistenciaTecnica()  {
+        //LayoutInflater é utilizado para inflar nosso layout em uma view.
+        //-pegamos nossa instancia da classe
+        LayoutInflater li = getLayoutInflater();
+
+        //inflamos o layout alerta.xml na view
+        View view = li.inflate(R.layout.dialog_deseja_realmente_voltar, null);
+        //definimos para o botão do layout um clickListener
+        view.findViewById(R.id.btn_sim).setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                Intent intent = new Intent(FormRelatorioAssistenciaTecnicaActivity.this, ListRelatorioAssistenciaTecnicaActivity.class);
+                startActivity(intent);
+            }
+        });
+        view.findViewById(R.id.btn_nao).setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0) {
+                return;
+            }
+        });
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(view);
+        alerta = builder.create();
+        alerta.show();
     }
 
 // importando o deslocamento e travando os edt para edição
@@ -214,7 +219,7 @@ public class FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
         relatorioAssistenciaTecnica.setMaterialTransp(Utils.getTextFromEditText(this, R.id.editGetMaterialTransp));
         relatorioAssistenciaTecnica.setDefeitoCostatado(Utils.getTextFromEditText(this, R.id.editGetDefeitoConstado));
         relatorioAssistenciaTecnica.setProcedAdot(Utils.getTextFromEditText(this, R.id.editGetProcAdot));
-
+        relatorioAssistenciaTecnica.setPendencias(Utils.getTextFromEditText(this, R.id.edt_pendencias));
         relatorioAssistenciaTecnica.setKmRodad(Utils.getTextFromEditText(this, R.id.edt_km_rodado));
 
         relatorioAssistenciaTecnica.setInicioDeslocamento(Utils.getTextFromEditText(this, R.id.edt_inicio_deslocamento));

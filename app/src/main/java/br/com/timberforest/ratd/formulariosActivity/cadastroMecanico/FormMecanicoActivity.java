@@ -1,6 +1,8 @@
 package br.com.timberforest.ratd.formulariosActivity.cadastroMecanico;
 
 import android.content.res.Resources;
+import android.support.v4.app.NavUtils;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -9,6 +11,7 @@ import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -28,14 +31,18 @@ public class FormMecanicoActivity extends ActionBarActivity {
     private EditText edtFilial;
     private EditText edtCidade;
     private EditText edtEstado;
+    private CheckBox cb_ativo, cb_inativo;
 
     private Resources resources;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_form_relatorio_avaliacao_operacional);
+//        setContentView(R.layout.activity_form_relatorio_avaliacao_operacional);
         setContentView(R.layout.activity_form_cadastro_mecanico);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
         initViews();
         if (getIntent().hasExtra("CadastroMecanico")) {
             mecanico = (CadastroMecanico) getIntent().getExtras().get("CadastroMecanico");
@@ -57,6 +64,8 @@ public class FormMecanicoActivity extends ActionBarActivity {
         mecanico.setFilial(Utils.getTextFromEditText(this, R.id.editFilialMecanico));
         mecanico.setCidade(Utils.getTextFromEditText(this, R.id.editCidadeMecanico));
         mecanico.setEstado(Utils.getTextFromEditText(this, R.id.editEstadoMecanico));
+
+
         String msgSalvarMecanico = getResources().getString(R.string.mecanicoSalvo);
         if (validateFields()) {
             cadastroMecanicoDao.salvar(mecanico);
@@ -142,9 +151,15 @@ public class FormMecanicoActivity extends ActionBarActivity {
         getMenuInflater().inflate(R.menu.menu_simples_botao_voltar, menu);
         return true;
     }
+
+
     public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId()==R.id.action_voltar) {
             super.finish();
+        }
+        if(item.getItemId()==R.id.home){
+            NavUtils.navigateUpFromSameTask(this);
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }

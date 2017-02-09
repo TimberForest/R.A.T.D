@@ -420,7 +420,7 @@
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="180dp"
+                android:layout_height="115dp"
                 android:id="@+id/editGetDefeitoConstado"
                 android:textSize="15dp"
                 android:gravity="top"
@@ -436,8 +436,24 @@
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="180dp"
+                android:layout_height="115dp"
                 android:id="@+id/editGetProcAdot"
+                android:textSize="15dp"
+                android:gravity="top"
+                android:imeOptions="actionDone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pendencias:"
+                android:textColor="#000000"
+                android:textSize="17dp"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:id="@+id/edt_pendencias"
                 android:textSize="15dp"
                 android:gravity="top"
                 android:imeOptions="actionDone"/>

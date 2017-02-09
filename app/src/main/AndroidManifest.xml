@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="br.com.timberforest.ratd">
 
     <application
@@ -48,22 +49,46 @@
             android:name=".detail.cadastroMecanico.DetailMecanicoActivity"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_mecanico_detail"
-            android:screenOrientation="landscape" />
+            android:parentActivityName=".dashboards.MainActivity"
+            android:screenOrientation="landscape">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".dashboards.MainActivity"
+                />
+        </activity>
         <activity
             android:name=".formulariosActivity.cadastroMecanico.FormMecanicoActivity"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_mecanico_form"
-            android:screenOrientation="landscape" />
+            android:parentActivityName=".dashboards.MainActivity"
+            android:screenOrientation="landscape">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".dashboards.MainActivity"
+                />
+        </activity>
         <activity
             android:name=".listActivity.cadastroMecanico.ListCadastroMecanicoActivity"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_mecanico_list"
-            android:screenOrientation="landscape" />
+            android:parentActivityName=".dashboards.MainActivity"
+            android:screenOrientation="landscape">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".dashboards.MainActivity"
+                />
+        </activity>
         <activity
             android:name=".detail.relatorioAssistenciaTecnica.DetailRelatorioAssistenciaTecnicaActivity"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_formulario_detail"
-            android:screenOrientation="landscape" />
+            android:parentActivityName=".dashboards.MainActivity"
+            android:screenOrientation="landscape">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".dashboards.MainActivity"
+                />
+        </activity>
         <activity
             android:name=".listActivity.relatorioAssistenciaTecnica.ListRelatorioAssistenciaTecnicaActivity"
             android:configChanges="orientation|keyboardHidden"
@@ -75,7 +100,7 @@
             android:label="@string/title_activity_form1_dados"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".model.relatorioAssitenciaTecnica.CameraActivity"
+            android:name=".utilitarios.CameraActivity"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/title_activity_camera"
             android:screenOrientation="landscape" />
@@ -552,12 +577,15 @@
         <activity
             android:name=".sharedPreferences.SharedPreferencesEmailActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="landscape" />
+            android:screenOrientation="landscape"
+            />
         <activity
             android:name=".sharedPreferences.SharedPreferencesDeslocamento"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="landscape"
-            android:windowSoftInputMode="stateHidden"/>
+            android:windowSoftInputMode="stateHidden"
+            android:theme="@style/AppTheme.NoActionBar"
+            />
     </application>
 
 </manifest>

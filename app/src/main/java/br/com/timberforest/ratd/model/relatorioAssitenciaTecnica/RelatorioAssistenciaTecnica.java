@@ -35,7 +35,7 @@ public class RelatorioAssistenciaTecnica implements Serializable{
     private String fimAlmoco;
     private String fimTrabalho;
     private String fimDeslocamento;
-
+    private String pendencias;
     private String getCodPec;
     private String getPecaQtd;
     private String getDescPec;
@@ -49,7 +49,7 @@ public class RelatorioAssistenciaTecnica implements Serializable{
     public RelatorioAssistenciaTecnica(String relator, String data, String numeroRelatorio, String numeroChassi,
                                        String modelo, String horimetro, String distribuidorAssisTec, String cidadeDistr,
                                        String estadoDistr, String cliente, String cidadeCli, String estadoCli, String localObra,
-                                       String materialTransp, String defeitoCostatado, String procedAdot, String kmRodad, String inicioDeslocamento,
+                                       String materialTransp, String defeitoCostatado, String procedAdot, String pendencias, String kmRodad, String inicioDeslocamento,
                                        String inicioTrabalho, String inicioAlmoco, String fimAlmoco, String fimTrabalho, String fimDeslocamento,
                                        String getCodPec, String getPecaQtd, String getDescPec, String getCodPec1, String getPecaQtd1, String getDescPec1){
         this.relator= relator;
@@ -68,6 +68,7 @@ public class RelatorioAssistenciaTecnica implements Serializable{
         this.materialTransp= materialTransp;
         this.defeitoCostatado= defeitoCostatado;
         this.procedAdot= procedAdot;
+        this.pendencias= pendencias;
         this.kmRodad= kmRodad;
         this.inicioDeslocamento=inicioDeslocamento;
         this.inicioTrabalho=inicioTrabalho;
@@ -92,6 +93,15 @@ public class RelatorioAssistenciaTecnica implements Serializable{
 
     public void setDefeitoCostatado(String defeitoCostatado) {
         this.defeitoCostatado = defeitoCostatado;
+    }
+
+    @JavascriptInterface
+    public String getPendencias() {
+        return pendencias;
+    }
+
+    public void setPendencias(String pendencias) {
+        this.pendencias = pendencias;
     }
 
     @JavascriptInterface

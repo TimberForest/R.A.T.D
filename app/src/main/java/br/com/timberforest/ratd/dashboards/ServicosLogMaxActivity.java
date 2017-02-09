@@ -1,5 +1,6 @@
 package br.com.timberforest.ratd.dashboards;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -41,8 +42,8 @@ public class ServicosLogMaxActivity extends ActionBarActivity {
 //                startActivity(new Intent(this, FormGuiaManutencaoLogmaxActivity.class));
                 break;
             case R.id.revisao500Hrs:
-                Toast.makeText(getApplicationContext(), "Relatório em desenvolvimento !", Toast.LENGTH_SHORT).show();
-//                startActivity(new Intent(this, DashRevisao500hrsLogMaxModelosActivity.class));
+//                Toast.makeText(getApplicationContext(), "Relatório em desenvolvimento !", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, DashRevisao500hrsLogMaxModelosActivity.class));
                 break;
         }
     }

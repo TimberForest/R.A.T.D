@@ -284,7 +284,7 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
-        android:layout_height="117dp"
+        android:layout_height="70dp"
         android:id="@+id/linearLayout6"
         android:layout_below="@+id/linearLayout14"
         android:layout_alignParentStart="true">
@@ -299,19 +299,28 @@
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="117dp"
-        android:id="@+id/linearLayout7"
-        android:layout_below="@+id/linearLayout8"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:id="@+id/linearLayout699"
+        android:layout_below="@+id/linearLayout6"
         android:layout_alignParentStart="true">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textDefeitoConstDetailFormulario"
+            android:text="Pendencias"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:layout_margin="1px"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textPendenciasAdotDetailFormulario"
             android:layout_margin="1px"/>
 
     </LinearLayout>
+
 
     <LinearLayout
         android:orientation="vertical"
@@ -437,17 +446,6 @@
             android:id="@+id/textView26" />
 
     </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="PEÇAS SUBSTITUIDAS"
-        android:textColor="#000000"
-        android:textSize="16dp"
-        android:id="@+id/textView25"
-        android:layout_gravity="center_horizontal"
-        android:layout_below="@+id/linearLayout6"
-        android:layout_alignStart="@+id/linearLayout12" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -711,5 +709,31 @@
             />
     </LinearLayout>
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:id="@+id/linearLayout7"
+        android:layout_below="@+id/linearLayout8"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textDefeitoConstDetailFormulario"
+            android:layout_margin="1px"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PEÇAS SUBSTITUIDAS"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        android:id="@+id/textView25"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/linearLayout699"
+        android:layout_alignStart="@+id/linearLayout12" />
 
 </RelativeLayout>

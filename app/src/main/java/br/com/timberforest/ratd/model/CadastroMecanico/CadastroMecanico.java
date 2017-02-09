@@ -31,6 +31,7 @@ public class CadastroMecanico implements Serializable{
         this.estado= estado;
 
     }
+
     @JavascriptInterface
     public String getCidade() {
         return cidade;

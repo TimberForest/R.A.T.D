@@ -1,6 +1,8 @@
 package br.com.timberforest.ratd.listActivity.cadastroMecanico;
 
 import android.content.Intent;
+import android.support.v4.app.NavUtils;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -25,6 +27,9 @@ public class ListCadastroMecanicoActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_cadastro_mecanico);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
 
         ListView mecanicosListView= (ListView) findViewById(R.id.mecanicosListView);
 
@@ -71,6 +76,10 @@ public class ListCadastroMecanicoActivity extends ActionBarActivity {
         }
         if(item.getItemId()==R.id.action_voltar) {
             super.finish();
+        }
+        if(item.getItemId()==R.id.home){
+            NavUtils.navigateUpFromSameTask(this);
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }

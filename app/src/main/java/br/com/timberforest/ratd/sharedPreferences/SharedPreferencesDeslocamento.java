@@ -1,11 +1,13 @@
 package br.com.timberforest.ratd.sharedPreferences;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -42,6 +44,12 @@ public class SharedPreferencesDeslocamento extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shared_preferences_deslocamento);
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+
+        View decorView = getWindow().getDecorView();
+// Esconde tanto a barra de navegação e a barra de status .
+        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
 
         btn_km_inicial = (Button) findViewById(R.id.btn_km_inicial);
         btn_km_final = (Button) findViewById(R.id.btn_km_final);
@@ -152,7 +160,15 @@ public class SharedPreferencesDeslocamento extends AppCompatActivity {
         });
 
     }
-
+    //botão voltar do device
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_BACK)) {
+            Intent intent = new Intent(SharedPreferencesDeslocamento.this, MainActivity.class);
+            startActivity(intent);
+        }
+        return super.onKeyDown(keyCode, event);
+    }
     public void limparCampos(){
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();
@@ -411,7 +427,7 @@ public class SharedPreferencesDeslocamento extends AppCompatActivity {
     }
 
 
-
+/*
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -427,7 +443,7 @@ public class SharedPreferencesDeslocamento extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 
 
 }

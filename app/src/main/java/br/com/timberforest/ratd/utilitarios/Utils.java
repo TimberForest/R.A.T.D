@@ -14,7 +14,8 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
- * Created by andreives on 17/04/2015.
+ * Created by Cayo Sander on 17/04/2015.
+ * email: cayo.muniz@fatec.sp.gov.br
  */
 public class Utils {
     public static void startActivityOnClickButton(final Activity activity,
@@ -40,6 +41,7 @@ public class Utils {
     public static void setTextFromTextView(Activity activity, int inputTextId, String text) {
         ((TextView) activity.findViewById(inputTextId)).setText(text);
     }
+
     public static String streamToString(InputStream is) throws IOException {
 
         byte[] bytes = new byte[1024];
@@ -50,8 +52,6 @@ public class Utils {
         }
         return new String(bout.toByteArray());
     }
-
-
 
     public static boolean hasFroyo() {
         return Build.VERSION.SDK_INT >= Build.VERSION_CODES.FROYO;

@@ -1,9 +1,12 @@
 package br.com.timberforest.ratd.detail.cadastroMecanico;
 import android.content.Intent;
+import android.support.v4.app.NavUtils;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import br.com.timberforest.ratd.R;
@@ -18,7 +21,10 @@ public class DetailMecanicoActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_cadastro_mecanico);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
         mecanico = (CadastroMecanico) getIntent().getExtras().get("CadastroMecanico");
+
         atualizarTela();
     }
     private void atualizarTela(){
@@ -72,6 +78,10 @@ public class DetailMecanicoActivity extends ActionBarActivity {
         }
         if (item.getItemId() == R.id.action_voltar) {
             super.finish();
+        }
+        if(item.getItemId()==R.id.home){
+            NavUtils.navigateUpFromSameTask(this);
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }
