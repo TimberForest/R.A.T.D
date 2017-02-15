@@ -108,12 +108,14 @@
                 android:id="@+id/editgetDataFormulario" />
 
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="250dp"
                 android:ems="10"
+                android:gravity="center"
                 android:inputType="number"
-                android:textSize="15dp"
+                android:textSize="22dp"
+                android:textStyle="bold"
                 android:id="@+id/editGetRelatNum"/>
         </LinearLayout>
 
@@ -159,8 +161,8 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
+                android:ems="20"
+                android:maxLength="30"
                 android:inputType="textCapWords"
                 android:textSize="15dp"
                 android:id="@+id/editGetChassiN"
@@ -171,8 +173,9 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:layout_weight="1"
+                android:ems="15"
+                android:maxLength="25"
+                android:layout_marginLeft="65dp"
                 android:inputType="textCapWords"
                 android:textSize="15dp"
                 android:id="@+id/editGetModelo"
@@ -182,9 +185,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:layout_weight="1"
+                android:layout_marginLeft="150dp"
                 android:inputType="numberDecimal"
                 android:textSize="15dp"
+                android:maxLength="20"
                 android:id="@+id/editGetHorimetro"
                 android:imeOptions="actionNext"/>
         </LinearLayout>

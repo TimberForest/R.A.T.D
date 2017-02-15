@@ -5,6 +5,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -38,6 +39,15 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //botão voltar do device
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_BACK)) {
+            finish();
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -57,16 +67,15 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, SharedPreferencesEmailActivity.class);
             startActivity(intent);
         }
-        if (item.getItemId()== R.id.action_voltar) {
+/*        if (item.getItemId()== R.id.action_voltar) {
             super.finish();
-        }
+        }*/
 
         return super.onOptionsItemSelected(item);
     }
 
     @Override
     public void finish() {
-        Toast.makeText(getApplicationContext(), "R.A.T.D. finalizado  !", Toast.LENGTH_LONG).show();
         super.finish();
         android.os.Process.killProcess(android.os.Process.myPid());
     }

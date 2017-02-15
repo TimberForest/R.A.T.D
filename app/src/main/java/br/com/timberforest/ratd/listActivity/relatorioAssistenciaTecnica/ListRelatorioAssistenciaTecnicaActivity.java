@@ -2,6 +2,7 @@ package br.com.timberforest.ratd.listActivity.relatorioAssistenciaTecnica;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -49,6 +50,17 @@ public class ListRelatorioAssistenciaTecnicaActivity extends ActionBarActivity {
         intent.putExtra("relatorioAssistenciaTecnica", relatorioAssistenciaTecnica);
         startActivity(intent);
     }
+
+    //botão voltar do device
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_BACK)) {
+            Intent intent = new Intent(ListRelatorioAssistenciaTecnicaActivity.this, MainActivity.class);
+            startActivity(intent);
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_list_relatorio_assistencia_tecnica, menu);
@@ -63,10 +75,10 @@ public class ListRelatorioAssistenciaTecnicaActivity extends ActionBarActivity {
         if(item.getItemId()==R.id.action_refresh) {
             buscaFormularios();
         }
-        if(item.getItemId()==R.id.action_voltar) {
+/*        if(item.getItemId()==R.id.action_voltar) {
             Intent intent = new Intent(ListRelatorioAssistenciaTecnicaActivity.this, MainActivity.class);
             startActivity(intent);
-        }
+        }*/
         return super.onOptionsItemSelected(item);
     }
     @Override

@@ -1,31 +1,22 @@
 package br.com.timberforest.ratd.sharedPreferences;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.KeyEvent;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-
 import br.com.timberforest.ratd.R;
 import br.com.timberforest.ratd.dashboards.MainActivity;
+import br.com.timberforest.ratd.formulariosActivity.relatorioAssistenciaTecnica.FormRelatorioAssistenciaTecnicaActivity;
 import br.com.timberforest.ratd.listActivity.relatorioAssistenciaTecnica.ListRelatorioAssistenciaTecnicaActivity;
-
-import static br.com.timberforest.ratd.R.id.edt_email;
-import static br.com.timberforest.ratd.R.id.edt_inicio_almoco;
 
 public class SharedPreferencesDeslocamento extends AppCompatActivity {
     public static final String PREFS_NAME = "Preferences";
@@ -44,12 +35,6 @@ public class SharedPreferencesDeslocamento extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shared_preferences_deslocamento);
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
-
-        View decorView = getWindow().getDecorView();
-// Esconde tanto a barra de navegação e a barra de status .
-        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                | View.SYSTEM_UI_FLAG_FULLSCREEN;
-        decorView.setSystemUiVisibility(uiOptions);
 
         btn_km_inicial = (Button) findViewById(R.id.btn_km_inicial);
         btn_km_final = (Button) findViewById(R.id.btn_km_final);
@@ -122,7 +107,7 @@ public class SharedPreferencesDeslocamento extends AppCompatActivity {
                     editor.putString("km_inicial", edt_km_inicial.getText().toString());
                     editor.commit();
                     Toast.makeText(getApplicationContext(), "Km inicial gravado com sucesso !"+edt_km_inicial.getText().toString(), Toast.LENGTH_LONG).show();
-                    atualizaCampos();
+                    iniDesl();
                 }
             }
         });
@@ -221,18 +206,14 @@ public class SharedPreferencesDeslocamento extends AppCompatActivity {
             btn_km_final.setEnabled(false);
         }else{
             btn_ini_desl.setEnabled(true);
-            btn_ini_trab.setEnabled(false);
-            btn_ini_alm.setEnabled(false);
+            btn_ini_trab.setEnabled(true);
+            btn_ini_alm.setEnabled(true);
             btn_fim_alm.setEnabled(false);
             btn_fim_trab.setEnabled(false);
             btn_fim_desl.setEnabled(false);
             edt_km_final.setEnabled(false);
             btn_km_final.setEnabled(false);
         }
-        verificaIniAlm();
-    }
-
-    private void verificaIniAlm() {
         if(txt_ini_desl.getText().toString().equals("")){
             btn_fim_alm.setEnabled(false);
             btn_fim_trab.setEnabled(false);
@@ -241,29 +222,10 @@ public class SharedPreferencesDeslocamento extends AppCompatActivity {
             btn_km_final.setEnabled(false);
         }else{
             btn_ini_trab.setEnabled(true);
-        }
-
-        if(txt_ini_trab.getText().toString().equals("")){
-            btn_fim_alm.setEnabled(false);
-            btn_fim_trab.setEnabled(false);
-            btn_fim_desl.setEnabled(false);
-            edt_km_final.setEnabled(false);
-            btn_km_final.setEnabled(false);
-        }else{
             btn_ini_alm.setEnabled(true);
         }
 
-        if(txt_ini_alm.getText().toString().equals("")){
-            btn_fim_alm.setEnabled(false);
-            btn_fim_trab.setEnabled(false);
-            btn_fim_desl.setEnabled(false);
-            edt_km_final.setEnabled(false);
-            btn_km_final.setEnabled(false);
-        }else{
-            btn_fim_alm.setEnabled(true);
-        }
-
-        if(txt_fim_alm.getText().toString().equals("")){
+        if(txt_ini_trab.getText().toString().equals("")){
             btn_fim_trab.setEnabled(false);
             btn_fim_desl.setEnabled(false);
             edt_km_final.setEnabled(false);
@@ -272,7 +234,30 @@ public class SharedPreferencesDeslocamento extends AppCompatActivity {
             btn_fim_trab.setEnabled(true);
         }
 
-        if(txt_fim_trab.getText().toString().equals("")){
+        if(txt_ini_alm.getText().toString().equals("")){
+            btn_fim_alm.setEnabled(false);
+            btn_fim_desl.setEnabled(false);
+            edt_km_final.setEnabled(false);
+            btn_km_final.setEnabled(false);
+        }else{
+            btn_fim_alm.setEnabled(true);
+        }
+
+/*        if(txt_ini_trab.getText().equals("") && txt_fim_trab.getText().equals("")){
+            btn_ini_alm.setEnabled(false);
+        }else {
+            btn_ini_alm.setEnabled(true);
+            btn_ini_desl.setEnabled(false);
+        }*/
+
+/*        if(txt_ini_alm.getText().equals("") && txt_fim_alm.getText().equals("")){
+            btn_ini_trab.setEnabled(true);
+        }else {
+            btn_ini_trab.setEnabled(false);
+            btn_ini_desl.setEnabled(false);
+        }
+
+ */       if(txt_fim_trab.getText().toString().equals("") || txt_fim_alm.getText().toString().equals("")){
             btn_fim_desl.setEnabled(false);
             edt_km_final.setEnabled(false);
             btn_km_final.setEnabled(false);
@@ -286,10 +271,12 @@ public class SharedPreferencesDeslocamento extends AppCompatActivity {
         }else{
             btn_km_final.setEnabled(true);
             edt_km_final.setEnabled(true);
+
             verificaBotaoFinal();
         }
 
     }
+
 
     private void verificaBotaoFinal() {
         if (edt_km_inicial.getText().toString().equals("") || edt_km_final.getText().toString().equals("")) {
@@ -329,8 +316,9 @@ public class SharedPreferencesDeslocamento extends AppCompatActivity {
         long aux=aux2-aux1;
         editor.putString("km_rodado", ""+aux);
         editor.commit();
-        Toast.makeText(getApplicationContext(), aux+" Foram rodados !", Toast.LENGTH_SHORT).show();
-        atualizaCampos();
+        Toast.makeText(getApplicationContext(), aux+" km Foram rodados !", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(SharedPreferencesDeslocamento.this, FormRelatorioAssistenciaTecnicaActivity.class);
+        startActivity(intent);
     }
 
     public void iniDesl(){

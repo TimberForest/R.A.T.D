@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5.0dip">
+        <Button
+            android:textColor="@color/preto"
+            android:id="@+id/btnSave"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salvar" />
+        <Button
+            android:textColor="@color/preto"
+            android:id="@+id/btnClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5.0dip"
+            android:text="Limpar" />
+        <Button
+            android:textColor="@color/preto"
+            android:id="@+id/btnLoadAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5.0dip"
+            android:text="Carregar Tudo" />
+    </LinearLayout>
+    <android.gesture.GestureOverlayView
+        android:id="@+id/assinatura"
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gestureColor="@android:color/black"
+        android:fadeOffset="300000"
+        android:gestureStrokeType="multiple"
+        android:gestureStrokeLengthThreshold="0.1"
+        android:eventsInterceptionEnabled="true"
+        android:fadeEnabled="false" />
+</LinearLayout>

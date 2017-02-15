@@ -13,9 +13,9 @@
         app:showAsAction="ifRoom"
         android:title="Atualizar"
         android:icon="@drawable/ic_refresh_white_48dp"/>
-    <item
+<!--    <item
         android:id="@+id/action_voltar"
         app:showAsAction="ifRoom"
         android:title="Voltar"
-        android:icon="@drawable/ic_reply_white_48dp"/>
+        android:icon="@drawable/ic_reply_white_48dp"/>-->
 </menu>

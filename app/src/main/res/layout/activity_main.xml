@@ -28,9 +28,11 @@
 
             <LinearLayout
                 style="@style/LinearBasico"
+                android:layout_width="420dp"
+                android:layout_height="200dp"
                 android:layout_marginLeft="43dp"
                 android:layout_marginRight="43dp"
-                android:background="@drawable/logo_timber_forest">
+                android:background="@drawable/logo_timber">
 
             </LinearLayout>
 
@@ -40,7 +42,7 @@
 
                 <TextView
                     style="@style/BotaoSimplesAmarelo"
-                    android:text="Relatários de assistência técnica"
+                    android:text="Relatórios de assistência técnica"
                     android:onClick="selecionarOpcao"
                     android:id="@+id/RelatoriosAssistenciaTecnicaButton"
                     />
@@ -88,7 +90,10 @@
             android:background="@drawable/emp_palfinger"
             android:id="@+id/btn_palfinger" />
         <Button
-            style="@style/BotaoClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="selecionarOpcao"
+            android:layout_weight="1"
             android:background="@drawable/emp_ponsse"
             android:id="@+id/btn_ponsse" />
 

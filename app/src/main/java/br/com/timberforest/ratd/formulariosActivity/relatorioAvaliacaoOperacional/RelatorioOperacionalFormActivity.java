@@ -1372,39 +1372,51 @@ public class RelatorioOperacionalFormActivity extends ActionBarActivity {
     {
         String strResultNotaSeguranca = NumberFormat.getInstance().format(resultadoNotaSeguranca);
         edtnotaSeguranca.setText(strResultNotaSeguranca);
+        edtnotaSeguranca.setEnabled(false);
 
         String strResultNotaMeioAmbiente = NumberFormat.getInstance().format(resultadoNotaMeioAmbiente);
         edtnotaMeioAmbiente.setText(strResultNotaMeioAmbiente);
+        edtnotaMeioAmbiente.setEnabled(false);
 
         String strResultNotaPlanejamento = NumberFormat.getInstance().format(resultadoNotaPlanejamento);
         edtnotaPlanejamento.setText(strResultNotaPlanejamento);
+        edtnotaPlanejamento.setEnabled(false);
 
         String strResultNotaSimulador = NumberFormat.getInstance().format(resultadoNotaSimulador);
         edtnotaSimulador.setText(strResultNotaSimulador);
+        edtnotaSimulador.setEnabled(false);
 
         String strResultNotaRelatóriasVerificaçãoReapertos = NumberFormat.getInstance().format(resultadoNotaRelatoriosVerificacoesReaperto);
         edtnotaRelatoriosVerificacoesReaperto.setText(strResultNotaRelatóriasVerificaçãoReapertos);
+        edtnotaRelatoriosVerificacoesReaperto.setEnabled(false);
 
         String strResultNotaPainelAlavancasRegulagens = NumberFormat.getInstance().format(resultadoNotaPainelAlavancaRegulag);
         edtnotaPainelAlavancaRegulag.setText(strResultNotaPainelAlavancasRegulagens);
+        edtnotaPainelAlavancaRegulag.setEnabled(false);
 
         String strNotaTecicasOperacao = NumberFormat.getInstance().format(resultadoNotaTecnicasOp);
         edtnotaTecnicasOp.setText(strNotaTecicasOperacao);
+        edtnotaTecnicasOp.setEnabled(false);
 
         String strTecicasNotaDadosTecnicoEquip = NumberFormat.getInstance().format(resultadoNotaDadosTecEq);
         edtnotaDadosTecEq.setText(strTecicasNotaDadosTecnicoEquip);
+        edtnotaDadosTecEq.setEnabled(false);
 
         String strTecicasNotaTrabalhoEqui = NumberFormat.getInstance().format(resultadoNotaTrabalhoEquipe);
         edtnotaTrabalhoEquipe.setText(strTecicasNotaTrabalhoEqui);
+        edtnotaTrabalhoEquipe.setEnabled(false);
 
         String strTecicasNotaAvaliacaoQual = NumberFormat.getInstance().format(resultadoNotaAvaliacaoQualidade);
         edtnotaAvaliacaoQualidade.setText(strTecicasNotaAvaliacaoQual);
+        edtnotaAvaliacaoQualidade.setEnabled(false);
 
         String strTecicasNotaprodução = NumberFormat.getInstance().format(resultadoNotaProducao);
         edtnotaProducao.setText(strTecicasNotaprodução);
+        edtnotaProducao.setEnabled(false);
 
         String strTecicasGeral = NumberFormat.getInstance().format(resultadoNotaGeral);
         edtnotaGeral.setText(strTecicasGeral);
+        edtnotaGeral.setEnabled(false);
     }
 
     @Override

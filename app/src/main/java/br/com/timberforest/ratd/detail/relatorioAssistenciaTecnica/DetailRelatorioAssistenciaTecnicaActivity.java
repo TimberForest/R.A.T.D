@@ -1,31 +1,50 @@
 package br.com.timberforest.ratd.detail.relatorioAssistenciaTecnica;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.os.Environment;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
 import br.com.timberforest.ratd.R;
 import br.com.timberforest.ratd.dao.relatorioAssistenciaTecnica.RelatorioAssistenciaTecnicaDao;
+import br.com.timberforest.ratd.dashboards.MainActivity;
 import br.com.timberforest.ratd.formulariosActivity.relatorioAssistenciaTecnica.FormRelatorioAssistenciaTecnicaActivity;
+import br.com.timberforest.ratd.listActivity.relatorioAssistenciaTecnica.ListRelatorioAssistenciaTecnicaActivity;
 import br.com.timberforest.ratd.model.CadastroMecanico.CadastroMecanico;
 import br.com.timberforest.ratd.model.relatorioAssitenciaTecnica.RelatorioAssistenciaTecnica;
 
+import br.com.timberforest.ratd.sharedPreferences.SharedPreferencesDeslocamento;
 import br.com.timberforest.ratd.utilitarios.EnviarEmail;
 
-public class DetailRelatorioAssistenciaTecnicaActivity extends ActionBarActivity {
+import static br.com.timberforest.ratd.R.string.salvar;
+
+public class DetailRelatorioAssistenciaTecnicaActivity extends ActionBarActivity implements View.OnClickListener{
     private RelatorioAssistenciaTecnicaDao relatorioAssistenciaTecnicaDao = new RelatorioAssistenciaTecnicaDao();
     private RelatorioAssistenciaTecnica relatorioAssistenciaTecnica;
     private CadastroMecanico mecanico;
     public static final String PREF_NAME = "Preferences";
+    FileOutputStream outputStream;
+    String filename = "ExemploTeste";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +52,17 @@ public class DetailRelatorioAssistenciaTecnicaActivity extends ActionBarActivity
         relatorioAssistenciaTecnica = (RelatorioAssistenciaTecnica) getIntent().getExtras().get("relatorioAssistenciaTecnica");
         atualizarTelaFormulario();
     }
+
+    //botão voltar do device
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_BACK)) {
+            Intent intent = new Intent(DetailRelatorioAssistenciaTecnicaActivity.this, ListRelatorioAssistenciaTecnicaActivity.class);
+            startActivity(intent);
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
     private void atualizarTelaFormulario(){
         TextView textFormularioRelator = (TextView) findViewById(R.id.textRelatorDetailFormulario);
         TextView textFormularioData = (TextView) findViewById(R.id.textDataDetailFormulario);
@@ -103,7 +133,7 @@ public class DetailRelatorioAssistenciaTecnicaActivity extends ActionBarActivity
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId()==R.id.action_delete){
+ /*       if(item.getItemId()==R.id.action_delete){
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle("Excluir RATD");
             builder.setMessage("Deseja realmente excluir esse RATD?");
@@ -121,7 +151,7 @@ public class DetailRelatorioAssistenciaTecnicaActivity extends ActionBarActivity
                 }
             });
             builder.show();
-        }
+        }*/
         if (item.getItemId() == R.id.action_edit) {
             Intent intent = new Intent(this, FormRelatorioAssistenciaTecnicaActivity.class);
             intent.putExtra("relatorioAssistenciaTecnica", relatorioAssistenciaTecnica);
@@ -142,7 +172,7 @@ public class DetailRelatorioAssistenciaTecnicaActivity extends ActionBarActivity
         if (item.getItemId() == R.id.action_assinatura) {
             Intent i = new Intent(Intent.ACTION_MAIN);
             PackageManager managerclock = getPackageManager();
-            i = managerclock.getLaunchIntentForPackage("com.rihan.digitalsignature");
+            i = managerclock.getLaunchIntentForPackage("com.vajsi.digital_signature");
             i.addCategory(Intent.CATEGORY_LAUNCHER);
             startActivity(i);
         }
@@ -155,5 +185,10 @@ public class DetailRelatorioAssistenciaTecnicaActivity extends ActionBarActivity
             relatorioAssistenciaTecnica = relatorioAssistenciaTecnicaDao.buscaPorId(relatorioAssistenciaTecnica.getIdFormulario());
             atualizarTelaFormulario();
         }
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 }

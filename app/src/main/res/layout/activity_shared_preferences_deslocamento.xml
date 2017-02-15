@@ -97,6 +97,7 @@
                 style="@style/BotoesBranco"
                 android:inputType="number"
                 android:hint="Informe o KM"
+                android:imeOptions="actionDone"
                 android:id="@+id/edt_km_inicial" />
 
             <Button

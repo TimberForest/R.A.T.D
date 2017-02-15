@@ -33,7 +33,7 @@ public class RelatorioAssistenciaTecnicaDao extends AppCompatActivity {
 
         values.put("relator", relatorioAssistenciaTecnica.getRelator());
         values.put("data", relatorioAssistenciaTecnica.getData());
-        values.put("numeroRelatorio", relatorioAssistenciaTecnica.getIdFormulario());
+        values.put("numeroRelatorio", relatorioAssistenciaTecnica.getNumeroRelatorio());
         values.put("chassi", relatorioAssistenciaTecnica.getNumeroChassi());
         values.put("modelo", relatorioAssistenciaTecnica.getModelo());
         values.put("horimetro", relatorioAssistenciaTecnica.getHorimetro());
@@ -55,7 +55,6 @@ public class RelatorioAssistenciaTecnicaDao extends AppCompatActivity {
         values.put("fimTrabalho", relatorioAssistenciaTecnica.getFimTrabalho());
         values.put("fimDeslocamento", relatorioAssistenciaTecnica.getFimDeslocamento());
         values.put("kmRodado", relatorioAssistenciaTecnica.getKmRodad());
-
         values.put("codigoPeca", relatorioAssistenciaTecnica.getGetCodPec());
         values.put("quantidade", relatorioAssistenciaTecnica.getPecaQtd());
         values.put("descricao", relatorioAssistenciaTecnica.getGetDescPec());
@@ -76,6 +75,23 @@ public class RelatorioAssistenciaTecnicaDao extends AppCompatActivity {
             database.delete("RelatorioAssistenciaTecnica","id="+ relatorioAssistenciaTecnica.getIdFormulario(),null);
         }
     }
+
+    public int ultimoRatd(){
+        int result = 0;
+        Cursor cursor = database.rawQuery("SELECT IFNULL(MAX(id), 0) + 1 FROM RelatorioAssistenciaTecnica", null);
+        int indiceColunaId = cursor.getColumnIndex("id");
+        while (cursor != null){
+            cursor.getString(indiceColunaId);
+
+            cursor.moveToNext();
+        }
+
+        return result;
+    }
+
+    //SELECT IFNULL(MAX(_id), 0) + 1 FROM table_name
+
+
     public List<RelatorioAssistenciaTecnica> busca(){
         List<RelatorioAssistenciaTecnica> relatorioAssistenciaTecnicas = new ArrayList<>();
         Cursor cursor= database.rawQuery("select id, relator, data, numeroRelatorio, chassi, modelo,horimetro, distribuidorPostoAss," +

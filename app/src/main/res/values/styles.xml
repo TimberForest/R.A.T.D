@@ -35,6 +35,7 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
         <item name="android:inputType">textEmailAddress</item>
     </style>
 
@@ -71,6 +72,20 @@
         <item name="android:onClick">selecionarOpcao</item>
         <item name="android:background">@drawable/screen_border</item>
     </style>
+
+    <style name="BotaoSimplesVerde">
+        <item name="android:textSize">22sp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textColor">@color/preto</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">365dp</item>
+        <item name="android:layout_height">53dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:onClick">selecionarOpcao</item>
+        <item name="android:background">@drawable/screen_border_verde</item>
+    </style>
+
 
     <!--Botões de Clique-->
     <style name="BotoesBranco">

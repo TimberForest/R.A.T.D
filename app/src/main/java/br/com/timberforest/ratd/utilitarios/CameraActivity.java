@@ -41,7 +41,7 @@ public class CameraActivity extends ActionBarActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_camera);
+        setContentView(R.layout.activity_fotos);
 
         imageViewChassi = (ImageView) findViewById(R.id.image_chassi);
         TextView btnChassi = (TextView) findViewById(R.id.btn_foto_chassi);
@@ -155,6 +155,25 @@ public class CameraActivity extends ActionBarActivity {
             }
         });
     }
+
+/*    public void atualizarImagens(){
+
+        String nomePasta = Environment.getExternalStorageDirectory()+"/relatorios";
+
+        File pasta = new File(nomePasta);
+        pasta.mkdirs();
+        if(pasta.exists()==true) {
+            pasta.mkdirs();
+        }
+        File file = new File(nomePasta+"chassi.jpg");
+
+        ImageView iv = (ImageView) findViewById(R.id.image_chassi);
+        iv.setImageBitmap(file);
+
+
+
+    }*/
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 

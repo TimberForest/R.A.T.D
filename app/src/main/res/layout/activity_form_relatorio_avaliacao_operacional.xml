@@ -845,6 +845,7 @@
             android:layout_toEndOf="@+id/linearLayout" />
 
         <TextView
+            style="@style/BotaoSimplesAmarelo"
             android:layout_width="150dp"
             android:layout_height="46dp"
             android:text="Salvar"
@@ -853,23 +854,17 @@
             android:gravity="center"
             android:id="@+id/salvarRelatorioOp"
             android:onClick="SalvarRelatorioOp"
-            android:background="#DAA520"
-            android:textColor="#000000"
-            android:textSize="22sp"
-            android:textStyle="bold"
             android:layout_below="@+id/linearLayout"
             android:layout_alignEnd="@+id/linearLayout" />
 
 
 
         <Button
-            android:layout_width="200dp"
-            android:layout_height="46dp"
+
             android:text="garar resultado"
-            android:background="#228B22"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            style="@style/BotaoSimplesVerde"
+            android:layout_width="250dp"
+            android:layout_height="46dp"
             android:id="@+id/onClick_btnSomar"
             android:layout_alignTop="@+id/salvarRelatorioOp"
             android:layout_toStartOf="@+id/salvarRelatorioOp" />

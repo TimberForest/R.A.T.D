@@ -27,7 +27,7 @@ public class CadastroMecanicoListAdapter extends ArrayAdapter<CadastroMecanico>{
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         //View de renderização de cada item
-        View rowView = inflater.inflate(R.layout.row_layout, parent, false);
+        View rowView = inflater.inflate(R.layout.row_layout_mecanico, parent, false);
 
         //TextView para o titulo
         TextView textView = (TextView) rowView.findViewById(R.id.label);

@@ -3,12 +3,14 @@ package br.com.timberforest.ratd.dashboards;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
 import br.com.timberforest.ratd.R;
+import br.com.timberforest.ratd.listActivity.relatorioAvaliacaoOperacional.ListRelatorioAvaliacaoOperacionalActivity;
 
 public class ServicosLogMaxActivity extends ActionBarActivity {
 
@@ -17,20 +19,16 @@ public class ServicosLogMaxActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_servicos_log_max);
     }
+    //botão voltar do device
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_simples_botao_voltar, menu);
-        return true;
-    }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        int id = item.getItemId();
-        if (id == R.id.action_voltar) {
-            super.finish();
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_BACK)) {
+            Intent intent = new Intent(ServicosLogMaxActivity.this, MainActivity.class);
+            startActivity(intent);
         }
-        return super.onOptionsItemSelected(item);
+        return super.onKeyDown(keyCode, event);
     }
+
     public void selecionarOpcao(View view) {
         switch (view.getId()) {
             case R.id.InstalacaoCertificadoGarantia:
@@ -42,8 +40,8 @@ public class ServicosLogMaxActivity extends ActionBarActivity {
 //                startActivity(new Intent(this, FormGuiaManutencaoLogmaxActivity.class));
                 break;
             case R.id.revisao500Hrs:
-//                Toast.makeText(getApplicationContext(), "Relatório em desenvolvimento !", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(this, DashRevisao500hrsLogMaxModelosActivity.class));
+                Toast.makeText(getApplicationContext(), "Relatório em desenvolvimento !", Toast.LENGTH_SHORT).show();
+//                startActivity(new Intent(this, DashRevisao500hrsLogMaxModelosActivity.class));
                 break;
         }
     }

@@ -46,12 +46,13 @@ public class RelatorioAssistenciaTecnica implements Serializable{
     public RelatorioAssistenciaTecnica(){
     }
 
-    public RelatorioAssistenciaTecnica(String relator, String data, String numeroRelatorio, String numeroChassi,
+    public RelatorioAssistenciaTecnica(Long idFormulario, String relator, String data, String numeroRelatorio, String numeroChassi,
                                        String modelo, String horimetro, String distribuidorAssisTec, String cidadeDistr,
                                        String estadoDistr, String cliente, String cidadeCli, String estadoCli, String localObra,
                                        String materialTransp, String defeitoCostatado, String procedAdot, String pendencias, String kmRodad, String inicioDeslocamento,
                                        String inicioTrabalho, String inicioAlmoco, String fimAlmoco, String fimTrabalho, String fimDeslocamento,
                                        String getCodPec, String getPecaQtd, String getDescPec, String getCodPec1, String getPecaQtd1, String getDescPec1){
+        this.idFormulario=idFormulario;
         this.relator= relator;
         this.data= data;
         this.numeroRelatorio= numeroRelatorio;

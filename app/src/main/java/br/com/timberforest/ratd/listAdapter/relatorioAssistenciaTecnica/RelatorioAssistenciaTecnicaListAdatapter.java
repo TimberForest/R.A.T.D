@@ -30,11 +30,13 @@ public class RelatorioAssistenciaTecnicaListAdatapter extends ArrayAdapter<Relat
         View rowView = inflater.inflate(R.layout.row_layout, parent, false);
 
         //TextView para o titulo
+        TextView textNumero = (TextView) rowView.findViewById(R.id.numero);
         TextView textView = (TextView) rowView.findViewById(R.id.label);
         TextView textView1 = (TextView) rowView.findViewById(R.id.label1);
 
         RelatorioAssistenciaTecnica relatorioAssistenciaTecnica = this.getItem(position);
         //Seta o texto da noticia no TextView
+        textNumero.setText(relatorioAssistenciaTecnica.getIdFormulario().toString());
         textView.setText(relatorioAssistenciaTecnica.getCliente());
         textView1.setText(relatorioAssistenciaTecnica.getData());
 

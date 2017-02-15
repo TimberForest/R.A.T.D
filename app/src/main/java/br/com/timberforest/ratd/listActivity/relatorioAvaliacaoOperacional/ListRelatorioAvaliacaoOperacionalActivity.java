@@ -3,13 +3,17 @@ package br.com.timberforest.ratd.listActivity.relatorioAvaliacaoOperacional;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import br.com.timberforest.ratd.R;
+import br.com.timberforest.ratd.dashboards.MainActivity;
+import br.com.timberforest.ratd.detail.relatorioAssistenciaTecnica.DetailRelatorioAssistenciaTecnicaActivity;
 import br.com.timberforest.ratd.formulariosActivity.relatorioAvaliacaoOperacional.RelatorioOperacionalFormActivity;
+import br.com.timberforest.ratd.listActivity.relatorioAssistenciaTecnica.ListRelatorioAssistenciaTecnicaActivity;
 import br.com.timberforest.ratd.listAdapter.relatorioAvaliacaoOperacional.RelatorioOperacionalListAdapter;
 import br.com.timberforest.ratd.dao.relatorioAvaliacaoOperacional.RelatorioAvaliacaoOperacionalDao;
 import br.com.timberforest.ratd.detail.relatorioAvaliacaoOperacional.DetailRelatorioOperacionalActivity;
@@ -43,6 +47,16 @@ public class ListRelatorioAvaliacaoOperacionalActivity extends ActionBarActivity
 
         relaListView.setAdapter(relatorioOperacionalListAdapter);
         buscaRelatorioOperacional();
+    }
+
+    //botão voltar do device
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_BACK)) {
+            Intent intent = new Intent(ListRelatorioAvaliacaoOperacionalActivity.this, MainActivity.class);
+            startActivity(intent);
+        }
+        return super.onKeyDown(keyCode, event);
     }
 
     private void buscaRelatorioOperacional(){
