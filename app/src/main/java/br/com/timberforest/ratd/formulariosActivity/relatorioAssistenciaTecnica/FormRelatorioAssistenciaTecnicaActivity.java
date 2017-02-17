@@ -1,10 +1,9 @@
 package br.com.timberforest.ratd.formulariosActivity.relatorioAssistenciaTecnica;
-import android.content.Context;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AlertDialog;
@@ -13,9 +12,8 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,8 +30,10 @@ import br.com.timberforest.ratd.utilitarios.CameraActivity;
 import br.com.timberforest.ratd.model.relatorioAssitenciaTecnica.RelatorioAssistenciaTecnica;
 import br.com.timberforest.ratd.sharedPreferences.SharedPreferencesDeslocamento;
 import br.com.timberforest.ratd.utilitarios.Utils;
+import de.keyboardsurfer.android.widget.crouton.Configuration;
+import de.keyboardsurfer.android.widget.crouton.Crouton;
+import de.keyboardsurfer.android.widget.crouton.Style;
 
-import static android.media.CamcorderProfile.get;
 import static br.com.timberforest.ratd.R.id.editGetRelatNum;
 import static br.com.timberforest.ratd.sharedPreferences.SharedPreferencesDeslocamento.PREFS_NAME;
 
@@ -51,6 +51,22 @@ public class FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
     private EditText edtChassi, edt_inicio_trabalho, edt_inicio_deslocamento, edt_inicio_almoco, edtCliente,edtModelo, edtHorimetro, edtEstadoCliente, edtCidadeCliente,edtLocalDaObra,edtDefeitoConstatado,
     edtProcedimentoAdotado,edt_fim_almoco, edt_fim_trabalho,edt_fim_deslocamento,edt_km_rodado,edtCodigoPeca,edtQuantidade,edtDescricao, edt_pendencias;
 
+    final Style styleAlert = new Style.Builder()
+            .setTextSize(30)
+            .setBackgroundColorValue(Color.RED)
+            .setConfiguration(new Configuration.Builder().setDuration(4000).build())
+            .build();
+
+    final Style styleConfirm = new Style.Builder()
+            .setTextSize(30)
+            .setBackgroundColorValue(Color.GREEN)
+            .setConfiguration(new Configuration.Builder().setDuration(5000).build())
+            .build();
+    final Style styleInf = new Style.Builder()
+            .setTextSize(30)
+            .setBackgroundColorValue(Color.BLUE)
+            .setConfiguration(new Configuration.Builder().setDuration(5000).build())
+            .build();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,29 +74,14 @@ public class FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
         EditText editGetRelatNum = (EditText) findViewById(R.id.editGetRelatNum);
         SharedPreferencesDeslocamento sharedPreferencesDeslocamento = new SharedPreferencesDeslocamento();
 
-        importarDeslocamento();
-
-/*
-        relatorioAssistenciaTecnicaDao.ultimoRatd();
-
-
-        aux = aux2;
-        editGetRelatNum.setText(aux.toString());
-        editGetRelatNum.setEnabled(false);
-*/
-
-
-/*        List<RelatorioAssistenciaTecnica> relatorioAssistenciaTecnicas = relatorioAssistenciaTecnicaDao.ultimoRatd();
+        List<RelatorioAssistenciaTecnica> relatorioAssistenciaTecnicas = relatorioAssistenciaTecnicaDao.ultimoRatd();
         if (relatorioAssistenciaTecnicas != null){
             if(relatorioAssistenciaTecnicas.size() > 0) {
                 RelatorioAssistenciaTecnica rel = relatorioAssistenciaTecnicas.get(0);
-                aux1 = (rel.getIdFormulario());
-                aux = aux1+1;
-                editGetRelatNum.setText(aux.toString());
+                editGetRelatNum.setText(rel.getIdFormulario().toString());
                 editGetRelatNum.setEnabled(false);
             }
-        }*/
-
+        }
 
         initViews();
         CadastroMecanicoDao cadastroMecanicoDao = new CadastroMecanicoDao();
@@ -98,6 +99,7 @@ public class FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
             TextView estadoMecanicoTextView= (TextView) findViewById(R.id.editGetEstadoDist);
             estadoMecanicoTextView.setText(mecanico.getEstado());
         }
+
         TextView textFormularioData = (TextView) findViewById(R.id.editgetDataFormulario);
         textFormularioData.setText(getDateTime());
 
@@ -140,6 +142,8 @@ public class FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
         }
     }
 
+
+
     //botão voltar do device
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -175,8 +179,7 @@ public class FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
         alerta.show();
     }
 
-// importando o deslocamento e travando os edt para edição
-    public void importarDeslocamento(){
+    public void importDeslocamento(View view){
         SharedPreferences sharedPreferences = getSharedPreferences(PREF_NAME, 0);
         String iniDes = sharedPreferences.getString("inicio_deslocamento", "");
         String iniTrab = sharedPreferences.getString("inicio_trabalho", "");
@@ -221,15 +224,20 @@ public class FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
             EditText  edt_km_rodado = (EditText) findViewById(R.id.edt_km_rodado);
             edt_km_rodado.setText(kmRod.toString());
             edt_km_rodado.setEnabled(false);
+
+            Crouton.makeText(FormRelatorioAssistenciaTecnicaActivity.this, "Dados do deslocamento importados com sucesso !", styleConfirm).show();
+            dialogoDeslocamento();
         }
 
     }
+
+
     public void abrirCamera (View view){
         startActivity(new Intent(this,CameraActivity.class));
     }
 
     public String getDateTime() {
-        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy  HH:mm:ss");
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy  HH:mm");
         Date date = new Date();
         return dateFormat.format(date);
     }
@@ -272,10 +280,12 @@ public class FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
         if (validateFields()) {
             relatorioAssistenciaTecnicaDao.salvar(relatorioAssistenciaTecnica);
             Toast.makeText(this, msgFormulario, Toast.LENGTH_LONG).show();
-            dialogoDeslocamento();
+            Intent intent = new Intent(FormRelatorioAssistenciaTecnicaActivity.this, ListRelatorioAssistenciaTecnicaActivity.class);
+            startActivity(intent);
         }
 
     }
+
     private AlertDialog alerta;
     private void dialogoDeslocamento()  {
         //LayoutInflater é utilizado para inflar nosso layout em uma view.
@@ -287,8 +297,7 @@ public class FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
         //definimos para o botão do layout um clickListener
         view.findViewById(R.id.btn_sim).setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
-                Intent intent = new Intent(FormRelatorioAssistenciaTecnicaActivity.this, ListRelatorioAssistenciaTecnicaActivity.class);
-                startActivity(intent);
+                alerta.cancel();
             }
         });
         view.findViewById(R.id.btn_nao).setOnClickListener(new View.OnClickListener() {
@@ -372,6 +381,14 @@ public class FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
         edtQuantidade.addTextChangedListener(textWatcher);
         edtDescricao = (EditText) findViewById(R.id.editGetDescPec);
         edtDescricao.addTextChangedListener(textWatcher);
+
+        edt_inicio_deslocamento.setEnabled(false);
+        edt_inicio_trabalho.setEnabled(false);
+        edt_inicio_almoco.setEnabled(false);
+        edt_fim_almoco.setEnabled(false);
+        edt_fim_trabalho.setEnabled(false);
+        edt_fim_deslocamento.setEnabled(false);
+        edt_km_rodado.setEnabled(false);
     }
     private void callClearErrors(Editable s) {}
     private boolean validateFields() {
@@ -443,25 +460,11 @@ public class FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
             return true;
         }return false;
     }
-    /*@Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_simples_botao_voltar, menu);
-        return true;
-    }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        int id = item.getItemId();
-        if (id == R.id.action_voltar) {
-            super.finish();
-        }
-
-        return super.onOptionsItemSelected(item);
-    }*/
     private void clearErrorFields(EditText... editTexts) {
         for (EditText editText : editTexts) {
             editText.setError(null);
         }
     }
+
 }
 

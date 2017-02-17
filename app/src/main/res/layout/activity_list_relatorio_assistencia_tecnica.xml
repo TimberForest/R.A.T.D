@@ -1,24 +1,52 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/branco"
-    android:orientation="vertical"
     tools:context=".listActivity.relatorioAssistenciaTecnica.ListRelatorioAssistenciaTecnicaActivity">
 
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:background="@color/branco"
-        >
+        android:id="@+id/linearLayout16">
+
+        <TextView
+            android:text="Relatórios de Assistência Técnica"
+            android:textStyle="bold"
+            android:textSize="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="10dp" />
+
 
         <ListView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:background="@color/branco"
             android:id="@+id/listViewFormularios"
             />
     </LinearLayout>
-</LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|top"
+        android:layout_margin="16dp"
+        app:fabSize="normal"
+        android:tintMode="add"
+        android:src="@drawable/ic_action_add"
+        app:backgroundTint="@android:color/holo_blue_light" />
+
+</android.support.design.widget.CoordinatorLayout>

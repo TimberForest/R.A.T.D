@@ -1,8 +1,8 @@
 package br.com.timberforest.ratd.formulariosActivity.relatorioAvaliacaoOperacional;
 
 import android.content.res.Resources;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -14,19 +14,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import br.com.timberforest.ratd.R;
 import br.com.timberforest.ratd.dao.cadastroMecanico.CadastroMecanicoDao;
 import br.com.timberforest.ratd.dao.relatorioAvaliacaoOperacional.RelatorioAvaliacaoOperacionalDao;
 import br.com.timberforest.ratd.model.CadastroMecanico.CadastroMecanico;
 import br.com.timberforest.ratd.model.relatorioAvaliacaoOperacional.RelatorioAvaliacaoOperacional;
-
 import java.text.DateFormat;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-
 import br.com.timberforest.ratd.utilitarios.Utils;
 
 public class RelatorioOperacionalFormActivity extends ActionBarActivity {
@@ -34,76 +31,13 @@ public class RelatorioOperacionalFormActivity extends ActionBarActivity {
     RelatorioAvaliacaoOperacionalDao relatorioAvaliacaoOperacionalDao = new RelatorioAvaliacaoOperacionalDao();
     private RelatorioAvaliacaoOperacional relatorioAvaliacaoOperacional;
 
-    private EditText edtCapacete;
-    private EditText edtOculosProt;
-    private EditText edtluva;
-    private EditText edtCamisaManga;
-    private EditText edtCalca;
-    private EditText edtSapatoNormal;
-    private EditText edtSapatoOp;
-    private EditText edtDistanciaEntreMaq;
-    private EditText edtEstacionamentoLocalAdeq;
-    private EditText edtDistanciaOpAbast;
-    private EditText edtProcedSubirDescer;
-    private EditText edtUtilizacaoSaidaEmergencia;
-    private EditText edtSubirDescerPranchaMaq;
-    private EditText edtFixarMaqPrancha;
-
-
-    private EditText edtPossuiKitCont;
-    private EditText edtSabeUsarSisAntChama;
-    private EditText edtDanosCanaletaEstrada;
-    private EditText edtDanosMataNativa;
-
-    private EditText edtTipoEquip;
-    private EditText edtCapacidadeReservatorio;
-    private EditText edtTiposLubrificante;
-    private EditText edtPontosLubrificacao;
-    private EditText edtInterpretecaoManualEquip;
-
-    private EditText edtCheckListDiar;
-    private EditText edtRelatorioDiarEquip;
-    private EditText edtPreenchimentoCorretoLivOcorr;
-    private EditText edtReapertoEqui;
-
-    private EditText edtMovimentosSuavesSincro;
-    private EditText edtManobrabilidade;
-
-    private EditText edtNomeOpAval;
-    private EditText edtNomeEmpresaAval;
-    private EditText edtIdFrotaMaq;
-
-    private EditText edtCooperacaoEquip;
-    private EditText edtComunicacao;
-    private EditText edtSegueNormasTrab;
-    private EditText edtAssiduidade;
-
-    private EditText edtPosicionamEquip;
-    private EditText edtSentidoExecTrabal;
-    private EditText edtPosicionamPilhasLinhas;
-    private EditText edtLeituraMapas;
-
-    private EditText edtConhecimentoIndicador;
-    private EditText edtUtilizacaoCorretoJoyStick;
-    private EditText edtRegulagenCalibracao;
-
-    private EditText edtDesempenhoGerQualidade;
-    private EditText edtDesempenhoGerProducao;
-    private EditText edtDesempenhoGerSimulador;
-    private EditText edtObsRelatorioOp;
-
-    private EditText edtnotaSeguranca;
-    private EditText edtnotaMeioAmbiente;
-    private EditText edtnotaPlanejamento;
-    private EditText edtnotaSimulador;
-    private EditText edtnotaRelatoriosVerificacoesReaperto;
-    private EditText edtnotaPainelAlavancaRegulag;
-    private EditText edtnotaTecnicasOp;
-    private EditText edtnotaDadosTecEq;
-    private EditText edtnotaTrabalhoEquipe;
-    private EditText edtnotaAvaliacaoQualidade;
-    private EditText edtnotaProducao;
-    private EditText edtnotaGeral;
+    private EditText edtCapacete, edtOculosProt, edtCamisaManga,edtluva,edtCalca,edtSapatoNormal,edtSapatoOp,edtDistanciaEntreMaq, edtEstacionamentoLocalAdeq, edtDistanciaOpAbast, edtProcedSubirDescer,
+            edtUtilizacaoSaidaEmergencia, edtSubirDescerPranchaMaq,edtFixarMaqPrancha, edtPossuiKitCont, edtSabeUsarSisAntChama, edtDanosCanaletaEstrada, edtDanosMataNativa, edtTipoEquip, edtCapacidadeReservatorio,
+            edtTiposLubrificante, edtPontosLubrificacao, edtInterpretecaoManualEquip,edtCheckListDiar,edtRelatorioDiarEquip, edtPreenchimentoCorretoLivOcorr,edtReapertoEqui, edtMovimentosSuavesSincro,edtManobrabilidade,
+            edtNomeOpAval,edtNomeEmpresaAval, edtIdFrotaMaq,edtCooperacaoEquip,edtComunicacao,edtSegueNormasTrab,edtAssiduidade, edtPosicionamEquip, edtSentidoExecTrabal,edtPosicionamPilhasLinhas,edtLeituraMapas,
+            edtConhecimentoIndicador,edtUtilizacaoCorretoJoyStick,edtRegulagenCalibracao,edtDesempenhoGerQualidade,edtDesempenhoGerProducao,edtDesempenhoGerSimulador,edtObsRelatorioOp,edtnotaSeguranca,
+            edtnotaMeioAmbiente,edtnotaPlanejamento,edtnotaSimulador,edtnotaRelatoriosVerificacoesReaperto,edtnotaPainelAlavancaRegulag,edtnotaTecnicasOp,edtnotaDadosTecEq,edtnotaTrabalhoEquipe,edtnotaAvaliacaoQualidade,
+            edtnotaProducao,edtnotaGeral;
 
     private Button btnSomar;
 
@@ -240,6 +174,7 @@ public class RelatorioOperacionalFormActivity extends ActionBarActivity {
             relatorioAvaliacaoOperacional = new RelatorioAvaliacaoOperacional();
         }
     }
+
     public String getDateTime() {
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy  HH:mm:ss");
         Date date = new Date();
@@ -1421,16 +1356,16 @@ public class RelatorioOperacionalFormActivity extends ActionBarActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_simples_botao_voltar, menu);
+//        getMenuInflater().inflate(R.menu.menu_simples_botao_voltar, menu);
         return true;
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        int id = item.getItemId();
+/*        int id = item.getItemId();
         if (id == R.id.action_voltar) {
             super.finish();
-        }
+        }*/
 
         return super.onOptionsItemSelected(item);
     }

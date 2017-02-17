@@ -50,34 +50,10 @@ public class DetailMecanicoActivity extends ActionBarActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        /*if(item.getItemId()==R.id.action_delete){
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setTitle("Excluír perfil mecânico");
-            builder.setMessage("Deseja realmente excluir esse cadastro de mecânico?");
-            builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int id) {
-                    cadastroMecanicoDao.excluir(mecanico);
-                    Toast.makeText(DetailMecanicoActivity.this, "Perfil de CadastroMecanico excluído com sucesso!", Toast.LENGTH_SHORT).show();
-                    finish();
-                    //return true;
-                }
-            });
-            builder.setNegativeButton("Não", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int id) {
-                    //ação do botão "não"
-                    Toast.makeText(DetailMecanicoActivity.this, "Perfl de mecânico não excluído!", Toast.LENGTH_SHORT).show();
-                }
-            });
-            builder.show();
-        }*/
         if (item.getItemId() == R.id.action_edit) {
             Intent intent = new Intent(this, FormMecanicoActivity.class);
             intent.putExtra("CadastroMecanico", mecanico);
             startActivity(intent);
-        }
-        if (item.getItemId() == R.id.action_voltar) {
-            super.finish();
         }
         if(item.getItemId()==R.id.home){
             NavUtils.navigateUpFromSameTask(this);

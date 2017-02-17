@@ -148,15 +148,15 @@ public class FormMecanicoActivity extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_simples_botao_voltar, menu);
+//        getMenuInflater().inflate(R.menu.menu_simples_botao_voltar, menu);
         return true;
     }
 
 
     public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId()==R.id.action_voltar) {
+/*        if(item.getItemId()==R.id.action_voltar) {
             super.finish();
-        }
+        }*/
         if(item.getItemId()==R.id.home){
             NavUtils.navigateUpFromSameTask(this);
             return true;

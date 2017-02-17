@@ -1,6 +1,9 @@
 package br.com.timberforest.ratd.listActivity.relatorioAvaliacaoOperacional;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -12,6 +15,7 @@ import android.widget.ListView;
 import br.com.timberforest.ratd.R;
 import br.com.timberforest.ratd.dashboards.MainActivity;
 import br.com.timberforest.ratd.detail.relatorioAssistenciaTecnica.DetailRelatorioAssistenciaTecnicaActivity;
+import br.com.timberforest.ratd.formulariosActivity.relatorioAssistenciaTecnica.FormRelatorioAssistenciaTecnicaActivity;
 import br.com.timberforest.ratd.formulariosActivity.relatorioAvaliacaoOperacional.RelatorioOperacionalFormActivity;
 import br.com.timberforest.ratd.listActivity.relatorioAssistenciaTecnica.ListRelatorioAssistenciaTecnicaActivity;
 import br.com.timberforest.ratd.listAdapter.relatorioAvaliacaoOperacional.RelatorioOperacionalListAdapter;
@@ -22,16 +26,29 @@ import br.com.timberforest.ratd.model.relatorioAvaliacaoOperacional.RelatorioAva
 import java.util.List;
 
 
-public class ListRelatorioAvaliacaoOperacionalActivity extends ActionBarActivity {
+public class ListRelatorioAvaliacaoOperacionalActivity extends Activity {
 
 
     private RelatorioAvaliacaoOperacionalDao relatorioAvaliacaoOperacionalDao;
     private RelatorioOperacionalListAdapter relatorioOperacionalListAdapter;
 
+    private CoordinatorLayout coordinatorLayout;
+    private FloatingActionButton fab;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_relatorio_avaliacao_operacional);
+
+        coordinatorLayout = (CoordinatorLayout) findViewById(R.id.coordinatorLayout);
+
+        fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ListRelatorioAvaliacaoOperacionalActivity.this, RelatorioOperacionalFormActivity.class);
+                startActivity(intent);
+            }
+        });
 
         ListView relaListView= (ListView) findViewById(R.id.relatorioOperacioanalListView);
 
@@ -82,12 +99,12 @@ public class ListRelatorioAvaliacaoOperacionalActivity extends ActionBarActivity
             startActivity(intent);
             return true;
         }
-        if(item.getItemId()==R.id.action_refresh) {
+/*        if(item.getItemId()==R.id.action_refresh) {
             buscaRelatorioOperacional();
         }
         if(item.getItemId()==R.id.action_voltar) {
             super.finish();
-        }
+        }*/
         return super.onOptionsItemSelected(item);
     }
     @Override

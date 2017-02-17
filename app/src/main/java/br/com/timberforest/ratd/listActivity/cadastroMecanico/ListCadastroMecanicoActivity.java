@@ -61,22 +61,11 @@ public class ListCadastroMecanicoActivity extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_mecanico_list, menu);
+//        getMenuInflater().inflate(R.menu.menu_mecanico_list, menu);
         return true;
     }
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        /*if(item.getItemId()==R.id.action_new) {
-            Intent intent = new Intent(this, FormMecanicoActivity.class);
-            startActivity(intent);
-            return true;
-        }*/
-        if(item.getItemId()==R.id.action_refresh) {
-            buscaMecanicos();
-        }
-        if(item.getItemId()==R.id.action_voltar) {
-            super.finish();
-        }
         if(item.getItemId()==R.id.home){
             NavUtils.navigateUpFromSameTask(this);
             return true;

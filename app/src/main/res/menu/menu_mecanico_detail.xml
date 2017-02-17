@@ -14,9 +14,9 @@
         app:showAsAction="ifRoom"
         android:icon="@drawable/ic_delete_white_48dp"
         android:title="Remover"/>-->
-    <item
+<!--    <item
         android:id="@+id/action_voltar"
         app:showAsAction="ifRoom"
         android:title="Voltar"
-        android:icon="@drawable/ic_reply_white_48dp"/>
+        android:icon="@drawable/ic_reply_white_48dp"/>-->
 </menu>

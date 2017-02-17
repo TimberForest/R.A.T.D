@@ -76,19 +76,19 @@ public class RelatorioAssistenciaTecnicaDao extends AppCompatActivity {
         }
     }
 
-    public int ultimoRatd(){
-        int result = 0;
-        Cursor cursor = database.rawQuery("SELECT IFNULL(MAX(id), 0) + 1 FROM RelatorioAssistenciaTecnica", null);
-        int indiceColunaId = cursor.getColumnIndex("id");
-        while (cursor != null){
-            cursor.getString(indiceColunaId);
-
+    public List<RelatorioAssistenciaTecnica> ultimoRatd(){
+        List<RelatorioAssistenciaTecnica> relatorioAssistenciaTecnicas = new ArrayList<>();
+        Cursor cursor= database.rawQuery("SELECT IFNULL(MAX(id), 0) + 1 FROM RelatorioAssistenciaTecnica", null);
+        cursor.moveToLast();
+        while (!cursor.isAfterLast()){
+            RelatorioAssistenciaTecnica form = new RelatorioAssistenciaTecnica();
+            form.setIdFormulario(cursor.getLong(0));
+            relatorioAssistenciaTecnicas.add(form);
             cursor.moveToNext();
         }
-
-        return result;
+        cursor.close();
+        return relatorioAssistenciaTecnicas;
     }
-
     //SELECT IFNULL(MAX(_id), 0) + 1 FROM table_name
 
 

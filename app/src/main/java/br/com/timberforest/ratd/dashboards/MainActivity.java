@@ -39,16 +39,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    //botão voltar do device
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if ((keyCode == KeyEvent.KEYCODE_BACK)) {
-            finish();
-        }
-        return super.onKeyDown(keyCode, event);
-    }
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -67,17 +57,11 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, SharedPreferencesEmailActivity.class);
             startActivity(intent);
         }
-/*        if (item.getItemId()== R.id.action_voltar) {
+        if (item.getItemId()== R.id.action_voltar) {
             super.finish();
-        }*/
+        }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public void finish() {
-        super.finish();
-        android.os.Process.killProcess(android.os.Process.myPid());
     }
 
     public void selecionarOpcao(View view) {

@@ -719,6 +719,15 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:text="Importar Deslocamento"
+                    android:clickable="true"
+                    android:id="@+id/importDeslocamento"
+                    android:onClick="importDeslocamento"
+                    android:layout_gravity="center"
+                    style="@style/BotaoSimplesAmarelo" />
+
+
+                <TextView
                     android:text="Fotografar"
                     android:clickable="true"
                     android:onClick="abrirCamera"
@@ -733,6 +742,8 @@
                     android:onClick="salvar"
                     android:layout_gravity="center"
                     style="@style/BotaoSimplesAmarelo" />
+
+
 
             </LinearLayout>
 
