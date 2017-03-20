@@ -48,18 +48,21 @@
         <item name="android:padding">2dp</item>
     </style>
 
-    <style name="FontesBotaoGrandeAmarelo">
+    <!--Botão Branco-->
+
+    <style name="BotaoGrandeBranco">
         <item name="android:textSize">22sp</item>
         <item name="android:textColor">@color/preto</item>
         <item name="android:textStyle">bold</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_height">100dp</item>
         <item name="android:layout_weight">1</item>
         <item name="android:layout_margin">5dp</item>
-        <item name="android:background">@drawable/screen_border_botao_grande_amarelo</item>
+        <item name="android:background">@drawable/screen_border_botao_grande_branco</item>
     </style>
 
+    <!--Botão Amarelo-->
     <style name="BotaoSimplesAmarelo">
         <item name="android:textSize">22sp</item>
         <item name="android:clickable">true</item>
@@ -72,6 +75,33 @@
         <item name="android:onClick">selecionarOpcao</item>
         <item name="android:background">@drawable/screen_border</item>
     </style>
+
+    <style name="BotaoPonsseAmarelo">
+        <item name="android:textSize">22sp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textColor">@color/preto</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">628dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:onClick">selecionarOpcao</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:background">@drawable/screen_border_botao_grande_amarelo</item>
+    </style>
+
+    <style name="FontesBotaoGrandeAmarelo">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/preto</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:background">@drawable/screen_border_botao_grande_amarelo</item>
+    </style>
+
+    <!--Botão Verde-->
 
     <style name="BotaoSimplesVerde">
         <item name="android:textSize">22sp</item>
@@ -86,6 +116,19 @@
         <item name="android:background">@drawable/screen_border_verde</item>
     </style>
 
+    <!--Botão Vermelho-->
+
+    <style name="BotaoVermelhoLogMax">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/branco</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:onClick">selecionarOpcao</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:background">@drawable/screen_border_botao_grande_vermelho</item>
+    </style>
 
     <!--Botões de Clique-->
     <style name="BotoesBranco">

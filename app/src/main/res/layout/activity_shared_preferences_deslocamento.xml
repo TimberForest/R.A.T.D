@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,138 +8,256 @@
     android:id="@+id/coordinatorLayout"
     tools:context=".sharedPreferences.SharedPreferencesDeslocamento">
 
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|enterAlways"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
-    </android.support.design.widget.AppBarLayout>
-
-    <TextView
-        android:text="Ponto Digital"
-        style="@style/TextosTitulos" />
-
-<!--    <Button
-        android:text="LIMPAR"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:id="@+id/btn_limpar" />-->
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/screen_border_botao_grande_branco"
-        android:padding="5dp"
-        android:gravity="center"
+        android:background="@color/amarelo_padrao"
+        android:orientation="vertical">
 
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_width="400dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <Button
-                android:text="@string/inicio_do_deslocamento"
-                style="@style/FontesBotaoGrandeAmarelo"
-                android:id="@+id/btn_ini_desl" />
-
-            <Button
-                android:text="@string/inicio_do_trabalho"
-                android:id="@+id/btn_ini_trab"
-                style="@style/FontesBotaoGrandeAmarelo"/>
-            <Button
-                android:text="@string/inicio_do_almoço"
-                style="@style/FontesBotaoGrandeAmarelo"
-                android:id="@+id/btn_ini_alm" />
-            <Button
-                android:text="@string/fim_do_almoço"
-                style="@style/FontesBotaoGrandeAmarelo"
-                android:id="@+id/btn_fim_alm" />
-            <Button
-                android:text="@string/fim_do_trabalho"
-                style="@style/FontesBotaoGrandeAmarelo"
-                android:id="@+id/btn_fim_trab" />
-            <Button
-                android:text="@string/fim_do_deslocamento"
-                android:layout_marginBottom="5dp"
-                style="@style/FontesBotaoGrandeAmarelo"
-                android:id="@+id/btn_fim_desl" />
-        </LinearLayout>
+        <TextView
+            style="@style/TextosTitulos"
+            android:text="Deslocamento"/>
 
         <LinearLayout
-            android:layout_width="400dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:orientation="vertical">
+            android:background="@drawable/screen_border_botao_grande_branco"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="0dp"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-            <TextView
-                style="@style/BotoesBranco"
-                android:id="@+id/txt_ini_desl" />
-            <TextView
-                style="@style/BotoesBranco"
-                android:id="@+id/txt_ini_trab" />
-            <TextView
-                style="@style/BotoesBranco"
-                android:id="@+id/txt_ini_alm" />
-            <TextView
-                style="@style/BotoesBranco"
-                android:id="@+id/txt_fim_alm" />
-            <TextView
-                style="@style/BotoesBranco"
-                android:id="@+id/txt_fim_trab" />
-            <TextView
-                style="@style/BotoesBranco"
-                android:id="@+id/txt_fim_desl" />
+            <LinearLayout
+                android:layout_width="400dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:text="@string/inicio_do_deslocamento"
+                    style="@style/FontesBotaoGrandeAmarelo"
+                    android:id="@+id/btn_ini_desl" />
+
+                <Button
+                    android:text="@string/inicio_do_trabalho"
+                    android:id="@+id/btn_ini_trab"
+                    style="@style/FontesBotaoGrandeAmarelo"/>
+                <Button
+                    android:text="@string/inicio_do_almoço"
+                    style="@style/FontesBotaoGrandeAmarelo"
+                    android:id="@+id/btn_ini_alm" />
+                <Button
+                    android:text="@string/fim_do_almoço"
+                    style="@style/FontesBotaoGrandeAmarelo"
+                    android:id="@+id/btn_fim_alm" />
+                <Button
+                    android:text="@string/fim_do_trabalho"
+                    style="@style/FontesBotaoGrandeAmarelo"
+                    android:id="@+id/btn_fim_trab" />
+                <Button
+                    android:text="@string/fim_do_deslocamento"
+                    android:layout_marginBottom="5dp"
+                    style="@style/FontesBotaoGrandeAmarelo"
+                    android:id="@+id/btn_fim_desl" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="400dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/BotoesBranco"
+                    android:id="@+id/txt_ini_desl" />
+                <TextView
+                    style="@style/BotoesBranco"
+                    android:id="@+id/txt_ini_trab" />
+                <TextView
+                    style="@style/BotoesBranco"
+                    android:id="@+id/txt_ini_alm" />
+
+                <TextView
+                    android:id="@+id/txt_fim_alm"
+                    style="@style/BotoesBranco" />
+
+                <TextView
+                    style="@style/BotoesBranco"
+                    android:id="@+id/txt_fim_trab" />
+                <TextView
+                    style="@style/BotoesBranco"
+                    android:id="@+id/txt_fim_desl" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="400dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:text="Km Inicial"
+                    style="@style/FontesBotaoGrandeAmarelo"
+                    android:id="@+id/btn_km_inicial" />
+
+                <EditText
+                    style="@style/BotoesBranco"
+                    android:layout_height="110dp"
+                    android:inputType="number"
+                    android:hint="Informe o KM"
+                    android:imeOptions="actionDone"
+                    android:id="@+id/edt_km_inicial" />
+
+                <Button
+                    android:text="Km Final"
+                    style="@style/FontesBotaoGrandeAmarelo"
+                    android:id="@+id/btn_km_final" />
+
+                <EditText
+                    style="@style/BotoesBranco"
+                    android:inputType="number"
+                    android:hint="Informe o KM"
+                    android:layout_height="110dp"
+                    android:id="@+id/edt_km_final" />
+
+                <Button
+                    android:text="Km Rodados"
+                    android:id="@+id/btn_km_rodado"
+                    style="@style/FontesBotaoGrandeAmarelo"
+                    android:background="#D3D3D3"/>
+
+                <TextView
+                    style="@style/BotoesBranco"
+                    android:layout_height="110dp"
+                    android:id="@+id/txt_km_rodado" />
+
+
+            </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="400dp"
-            android:layout_height="match_parent"
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="35dp"
+            android:paddingTop="5dp"
+            android:paddingRight="35dp"
+            android:paddingBottom="5dp"
+            android:layout_margin="5dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/screen_border_botao_grande_branco"
             android:orientation="vertical">
 
-            <Button
-                android:text="Km Inicial"
-                style="@style/FontesBotaoGrandeAmarelo"
-                android:id="@+id/btn_km_inicial" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <CheckBox
+                    android:id="@+id/ck_aguardando"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Aguardando Peça"
+                    android:textSize="22sp"
+                    android:onClick="AguardandoPeca"/>
 
-            <EditText
-                style="@style/BotoesBranco"
-                android:inputType="number"
-                android:hint="Informe o KM"
-                android:imeOptions="actionDone"
-                android:id="@+id/edt_km_inicial" />
+                <Space
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
 
-            <Button
-                android:text="Km Final"
-                style="@style/FontesBotaoGrandeAmarelo"
-                android:id="@+id/btn_km_final" />
+                <CheckBox
+                    android:id="@+id/ck_pausa_deslocamento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pausa no Deslocamento"
+                    android:textSize="22sp"
+                    android:onClick="PausaDeslocamento"/>
 
-            <EditText
-                style="@style/BotoesBranco"
-                android:inputType="number"
-                android:hint="Informe o KM"
-                android:id="@+id/edt_km_final" />
+            </LinearLayout>
+            </LinearLayout>
 
-            <Button
-                android:text="Km Rodados"
-                android:id="@+id/btn_km_rodado"
-                style="@style/FontesBotaoGrandeAmarelo"
-                android:background="#D3D3D3"/>
+        &lt;!&ndash;F6329&ndash;&gt;
 
-            <TextView
-                style="@style/BotoesBranco"
-                android:id="@+id/txt_km_rodado" />
+            <LinearLayout
+                android:id="@+id/linear_aguardando"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="35dp"
+                android:paddingRight="35dp"
+                android:paddingBottom="5dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/screen_border_botao_grande_branco"
+                android:orientation="vertical">
 
+                <TextView
+                    style="@style/FontesTxt"
+                    android:text="Aguardando Peça" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:text="Inicio"
+                        style="@style/FontesBotaoGrandeAmarelo"
+                        android:id="@+id/btn_ini_espera" />
+
+                    <TextView
+                        android:id="@+id/txt_ini_espera"
+                        style="@style/BotaoGrandeBranco" />
+
+                    <Button
+                        android:text="Fim"
+                        style="@style/FontesBotaoGrandeAmarelo"
+                        android:id="@+id/btn_fim_espera" />
+
+                    <TextView
+                        style="@style/BotaoGrandeBranco"
+                        android:id="@+id/txt_fim_espera" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linear_pausa_deslocamento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="35dp"
+                android:paddingRight="35dp"
+                android:paddingBottom="5dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/screen_border_botao_grande_branco"
+                android:orientation="vertical">
+
+
+                <TextView
+                    style="@style/FontesTxt"
+                    android:text="Pausa no Deslocamento" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:text="Inicio"
+                        style="@style/FontesBotaoGrandeAmarelo"
+                        android:id="@+id/btn_ini_pausa" />
+
+                    <TextView
+                        style="@style/BotaoGrandeBranco"
+                        android:id="@+id/txt_ini_pausa" />
+
+                    <Button
+                        android:text="Fim"
+                        style="@style/FontesBotaoGrandeAmarelo"
+                        android:id="@+id/btn_fim_pausa" />
+
+                    <TextView
+                        style="@style/BotaoGrandeBranco"
+                        android:id="@+id/txt_fim_pausa" />
+                </LinearLayout>
+            </LinearLayout>
+-->
         </LinearLayout>
-    </LinearLayout>
-
-</android.support.design.widget.CoordinatorLayout>
+</ScrollView>

@@ -3,11 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="br.com.timberforest.ratd">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/icone_app1"
         android:label="R.A.T.D"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
 
         <activity
             android:name=".dashboards.MainActivity"
@@ -26,7 +32,7 @@
             android:label="@string/app_name"
             android:screenOrientation="landscape" />
 
-<!--                    <activity
+                        <!--<activity
                     android:name=".utilitarios.SplashScreen"
                     android:configChanges="orientation|keyboardHidden"
                     android:label="@string/nome_icone"
@@ -41,6 +47,10 @@
                     android:configChanges="orientation|keyboardHidden"
                     android:label="@string/app_name"
                     android:screenOrientation="landscape" />-->
+
+<!--        <service
+            android:name=".utilitarios.LocationIntentService"
+            android:exported="false"/>-->
 
         <activity
             android:name=".detail.cadastroMecanico.DetailMecanicoActivity"
@@ -90,9 +100,9 @@
         <activity
             android:name=".formulariosActivity.relatorioAssistenciaTecnica.FormRelatorioAssistenciaTecnicaActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:theme="@style/AppTheme.NoActionBar"
             android:label="@string/title_activity_form1_dados"
-            android:screenOrientation="landscape" />
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".utilitarios.CameraActivity"
             android:configChanges="orientation|keyboardHidden"
@@ -133,6 +143,7 @@
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
+
     </application>
 
 </manifest>

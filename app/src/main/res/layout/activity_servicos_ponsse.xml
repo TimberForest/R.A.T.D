@@ -7,88 +7,37 @@
     android:background="#000000">
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="630dp"
+        android:layout_width="640dp"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:id="@+id/linearLayout163">
         <TextView
-            android:layout_width="628dp"
-            android:layout_height="50dp"
-            android:clickable="true"
-            android:textColor="#000000"
+            style="@style/BotaoPonsseAmarelo"
             android:text="Manutenção programada básica/completa da GRUA"
-            android:onClick="selecionarOpcao"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:background="#DAA520"
-            android:layout_margin="5dp"
-            android:gravity="center"
             android:id="@+id/manutencaoProgBasCompGruaButton" />
+
         <TextView
-            android:layout_width="628dp"
-            android:layout_height="50dp"
-            android:clickable="true"
-            android:textColor="#000000"
+            style="@style/BotaoPonsseAmarelo"
             android:text="Manutenção programada básica/completa do HARVESTER"
-            android:onClick="selecionarOpcao"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:background="#DAA520"
-            android:gravity="center"
-            android:layout_margin="5dp"
             android:id="@+id/manutencaoProgBasCompCabecoteButton"/>
         <Button
-            android:layout_width="628dp"
-            android:layout_height="50dp"
-            android:clickable="true"
-            android:textColor="#000000"
+            style="@style/BotaoPonsseAmarelo"
             android:text="Manutenção programada básica/completa do FORWARDER"
-            android:onClick="selecionarOpcao"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:background="#DAA520"
-            android:gravity="center"
-            android:layout_margin="5dp"
             android:id="@+id/manutencaoProgBasCompForwarderButton"/>
         <TextView
-            android:layout_width="628dp"
-            android:layout_height="50dp"
-            android:clickable="true"
-            android:textColor="#000000"
+            style="@style/BotaoPonsseAmarelo"
             android:text="Manutenção programada básica/completa da MÁQUINA BASE"
-            android:onClick="selecionarOpcao"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:background="#DAA520"
-            android:layout_margin="5dp"
             android:id="@+id/manutencaoProgBasCompMaquinaBaseButton"/>
+
         <TextView
-            android:layout_width="628dp"
-            android:layout_height="50dp"
-            android:clickable="true"
-            android:textColor="#000000"
-            android:gravity="center"
-            android:text="Garantia do FORWARDER"
-            android:onClick="selecionarOpcao"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:background="#DAA520"
-            android:layout_margin="5dp"
-            android:id="@+id/garantiaForwarderButton"/>
+            android:id="@+id/garantiaForwarderButton"
+            style="@style/BotaoPonsseAmarelo"
+            android:text="Garantia do FORWARDER" />
+
         <TextView
-            android:layout_width="628dp"
-            android:layout_height="50dp"
-            android:clickable="true"
-            android:textColor="#000000"
-            android:gravity="center"
+            style="@style/BotaoPonsseAmarelo"
             android:text="Garantia do HARVESTER"
-            android:onClick="selecionarOpcao"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:background="#DAA520"
-            android:layout_margin="5dp"
             android:id="@+id/garantiaHarvesterButton"/>
 
         <ImageView

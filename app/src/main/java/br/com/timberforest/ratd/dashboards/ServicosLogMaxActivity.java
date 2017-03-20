@@ -1,6 +1,8 @@
 package br.com.timberforest.ratd.dashboards;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -11,8 +13,28 @@ import android.widget.Toast;
 
 import br.com.timberforest.ratd.R;
 import br.com.timberforest.ratd.listActivity.relatorioAvaliacaoOperacional.ListRelatorioAvaliacaoOperacionalActivity;
+import de.keyboardsurfer.android.widget.crouton.Configuration;
+import de.keyboardsurfer.android.widget.crouton.Crouton;
+import de.keyboardsurfer.android.widget.crouton.Style;
 
-public class ServicosLogMaxActivity extends ActionBarActivity {
+public class ServicosLogMaxActivity extends Activity {
+
+    final Style styleAlert = new Style.Builder()
+            .setTextSize(30)
+            .setBackgroundColorValue(Color.RED)
+            .setConfiguration(new Configuration.Builder().setDuration(2000).build())
+            .build();
+
+    final Style styleConfirm = new Style.Builder()
+            .setTextSize(30)
+            .setBackgroundColorValue(Color.GREEN)
+            .setConfiguration(new Configuration.Builder().setDuration(2000).build())
+            .build();
+    final Style styleInf = new Style.Builder()
+            .setTextSize(30)
+            .setBackgroundColorValue(Color.BLUE)
+            .setConfiguration(new Configuration.Builder().setDuration(2000).build())
+            .build();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,27 +54,27 @@ public class ServicosLogMaxActivity extends ActionBarActivity {
     public void selecionarOpcao(View view) {
         switch (view.getId()) {
             case R.id.InstalacaoCertificadoGarantia:
-                Toast.makeText(getApplicationContext(), "Relatório em desenvolvimento !", Toast.LENGTH_SHORT).show();
+                Crouton.makeText(ServicosLogMaxActivity.this, "Relatório em desenvolvimento !", styleAlert).show();
 //                startActivity(new Intent(this, ControleInstalacaoCertificadoGarantiaDao.class));
                 break;
             case R.id.GuiaManutencao:
-                Toast.makeText(getApplicationContext(), "Relatório em desenvolvimento !", Toast.LENGTH_SHORT).show();
+                Crouton.makeText(ServicosLogMaxActivity.this, "Relatório em desenvolvimento !", styleAlert).show();
 //                startActivity(new Intent(this, FormGuiaManutencaoLogmaxActivity.class));
                 break;
             case R.id.revisao500Hrs:
-                Toast.makeText(getApplicationContext(), "Relatório em desenvolvimento !", Toast.LENGTH_SHORT).show();
+                Crouton.makeText(ServicosLogMaxActivity.this, "Relatório em desenvolvimento !", styleAlert).show();
 //                startActivity(new Intent(this, DashRevisao500hrsLogMaxModelosActivity.class));
                 break;
         }
     }
 
     public void abrirManutencaoProgGrua(View view){
-        Toast.makeText(getApplicationContext(), "Relatório em desenvolvimento !", Toast.LENGTH_SHORT).show();
+        Crouton.makeText(ServicosLogMaxActivity.this, "Relatório em desenvolvimento !", styleAlert).show();
     }
     public void manualServiço(View view){
-        Toast.makeText(getApplicationContext(), "Relatório em desenvolvimento !", Toast.LENGTH_SHORT).show();
+        Crouton.makeText(ServicosLogMaxActivity.this, "Relatório em desenvolvimento !", styleAlert).show();
     }
     public void CatalogoPeças(View view){
-        Toast.makeText(getApplicationContext(), "Relatório em desenvolvimento !", Toast.LENGTH_SHORT).show();
+        Crouton.makeText(ServicosLogMaxActivity.this, "Relatório em desenvolvimento !", styleAlert).show();
     }
 }

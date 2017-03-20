@@ -23,6 +23,7 @@ public class DetailRelatorioOperacionalActivity extends ActionBarActivity {
     private RelatorioAvaliacaoOperacionalDao relatorioAvaliacaoOperacionalDao = new RelatorioAvaliacaoOperacionalDao();
     private RelatorioAvaliacaoOperacional relatorioAvaliacaoOperacional;
     public static final String PREF_NAME = "Preferences";
+    public String packageName = "com.vajsi.digital_signature";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -209,7 +210,7 @@ public class DetailRelatorioOperacionalActivity extends ActionBarActivity {
         if (item.getItemId() == R.id.action_assinatura) {
             Intent i = new Intent(Intent.ACTION_MAIN);
             PackageManager managerclock = getPackageManager();
-            i = managerclock.getLaunchIntentForPackage("com.rihan.digitalsignature");
+            i = managerclock.getLaunchIntentForPackage(packageName);
             i.addCategory(Intent.CATEGORY_LAUNCHER);
             startActivity(i);
         }

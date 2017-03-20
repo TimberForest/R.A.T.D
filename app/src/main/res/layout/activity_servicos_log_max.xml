@@ -29,81 +29,34 @@
         android:id="@+id/linearLayout316">
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/BotaoVermelhoLogMax"
             android:text="guia de manutenção"
-            android:onClick="selecionarOpcao"
-            android:textSize="20sp"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            android:background="#EE0000"
-            android:layout_margin="5dp"
-            android:gravity="center"
             android:id="@+id/GuiaManutencao" />
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/BotaoVermelhoLogMax"
             android:text="controle de instalação /certificado de garantia"
-            android:onClick="selecionarOpcao"
-            android:textSize="20sp"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            android:background="#EE0000"
-            android:layout_margin="5dp"
-            android:gravity="center"
             android:id="@+id/InstalacaoCertificadoGarantia" />
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/BotaoVermelhoLogMax"
             android:text="revisão 500 horas"
-            android:onClick="selecionarOpcao"
-            android:textSize="20sp"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            android:background="#EE0000"
-            android:layout_margin="5dp"
-            android:gravity="center"
             android:id="@+id/revisao500Hrs" />
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/BotaoVermelhoLogMax"
             android:text="check list sensores"
-            android:onClick="abrirManutencaoProgGrua"
-            android:textSize="20sp"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            android:background="#EE0000"
-            android:layout_margin="5dp"
-            android:gravity="center"
             android:id="@+id/button5" />
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/BotaoVermelhoLogMax"
             android:text="Manuais de serviço"
-            android:onClick="manualServiço"
-            android:textSize="20sp"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            android:background="#EE0000"
-            android:layout_margin="5dp"
-            android:gravity="center"
             android:id="@+id/button6" />
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/BotaoVermelhoLogMax"
             android:text="Catálago de peças"
             android:onClick="CatalogoPeças"
-            android:textSize="20sp"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            android:background="#EE0000"
-            android:layout_margin="5dp"
-            android:gravity="center"
             android:id="@+id/button7" />
 
 

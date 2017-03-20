@@ -11,8 +11,12 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.text.SimpleDateFormat;
@@ -28,32 +32,33 @@ import de.keyboardsurfer.android.widget.crouton.Style;
 
 public class SharedPreferencesDeslocamento extends AppCompatActivity {
     public static final String PREFS_NAME = "Preferences";
-    Button btn_ini_desl, btn_ini_trab, btn_ini_alm, btn_fim_alm, btn_fim_trab, btn_fim_desl, btn_km_inicial, btn_km_final;
-    TextView txt_ini_desl, txt_ini_trab, txt_ini_alm, txt_fim_alm, txt_fim_trab, txt_fim_desl, txt_km_rodado, aux;
+    Button btn_ini_desl, btn_ini_trab, btn_ini_alm, btn_fim_alm, btn_fim_trab, btn_fim_desl, btn_km_inicial, btn_km_final, btn_ini_espera, btn_fim_espera;
+    TextView txt_ini_desl, txt_ini_trab, txt_ini_alm, txt_fim_alm, txt_fim_trab, txt_fim_desl, txt_km_rodado, aux, txt_ini_espera, txt_fim_espera;
     EditText edt_km_inicial, edt_km_final;
+    LinearLayout linear_aguardando, linear_pausa_deslocamento, linear_base;
+    CheckBox ck_aguardando, ck_pausa_deslocamento;
     Button btn_limpar;
-    private CoordinatorLayout coordinatorLayout;
 
     final Style styleAlert = new Style.Builder()
             .setTextSize(30)
             .setBackgroundColorValue(Color.RED)
-            .setConfiguration(new Configuration.Builder().setDuration(5000).build())
+            .setConfiguration(new Configuration.Builder().setDuration(4000).build())
             .build();
 
     final Style styleConfirm = new Style.Builder()
             .setTextSize(30)
             .setBackgroundColorValue(Color.GREEN)
-            .setConfiguration(new Configuration.Builder().setDuration(5000).build())
+            .setConfiguration(new Configuration.Builder().setDuration(4000).build())
             .build();
     final Style styleInf = new Style.Builder()
             .setTextSize(30)
             .setBackgroundColorValue(Color.BLUE)
-            .setConfiguration(new Configuration.Builder().setDuration(5000).build())
+            .setConfiguration(new Configuration.Builder().setDuration(4000).build())
             .build();
 
     //recupera hora atual
     SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
-    Date hora = Calendar.getInstance().getTime(); // Ou qualquer outra forma que tem
+    Date hora = Calendar.getInstance().getTime();
     final String dataFormatada = sdf.format(hora);
 
     @Override
@@ -62,7 +67,9 @@ public class SharedPreferencesDeslocamento extends AppCompatActivity {
         setContentView(R.layout.activity_shared_preferences_deslocamento);
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
 
-        coordinatorLayout = (CoordinatorLayout) findViewById(R.id.coordinatorLayout);
+/*        linear_aguardando = (LinearLayout) findViewById(R.id.linear_aguardando);
+        linear_pausa_deslocamento = (LinearLayout) findViewById(R.id.linear_pausa_deslocamento);*/
+//        linear_base = (LinearLayout) findViewById(R.id.linear_base);
 
         btn_km_inicial = (Button) findViewById(R.id.btn_km_inicial);
         btn_km_final = (Button) findViewById(R.id.btn_km_final);
@@ -85,6 +92,16 @@ public class SharedPreferencesDeslocamento extends AppCompatActivity {
         btn_fim_trab = (Button) findViewById(R.id.btn_fim_trab);
         btn_fim_desl = (Button) findViewById(R.id.btn_fim_desl);
 
+        //extra deslocamento
+/*        ck_aguardando = (CheckBox)findViewById(R.id.ck_aguardando);
+        ck_pausa_deslocamento = (CheckBox) findViewById(R.id.ck_pausa_deslocamento);
+
+        btn_ini_espera = (Button) findViewById(R.id.btn_ini_espera);
+        btn_fim_espera = (Button) findViewById(R.id.btn_fim_espera);
+        txt_ini_espera = (TextView) findViewById(R.id.txt_ini_espera);
+        txt_fim_espera = (TextView) findViewById(R.id.txt_fim_espera);*/
+
+//        verificaAguardandoPeca();
         atualizaCampos();
 
         btn_ini_desl.setOnClickListener(new View.OnClickListener() {
@@ -125,19 +142,50 @@ public class SharedPreferencesDeslocamento extends AppCompatActivity {
         });
 
 
+/*        ck_aguardando.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+                if (ck_aguardando.isChecked()){
+                    SharedPreferences.Editor editor = settings.edit();
+                    editor.putString("ck_aguardando", "1");
+                    editor.commit();
+                }else{
+                    SharedPreferences.Editor editor = settings.edit();
+                    editor.putString("ck_aguardando", "");
+                    editor.commit();
+                }
+                verificaAguardandoPeca();
+            }
+        });
+
+        ck_pausa_deslocamento.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+                if (ck_pausa_deslocamento.isChecked()){
+                    SharedPreferences.Editor editor = settings.edit();
+                    editor.putString("ck_pausa_desl", "1");
+                    editor.commit();
+                }else{
+                    SharedPreferences.Editor editor = settings.edit();
+                    editor.putString("ck_pausa_desl", "");
+                    editor.commit();
+                }
+                verificaAguardandoPeca();
+            }
+        });*/
+
         btn_km_inicial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
                 SharedPreferences.Editor editor = settings.edit();
                 if (edt_km_inicial.getText().toString().equals("")) {
-//                    Toast.makeText(getApplicationContext(), "Campo Km inicial sem informação, insira informações para poder gravar !", Toast.LENGTH_LONG).show();
-
                     Crouton.makeText(SharedPreferencesDeslocamento.this, "Campo Km inicial sem informação, insira informações para poder gravar !", styleAlert).show();
                 } else {
                     editor.putString("km_inicial", edt_km_inicial.getText().toString());
                     editor.commit();
-//                    Toast.makeText(getApplicationContext(), "Km inicial gravado com sucesso !"+edt_km_inicial.getText().toString(), Toast.LENGTH_LONG).show();
                     Crouton.makeText(SharedPreferencesDeslocamento.this, "Km inicial gravado com sucesso !    " + edt_km_inicial.getText().toString() + " km", styleConfirm).show();
                     iniDesl();
                 }
@@ -150,7 +198,6 @@ public class SharedPreferencesDeslocamento extends AppCompatActivity {
 
                 edt_km_final.getText().toString();
                 if (edt_km_final.getText().toString().equals("")){
-//                    Toast.makeText(getApplicationContext(), "Campo Km final sem informação, insira informações para poder gravar !", Toast.LENGTH_LONG).show();
                     Crouton.makeText(SharedPreferencesDeslocamento.this, "Campo Km final sem informação, insira informações para poder gravar !", styleAlert).show();
                     atualizaCampos();
                 }else {
@@ -158,6 +205,35 @@ public class SharedPreferencesDeslocamento extends AppCompatActivity {
                 }
             }
         });
+
+    }
+
+    private void verificaAguardandoPeca() {
+        if(ck_aguardando.isChecked()){
+            linear_aguardando.setVisibility(View.VISIBLE);
+            LinearLayout.LayoutParams ap = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+//            linear_base.setVisibility(View.VISIBLE);
+            linear_aguardando.setLayoutParams(ap);
+        }else{
+            linear_aguardando.setVisibility(View.INVISIBLE);
+            LinearLayout.LayoutParams ap = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, 0);
+//            linear_base.setVisibility(View.INVISIBLE);
+            linear_aguardando.setLayoutParams(ap);
+        }
+        verificaPausaDeslocamento();
+    }
+    private void verificaPausaDeslocamento(){
+        if(ck_pausa_deslocamento.isChecked()){
+            linear_pausa_deslocamento.setVisibility(View.VISIBLE);
+            LinearLayout.LayoutParams pd = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+//            linear_base.setVisibility(View.VISIBLE);
+            linear_aguardando.setLayoutParams(pd);
+        }else{
+            linear_pausa_deslocamento.setVisibility(View.INVISIBLE);
+            LinearLayout.LayoutParams pd = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, 0);
+//            linear_base.setVisibility(View.INVISIBLE);
+            linear_aguardando.setLayoutParams(pd);
+        }
 
     }
 
@@ -208,6 +284,8 @@ public class SharedPreferencesDeslocamento extends AppCompatActivity {
         edt_km_inicial.setText(settings.getString("km_inicial", ""));
         edt_km_final.setText(settings.getString("km_final", ""));
         txt_km_rodado.setText(settings.getString("km_rodado", ""));
+
+
 
         verificaAlteracaoEdt();
         verificaAlteracaoBtn();
@@ -354,11 +432,11 @@ public class SharedPreferencesDeslocamento extends AppCompatActivity {
             editor.putString("inicio_trabalho", dataFormatada);
             editor.commit();
 
-            Toast.makeText(getApplicationContext(), "Inicio do Deslocamento:"+dataFormatada+" Gravado !", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Inicio do Trabalho:"+dataFormatada+" Gravado !", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(SharedPreferencesDeslocamento.this, MainActivity.class);
             startActivity(intent);
         } else {
-            Toast.makeText(getApplicationContext(), "Inicio de deslocamento já foi informado: " + txt_ini_trab.getText().toString() + "", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Inicio de Trabalho já foi informado: " + txt_ini_trab.getText().toString() + "", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(SharedPreferencesDeslocamento.this, MainActivity.class);
             startActivity(intent);
         }
@@ -370,11 +448,11 @@ public class SharedPreferencesDeslocamento extends AppCompatActivity {
             SharedPreferences.Editor editor = settings.edit();
             editor.putString("inicio_almoço", dataFormatada);
             editor.commit();
-            Toast.makeText(getApplicationContext(), "Inicio do Deslocamento:" + dataFormatada + " Gravado !", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Inicio do Almoço:" + dataFormatada + " Gravado !", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(SharedPreferencesDeslocamento.this, MainActivity.class);
             startActivity(intent);
         } else {
-            Toast.makeText(getApplicationContext(), "Inicio de deslocamento já foi informado: " + txt_ini_alm.getText().toString() + "", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Inicio de Almoço já foi informado: " + txt_ini_alm.getText().toString() + "", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(SharedPreferencesDeslocamento.this, MainActivity.class);
             startActivity(intent);
         }
@@ -386,11 +464,11 @@ public class SharedPreferencesDeslocamento extends AppCompatActivity {
             SharedPreferences.Editor editor = settings.edit();
             editor.putString("fim_almoço", dataFormatada);
             editor.commit();
-            Toast.makeText(getApplicationContext(), "Inicio do Deslocamento:" + dataFormatada + " Gravado !", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Fim do Almoço:" + dataFormatada + " Gravado !", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(SharedPreferencesDeslocamento.this, MainActivity.class);
             startActivity(intent);
         } else {
-            Toast.makeText(getApplicationContext(), "Inicio de deslocamento já foi informado: " + txt_fim_alm.getText().toString() + "", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Fim do Almoço já foi informado: " + txt_fim_alm.getText().toString() + "", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(SharedPreferencesDeslocamento.this, MainActivity.class);
             startActivity(intent);
         }
@@ -402,11 +480,11 @@ public class SharedPreferencesDeslocamento extends AppCompatActivity {
             SharedPreferences.Editor editor = settings.edit();
             editor.putString("fim_trabalho", dataFormatada);
             editor.commit();
-            Toast.makeText(getApplicationContext(), "Inicio do Deslocamento:" + dataFormatada + " Gravado !", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Fim do Trabalho:" + dataFormatada + " Gravado !", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(SharedPreferencesDeslocamento.this, MainActivity.class);
             startActivity(intent);
         } else {
-            Toast.makeText(getApplicationContext(), "Inicio de deslocamento já foi informado: " + txt_fim_trab.getText().toString() + "", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Fim do trabalho já foi informado: " + txt_fim_trab.getText().toString() + "", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(SharedPreferencesDeslocamento.this, ListRelatorioAssistenciaTecnicaActivity.class);
             startActivity(intent);
         }

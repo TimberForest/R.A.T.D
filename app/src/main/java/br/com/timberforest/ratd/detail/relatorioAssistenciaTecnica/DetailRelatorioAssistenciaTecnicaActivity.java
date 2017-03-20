@@ -43,6 +43,7 @@ public class DetailRelatorioAssistenciaTecnicaActivity extends ActionBarActivity
     private RelatorioAssistenciaTecnica relatorioAssistenciaTecnica;
     private CadastroMecanico mecanico;
     public static final String PREF_NAME = "Preferences";
+    public String packageName = "com.vajsi.digital_signature";
     FileOutputStream outputStream;
     String filename = "ExemploTeste";
     @Override
@@ -172,7 +173,7 @@ public class DetailRelatorioAssistenciaTecnicaActivity extends ActionBarActivity
         if (item.getItemId() == R.id.action_assinatura) {
             Intent i = new Intent(Intent.ACTION_MAIN);
             PackageManager managerclock = getPackageManager();
-            i = managerclock.getLaunchIntentForPackage("com.vajsi.digital_signature");
+            i = managerclock.getLaunchIntentForPackage(packageName);
             i.addCategory(Intent.CATEGORY_LAUNCHER);
             startActivity(i);
         }

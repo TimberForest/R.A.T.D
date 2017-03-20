@@ -2,13 +2,14 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 22
-    buildToolsVersion "21.1.2"
+    buildToolsVersion '25.0.0'
     //compileOptions . encoding =  "ISO-8859-1 "
     defaultConfig {
         applicationId "br.com.timberforest.ratd"
         minSdkVersion 17
         targetSdkVersion 22
-        versionName '1.4'
+        versionCode 5
+        versionName '1.5'
     }
     buildTypes {
         RATD {
@@ -20,9 +21,11 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.google.android.gms:play-services:6.5.87'
     compile 'com.android.support:appcompat-v7:22.2.1'
     compile 'com.android.support:design:22.2.1'
     compile 'com.android.support:support-v4:22.2.1'
+    compile 'de.greenrobot:eventbus:2.4.0'
     compile 'de.keyboardsurfer.android.widget:crouton:1.8.5@aar'
     testCompile 'junit:junit:4.12'
 }

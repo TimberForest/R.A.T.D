@@ -327,8 +327,7 @@ public class FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
         editor.commit();
 
         Toast.makeText(getApplicationContext(), "Campos de deslocamento liberados !", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(this, ListRelatorioAssistenciaTecnicaActivity.class);
-        startActivity(intent);
+        alerta.cancel();
     }
     private void initViews() {
         resources = getResources();

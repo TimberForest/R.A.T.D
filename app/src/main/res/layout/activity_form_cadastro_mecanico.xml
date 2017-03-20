@@ -68,7 +68,7 @@
             android:id="@+id/editCargoMecanico"
             android:inputType="textCapWords"
             android:textSize="@dimen/campos_edt_forms"
-            android:maxLength="10"
+            android:maxLength="20"
             android:ems="10"
             android:imeOptions="actionNext"/>
 
