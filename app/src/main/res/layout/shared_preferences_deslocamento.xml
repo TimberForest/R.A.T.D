@@ -15,9 +15,7 @@
         android:background="@color/amarelo_padrao"
         android:orientation="vertical">
 
-        <TextView
-            style="@style/TextosTitulos"
-            android:text="Deslocamento"/>
+c
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -135,7 +133,7 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!--<LinearLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="35dp"
@@ -174,7 +172,7 @@
             </LinearLayout>
             </LinearLayout>
 
-        &lt;!&ndash;F6329&ndash;&gt;
+        <!--F6329-->
 
             <LinearLayout
                 android:id="@+id/linear_aguardando"
@@ -258,6 +256,5 @@
                         android:id="@+id/txt_fim_pausa" />
                 </LinearLayout>
             </LinearLayout>
--->
         </LinearLayout>
 </ScrollView>

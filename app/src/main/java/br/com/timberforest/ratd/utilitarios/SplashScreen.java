@@ -2,12 +2,8 @@ package br.com.timberforest.ratd.utilitarios;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.webkit.WebView;
 
 import br.com.timberforest.ratd.R;
@@ -23,7 +19,7 @@ public class SplashScreen extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_splash_screen);
+        setContentView(R.layout.splash_screen);
 
         webView = (WebView) findViewById(R.id.webView);
         webView.loadUrl(animacao);

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/amarelo_padrao"
+    tools:context="br.com.timberforest.ratd.sharedPreferences.deslocamento.DeslocamentoActivity">
+
+    <TextView
+        style="@style/TextosTitulos"
+        android:text="Registro de Ponto Digital"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/screen_border_botao_grande_branco"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="0dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/btn_deslocamento"
+        style="@style/FontesBotaoGrandeAmarelo"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="Deslocamento" />
+
+    <Button
+        android:id="@+id/btn_servico"
+        style="@style/FontesBotaoGrandeAmarelo"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="Serviço" />
+
+    <Button
+        android:id="@+id/btn_refeicao"
+        style="@style/FontesBotaoGrandeAmarelo"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="Refeição" />
+
+        </LinearLayout>
+</LinearLayout>

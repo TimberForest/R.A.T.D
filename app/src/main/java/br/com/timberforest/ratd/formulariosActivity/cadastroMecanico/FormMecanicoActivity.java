@@ -39,7 +39,7 @@ public class FormMecanicoActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        setContentView(R.layout.activity_form_relatorio_avaliacao_operacional);
-        setContentView(R.layout.activity_form_cadastro_mecanico);
+        setContentView(R.layout.form_cadastro_mecanico);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 

@@ -48,6 +48,33 @@
         <item name="android:padding">2dp</item>
     </style>
 
+    <!--Style deslocamento-->
+    <style name="EdtBrancoDeslocamento">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/preto</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:background">@drawable/screen_border_botao_grande_branco</item>
+    </style>
+
+    <style name="BotaoDeslocamento">
+        <item name="android:onClick">deslocamentoClick</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/preto</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:background">@drawable/screen_border_botao_grande_amarelo</item>
+    </style>
+
+
     <!--Botão Branco-->
 
     <style name="BotaoGrandeBranco">

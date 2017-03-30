@@ -16,6 +16,7 @@ import br.com.timberforest.ratd.listActivity.relatorioAvaliacaoOperacional.ListR
 import br.com.timberforest.ratd.dao.ambienteBancoDados.DatabaseFactory;
 import br.com.timberforest.ratd.sharedPreferences.SharedPreferencesDeslocamento;
 import br.com.timberforest.ratd.sharedPreferences.SharedPreferencesEmailActivity;
+import br.com.timberforest.ratd.sharedPreferences.deslocamento.OpcoesDeslocamentoActivity;
 import br.com.timberforest.ratd.utilitarios.Geolocalizacao;
 
 public class MainActivity extends AppCompatActivity {
@@ -66,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         }*/
 
         if (item.getItemId() == R.id.action_ponto_digital) {
-            Intent intent = new Intent(MainActivity.this, SharedPreferencesDeslocamento.class);
+            Intent intent = new Intent(MainActivity.this, OpcoesDeslocamentoActivity.class);
             startActivity(intent);
         }
 

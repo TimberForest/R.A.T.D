@@ -4,10 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import br.com.timberforest.ratd.R;
@@ -21,7 +19,7 @@ public class SharedPreferencesEmailActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_shared_preferences_email);
+        setContentView(R.layout.shared_preferences_email);
 
         edt_email = (EditText)findViewById(R.id.edt_email);
         edt_email_rigesa = (EditText)findViewById(R.id.edt_email_rigesa);

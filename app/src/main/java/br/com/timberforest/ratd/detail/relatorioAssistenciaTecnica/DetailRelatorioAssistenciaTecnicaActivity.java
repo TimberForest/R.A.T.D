@@ -1,42 +1,25 @@
 package br.com.timberforest.ratd.detail.relatorioAssistenciaTecnica;
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.os.Environment;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.IOException;
 
 import br.com.timberforest.ratd.R;
 import br.com.timberforest.ratd.dao.relatorioAssistenciaTecnica.RelatorioAssistenciaTecnicaDao;
-import br.com.timberforest.ratd.dashboards.MainActivity;
 import br.com.timberforest.ratd.formulariosActivity.relatorioAssistenciaTecnica.FormRelatorioAssistenciaTecnicaActivity;
 import br.com.timberforest.ratd.listActivity.relatorioAssistenciaTecnica.ListRelatorioAssistenciaTecnicaActivity;
 import br.com.timberforest.ratd.model.CadastroMecanico.CadastroMecanico;
 import br.com.timberforest.ratd.model.relatorioAssitenciaTecnica.RelatorioAssistenciaTecnica;
 
-import br.com.timberforest.ratd.sharedPreferences.SharedPreferencesDeslocamento;
 import br.com.timberforest.ratd.utilitarios.EnviarEmail;
-
-import static br.com.timberforest.ratd.R.string.salvar;
 
 public class DetailRelatorioAssistenciaTecnicaActivity extends ActionBarActivity implements View.OnClickListener{
     private RelatorioAssistenciaTecnicaDao relatorioAssistenciaTecnicaDao = new RelatorioAssistenciaTecnicaDao();
@@ -49,7 +32,7 @@ public class DetailRelatorioAssistenciaTecnicaActivity extends ActionBarActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail_relatorio_relatorio_assistencia_tecnica);
+        setContentView(R.layout.detail_relatorio_relatorio_assistencia_tecnica);
         relatorioAssistenciaTecnica = (RelatorioAssistenciaTecnica) getIntent().getExtras().get("relatorioAssistenciaTecnica");
         atualizarTelaFormulario();
     }

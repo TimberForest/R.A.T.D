@@ -28,7 +28,7 @@ public class DetailRelatorioOperacionalActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail_relatorio_avaliacao_operacional);
+        setContentView(R.layout.detail_relatorio_avaliacao_operacional);
         relatorioAvaliacaoOperacional = (RelatorioAvaliacaoOperacional) getIntent().getExtras().get("RelatorioAvaliacaoOperacional");
         atualizarTela();
     }

@@ -6,7 +6,6 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.CheckBox;
 import android.widget.TextView;
 
 import br.com.timberforest.ratd.R;
@@ -20,7 +19,7 @@ public class DetailMecanicoActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail_cadastro_mecanico);
+        setContentView(R.layout.detail_cadastro_mecanico);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         mecanico = (CadastroMecanico) getIntent().getExtras().get("CadastroMecanico");

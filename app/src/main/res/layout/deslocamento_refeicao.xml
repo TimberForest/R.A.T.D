@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/amarelo_padrao"
+    android:padding="5dp"
+    tools:context="br.com.timberforest.ratd.sharedPreferences.deslocamento.DeslocamentoActivity">
+
+    <TextView
+        style="@style/TextosTitulos"
+        android:text="Refeição" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/screen_border_botao_grande_branco"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/branco"
+            android:orientation="horizontal">
+
+            <Button
+                android:text="@string/inicio"
+                style="@style/BotaoDeslocamento"
+                android:id="@+id/btn_ini_ref1" />
+            <TextView
+                style="@style/EdtBrancoDeslocamento"
+                android:id="@+id/txt_ini_ref1" />
+            <Button
+                android:text="@string/fim"
+                style="@style/BotaoDeslocamento"
+                android:id="@+id/btn_fim_ref1" />
+            <TextView
+                style="@style/EdtBrancoDeslocamento"
+                android:id="@+id/txt_fim_ref1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/branco"
+            android:orientation="horizontal">
+
+            <Button
+                android:text="@string/inicio"
+                style="@style/BotaoDeslocamento"
+                android:id="@+id/btn_ini_ref2" />
+            <TextView
+                style="@style/EdtBrancoDeslocamento"
+                android:id="@+id/txt_ini_ref2" />
+            <Button
+                android:text="@string/fim"
+                style="@style/BotaoDeslocamento"
+                android:id="@+id/btn_fim_ref2" />
+            <TextView
+                style="@style/EdtBrancoDeslocamento"
+                android:id="@+id/txt_fim_ref2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/branco"
+            android:orientation="horizontal">
+
+            <Button
+                android:text="@string/inicio"
+                style="@style/BotaoDeslocamento"
+                android:id="@+id/btn_ini_ref3" />
+            <TextView
+                style="@style/EdtBrancoDeslocamento"
+                android:id="@+id/txt_ini_ref3" />
+            <Button
+                android:text="@string/fim"
+                style="@style/BotaoDeslocamento"
+                android:id="@+id/btn_fim_ref3" />
+            <TextView
+                style="@style/EdtBrancoDeslocamento"
+                android:id="@+id/txt_fim_ref3" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/branco"
+            android:orientation="horizontal">
+
+            <Button
+                android:text="@string/inicio"
+                style="@style/BotaoDeslocamento"
+                android:id="@+id/btn_ini_ref4" />
+            <TextView
+                style="@style/EdtBrancoDeslocamento"
+                android:id="@+id/txt_ini_ref4" />
+            <Button
+                android:text="@string/fim"
+                style="@style/BotaoDeslocamento"
+                android:id="@+id/btn_fim_ref4" />
+            <TextView
+                style="@style/EdtBrancoDeslocamento"
+                android:id="@+id/txt_fim_ref4" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/branco"
+            android:orientation="horizontal">
+
+            <Button
+                android:text="@string/inicio"
+                style="@style/BotaoDeslocamento"
+                android:id="@+id/btn_ini_ref5" />
+            <TextView
+                style="@style/EdtBrancoDeslocamento"
+                android:id="@+id/txt_ini_ref5" />
+            <Button
+                android:text="@string/fim"
+                style="@style/BotaoDeslocamento"
+                android:id="@+id/btn_fim_ref5" />
+            <TextView
+                style="@style/EdtBrancoDeslocamento"
+                android:id="@+id/txt_fim_ref5" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/branco"
+            android:orientation="horizontal">
+
+            <Button
+                android:text="@string/inicio"
+                style="@style/BotaoDeslocamento"
+                android:id="@+id/btn_ini_ref6" />
+            <TextView
+                style="@style/EdtBrancoDeslocamento"
+                android:id="@+id/txt_ini_ref6" />
+            <Button
+                android:text="@string/fim"
+                style="@style/BotaoDeslocamento"
+                android:id="@+id/btn_fim_ref6" />
+            <TextView
+                style="@style/EdtBrancoDeslocamento"
+                android:id="@+id/txt_fim_ref6" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

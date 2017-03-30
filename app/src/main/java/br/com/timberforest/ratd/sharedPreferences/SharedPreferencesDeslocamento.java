@@ -3,18 +3,13 @@ package br.com.timberforest.ratd.sharedPreferences;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -24,7 +19,6 @@ import java.util.Calendar;
 import java.util.Date;
 import br.com.timberforest.ratd.R;
 import br.com.timberforest.ratd.dashboards.MainActivity;
-import br.com.timberforest.ratd.formulariosActivity.relatorioAssistenciaTecnica.FormRelatorioAssistenciaTecnicaActivity;
 import br.com.timberforest.ratd.listActivity.relatorioAssistenciaTecnica.ListRelatorioAssistenciaTecnicaActivity;
 import de.keyboardsurfer.android.widget.crouton.Configuration;
 import de.keyboardsurfer.android.widget.crouton.Crouton;
@@ -64,7 +58,7 @@ public class SharedPreferencesDeslocamento extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_shared_preferences_deslocamento);
+        setContentView(R.layout.shared_preferences_deslocamento);
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
 
 /*        linear_aguardando = (LinearLayout) findViewById(R.id.linear_aguardando);
@@ -280,7 +274,6 @@ public class SharedPreferencesDeslocamento extends AppCompatActivity {
         txt_fim_alm.setText(settings.getString("fim_almoço", ""));
         txt_fim_trab.setText(settings.getString("fim_trabalho", ""));
         txt_fim_desl.setText(settings.getString("fim_deslocamento", ""));
-
         edt_km_inicial.setText(settings.getString("km_inicial", ""));
         edt_km_final.setText(settings.getString("km_final", ""));
         txt_km_rodado.setText(settings.getString("km_rodado", ""));

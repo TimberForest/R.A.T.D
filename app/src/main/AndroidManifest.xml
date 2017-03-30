@@ -3,9 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="br.com.timberforest.ratd">
 
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-
     <application
         android:allowBackup="true"
         android:icon="@drawable/icone_app1"
@@ -32,7 +29,8 @@
             android:label="@string/app_name"
             android:screenOrientation="landscape" />
 
-                        <!--<activity
+        <!--
+                <activity
                     android:name=".utilitarios.SplashScreen"
                     android:configChanges="orientation|keyboardHidden"
                     android:label="@string/nome_icone"
@@ -46,11 +44,15 @@
                     android:name=".dashboards.MainActivity"
                     android:configChanges="orientation|keyboardHidden"
                     android:label="@string/app_name"
-                    android:screenOrientation="landscape" />-->
+                    android:screenOrientation="landscape" />
+        -->
 
-<!--        <service
+
+        <!--
+            <service
             android:name=".utilitarios.LocationIntentService"
-            android:exported="false"/>-->
+            android:exported="false"/>
+        -->
 
         <activity
             android:name=".detail.cadastroMecanico.DetailMecanicoActivity"
@@ -144,6 +146,27 @@
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
 
+       <!--deslocamento-->
+        <activity android:name=".sharedPreferences.deslocamento.OpcoesDeslocamentoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".sharedPreferences.deslocamento.DeslocamentoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".sharedPreferences.deslocamento.TrabalhoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".sharedPreferences.deslocamento.RefeicaoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
     </application>
 
 </manifest>
