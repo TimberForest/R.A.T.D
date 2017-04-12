@@ -44,8 +44,27 @@ public class RefeicaoActivity extends AppCompatActivity {
             .setConfiguration(new Configuration.Builder().setDuration(4000).build())
             .build();
 
+    private String spIniRef1 = "ini_ref1";
+    private String spFimRef1 = "fim_ref1";
+    private String spIniRef2 = "ini_ref2";
+    private String spFimRef2 = "fim_ref2";
+    private String spIniRef3 = "ini_ref3";
+    private String spFimRef3 = "fim_ref3";
+    private String spIniRef4 = "ini_ref4";
+    private String spFimRef4 = "fim_ref4";
+    private String spIniRef5 = "ini_ref5";
+    private String spFimRef5 = "fim_ref5";
+    private String spIniRef6 = "ini_ref6";
+    private String spFimRef6 = "fim_ref6";
+
+    private String msgIniRef = "Inicio da Refeição: ";
+    private String msgSucesso = " Gravado com sucesso !";
+    private String msgFimRef = "Fim da Refeição: ";
+
+    private String vazio = "";
+
     //recupera hora atual
-    SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+    SimpleDateFormat sdf = new SimpleDateFormat("HH:mm" + " - "+ "dd/MM/yyyy");
     Date hora = Calendar.getInstance().getTime();
     final String dataFormatada = sdf.format(hora);
 
@@ -85,183 +104,117 @@ public class RefeicaoActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
-    public void mensagemGravar(String data){
-        Toast.makeText(getApplicationContext(), "Inicio da Refeição: "+data+" Gravado !", Toast.LENGTH_SHORT).show();
+
+    public void msgIni(String data){
+        Toast.makeText(getApplicationContext(), msgIniRef+data+msgSucesso, Toast.LENGTH_SHORT).show();
     }
-    public void mensagemGravado(String campo){
-        Toast.makeText(getApplicationContext(), "Inicio da Refeição já foi informado: " + campo + "", Toast.LENGTH_SHORT).show();
+    public void msgFim(String data){
+        Toast.makeText(getApplicationContext(), msgFimRef+data+msgSucesso, Toast.LENGTH_SHORT).show();
     }
-    public void deslocamentoClick(View view){
+
+    public void gravarRefIni(String chaveValor){
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();
+        editor.putString(chaveValor, dataFormatada);
+        editor.commit();
+        msgIni(dataFormatada);
+        goToMain();
+
+    }
+    public void gravarRefFim(String chaveValor){
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putString(chaveValor, dataFormatada);
+        editor.commit();
+        msgFim(dataFormatada);
+        goToMain();
+
+    }
+
+    public void deslocamentoClick(View view){
         switch (view.getId()) {
             // 1
             case R.id.btn_ini_ref1:
-                if (txt_ini_ref1.getText().toString().equals("")) {
-                    editor.putString("ini_ref1", dataFormatada);
-                    mensagemGravar(dataFormatada);
-                    goToMain();
-                } else {
-                    mensagemGravado(txt_ini_ref1.getText().toString());
-                    goToMain();
-                }
+                gravarRefIni(spIniRef1);
                 break;
             case R.id.btn_fim_ref1:
-                if (txt_fim_ref1.getText().toString().equals("")) {
-                    editor.putString("fim_ref1", dataFormatada);
-                    mensagemGravar(dataFormatada);
-                    goToMain();
-                } else {
-                    mensagemGravado(txt_ini_ref1.getText().toString());
-                    goToMain();
-                }
+                gravarRefFim(spFimRef1);
                 break;
             // 2
             case R.id.btn_ini_ref2:
-                if (txt_ini_ref2.getText().toString().equals("")) {
-                    editor.putString("ini_ref2", dataFormatada);
-                    mensagemGravar(dataFormatada);
-                    goToMain();
-                } else {
-                    mensagemGravado(txt_ini_ref2.getText().toString());
-                    goToMain();
-                }
+                gravarRefIni(spIniRef2);
                 break;
             case R.id.btn_fim_ref2:
-                if (txt_fim_ref2.getText().toString().equals("")) {
-                    editor.putString("fim_ref2", dataFormatada);
-                    mensagemGravar(dataFormatada);
-                    goToMain();
-                } else {
-                    mensagemGravado(txt_ini_ref2.getText().toString());
-                    goToMain();
-                }
+                gravarRefFim(spFimRef2);
                 break;
             //3
             case R.id.btn_ini_ref3:
-                if (txt_ini_ref3.getText().toString().equals("")) {
-                    editor.putString("ini_ref3", dataFormatada);
-                    mensagemGravar(dataFormatada);
-                    goToMain();
-                } else {
-                    mensagemGravado(txt_ini_ref3.getText().toString());
-                    goToMain();
-                }
+                gravarRefIni(spIniRef3);
                 break;
             case R.id.btn_fim_ref3:
-                if (txt_fim_ref3.getText().toString().equals("")) {
-                    editor.putString("fim_ref3", dataFormatada);
-                    mensagemGravar(dataFormatada);
-                    goToMain();
-                } else {
-                    mensagemGravado(txt_ini_ref3.getText().toString());
-                    goToMain();
-                }
+                gravarRefFim(spFimRef3);
                 break;
             //4
             case R.id.btn_ini_ref4:
-                if (txt_ini_ref4.getText().toString().equals("")) {
-                    editor.putString("ini_ref4", dataFormatada);
-                    mensagemGravar(dataFormatada);
-                    goToMain();
-                } else {
-                    mensagemGravado(txt_ini_ref4.getText().toString());
-                    goToMain();
-                }
+                gravarRefIni(spIniRef4);
                 break;
             case R.id.btn_fim_ref4:
-                if (txt_fim_ref4.getText().toString().equals("")) {
-                    editor.putString("fim_ref4", dataFormatada);
-                    mensagemGravar(dataFormatada);
-                    goToMain();
-                } else {
-                    mensagemGravado(txt_ini_ref4.getText().toString());
-                    goToMain();
-                }
+                gravarRefFim(spFimRef4);
                 break;
             //5
             case R.id.btn_ini_ref5:
-                if (txt_ini_ref5.getText().toString().equals("")) {
-                    editor.putString("ini_ref5", dataFormatada);
-                    mensagemGravar(dataFormatada);
-                    goToMain();
-                } else {
-                    mensagemGravado(txt_ini_ref5.getText().toString());
-                    goToMain();
-                }
+                gravarRefIni(spIniRef5);
                 break;
             case R.id.btn_fim_ref5:
-                if (txt_fim_ref5.getText().toString().equals("")) {
-                    editor.putString("fim_ref5", dataFormatada);
-                    mensagemGravar(dataFormatada);
-                    goToMain();
-                } else {
-                    mensagemGravado(txt_ini_ref5.getText().toString());
-                    goToMain();
-                }
+                gravarRefFim(spFimRef5);
                 break;
             //6
             case R.id.btn_ini_ref6:
-                if (txt_ini_ref6.getText().toString().equals("")) {
-                    editor.putString("ini_ref6", dataFormatada);
-                    mensagemGravar(dataFormatada);
-                    goToMain();
-                } else {
-                    mensagemGravado(txt_ini_ref6.getText().toString());
-                    goToMain();
-                }
+                gravarRefIni(spIniRef6);
                 break;
             case R.id.btn_fim_ref6:
-                if (txt_fim_ref6.getText().toString().equals("")) {
-                    editor.putString("fim_ref6", dataFormatada);
-                    mensagemGravar(dataFormatada);
-                    goToMain();
-                } else {
-                    mensagemGravado(txt_ini_ref6.getText().toString());
-                    goToMain();
-                }
+                gravarRefFim(spFimRef6);
                 break;
         }
-        editor.commit();
     }
     private void atualizaCampos() {
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
-        txt_ini_ref1.setText(settings.getString("ini_ref1", ""));
-        txt_fim_ref1.setText(settings.getString("fim_ref1", ""));
-        txt_ini_ref2.setText(settings.getString("ini_ref2", ""));
-        txt_fim_ref2.setText(settings.getString("fim_ref2", ""));
-        txt_ini_ref3.setText(settings.getString("ini_ref3", ""));
-        txt_fim_ref3.setText(settings.getString("fim_ref3", ""));
-        txt_ini_ref4.setText(settings.getString("ini_ref4", ""));
-        txt_fim_ref4.setText(settings.getString("fim_ref4", ""));
-        txt_ini_ref5.setText(settings.getString("ini_ref5", ""));
-        txt_fim_ref5.setText(settings.getString("fim_ref5", ""));
-        txt_ini_ref6.setText(settings.getString("ini_ref6", ""));
-        txt_fim_ref6.setText(settings.getString("fim_ref6", ""));
+        txt_ini_ref1.setText(settings.getString(spIniRef1, vazio));
+        txt_fim_ref1.setText(settings.getString(spFimRef1, vazio));
+        txt_ini_ref2.setText(settings.getString(spIniRef2, vazio));
+        txt_fim_ref2.setText(settings.getString(spFimRef2, vazio));
+        txt_ini_ref3.setText(settings.getString(spIniRef3, vazio));
+        txt_fim_ref3.setText(settings.getString(spFimRef3, vazio));
+        txt_ini_ref4.setText(settings.getString(spIniRef4, vazio));
+        txt_fim_ref4.setText(settings.getString(spFimRef4, vazio));
+        txt_ini_ref5.setText(settings.getString(spIniRef5, vazio));
+        txt_fim_ref5.setText(settings.getString(spFimRef5, vazio));
+        txt_ini_ref6.setText(settings.getString(spIniRef6, vazio));
+        txt_fim_ref6.setText(settings.getString(spFimRef6, vazio));
         verAltBtnIni();
     }
     private void verAltBtnIni() {
-        if (txt_fim_ref1.getText().toString().equals("")){
+        if (txt_fim_ref1.getText().toString().equals(vazio)){
             btn_ini_ref2.setEnabled(false);
         } else {
             btn_ini_ref2.setEnabled(true);
         }
-        if (txt_fim_ref2.getText().toString().equals("")){
+        if (txt_fim_ref2.getText().toString().equals(vazio)){
             btn_ini_ref3.setEnabled(false);
         } else {
             btn_ini_ref3.setEnabled(true);
         }
-        if (txt_fim_ref3.getText().toString().equals("")){
+        if (txt_fim_ref3.getText().toString().equals(vazio)){
             btn_ini_ref4.setEnabled(false);
         } else {
             btn_ini_ref4.setEnabled(true);
         }
-        if (txt_fim_ref4.getText().toString().equals("")){
+        if (txt_fim_ref4.getText().toString().equals(vazio)){
             btn_ini_ref5.setEnabled(false);
         } else {
             btn_ini_ref5.setEnabled(true);
         }
-        if (txt_fim_ref5.getText().toString().equals("")){
+        if (txt_fim_ref5.getText().toString().equals(vazio)){
             btn_ini_ref6.setEnabled(false);
         } else {
             btn_ini_ref6.setEnabled(true);
@@ -269,32 +222,32 @@ public class RefeicaoActivity extends AppCompatActivity {
         verAltBtnFim();
     }
     public void verAltBtnFim(){
-        if (txt_ini_ref1.getText().toString().equals("")){
+        if (txt_ini_ref1.getText().toString().equals(vazio)){
             btn_fim_ref1.setEnabled(false);
         } else {
             btn_fim_ref1.setEnabled(true);
         }
-        if (txt_ini_ref2.getText().toString().equals("")){
+        if (txt_ini_ref2.getText().toString().equals(vazio)){
             btn_fim_ref2.setEnabled(false);
         } else {
             btn_fim_ref2.setEnabled(true);
         }
-        if (txt_ini_ref3.getText().toString().equals("")){
+        if (txt_ini_ref3.getText().toString().equals(vazio)){
             btn_fim_ref3.setEnabled(false);
         } else {
             btn_fim_ref3.setEnabled(true);
         }
-        if (txt_ini_ref4.getText().toString().equals("")){
+        if (txt_ini_ref4.getText().toString().equals(vazio)){
             btn_fim_ref4.setEnabled(false);
         } else {
             btn_fim_ref4.setEnabled(true);
         }
-        if (txt_ini_ref5.getText().toString().equals("")){
+        if (txt_ini_ref5.getText().toString().equals(vazio)){
             btn_fim_ref5.setEnabled(false);
         } else {
             btn_fim_ref5.setEnabled(true);
         }
-        if (txt_ini_ref6.getText().toString().equals("")){
+        if (txt_ini_ref6.getText().toString().equals(vazio)){
             btn_fim_ref6.setEnabled(false);
         } else {
             btn_fim_ref6.setEnabled(true);
@@ -303,56 +256,56 @@ public class RefeicaoActivity extends AppCompatActivity {
     }
     public void botaoClicado(){
         //1
-        if (txt_ini_ref1.getText().toString().equals("")){
+        if (txt_ini_ref1.getText().toString().equals(vazio)){
         } else {
             btn_ini_ref1.setEnabled(false);
         }
-        if (txt_fim_ref1.getText().toString().equals("")){
+        if (txt_fim_ref1.getText().toString().equals(vazio)){
         } else {
             btn_fim_ref1.setEnabled(false);
         }
         //2
-        if (txt_ini_ref2.getText().toString().equals("")){
+        if (txt_ini_ref2.getText().toString().equals(vazio)){
         } else {
             btn_ini_ref2.setEnabled(false);
         }
-        if (txt_fim_ref2.getText().toString().equals("")){
+        if (txt_fim_ref2.getText().toString().equals(vazio)){
         } else {
             btn_fim_ref2.setEnabled(false);
         }
         //3
-        if (txt_ini_ref3.getText().toString().equals("")){
+        if (txt_ini_ref3.getText().toString().equals(vazio)){
         } else {
             btn_ini_ref3.setEnabled(false);
         }
-        if (txt_fim_ref3.getText().toString().equals("")){
+        if (txt_fim_ref3.getText().toString().equals(vazio)){
         } else {
             btn_fim_ref3.setEnabled(false);
         }
         //4
-        if (txt_ini_ref4.getText().toString().equals("")){
+        if (txt_ini_ref4.getText().toString().equals(vazio)){
         } else {
             btn_ini_ref4.setEnabled(false);
         }
-        if (txt_fim_ref4.getText().toString().equals("")){
+        if (txt_fim_ref4.getText().toString().equals(vazio)){
         } else {
             btn_fim_ref4.setEnabled(false);
         }
         //5
-        if (txt_ini_ref5.getText().toString().equals("")){
+        if (txt_ini_ref5.getText().toString().equals(vazio)){
         } else {
             btn_ini_ref5.setEnabled(false);
         }
-        if (txt_fim_ref5.getText().toString().equals("")){
+        if (txt_fim_ref5.getText().toString().equals(vazio)){
         } else {
             btn_fim_ref5.setEnabled(false);
         }
         //6
-        if (txt_ini_ref6.getText().toString().equals("")){
+        if (txt_ini_ref6.getText().toString().equals(vazio)){
         } else {
             btn_ini_ref6.setEnabled(false);
         }
-        if (txt_fim_ref6.getText().toString().equals("")){
+        if (txt_fim_ref6.getText().toString().equals(vazio)){
         } else {
             btn_fim_ref6.setEnabled(false);
         }

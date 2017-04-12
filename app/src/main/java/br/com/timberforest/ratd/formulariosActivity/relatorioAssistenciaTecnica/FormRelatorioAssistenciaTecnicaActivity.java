@@ -42,6 +42,7 @@ public class FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
     RelatorioAssistenciaTecnicaDao relatorioAssistenciaTecnicaDao = new RelatorioAssistenciaTecnicaDao();
     SharedPreferencesDeslocamento sharedPreferencesDeslocamento = new SharedPreferencesDeslocamento();
     public static final String PREF_NAME = "Preferences";
+    public static final String PREF_ID_RATD = "idRatd";
 
     Long aux;
     Long aux1;
@@ -49,7 +50,7 @@ public class FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
     private RelatorioAssistenciaTecnica relatorioAssistenciaTecnica;
     private Resources resources;
     private EditText edtChassi, edt_inicio_trabalho, edt_inicio_deslocamento, edt_inicio_almoco, edtCliente,edtModelo, edtHorimetro, edtEstadoCliente, edtCidadeCliente,edtLocalDaObra,edtDefeitoConstatado,
-    edtProcedimentoAdotado,edt_fim_almoco, edt_fim_trabalho,edt_fim_deslocamento,edt_km_rodado,edtCodigoPeca,edtQuantidade,edtDescricao, edt_pendencias;
+            edtProcedimentoAdotado,edt_fim_almoco, edt_fim_trabalho,edt_fim_deslocamento,edt_km_rodado,edtCodigoPeca,edtQuantidade,edtDescricao, edt_pendencias;
 
     final Style styleAlert = new Style.Builder()
             .setTextSize(30)
@@ -80,6 +81,12 @@ public class FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
                 RelatorioAssistenciaTecnica rel = relatorioAssistenciaTecnicas.get(0);
                 editGetRelatNum.setText(rel.getIdFormulario().toString());
                 editGetRelatNum.setEnabled(false);
+
+                SharedPreferences settings = getSharedPreferences(PREF_ID_RATD, 0);
+                SharedPreferences.Editor editor = settings.edit();
+                editor.putString("idRatd", rel.getIdFormulario().toString());
+                editor.commit();
+
             }
         }
 
@@ -466,4 +473,3 @@ public class FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
     }
 
 }
-

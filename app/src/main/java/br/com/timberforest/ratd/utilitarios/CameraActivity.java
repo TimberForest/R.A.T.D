@@ -1,6 +1,7 @@
 package br.com.timberforest.ratd.utilitarios;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -10,6 +11,7 @@ import android.provider.MediaStore;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import br.com.timberforest.ratd.R;
@@ -18,7 +20,6 @@ import br.com.timberforest.ratd.model.relatorioAssitenciaTecnica.RelatorioAssist
 import java.io.File;
 
 public class CameraActivity extends ActionBarActivity {
-
 
     private static final int TAKE_PICTURE0 = 1;
     private static final int TAKE_PICTURE1 = 2;
@@ -38,10 +39,19 @@ public class CameraActivity extends ActionBarActivity {
 
     private Uri outputFileUri;
 
+    public static final String PREF_ID_RATD = "idRatd";
+    public TextView ratdId;
+    public String idRatd;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fotos);
+
+
+/*        SharedPreferences settings = getSharedPreferences(PREF_ID_RATD, 0);
+        ratdId.setText(settings.getString("idRatd", ""));
+        idRatd=ratdId.toString();*/
 
         imageViewChassi = (ImageView) findViewById(R.id.image_chassi);
         TextView btnChassi = (TextView) findViewById(R.id.btn_foto_chassi);
@@ -54,6 +64,7 @@ public class CameraActivity extends ActionBarActivity {
                 if(pasta.exists()==true) {
                     pasta.mkdirs();
                 }
+
                 File file = new File(nomePasta,"chassi.jpg");
                 outputFileUri = Uri.fromFile(file);
                 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -157,21 +168,15 @@ public class CameraActivity extends ActionBarActivity {
     }
 
 /*    public void atualizarImagens(){
-
         String nomePasta = Environment.getExternalStorageDirectory()+"/relatorios";
-
         File pasta = new File(nomePasta);
         pasta.mkdirs();
         if(pasta.exists()==true) {
             pasta.mkdirs();
         }
         File file = new File(nomePasta+"chassi.jpg");
-
         ImageView iv = (ImageView) findViewById(R.id.image_chassi);
         iv.setImageBitmap(file);
-
-
-
     }*/
 
     @Override
@@ -359,6 +364,3 @@ public class CameraActivity extends ActionBarActivity {
     }
 
 }
-
-
-

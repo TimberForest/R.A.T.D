@@ -16,7 +16,7 @@ import br.com.timberforest.ratd.dashboards.MainActivity;
 
 public class TrabalhoActivity extends AppCompatActivity {
 
-    public static final String PREFS_NAME = "sharedPreferencesTrabalho";
+    public static final String PREFS_NAME = "sharedPreferencesServico";
 
     private Button btn_ini_serv1,btn_fim_serv1,btn_ini_serv2,btn_fim_serv2,btn_ini_serv3,btn_fim_serv3,btn_ini_serv4,
             btn_fim_serv4,btn_ini_serv5, btn_fim_serv5,btn_ini_serv6,btn_fim_serv6;
@@ -44,7 +44,7 @@ public class TrabalhoActivity extends AppCompatActivity {
 
 
     //recupera hora atual
-    SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+    SimpleDateFormat sdf = new SimpleDateFormat("HH:mm" + " - "+ "dd/MM/yyyy");
     Date hora = Calendar.getInstance().getTime();
     final String dataFormatada = sdf.format(hora);
 
@@ -86,6 +86,7 @@ public class TrabalhoActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
     public void msgIni(String data){
         Toast.makeText(getApplicationContext(), msgIniServ+data+msgSucesso, Toast.LENGTH_SHORT).show();
     }
@@ -111,8 +112,6 @@ public class TrabalhoActivity extends AppCompatActivity {
 
     }
     public void deslocamentoClick(View view){
-        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
-        SharedPreferences.Editor editor = settings.edit();
         switch (view.getId()) {
             // 1
             case R.id.btn_ini_serv1:
@@ -157,22 +156,21 @@ public class TrabalhoActivity extends AppCompatActivity {
                 gravarServFim(spFimServ6);
                 break;
         }
-        editor.commit();
     }
     private void atualizaCampos() {
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         txt_ini_serv1.setText(settings.getString(spIniServ1, vazio));
-        txt_fim_serv1.setText(settings.getString(spIniServ1, vazio));
+        txt_fim_serv1.setText(settings.getString(spFimServ1, vazio));
         txt_ini_serv2.setText(settings.getString(spIniServ2, vazio));
-        txt_fim_serv2.setText(settings.getString(spIniServ2, vazio));
+        txt_fim_serv2.setText(settings.getString(spFimServ2, vazio));
         txt_ini_serv3.setText(settings.getString(spIniServ3, vazio));
-        txt_fim_serv3.setText(settings.getString(spIniServ3, vazio));
+        txt_fim_serv3.setText(settings.getString(spFimServ3, vazio));
         txt_ini_serv4.setText(settings.getString(spIniServ4, vazio));
-        txt_fim_serv4.setText(settings.getString(spIniServ4, vazio));
+        txt_fim_serv4.setText(settings.getString(spFimServ4, vazio));
         txt_ini_serv5.setText(settings.getString(spIniServ5, vazio));
-        txt_fim_serv5.setText(settings.getString(spIniServ5, vazio));
+        txt_fim_serv5.setText(settings.getString(spFimServ5, vazio));
         txt_ini_serv6.setText(settings.getString(spIniServ6, vazio));
-        txt_fim_serv6.setText(settings.getString(spIniServ6, vazio));
+        txt_fim_serv6.setText(settings.getString(spFimServ6, vazio));
 
         verAltBtnIni();
     }

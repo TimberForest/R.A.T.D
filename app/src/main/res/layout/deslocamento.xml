@@ -45,6 +45,10 @@
                 style="@style/EdtBrancoDeslocamento"
                 android:id="@+id/txt_fim_desl1" />
 
+            <TextView
+                style="@style/TxtCinzaDeslocamento"
+                android:id="@+id/txt_tempo_desl1" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -68,6 +72,10 @@
                 style="@style/EdtBrancoDeslocamento"
                 android:id="@+id/txt_fim_desl2" />
 
+            <TextView
+                style="@style/TxtCinzaDeslocamento"
+                android:id="@+id/txt_tempo_desl2" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -90,6 +98,9 @@
             <TextView
                 style="@style/EdtBrancoDeslocamento"
                 android:id="@+id/txt_fim_desl3" />
+            <TextView
+                style="@style/TxtCinzaDeslocamento"
+                android:id="@+id/txt_tempo_desl3" />
 
         </LinearLayout>
 
@@ -113,6 +124,9 @@
             <TextView
                 style="@style/EdtBrancoDeslocamento"
                 android:id="@+id/txt_fim_desl4" />
+            <TextView
+                style="@style/TxtCinzaDeslocamento"
+                android:id="@+id/txt_tempo_desl4" />
 
         </LinearLayout>
 
@@ -136,6 +150,9 @@
             <TextView
                 style="@style/EdtBrancoDeslocamento"
                 android:id="@+id/txt_fim_desl5" />
+            <TextView
+                style="@style/TxtCinzaDeslocamento"
+                android:id="@+id/txt_tempo_desl5" />
 
         </LinearLayout>
 
@@ -159,6 +176,9 @@
             <TextView
                 style="@style/EdtBrancoDeslocamento"
                 android:id="@+id/txt_fim_desl6" />
+            <TextView
+                style="@style/TxtCinzaDeslocamento"
+                android:id="@+id/txt_tempo_desl6" />
 
         </LinearLayout>
 

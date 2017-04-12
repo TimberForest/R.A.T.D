@@ -15,36 +15,74 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/screen_border_botao_grande_branco"
-        android:padding="5dp"
         android:layout_margin="5dp"
         android:layout_marginBottom="0dp"
+        android:background="@drawable/screen_border_botao_grande_branco"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        android:padding="5dp">
 
-    <Button
-        android:id="@+id/btn_deslocamento"
-        style="@style/FontesBotaoGrandeAmarelo"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:text="Deslocamento" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btn_servico"
-        style="@style/FontesBotaoGrandeAmarelo"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:text="Serviço" />
+            <Button
+                android:id="@+id/btn_deslocamento"
+                style="@style/FontesBotaoGrandeAmarelo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_deslocamento_car"
+                android:paddingRight="80dp"
+                android:paddingLeft="80dp"
+                android:text="Deslocamento" />
 
-    <Button
-        android:id="@+id/btn_refeicao"
-        style="@style/FontesBotaoGrandeAmarelo"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:text="Refeição" />
+            <Button
+                android:id="@+id/btn_servico"
+                style="@style/FontesBotaoGrandeAmarelo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_servico"
+                android:paddingRight="110dp"
+                android:paddingLeft="110dp"
+                android:text="Serviço" />
+
+            <Button
+                android:id="@+id/btn_refeicao"
+                style="@style/FontesBotaoGrandeAmarelo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_refeicao"
+                android:paddingRight="110dp"
+                android:paddingLeft="110dp"
+                android:text="Refeição" />
 
         </LinearLayout>
+
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:text="@string/inicio"
+                style="@style/BotaoDeslocamento"
+                android:id="@+id/btn_ini_desl1" />
+            <TextView
+                style="@style/EdtBrancoDeslocamento"
+                android:id="@+id/txt_ini_desl1" />
+            <Button
+                android:text="@string/inicio"
+                style="@style/BotaoDeslocamento"
+                android:id="@+id/btn_ini_desl2" />
+            <TextView
+                style="@style/EdtBrancoDeslocamento"
+                android:id="@+id/txt_ini_desl2" />
+
+        </LinearLayout>
+-->
+    </LinearLayout>
 </LinearLayout>
