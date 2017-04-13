@@ -1,6 +1,5 @@
 package br.com.timberforest.ratd.sharedPreferences.deslocamento;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
@@ -25,7 +24,7 @@ public class DeslocamentoActivity extends AppCompatActivity{
     private TextView txt_ini_desl1, txt_fim_desl1, txt_ini_desl2, txt_fim_desl2, txt_ini_desl3, txt_fim_desl3, txt_ini_desl4, txt_fim_desl4,
             txt_ini_desl5, txt_fim_desl5, txt_ini_desl6, txt_fim_desl6;
 
-    private TextView txt_tempo_desl1, txt_tempo_desl2, txt_tempo_desl3, txt_tempo_desl4, txt_tempo_desl5, txt_tempo_desl6, txt_total;
+    private TextView txt_tempo_desl1, txt_tempo_desl2, txt_tempo_desl3, txt_tempo_desl4, txt_tempo_desl5, txt_tempo_desl6;
 
     private String spIniDesl1 = "ini_desl1";
     private String spFimDesl1 = "fim_desl1";
@@ -45,7 +44,7 @@ public class DeslocamentoActivity extends AppCompatActivity{
     private String spTempoDesl4 = "tempo_desl4";
     private String spTempoDesl5 = "tempo_desl5";
     private String spTempoDesl6 = "tempo_desl6";
-    private String spTotal = "tempo_deslocamento";
+    private String spTotalDeslocamento = "tempo_deslocamento";
 
     long lh1 =0, lh2 =0, lh3 =0, lh4 =0, lh5 =0, lh6 =0, horasSoma =0, diffHours =0;
     long lm1 =0, lm2 =0, lm3 =0, lm4 =0, lm5 =0, lm6 =0, diffMinutes =0;
@@ -54,14 +53,8 @@ public class DeslocamentoActivity extends AppCompatActivity{
     private String msgIniDesl = "Inicio do Deslocamento: ";
     private String msgSucesso = " Gravado com sucesso !";
     private String msgFimDesl = "Fim do Deslocamento: ";
-
+    private String DataFormat = "HH:mm";
     private String vazio = "";
-
-
-    //recupera hora atual
-    SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
-    Date hora = Calendar.getInstance().getTime();
-    final String dataFormatada = sdf.format(hora);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -114,6 +107,11 @@ public class DeslocamentoActivity extends AppCompatActivity{
         Toast.makeText(getApplicationContext(), msgFimDesl+data+msgSucesso, Toast.LENGTH_SHORT).show();
     }
     public void gravarDeslIni(String chaveValor){
+        //recupera hora atual
+        SimpleDateFormat sdf = new SimpleDateFormat(DataFormat);
+        Date hora = Calendar.getInstance().getTime();
+        final String dataFormatada = sdf.format(hora);
+
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();
         editor.putString(chaveValor, dataFormatada);
@@ -122,6 +120,11 @@ public class DeslocamentoActivity extends AppCompatActivity{
         goToMain();
     }
     public void gravarDeslFim(String chaveValor){
+        //recupera hora atual
+        SimpleDateFormat sdf = new SimpleDateFormat(DataFormat);
+        Date hora = Calendar.getInstance().getTime();
+        final String dataFormatada = sdf.format(hora);
+
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();
         editor.putString(chaveValor, dataFormatada);
@@ -136,7 +139,6 @@ public class DeslocamentoActivity extends AppCompatActivity{
         SharedPreferences.Editor editor = settings.edit();
         editor.putString(chaveValor, total);
         editor.commit();
-
     }
     public void deslocamentoClick(View view){
         switch (view.getId()) {
@@ -185,9 +187,7 @@ public class DeslocamentoActivity extends AppCompatActivity{
         }
     }
     private void atualizaCampos() {
-
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
-
         txt_ini_desl1.setText(settings.getString(spIniDesl1, vazio));
         txt_fim_desl1.setText(settings.getString(spFimDesl1, vazio));
         txt_ini_desl2.setText(settings.getString(spIniDesl2, vazio));
@@ -200,6 +200,7 @@ public class DeslocamentoActivity extends AppCompatActivity{
         txt_fim_desl5.setText(settings.getString(spFimDesl5, vazio));
         txt_ini_desl6.setText(settings.getString(spIniDesl6, vazio));
         txt_fim_desl6.setText(settings.getString(spFimDesl6, vazio));
+
         txt_tempo_desl1.setText(settings.getString(spTempoDesl1, vazio));
         txt_tempo_desl2.setText(settings.getString(spTempoDesl2, vazio));
         txt_tempo_desl3.setText(settings.getString(spTempoDesl3, vazio));
@@ -207,7 +208,6 @@ public class DeslocamentoActivity extends AppCompatActivity{
         txt_tempo_desl5.setText(settings.getString(spTempoDesl5, vazio));
         txt_tempo_desl6.setText(settings.getString(spTempoDesl6, vazio));
 
-        zerarSoma();
         verAltBtnIni();
     }
     private void verAltBtnIni() {
@@ -506,21 +506,6 @@ public class DeslocamentoActivity extends AppCompatActivity{
         }
         atualizaCamposNovamente();
     }
-    public void zerarSoma(){
-        if (txt_ini_desl1.getText().toString().equals("") && txt_fim_desl1.getText().toString().equals(vazio)) zerarCampo(spTempoDesl1);
-        if (txt_ini_desl2.getText().toString().equals("") && txt_fim_desl2.getText().toString().equals(vazio)) zerarCampo(spTempoDesl2);
-        if (txt_ini_desl3.getText().toString().equals("") && txt_fim_desl3.getText().toString().equals(vazio)) zerarCampo(spTempoDesl3);
-        if (txt_ini_desl4.getText().toString().equals("") && txt_fim_desl4.getText().toString().equals(vazio)) zerarCampo(spTempoDesl4);
-        if (txt_ini_desl5.getText().toString().equals("") && txt_fim_desl5.getText().toString().equals(vazio)) zerarCampo(spTempoDesl5);
-        if (txt_ini_desl6.getText().toString().equals("") && txt_fim_desl6.getText().toString().equals(vazio)) zerarCampo(spTempoDesl6);
-    }
-    public void zerarCampo(String chaveValor){
-        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
-        SharedPreferences.Editor editor = settings.edit();
-        editor.putString(chaveValor, "");
-        editor.commit();
-
-    }
     private void totalDeslocamento(TextView tempo1, TextView tempo2, TextView tempo3, TextView tempo4, TextView tempo5, TextView tempo6) {
         try {
             String h1 = tempo1.getText().toString();
@@ -692,7 +677,7 @@ public class DeslocamentoActivity extends AppCompatActivity{
             }
             resultado = horasSoma +":"+minutosDiferenca;
 
-            gravarDeslTot(spTotal, resultado);
+            gravarDeslTot(spTotalDeslocamento, resultado);
             Log.i("info", "*---*---*---*---*---*---*---*---*");
             Log.i("info", "Total deslocamento: "+resultado);
 
@@ -700,7 +685,6 @@ public class DeslocamentoActivity extends AppCompatActivity{
             e.printStackTrace();
         }
     }
-
     private void atualizaCamposNovamente() {
 
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
