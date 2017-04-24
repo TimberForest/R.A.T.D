@@ -94,7 +94,6 @@ public class TrabalhoActivity extends AppCompatActivity {
 
         atualizaCampos();
     }
-
     public void goToMain(){
         Intent intent = new Intent(TrabalhoActivity.this, MainActivity.class);
         startActivity(intent);
@@ -129,8 +128,7 @@ public class TrabalhoActivity extends AppCompatActivity {
         editor.putString(chaveValor, dataFormatada);
         editor.commit();
         msgFim(dataFormatada);
-        calcTotDesl();
-        goToMain();
+        atualizaViews();
 
     }
     public void deslocamentoClick(View view){
@@ -200,13 +198,6 @@ public class TrabalhoActivity extends AppCompatActivity {
         txt_tempo_serv4.setText(settings.getString(spTempoServ4, vazio));
         txt_tempo_serv5.setText(settings.getString(spTempoServ5, vazio));
         txt_tempo_serv6.setText(settings.getString(spTempoServ6, vazio));
-
-        Log.i("info", "tempo 1: "+txt_tempo_serv1.getText().toString());
-        Log.i("info", "tempo 2: "+txt_tempo_serv2.getText().toString());
-        Log.i("info", "tempo 3: "+txt_tempo_serv3.getText().toString());
-        Log.i("info", "tempo 4: "+txt_tempo_serv4.getText().toString());
-        Log.i("info", "tempo 5: "+txt_tempo_serv5.getText().toString());
-        Log.i("info", "tempo 6: "+txt_tempo_serv6.getText().toString());
 
         verAltBtnIni();
     }
@@ -326,13 +317,22 @@ public class TrabalhoActivity extends AppCompatActivity {
         } else {
             btn_fim_serv6.setEnabled(false);
         }
-        calcTotDesl();
     }
-    public void gravarDeslTot(String chaveValor, String total){
+    public void gravarServTot(String chaveValor, String total){
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();
         editor.putString(chaveValor, total);
         editor.commit();
+        Log.i("info","gravarServTot: "+total);
+        goToMain();
+    }
+    public void gravarServDif(String chaveValor, String total){
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putString(chaveValor, total);
+        editor.commit();
+        Log.i("info","gravarServDif: "+total);
+        atualizaCamposNovamente();
     }
     public void calcTotDesl(){
         //1
@@ -486,24 +486,28 @@ public class TrabalhoActivity extends AppCompatActivity {
                 diffMinutes=diffMinutes-60;
             }
 
-            String horaDiferenca, minutosDiferenca = null;
+            String horaDiferenca = null, minutosDiferenca = null;
 
-            horaDiferenca = String.valueOf(diffHours);
-            horaDiferenca = horaDiferenca.replace(".", "");
-            if(diffMinutes<10){
+            if (diffHours>0){
+                horaDiferenca = String.valueOf(diffHours);
+                horaDiferenca = horaDiferenca.replace(".", "");
+            }else {
+                horaDiferenca="00";
+            }
+
+            if (diffMinutes==0){
+                minutosDiferenca="00";
+            }else if(diffMinutes<10){
                 minutosDiferenca = "0"+ String.valueOf(diffMinutes);
             } else {
                 minutosDiferenca = String.valueOf(diffMinutes);
             }
 //            minutosDiferenca = String.valueOf(diffMinutes);
             String diferenca = horaDiferenca+":"+minutosDiferenca;
-            Log.i("info", "comparaHora - Intervalo :"+diferenca);
-            gravarDeslTot(chaveValorSP, diferenca);
-            Log.i("info", "***********************************");
+            gravarServDif(chaveValorSP, diferenca);
         }catch (Exception e){
             e.printStackTrace();
         }
-        atualizaCamposNovamente();
     }
     private void totalDeslocamento(TextView tempo1, TextView tempo2, TextView tempo3, TextView tempo4, TextView tempo5, TextView tempo6) {
         try {
@@ -523,43 +527,43 @@ public class TrabalhoActivity extends AppCompatActivity {
 
             if(tempo1.getText().equals(vazio)){
             }else {
-                h1 = h1.substring(0,1);
-                m1 = m1.substring(2,4);
+                h1 = h1.substring(0,2);
+                m1 = m1.substring(3,5);
                 lh1 = Long.parseLong(h1);
                 lm1 = Long.parseLong(m1);
             }
             if (tempo2.getText().equals(vazio)){
             }else {
-                h2 = h2.substring(0,1);
-                m2 = m2.substring(2,4);
+                h2 = h2.substring(0,2);
+                m2 = m2.substring(3,5);
                 lh2 = Long.parseLong(h2);
                 lm2 = Long.parseLong(m2);
             }
             if (tempo3.getText().equals(vazio)){
             }else {
-                h3 = h3.substring(0,1);
-                m3 = m3.substring(2,4);
+                h3 = h3.substring(0,2);
+                m3 = m3.substring(3,5);
                 lh3 = Long.parseLong(h3);
                 lm3 = Long.parseLong(m3);
             }
             if (tempo4.getText().equals(vazio)){
             }else {
-                h4 = h4.substring(0,1);
-                m4 = m4.substring(2,4);
+                h4 = h4.substring(0,2);
+                m4 = m4.substring(3,5);
                 lh4 = Long.parseLong(h4);
                 lm4 = Long.parseLong(m4);
             }
             if (tempo5.getText().equals(vazio)){
             }else {
-                h5 = h5.substring(0,1);
-                m5 = m5.substring(2,4);
+                h5 = h5.substring(0,2);
+                m5 = m5.substring(3,5);
                 lh5 = Long.parseLong(h5);
                 lm5 = Long.parseLong(m5);
             }
             if (tempo6.getText().equals(vazio)){
             }else {
-                h6 = h6.substring(0,1);
-                m6 = m6.substring(2,4);
+                h6 = h6.substring(0,2);
+                m6 = m6.substring(3,5);
                 lh6 = Long.parseLong(h6);
                 lm6 = Long.parseLong(m6);
             }
@@ -667,7 +671,6 @@ public class TrabalhoActivity extends AppCompatActivity {
             horasSoma +=diffHours;
 
             String resultado = "", minutosDiferenca;
-            if (horasSoma<10) resultado = "0"+String.valueOf(horasSoma);
 
             if(diffMinutes<10){
                 minutosDiferenca = "0"+ String.valueOf(diffMinutes);
@@ -676,29 +679,19 @@ public class TrabalhoActivity extends AppCompatActivity {
             }
             resultado = horasSoma +":"+minutosDiferenca;
 
-            gravarDeslTot(spTotalServico, resultado);
-            Log.i("info", "*---*---*---*---*---*---*---*---*");
-            Log.i("info", "Total Serviço: "+resultado);
+            gravarServTot(spTotalServico, resultado);
 
         }catch (Exception e){
             e.printStackTrace();
         }
     }
-    private void atualizaCamposNovamente() {
-
+    private void atualizaViews() {
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
-
-        txt_ini_serv1.setText(settings.getString(spIniServ1, vazio));
         txt_fim_serv1.setText(settings.getString(spFimServ1, vazio));
-        txt_ini_serv2.setText(settings.getString(spIniServ2, vazio));
         txt_fim_serv2.setText(settings.getString(spFimServ2, vazio));
-        txt_ini_serv3.setText(settings.getString(spIniServ3, vazio));
         txt_fim_serv3.setText(settings.getString(spFimServ3, vazio));
-        txt_ini_serv4.setText(settings.getString(spIniServ4, vazio));
         txt_fim_serv4.setText(settings.getString(spFimServ4, vazio));
-        txt_ini_serv5.setText(settings.getString(spIniServ5, vazio));
         txt_fim_serv5.setText(settings.getString(spFimServ5, vazio));
-        txt_ini_serv6.setText(settings.getString(spIniServ6, vazio));
         txt_fim_serv6.setText(settings.getString(spFimServ6, vazio));
         txt_tempo_serv1.setText(settings.getString(spTempoServ1, vazio));
         txt_tempo_serv2.setText(settings.getString(spTempoServ2, vazio));
@@ -706,7 +699,16 @@ public class TrabalhoActivity extends AppCompatActivity {
         txt_tempo_serv4.setText(settings.getString(spTempoServ4, vazio));
         txt_tempo_serv5.setText(settings.getString(spTempoServ5, vazio));
         txt_tempo_serv6.setText(settings.getString(spTempoServ6, vazio));
-
+        calcTotDesl();
+    }
+    private void atualizaCamposNovamente() {
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        txt_tempo_serv1.setText(settings.getString(spTempoServ1, vazio));
+        txt_tempo_serv2.setText(settings.getString(spTempoServ2, vazio));
+        txt_tempo_serv3.setText(settings.getString(spTempoServ3, vazio));
+        txt_tempo_serv4.setText(settings.getString(spTempoServ4, vazio));
+        txt_tempo_serv5.setText(settings.getString(spTempoServ5, vazio));
+        txt_tempo_serv6.setText(settings.getString(spTempoServ6, vazio));
         totalDeslocamento(txt_tempo_serv1, txt_tempo_serv2, txt_tempo_serv3, txt_tempo_serv4, txt_tempo_serv5, txt_tempo_serv6);
     }
 

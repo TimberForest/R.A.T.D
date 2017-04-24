@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/amarelo_padrao"
+    tools:context="br.com.timberforest.ratd.sharedPreferences.deslocamento.KmRodado">
+
+    <TextView
+        style="@style/TextosTitulos"
+        android:text="Km Rodado" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/screen_border_botao_grande_branco"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="0dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/branco"
+            android:orientation="horizontal">
+            <Button
+                android:text="@string/inicio"
+                style="@style/BotaoDeslocamento"
+                android:onClick="selecionarOpcao"
+                android:id="@+id/btn_ini_kmRod1" />
+            <EditText
+                style="@style/EdtKmDeslocamento"
+                android:id="@+id/edt_km_ini1" />
+            <Button
+                android:text="@string/fim"
+                style="@style/BotaoDeslocamento"
+                android:onClick="selecionarOpcao"
+                android:id="@+id/btn_fim_kmRod1" />
+            <EditText
+                style="@style/EdtKmDeslocamento"
+                android:id="@+id/edt_km_fim1" />
+            <TextView
+                style="@style/TxtCinzaDeslocamento"
+                android:id="@+id/txt_kmRod1" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/branco"
+            android:orientation="horizontal">
+            <Button
+                android:text="@string/inicio"
+                style="@style/BotaoDeslocamento"
+                android:onClick="selecionarOpcao"
+                android:id="@+id/btn_ini_kmRod2" />
+            <EditText
+                style="@style/EdtKmDeslocamento"
+                android:id="@+id/edt_km_ini2" />
+
+            <Button
+                android:id="@+id/btn_fim_kmRod2"
+                style="@style/BotaoDeslocamento"
+                android:onClick="selecionarOpcao"
+                android:text="@string/fim" />
+
+            <EditText
+                style="@style/EdtKmDeslocamento"
+                android:id="@+id/edt_km_fim2" />
+            <TextView
+                style="@style/TxtCinzaDeslocamento"
+                android:id="@+id/txt_kmRod2" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/branco"
+            android:orientation="horizontal">
+            <Button
+                android:text="@string/inicio"
+                style="@style/BotaoDeslocamento"
+                android:onClick="selecionarOpcao"
+                android:id="@+id/btn_ini_kmRod3" />
+            <EditText
+                style="@style/EdtKmDeslocamento"
+                android:id="@+id/edt_km_ini3" />
+            <Button
+                android:text="@string/fim"
+                style="@style/BotaoDeslocamento"
+                android:onClick="selecionarOpcao"
+                android:id="@+id/btn_fim_kmRod3" />
+            <EditText
+                style="@style/EdtKmDeslocamento"
+                android:id="@+id/edt_km_fim3" />
+            <TextView
+                style="@style/TxtCinzaDeslocamento"
+                android:id="@+id/txt_kmRod3" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/branco"
+            android:orientation="horizontal">
+            <Button
+                android:text="@string/inicio"
+                style="@style/BotaoDeslocamento"
+                android:onClick="selecionarOpcao"
+                android:id="@+id/btn_ini_kmRod4" />
+            <EditText
+                style="@style/EdtKmDeslocamento"
+                android:id="@+id/edt_km_ini4" />
+            <Button
+                android:text="@string/fim"
+                style="@style/BotaoDeslocamento"
+                android:onClick="selecionarOpcao"
+                android:id="@+id/btn_fim_kmRod4" />
+            <EditText
+                style="@style/EdtKmDeslocamento"
+                android:id="@+id/edt_km_fim4" />
+            <TextView
+                style="@style/TxtCinzaDeslocamento"
+                android:id="@+id/txt_kmRod4" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/branco"
+            android:orientation="horizontal">
+            <Button
+                android:text="@string/inicio"
+                style="@style/BotaoDeslocamento"
+                android:onClick="selecionarOpcao"
+                android:id="@+id/btn_ini_kmRod5" />
+            <EditText
+                style="@style/EdtKmDeslocamento"
+                android:id="@+id/edt_km_ini5" />
+            <Button
+                android:text="@string/fim"
+                style="@style/BotaoDeslocamento"
+                android:onClick="selecionarOpcao"
+                android:id="@+id/btn_fim_kmRod5" />
+            <EditText
+                style="@style/EdtKmDeslocamento"
+                android:id="@+id/edt_km_fim5" />
+
+            <TextView
+                android:id="@+id/txt_kmRod5"
+                style="@style/TxtCinzaDeslocamento" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/branco"
+            android:orientation="horizontal">
+            <Button
+                android:text="@string/inicio"
+                style="@style/BotaoDeslocamento"
+                android:onClick="selecionarOpcao"
+                android:id="@+id/btn_ini_kmRod6" />
+            <EditText
+                style="@style/EdtKmDeslocamento"
+                android:id="@+id/edt_km_ini6" />
+            <Button
+                android:text="@string/fim"
+                style="@style/BotaoDeslocamento"
+                android:onClick="selecionarOpcao"
+                android:id="@+id/btn_fim_kmRod6" />
+            <EditText
+                style="@style/EdtKmDeslocamento"
+                android:id="@+id/edt_km_fim6" />
+            <TextView
+                style="@style/TxtCinzaDeslocamento"
+                android:id="@+id/txt_kmRod6" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -86,6 +86,24 @@
         <item name="android:background">@drawable/screen_border_cinza</item>
     </style>
 
+
+    <style name="EdtKmDeslocamento">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:inputType">number</item>
+        <item name="android:hint">Informe o KM</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/preto</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:maxLength">9</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:background">@drawable/screen_border_botao_grande_branco</item>
+    </style>
+
     <!--Botão Branco-->
 
     <style name="BotaoGrandeBranco">

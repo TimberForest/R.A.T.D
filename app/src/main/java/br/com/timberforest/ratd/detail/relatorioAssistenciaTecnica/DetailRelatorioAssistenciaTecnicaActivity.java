@@ -43,6 +43,7 @@ public class DetailRelatorioAssistenciaTecnicaActivity extends ActionBarActivity
         if ((keyCode == KeyEvent.KEYCODE_BACK)) {
             Intent intent = new Intent(DetailRelatorioAssistenciaTecnicaActivity.this, ListRelatorioAssistenciaTecnicaActivity.class);
             startActivity(intent);
+            finish();
         }
         return super.onKeyDown(keyCode, event);
     }
@@ -71,7 +72,6 @@ public class DetailRelatorioAssistenciaTecnicaActivity extends ActionBarActivity
         TextView textFormularioInicioAlmoco = (TextView) findViewById(R.id.textInicioAlmocoDetailFormulario);
         TextView textFormularioFimAlmoco = (TextView) findViewById(R.id.textFimAlmocoDetailFormulario);
         TextView textFormularioFimTrabalho = (TextView) findViewById(R.id.textFimTrabalhoDetailFormulario);
-        TextView textFormularioFimDeslocamento = (TextView) findViewById(R.id.textFimDeslocamentoDetailFormulario);
         TextView textFormularioGetCodPec = (TextView) findViewById(R.id.textCodigoDetailFormulario);
         TextView textFormularioGetPecaQtd = (TextView) findViewById(R.id.textQtdDetailFormulario);
         TextView textFormularioGetDescPec = (TextView) findViewById(R.id.textDescricaoDetailFormulario);
@@ -102,7 +102,6 @@ public class DetailRelatorioAssistenciaTecnicaActivity extends ActionBarActivity
         textFormularioInicioAlmoco.setText(relatorioAssistenciaTecnica.getInicioAlmoco());
         textFormularioFimAlmoco.setText(relatorioAssistenciaTecnica.getFimAlmoco());
         textFormularioFimTrabalho.setText(relatorioAssistenciaTecnica.getFimTrabalho());
-        textFormularioFimDeslocamento.setText(relatorioAssistenciaTecnica.getFimDeslocamento());
         textFormularioGetCodPec.setText(relatorioAssistenciaTecnica.getGetCodPec());
         textFormularioGetPecaQtd.setText(relatorioAssistenciaTecnica.getPecaQtd());
         textFormularioGetDescPec.setText(relatorioAssistenciaTecnica.getGetDescPec());

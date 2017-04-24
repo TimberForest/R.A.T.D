@@ -25,7 +25,7 @@ import de.keyboardsurfer.android.widget.crouton.Crouton;
 import de.keyboardsurfer.android.widget.crouton.Style;
 
 public class SharedPreferencesDeslocamento extends AppCompatActivity {
-    public static final String PREFS_NAME = "Preferences";
+    public static final String PREFS_NAME = "sharedPreferencesDeslocamento";
     Button btn_ini_desl, btn_ini_trab, btn_ini_alm, btn_fim_alm, btn_fim_trab, btn_fim_desl, btn_km_inicial, btn_km_final, btn_ini_espera, btn_fim_espera;
     TextView txt_ini_desl, txt_ini_trab, txt_ini_alm, txt_fim_alm, txt_fim_trab, txt_fim_desl, txt_km_rodado, aux, txt_ini_espera, txt_fim_espera;
     EditText edt_km_inicial, edt_km_final;
@@ -86,14 +86,6 @@ public class SharedPreferencesDeslocamento extends AppCompatActivity {
         btn_fim_trab = (Button) findViewById(R.id.btn_fim_trab);
         btn_fim_desl = (Button) findViewById(R.id.btn_fim_desl);
 
-        //extra deslocamento
-/*        ck_aguardando = (CheckBox)findViewById(R.id.ck_aguardando);
-        ck_pausa_deslocamento = (CheckBox) findViewById(R.id.ck_pausa_deslocamento);
-
-        btn_ini_espera = (Button) findViewById(R.id.btn_ini_espera);
-        btn_fim_espera = (Button) findViewById(R.id.btn_fim_espera);
-        txt_ini_espera = (TextView) findViewById(R.id.txt_ini_espera);
-        txt_fim_espera = (TextView) findViewById(R.id.txt_fim_espera);*/
 
 //        verificaAguardandoPeca();
         atualizaCampos();
@@ -202,35 +194,6 @@ public class SharedPreferencesDeslocamento extends AppCompatActivity {
 
     }
 
-    private void verificaAguardandoPeca() {
-        if(ck_aguardando.isChecked()){
-            linear_aguardando.setVisibility(View.VISIBLE);
-            LinearLayout.LayoutParams ap = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-//            linear_base.setVisibility(View.VISIBLE);
-            linear_aguardando.setLayoutParams(ap);
-        }else{
-            linear_aguardando.setVisibility(View.INVISIBLE);
-            LinearLayout.LayoutParams ap = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, 0);
-//            linear_base.setVisibility(View.INVISIBLE);
-            linear_aguardando.setLayoutParams(ap);
-        }
-        verificaPausaDeslocamento();
-    }
-    private void verificaPausaDeslocamento(){
-        if(ck_pausa_deslocamento.isChecked()){
-            linear_pausa_deslocamento.setVisibility(View.VISIBLE);
-            LinearLayout.LayoutParams pd = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-//            linear_base.setVisibility(View.VISIBLE);
-            linear_aguardando.setLayoutParams(pd);
-        }else{
-            linear_pausa_deslocamento.setVisibility(View.INVISIBLE);
-            LinearLayout.LayoutParams pd = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, 0);
-//            linear_base.setVisibility(View.INVISIBLE);
-            linear_aguardando.setLayoutParams(pd);
-        }
-
-    }
-
     public void continuaMetodo(){
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();
@@ -239,10 +202,8 @@ public class SharedPreferencesDeslocamento extends AppCompatActivity {
         long aux2 = Long.parseLong(edt_km_final.getText().toString());
 
         if (aux2 < aux1) {
-//                    Toast.makeText(getApplicationContext(), "Km final informado é menor que o Km inicial !", Toast.LENGTH_LONG).show();
             Crouton.makeText(SharedPreferencesDeslocamento.this, "Km final informado é menor que o Km inicial !", styleAlert).show();
         } else if (aux1 == aux2) {
-//                    Toast.makeText(getApplicationContext(), "Km final informado é igual ao Km inicial !", Toast.LENGTH_LONG).show();
             Crouton.makeText(SharedPreferencesDeslocamento.this, "Km final informado é igual ao Km inicial !", styleAlert).show();
         } else {
             editor.putString("km_final", edt_km_final.getText().toString());

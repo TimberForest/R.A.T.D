@@ -380,12 +380,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textFimDeslocamentoDetailFormulario"
-            android:layout_margin="1px"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/textKmRodadoDetailFormulario"
             android:layout_margin="1px"/>
     </LinearLayout>
@@ -656,7 +650,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Inicio Do Deslocamento:"
+            android:text="Horas Deslocamento:"
             android:textColor="#000000"
             android:textSize="16dp"
             />
@@ -664,7 +658,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Inicio do trabalho:"
+            android:text="Horas Trabalhadas:"
             android:textColor="#000000"
             android:textSize="16dp"
             />
@@ -672,7 +666,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Inicio do Almoço:"
+            android:text="Horas Refeições:"
             android:textColor="#000000"
             android:textSize="16dp"
             />
@@ -680,25 +674,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="im do Almoço:"
+            android:text="Extras Trabalhadas:"
             android:textColor="#000000"
             android:textSize="16dp"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Fim do Trabalho:"
+            android:text="Extras Deslocadas:"
             android:textColor="#000000"
             android:textSize="16dp"
             />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Fim do Deslocamento:"
-            android:textColor="#000000"
-            android:textSize="16dp"
-            />
+
 
         <TextView
             android:layout_width="wrap_content"

@@ -130,8 +130,7 @@ public class DeslocamentoActivity extends AppCompatActivity{
         editor.putString(chaveValor, dataFormatada);
         editor.commit();
         msgFim(dataFormatada);
-        calcTotDesl();
-        goToMain();
+        atualizaViews();
 
     }
     public void gravarDeslTot(String chaveValor, String total){
@@ -139,6 +138,16 @@ public class DeslocamentoActivity extends AppCompatActivity{
         SharedPreferences.Editor editor = settings.edit();
         editor.putString(chaveValor, total);
         editor.commit();
+        Log.i("info","gravarDeslTot: "+total);
+        goToMain();
+    }
+    public void gravarDifDesloc(String chaveValor, String total){
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putString(chaveValor, total);
+        editor.commit();
+        Log.i("info", "gravarDifDesloc: "+total);
+        atualizaCamposNovamente();
     }
     public void deslocamentoClick(View view){
         switch (view.getId()) {
@@ -332,8 +341,6 @@ public class DeslocamentoActivity extends AppCompatActivity{
         } else {
             btn_fim_desl6.setEnabled(false);
         }
-
-        calcTotDesl();
     }
     public void calcTotDesl(){
         //1
@@ -487,24 +494,28 @@ public class DeslocamentoActivity extends AppCompatActivity{
                 diffMinutes=diffMinutes-60;
             }
 
-            String horaDiferenca, minutosDiferenca = null;
+            String horaDiferenca=null, minutosDiferenca = null;
 
-            horaDiferenca = String.valueOf(diffHours);
-            horaDiferenca = horaDiferenca.replace(".", "");
-            if(diffMinutes<10){
+            if (diffHours>0){
+                horaDiferenca = String.valueOf(diffHours);
+                horaDiferenca = horaDiferenca.replace(".", "");
+            }else {
+                horaDiferenca="00";
+            }
+
+            if (diffMinutes==0){
+                minutosDiferenca="00";
+            }else if(diffMinutes<10){
                 minutosDiferenca = "0"+ String.valueOf(diffMinutes);
             } else {
                 minutosDiferenca = String.valueOf(diffMinutes);
             }
 //            minutosDiferenca = String.valueOf(diffMinutes);
             String diferenca = horaDiferenca+":"+minutosDiferenca;
-            Log.i("info", "comparaHora - Intervalo :"+diferenca);
-            gravarDeslTot(chaveValorSP, diferenca);
-            Log.i("info", "***********************************");
+            gravarDifDesloc(chaveValorSP, diferenca);
         }catch (Exception e){
             e.printStackTrace();
         }
-        atualizaCamposNovamente();
     }
     private void totalDeslocamento(TextView tempo1, TextView tempo2, TextView tempo3, TextView tempo4, TextView tempo5, TextView tempo6) {
         try {
@@ -522,45 +533,54 @@ public class DeslocamentoActivity extends AppCompatActivity{
             String m5 = tempo5.getText().toString();
             String m6 = tempo6.getText().toString();
 
-            if(tempo1.getText().equals(vazio)){
+            if (tempo1.getText().equals(vazio)){
+                lm1=0; lh1=0;
             }else {
-                h1 = h1.substring(0,1);
-                m1 = m1.substring(2,4);
+                h1 = h1.substring(0,2);
+                m1 = m1.substring(3,5);
                 lh1 = Long.parseLong(h1);
                 lm1 = Long.parseLong(m1);
             }
+
             if (tempo2.getText().equals(vazio)){
+                lm2=0; lh2=0;
             }else {
-                h2 = h2.substring(0,1);
-                m2 = m2.substring(2,4);
+                h2 = h2.substring(0,2);
+                m2 = m2.substring(3,5);
                 lh2 = Long.parseLong(h2);
                 lm2 = Long.parseLong(m2);
             }
+
             if (tempo3.getText().equals(vazio)){
+                lm3=0; lh3=0;
             }else {
-                h3 = h3.substring(0,1);
-                m3 = m3.substring(2,4);
+                h3 = h3.substring(0,2);
+                m3 = m3.substring(3,5);
                 lh3 = Long.parseLong(h3);
                 lm3 = Long.parseLong(m3);
             }
+
             if (tempo4.getText().equals(vazio)){
+                lm4=0; lh4=0;
             }else {
-                h4 = h4.substring(0,1);
-                m4 = m4.substring(2,4);
+                h4 = h4.substring(0,2);
+                m4 = m4.substring(3,5);
                 lh4 = Long.parseLong(h4);
                 lm4 = Long.parseLong(m4);
             }
             if (tempo5.getText().equals(vazio)){
+                lm5=0; lh5=0;
             }else {
-                h5 = h5.substring(0,1);
-                m5 = m5.substring(2,4);
+                h5 = h5.substring(0,2);
+                m5 = m5.substring(3,5);
                 lh5 = Long.parseLong(h5);
                 lm5 = Long.parseLong(m5);
             }
             if (tempo6.getText().equals(vazio)){
+                lm5=0; lh5=0;
             }else {
-                h6 = h6.substring(0,1);
-                m6 = m6.substring(2,4);
+                h6 = h6.substring(0,2);
+                m6 = m6.substring(3,5);
                 lh6 = Long.parseLong(h6);
                 lm6 = Long.parseLong(m6);
             }
@@ -668,38 +688,26 @@ public class DeslocamentoActivity extends AppCompatActivity{
             horasSoma +=diffHours;
 
             String resultado = "", minutosDiferenca;
-            if (horasSoma<10) resultado = "0"+String.valueOf(horasSoma);
 
             if(diffMinutes<10){
                 minutosDiferenca = "0"+ String.valueOf(diffMinutes);
             } else {
                 minutosDiferenca = String.valueOf(diffMinutes);
             }
-            resultado = horasSoma +":"+minutosDiferenca;
-
+            resultado = horasSoma+":"+minutosDiferenca;
             gravarDeslTot(spTotalDeslocamento, resultado);
-            Log.i("info", "*---*---*---*---*---*---*---*---*");
-            Log.i("info", "Total deslocamento: "+resultado);
 
         }catch (Exception e){
             e.printStackTrace();
         }
     }
-    private void atualizaCamposNovamente() {
-
+    private void atualizaViews() {
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
-
-        txt_ini_desl1.setText(settings.getString(spIniDesl1, vazio));
         txt_fim_desl1.setText(settings.getString(spFimDesl1, vazio));
-        txt_ini_desl2.setText(settings.getString(spIniDesl2, vazio));
         txt_fim_desl2.setText(settings.getString(spFimDesl2, vazio));
-        txt_ini_desl3.setText(settings.getString(spIniDesl3, vazio));
         txt_fim_desl3.setText(settings.getString(spFimDesl3, vazio));
-        txt_ini_desl4.setText(settings.getString(spIniDesl4, vazio));
         txt_fim_desl4.setText(settings.getString(spFimDesl4, vazio));
-        txt_ini_desl5.setText(settings.getString(spIniDesl5, vazio));
         txt_fim_desl5.setText(settings.getString(spFimDesl5, vazio));
-        txt_ini_desl6.setText(settings.getString(spIniDesl6, vazio));
         txt_fim_desl6.setText(settings.getString(spFimDesl6, vazio));
         txt_tempo_desl1.setText(settings.getString(spTempoDesl1, vazio));
         txt_tempo_desl2.setText(settings.getString(spTempoDesl2, vazio));
@@ -707,8 +715,16 @@ public class DeslocamentoActivity extends AppCompatActivity{
         txt_tempo_desl4.setText(settings.getString(spTempoDesl4, vazio));
         txt_tempo_desl5.setText(settings.getString(spTempoDesl5, vazio));
         txt_tempo_desl6.setText(settings.getString(spTempoDesl6, vazio));
-
+        calcTotDesl();
+    }
+    private void atualizaCamposNovamente() {
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        txt_tempo_desl1.setText(settings.getString(spTempoDesl1, vazio));
+        txt_tempo_desl2.setText(settings.getString(spTempoDesl2, vazio));
+        txt_tempo_desl3.setText(settings.getString(spTempoDesl3, vazio));
+        txt_tempo_desl4.setText(settings.getString(spTempoDesl4, vazio));
+        txt_tempo_desl5.setText(settings.getString(spTempoDesl5, vazio));
+        txt_tempo_desl6.setText(settings.getString(spTempoDesl6, vazio));
         totalDeslocamento(txt_tempo_desl1, txt_tempo_desl2, txt_tempo_desl3, txt_tempo_desl4, txt_tempo_desl5, txt_tempo_desl6);
     }
-
 }

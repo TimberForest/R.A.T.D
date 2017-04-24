@@ -463,7 +463,6 @@
                 android:imeOptions="actionDone"/>
 
 
-
         </LinearLayout>
         <TextView
             android:layout_width="match_parent"
@@ -490,7 +489,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Inicio do Deslocamento:"
+                    android:text="Horas Deslocamento:"
                     android:textColor="#000000"
                     android:textSize="17dp"
                     />
@@ -498,92 +497,64 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="numberDecimal"
-                    android:textSize="15dp"
-                    android:paddingLeft="40dp"
-                    android:id="@+id/edt_inicio_deslocamento" />
+                    android:textSize="18dp"
+                    android:paddingLeft="50dp"
+                    android:id="@+id/edt_horas_deslocamento" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Inicio do Trabalho:"
+                    android:text="Horas Trabalhadas:"
                     android:textColor="#000000"
-                    android:textSize="17dp"
-                    android:id="@+id/textKmRodad" />
+                    android:textSize="17dp"/>
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="numberDecimal"
-                    android:textSize="15dp"
-                    android:paddingLeft="40dp"
-                    android:id="@+id/edt_inicio_trabalho" />
+                    android:textSize="18dp"
+                    android:paddingLeft="50dp"
+                    android:id="@+id/edt_horas_trabalhadas" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Inicio do Almoço:"
-                    android:textColor="#000000"
-                    android:textSize="17dp"
-                    android:id="@+id/textHrsTrablh" />
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="numberDecimal"
-                    android:textSize="15dp"
-                    android:paddingLeft="40dp"
-                    android:id="@+id/edt_inicio_almoco" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Fim do Almoço:"
-                    android:textColor="#000000"
-                    android:textSize="17dp"
-                    android:id="@+id/textHrsDesloc" />
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="numberDecimal"
-                    android:textSize="15dp"
-                    android:paddingLeft="40dp"
-                    android:id="@+id/edt_fim_almoco" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Fim do Trabalho:"
-                    android:textColor="#000000"
-                    android:textSize="17dp"
-                    android:id="@+id/textHorExtrTrab" />
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="numberDecimal"
-                    android:textSize="15dp"
-                    android:paddingLeft="40dp"
-                    android:id="@+id/edt_fim_trabalho"
-                    android:layout_gravity="center_horizontal" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Fim do deslocamento:"
+                    android:text="Horas Refeição:"
                     android:textColor="#000000"
                     android:textSize="17dp"
                     />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:paddingLeft="50dp"
+                    android:id="@+id/edt_horas_refeicao" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Extras Trabalhadas:"
+                    android:textColor="#000000"
+                    android:textSize="17dp"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:paddingLeft="50dp"
+                    android:id="@+id/edt_extras_trabalhadas" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Extras Deslocadas:"
+                    android:textColor="#000000"
+                    android:textSize="17dp"/>
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="numberDecimal"
-                    android:textSize="15dp"
-                    android:id="@+id/edt_fim_deslocamento"
-                    android:paddingLeft="40dp"
-                    android:layout_gravity="center_horizontal" />
+                    android:textSize="18dp"
+                    android:paddingLeft="50dp"
+                    android:id="@+id/edt_extras_deslocamento"
+                    />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -594,10 +565,8 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="numberDecimal"
-                    android:textSize="15dp"
-                    android:paddingLeft="40dp"
+                    android:textSize="18dp"
+                    android:paddingLeft="50dp"
                     android:id="@+id/edt_km_rodado" />
 
             </LinearLayout>
@@ -671,7 +640,7 @@
                         android:imeOptions="actionNext"/>
 
                     <EditText
-                        android:layout_width="340dp"
+                        android:layout_width="347dp"
                         android:layout_height="match_parent"
                         android:text="0"
                         android:gravity="top"
@@ -717,11 +686,15 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
                 <TextView
                     android:text="Importar Deslocamento"
                     android:clickable="true"
                     android:id="@+id/importDeslocamento"
-                    android:onClick="importDeslocamento"
+                    android:onClick="importDesloc"
                     android:layout_gravity="center"
                     style="@style/BotaoSimplesAmarelo" />
 

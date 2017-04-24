@@ -79,6 +79,7 @@ public class ListRelatorioAssistenciaTecnicaActivity extends Activity {
         if ((keyCode == KeyEvent.KEYCODE_BACK)) {
             Intent intent = new Intent(ListRelatorioAssistenciaTecnicaActivity.this, MainActivity.class);
             startActivity(intent);
+            finish();
         }
         return super.onKeyDown(keyCode, event);
     }

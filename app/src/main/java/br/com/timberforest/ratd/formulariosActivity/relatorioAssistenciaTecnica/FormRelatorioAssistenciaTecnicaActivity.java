@@ -41,7 +41,7 @@ public class FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
 
     RelatorioAssistenciaTecnicaDao relatorioAssistenciaTecnicaDao = new RelatorioAssistenciaTecnicaDao();
     SharedPreferencesDeslocamento sharedPreferencesDeslocamento = new SharedPreferencesDeslocamento();
-    public static final String PREF_NAME = "Preferences";
+    public static final String PREF_NAME = "sharedPreferencesDeslocamento";
     public static final String PREF_ID_RATD = "idRatd";
 
     Long aux;
@@ -49,8 +49,10 @@ public class FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
     private final  long aux2 = 1;
     private RelatorioAssistenciaTecnica relatorioAssistenciaTecnica;
     private Resources resources;
-    private EditText edtChassi, edt_inicio_trabalho, edt_inicio_deslocamento, edt_inicio_almoco, edtCliente,edtModelo, edtHorimetro, edtEstadoCliente, edtCidadeCliente,edtLocalDaObra,edtDefeitoConstatado,
-            edtProcedimentoAdotado,edt_fim_almoco, edt_fim_trabalho,edt_fim_deslocamento,edt_km_rodado,edtCodigoPeca,edtQuantidade,edtDescricao, edt_pendencias;
+    private EditText edtChassi, edtCliente,edtModelo, edtHorimetro, edtEstadoCliente, edtCidadeCliente,edtLocalDaObra,edtDefeitoConstatado,
+            edtProcedimentoAdotado,edtCodigoPeca,edtQuantidade,edtDescricao, edt_pendencias;
+
+    private EditText edt_horas_deslocamento, edt_horas_trabalhadas, edt_horas_refeicao, edt_extras_trabalhadas, edt_extras_deslocamento, edt_km_rodado;
 
     final Style styleAlert = new Style.Builder()
             .setTextSize(30)
@@ -72,6 +74,8 @@ public class FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.form_relatorio_assistencia_tecnica);
+
+
         EditText editGetRelatNum = (EditText) findViewById(R.id.editGetRelatNum);
         SharedPreferencesDeslocamento sharedPreferencesDeslocamento = new SharedPreferencesDeslocamento();
 
@@ -130,12 +134,11 @@ public class FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
             Utils.setTextEditText(this, R.id.editGetDefeitoConstado, relatorioAssistenciaTecnica.getDefeitoCostatado());
             Utils.setTextEditText(this, R.id.editGetProcAdot, relatorioAssistenciaTecnica.getProcedAdot());
             Utils.setTextEditText(this, R.id.edt_pendencias, relatorioAssistenciaTecnica.getPendencias());
-            Utils.setTextEditText(this, R.id.edt_inicio_deslocamento, relatorioAssistenciaTecnica.getInicioDeslocamento());
-            Utils.setTextEditText(this, R.id.edt_inicio_trabalho, relatorioAssistenciaTecnica.getInicioTrabalho());
-            Utils.setTextEditText(this, R.id.edt_inicio_almoco, relatorioAssistenciaTecnica.getInicioAlmoco());
-            Utils.setTextEditText(this, R.id.edt_fim_almoco, relatorioAssistenciaTecnica.getFimAlmoco());
-            Utils.setTextEditText(this, R.id.edt_fim_trabalho, relatorioAssistenciaTecnica.getFimTrabalho());
-            Utils.setTextEditText(this, R.id.edt_fim_deslocamento, relatorioAssistenciaTecnica.getFimDeslocamento());
+            Utils.setTextEditText(this, R.id.edt_horas_deslocamento, relatorioAssistenciaTecnica.getInicioDeslocamento());
+            Utils.setTextEditText(this, R.id.edt_horas_refeicao, relatorioAssistenciaTecnica.getInicioTrabalho());
+            Utils.setTextEditText(this, R.id.edt_horas_trabalhadas, relatorioAssistenciaTecnica.getInicioAlmoco());
+            Utils.setTextEditText(this, R.id.edt_extras_deslocamento, relatorioAssistenciaTecnica.getFimAlmoco());
+            Utils.setTextEditText(this, R.id.edt_extras_trabalhadas, relatorioAssistenciaTecnica.getFimTrabalho());
             Utils.setTextEditText(this, R.id.edt_km_rodado, relatorioAssistenciaTecnica.getKmRodad());
 
             Utils.setTextEditText(this, R.id.editGetCodPec, relatorioAssistenciaTecnica.getGetCodPec());
@@ -172,6 +175,7 @@ public class FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
             public void onClick(View arg0) {
                 Intent intent = new Intent(FormRelatorioAssistenciaTecnicaActivity.this, ListRelatorioAssistenciaTecnicaActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
         view.findViewById(R.id.btn_nao).setOnClickListener(new View.OnClickListener() {
@@ -186,6 +190,38 @@ public class FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
         alerta.show();
     }
 
+    public void importDesloc(View view){
+        try{
+            SharedPreferences sharedPreferences = getSharedPreferences(PREF_NAME, 0);
+            String desloc = sharedPreferences.getString("tempo_deslocamento","");
+            String ref = sharedPreferences.getString("tempo_refeicao","");
+            String serv = sharedPreferences.getString("tempo_servico","");
+            String extDesl = sharedPreferences.getString("tempo_servico","");
+            String extTrab = sharedPreferences.getString("tempo_servico","");
+            String kmRodado = sharedPreferences.getString("tot_kmRodado","");
+
+            edt_horas_deslocamento = (EditText) findViewById(R.id.edt_horas_deslocamento);
+            edt_horas_trabalhadas = (EditText) findViewById(R.id.edt_horas_trabalhadas);
+            edt_horas_refeicao = (EditText) findViewById(R.id.edt_horas_refeicao);
+            edt_extras_trabalhadas = (EditText) findViewById(R.id.edt_extras_trabalhadas);
+            edt_extras_deslocamento = (EditText) findViewById(R.id.edt_extras_deslocamento);
+            edt_km_rodado = (EditText) findViewById(R.id.edt_km_rodado);
+            edt_horas_deslocamento.setText(desloc.toString());
+            edt_horas_refeicao.setText(ref.toString());
+            edt_horas_trabalhadas.setText(serv.toString());
+            edt_extras_deslocamento.setText(extDesl.toString());
+            edt_extras_trabalhadas.setText(extTrab.toString());
+            edt_km_rodado.setText(kmRodado.toString());
+
+            Crouton.makeText(FormRelatorioAssistenciaTecnicaActivity.this, "Dados do deslocamento importados com sucesso !", styleConfirm).show();
+            dialogoDeslocamento();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+
+    }
+/*
     public void importDeslocamento(View view){
         SharedPreferences sharedPreferences = getSharedPreferences(PREF_NAME, 0);
         String iniDes = sharedPreferences.getString("inicio_deslocamento", "");
@@ -237,6 +273,7 @@ public class FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
         }
 
     }
+*/
 
 
     public void abrirCamera (View view){
@@ -268,12 +305,11 @@ public class FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
         relatorioAssistenciaTecnica.setPendencias(Utils.getTextFromEditText(this, R.id.edt_pendencias));
         relatorioAssistenciaTecnica.setKmRodad(Utils.getTextFromEditText(this, R.id.edt_km_rodado));
 
-        relatorioAssistenciaTecnica.setInicioDeslocamento(Utils.getTextFromEditText(this, R.id.edt_inicio_deslocamento));
-        relatorioAssistenciaTecnica.setInicioTrabalho(Utils.getTextFromEditText(this, R.id.edt_inicio_trabalho));
-        relatorioAssistenciaTecnica.setInicioAlmoco(Utils.getTextFromEditText(this, R.id.edt_inicio_almoco));
-        relatorioAssistenciaTecnica.setFimAlmoco(Utils.getTextFromEditText(this, R.id.edt_fim_almoco));
-        relatorioAssistenciaTecnica.setFimTrabalho(Utils.getTextFromEditText(this, R.id.edt_fim_trabalho));
-        relatorioAssistenciaTecnica.setFimDeslocamento(Utils.getTextFromEditText(this, R.id.edt_fim_deslocamento));
+        relatorioAssistenciaTecnica.setInicioDeslocamento(Utils.getTextFromEditText(this, R.id.edt_horas_trabalhadas));
+        relatorioAssistenciaTecnica.setInicioTrabalho(Utils.getTextFromEditText(this, R.id.edt_horas_refeicao));
+        relatorioAssistenciaTecnica.setInicioAlmoco(Utils.getTextFromEditText(this, R.id.edt_horas_deslocamento));
+        relatorioAssistenciaTecnica.setFimAlmoco(Utils.getTextFromEditText(this, R.id.edt_extras_trabalhadas));
+        relatorioAssistenciaTecnica.setFimTrabalho(Utils.getTextFromEditText(this, R.id.edt_extras_deslocamento));
 
         relatorioAssistenciaTecnica.setGetCodPec(Utils.getTextFromEditText(this, R.id.editGetCodPec));
         relatorioAssistenciaTecnica.setPecaQtd(Utils.getTextFromEditText(this, R.id.editGetPecaQtd));
@@ -289,6 +325,7 @@ public class FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
             Toast.makeText(this, msgFormulario, Toast.LENGTH_LONG).show();
             Intent intent = new Intent(FormRelatorioAssistenciaTecnicaActivity.this, ListRelatorioAssistenciaTecnicaActivity.class);
             startActivity(intent);
+            finish();
         }
 
     }
@@ -321,16 +358,82 @@ public class FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
     public void limparDeslocamento(){
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();
-
-        editor.putString("inicio_deslocamento", "");
-        editor.putString("inicio_trabalho","");
-        editor.putString("inicio_almoço","");
-        editor.putString("fim_almoço","");
-        editor.putString("fim_trabalho","");
-        editor.putString("fim_deslocamento","");
-        editor.putString("km_inicial","");
-        editor.putString("km_final","");
-        editor.putString("km_rodado","");
+        editor.putString("ini_km1", "");
+        editor.putString("fim_km1", "");
+        editor.putString("ini_km2", "");
+        editor.putString("fim_km2", "");
+        editor.putString("ini_km3", "");
+        editor.putString("fim_km3", "");
+        editor.putString("ini_km4", "");
+        editor.putString("fim_km4", "");
+        editor.putString("ini_km5", "");
+        editor.putString("fim_km5", "");
+        editor.putString("ini_km6", "");
+        editor.putString("fim_km6", "");
+        editor.putString("tot_km1", "");
+        editor.putString("tot_km2", "");
+        editor.putString("tot_km3", "");
+        editor.putString("tot_km4", "");
+        editor.putString("tot_km5", "");
+        editor.putString("tot_km6", "");
+        editor.putString("tot_kmRodado", "");
+        editor.putString("ini_desl1", "");
+        editor.putString("fim_desl1", "");
+        editor.putString("ini_desl2", "");
+        editor.putString("fim_desl2", "");
+        editor.putString("ini_desl3", "");
+        editor.putString("fim_desl3", "");
+        editor.putString("ini_desl4", "");
+        editor.putString("fim_desl4", "");
+        editor.putString("ini_desl5", "");
+        editor.putString("fim_desl5", "");
+        editor.putString("ini_desl6", "");
+        editor.putString("fim_desl6", "");
+        editor.putString("tempo_desl1", "");
+        editor.putString("tempo_desl2", "");
+        editor.putString("tempo_desl3", "");
+        editor.putString("tempo_desl4", "");
+        editor.putString("tempo_desl5", "");
+        editor.putString("tempo_desl6", "");
+        editor.putString("tempo_deslocamento", "");
+        editor.putString("ini_serv1", "");
+        editor.putString("fim_serv1", "");
+        editor.putString("ini_serv2", "");
+        editor.putString("fim_serv2", "");
+        editor.putString("ini_serv3", "");
+        editor.putString("fim_serv3", "");
+        editor.putString("ini_serv4", "");
+        editor.putString("fim_serv4", "");
+        editor.putString("ini_serv5", "");
+        editor.putString("fim_serv5", "");
+        editor.putString("ini_serv6", "");
+        editor.putString("fim_serv6", "");
+        editor.putString("tempo_serv1", "");
+        editor.putString("tempo_serv2", "");
+        editor.putString("tempo_serv3", "");
+        editor.putString("tempo_serv4", "");
+        editor.putString("tempo_serv5", "");
+        editor.putString("tempo_serv6", "");
+        editor.putString("tempo_servico", "");
+        editor.putString("ini_ref1", "");
+        editor.putString("fim_ref1", "");
+        editor.putString("ini_ref2", "");
+        editor.putString("fim_ref2", "");
+        editor.putString("ini_ref3", "");
+        editor.putString("fim_ref3", "");
+        editor.putString("ini_ref4", "");
+        editor.putString("fim_ref4", "");
+        editor.putString("ini_ref5", "");
+        editor.putString("fim_ref5", "");
+        editor.putString("ini_ref6", "");
+        editor.putString("fim_ref6", "");
+        editor.putString("tempo_ref1", "");
+        editor.putString("tempo_ref2", "");
+        editor.putString("tempo_ref3", "");
+        editor.putString("tempo_ref4", "");
+        editor.putString("tempo_ref5", "");
+        editor.putString("tempo_ref6", "");
+        editor.putString("tempo_refeicao", "");
         editor.commit();
 
         Toast.makeText(getApplicationContext(), "Campos de deslocamento liberados !", Toast.LENGTH_SHORT).show();
@@ -367,18 +470,16 @@ public class FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
         edtDefeitoConstatado.addTextChangedListener(textWatcher);
         edtProcedimentoAdotado = (EditText) findViewById(R.id.editGetProcAdot);
         edtProcedimentoAdotado.addTextChangedListener(textWatcher);
-        edt_inicio_deslocamento = (EditText) findViewById(R.id.edt_inicio_deslocamento);
-        edt_inicio_deslocamento.addTextChangedListener(textWatcher);
-        edt_inicio_trabalho = (EditText) findViewById(R.id.edt_inicio_trabalho);
-        edt_inicio_trabalho.addTextChangedListener(textWatcher);
-        edt_inicio_almoco = (EditText) findViewById(R.id.edt_inicio_almoco);
-        edt_inicio_almoco.addTextChangedListener(textWatcher);
-        edt_fim_almoco = (EditText) findViewById(R.id.edt_fim_almoco);
-        edt_fim_almoco.addTextChangedListener(textWatcher);
-        edt_fim_trabalho = (EditText) findViewById(R.id.edt_fim_trabalho);
-        edt_fim_trabalho.addTextChangedListener(textWatcher);
-        edt_fim_deslocamento = (EditText) findViewById(R.id.edt_fim_deslocamento);
-        edt_fim_deslocamento.addTextChangedListener(textWatcher);
+        edt_horas_deslocamento = (EditText) findViewById(R.id.edt_horas_deslocamento);
+        edt_horas_deslocamento.addTextChangedListener(textWatcher);
+        edt_horas_trabalhadas = (EditText) findViewById(R.id.edt_horas_trabalhadas);
+        edt_horas_trabalhadas.addTextChangedListener(textWatcher);
+        edt_horas_refeicao = (EditText) findViewById(R.id.edt_horas_refeicao);
+        edt_horas_refeicao.addTextChangedListener(textWatcher);
+        edt_extras_trabalhadas = (EditText) findViewById(R.id.edt_extras_trabalhadas);
+        edt_extras_trabalhadas.addTextChangedListener(textWatcher);
+        edt_extras_deslocamento = (EditText) findViewById(R.id.edt_extras_deslocamento);
+        edt_extras_deslocamento.addTextChangedListener(textWatcher);
         edt_km_rodado = (EditText) findViewById(R.id.edt_km_rodado);
         edt_km_rodado.addTextChangedListener(textWatcher);
         edtCodigoPeca = (EditText) findViewById(R.id.editGetCodPec);
@@ -388,12 +489,11 @@ public class FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
         edtDescricao = (EditText) findViewById(R.id.editGetDescPec);
         edtDescricao.addTextChangedListener(textWatcher);
 
-        edt_inicio_deslocamento.setEnabled(false);
-        edt_inicio_trabalho.setEnabled(false);
-        edt_inicio_almoco.setEnabled(false);
-        edt_fim_almoco.setEnabled(false);
-        edt_fim_trabalho.setEnabled(false);
-        edt_fim_deslocamento.setEnabled(false);
+        edt_horas_deslocamento.setEnabled(false);
+        edt_horas_trabalhadas.setEnabled(false);
+        edt_horas_refeicao.setEnabled(false);
+        edt_extras_trabalhadas.setEnabled(false);
+        edt_extras_deslocamento.setEnabled(false);
         edt_km_rodado.setEnabled(false);
     }
     private void callClearErrors(Editable s) {}

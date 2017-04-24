@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="br.com.timberforest.ratd">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -104,10 +104,11 @@
             android:screenOrientation="landscape" />
         <activity
             android:name=".formulariosActivity.relatorioAssistenciaTecnica.FormRelatorioAssistenciaTecnicaActivity"
-            android:configChanges="orientation|keyboardHidden"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/title_activity_form1_dados"
             android:screenOrientation="landscape"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".utilitarios.CameraActivity"
             android:configChanges="orientation|keyboardHidden"
@@ -149,27 +150,38 @@
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
 
-       <!--deslocamento-->
-        <activity android:name=".sharedPreferences.deslocamento.OpcoesDeslocamentoActivity"
+        <!-- deslocamento -->
+        <activity
+            android:name=".sharedPreferences.deslocamento.OpcoesDeslocamentoActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".sharedPreferences.deslocamento.DeslocamentoActivity"
+        <activity
+            android:name=".sharedPreferences.deslocamento.DeslocamentoActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".sharedPreferences.deslocamento.TrabalhoActivity"
+        <activity
+            android:name=".sharedPreferences.deslocamento.TrabalhoActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".sharedPreferences.deslocamento.RefeicaoActivity"
+        <activity
+            android:name=".sharedPreferences.deslocamento.RefeicaoActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".sharedPreferences.deslocamento.KmRodado"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden"/>
     </application>
 
 </manifest>

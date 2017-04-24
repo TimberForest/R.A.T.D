@@ -14,8 +14,7 @@ import br.com.timberforest.ratd.dashboards.MainActivity;
 public class SharedPreferencesEmailActivity extends Activity {
     public static final String PREFS_NAME = "Preferences";
     EditText edt_email, edt_email_rigesa;
-
-    /**Chamado quando a Activity é executada pela primeira vez.*/
+    
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +35,7 @@ public class SharedPreferencesEmailActivity extends Activity {
         if ((keyCode == KeyEvent.KEYCODE_BACK)) {
             Intent intent = new Intent(SharedPreferencesEmailActivity.this, MainActivity.class);
             startActivity(intent);
+            finish();
         }
         return super.onKeyDown(keyCode, event);
     }
@@ -56,10 +56,7 @@ public class SharedPreferencesEmailActivity extends Activity {
 
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+        finish();
     }
 
-    //Evento click do botão Fechar prorama
-    public void btnFechar_Click(View v){
-        finish(); // fecha aplicativo
-    }
 }

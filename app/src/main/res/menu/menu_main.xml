@@ -2,11 +2,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
 
-<!--    <item
-        android:id="@+id/action_localzacao"
+    <item
+        android:id="@+id/action_knRodado"
         app:showAsAction="ifRoom"
         android:title="Voltar"
-        android:icon="@drawable/ic_localizacao"/>-->
+        android:icon="@drawable/ic_action_navigate"/>
 
     <item
         android:id="@+id/action_ponto_digital"
@@ -20,9 +20,9 @@
         android:title="Voltar"
         android:icon="@drawable/action_config"/>
 
-    <item
+<!--    <item
         android:id="@+id/action_voltar"
         app:showAsAction="ifRoom"
         android:title="Voltar"
-        android:icon="@drawable/ic_reply_white_48dp"/>
+        android:icon="@drawable/ic_reply_white_48dp"/>-->
 </menu>

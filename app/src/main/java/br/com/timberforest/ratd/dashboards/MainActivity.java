@@ -16,6 +16,7 @@ import br.com.timberforest.ratd.listActivity.relatorioAvaliacaoOperacional.ListR
 import br.com.timberforest.ratd.dao.ambienteBancoDados.DatabaseFactory;
 import br.com.timberforest.ratd.sharedPreferences.SharedPreferencesDeslocamento;
 import br.com.timberforest.ratd.sharedPreferences.SharedPreferencesEmailActivity;
+import br.com.timberforest.ratd.sharedPreferences.deslocamento.KmRodado;
 import br.com.timberforest.ratd.sharedPreferences.deslocamento.OpcoesDeslocamentoActivity;
 import br.com.timberforest.ratd.utilitarios.Geolocalizacao;
 
@@ -61,10 +62,10 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         //int id = item.getItemId();
-/*        if (item.getItemId() == R.id.action_localzacao) {
-            Intent intent = new Intent(MainActivity.this, Geolocalizacao.class);
+        if (item.getItemId() == R.id.action_knRodado) {
+            Intent intent = new Intent(MainActivity.this, KmRodado.class);
             startActivity(intent);
-        }*/
+        }
 
         if (item.getItemId() == R.id.action_ponto_digital) {
             Intent intent = new Intent(MainActivity.this, OpcoesDeslocamentoActivity.class);
@@ -75,9 +76,9 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, SharedPreferencesEmailActivity.class);
             startActivity(intent);
         }
-        if (item.getItemId()== R.id.action_voltar) {
+/*        if (item.getItemId()== R.id.action_voltar) {
             super.finish();
-        }
+        }*/
 
         return super.onOptionsItemSelected(item);
     }
