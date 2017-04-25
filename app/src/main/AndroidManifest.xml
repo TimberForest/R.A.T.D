@@ -164,7 +164,7 @@
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name=".sharedPreferences.deslocamento.TrabalhoActivity"
+            android:name=".sharedPreferences.deslocamento.ServicoActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar"

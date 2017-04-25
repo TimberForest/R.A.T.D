@@ -4,13 +4,16 @@ import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
 import br.com.timberforest.ratd.R;
 import br.com.timberforest.ratd.dao.cadastroMecanico.CadastroMecanicoDao;
+import br.com.timberforest.ratd.dashboards.MainActivity;
 import br.com.timberforest.ratd.formulariosActivity.cadastroMecanico.FormMecanicoActivity;
+import br.com.timberforest.ratd.listActivity.relatorioAvaliacaoOperacional.ListRelatorioAvaliacaoOperacionalActivity;
 import br.com.timberforest.ratd.model.CadastroMecanico.CadastroMecanico;
 
 public class DetailMecanicoActivity extends ActionBarActivity {
@@ -26,6 +29,17 @@ public class DetailMecanicoActivity extends ActionBarActivity {
 
         atualizarTela();
     }
+    //botão voltar do device
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_BACK)) {
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
     private void atualizarTela(){
         TextView textMecanicoNome = (TextView) findViewById(R.id.textNomeDatailMecanico);
         TextView textMecanicoMatricula = (TextView) findViewById(R.id.textMatriculaDatailMecanico);

@@ -196,8 +196,8 @@ public class FormRelatorioAssistenciaTecnicaActivity extends ActionBarActivity{
             String desloc = sharedPreferences.getString("tempo_deslocamento","");
             String ref = sharedPreferences.getString("tempo_refeicao","");
             String serv = sharedPreferences.getString("tempo_servico","");
-            String extDesl = sharedPreferences.getString("tempo_servico","");
-            String extTrab = sharedPreferences.getString("tempo_servico","");
+            String extDesl = sharedPreferences.getString("extra_deslocada","");
+            String extTrab = sharedPreferences.getString("extra_trabalhada","");
             String kmRodado = sharedPreferences.getString("tot_kmRodado","");
 
             edt_horas_deslocamento = (EditText) findViewById(R.id.edt_horas_deslocamento);

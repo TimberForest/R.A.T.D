@@ -45,6 +45,7 @@ public class ServicosPonsseActivity extends Activity {
         if ((keyCode == KeyEvent.KEYCODE_BACK)) {
             Intent intent = new Intent(ServicosPonsseActivity.this, MainActivity.class);
             startActivity(intent);
+            finish();
         }
         return super.onKeyDown(keyCode, event);
     }

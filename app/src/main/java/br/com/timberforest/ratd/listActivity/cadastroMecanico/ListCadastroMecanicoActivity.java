@@ -33,6 +33,8 @@ public class ListCadastroMecanicoActivity extends ActionBarActivity {
 
         ListView mecanicosListView= (ListView) findViewById(R.id.mecanicosListView);
 
+
+
         mecanicosListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -45,7 +47,15 @@ public class ListCadastroMecanicoActivity extends ActionBarActivity {
 
         mecanicosListView.setAdapter(cadastroMecanicoListAdapter);
         buscaMecanicos();
+        abrirCadastroMec();
     }
+
+    //abrir direto o unico cadastro de mecanico
+    private void abrirCadastroMec(){
+        onListItemClick(0);
+    }
+
+
     private void buscaMecanicos(){
         List<CadastroMecanico> mecanicos= cadastroMecanicoDao.busca();
 
@@ -57,6 +67,7 @@ public class ListCadastroMecanicoActivity extends ActionBarActivity {
         CadastroMecanico mecanico= (CadastroMecanico) cadastroMecanicoListAdapter.getItem(position);
         intent.putExtra("CadastroMecanico", mecanico);
         startActivity(intent);
+        finish();
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

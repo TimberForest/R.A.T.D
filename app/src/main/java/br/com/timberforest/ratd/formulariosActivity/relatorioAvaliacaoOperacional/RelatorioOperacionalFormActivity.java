@@ -1,5 +1,6 @@
 package br.com.timberforest.ratd.formulariosActivity.relatorioAvaliacaoOperacional;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -7,6 +8,7 @@ import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,6 +19,7 @@ import android.widget.Toast;
 import br.com.timberforest.ratd.R;
 import br.com.timberforest.ratd.dao.cadastroMecanico.CadastroMecanicoDao;
 import br.com.timberforest.ratd.dao.relatorioAvaliacaoOperacional.RelatorioAvaliacaoOperacionalDao;
+import br.com.timberforest.ratd.dashboards.MainActivity;
 import br.com.timberforest.ratd.model.CadastroMecanico.CadastroMecanico;
 import br.com.timberforest.ratd.model.relatorioAvaliacaoOperacional.RelatorioAvaliacaoOperacional;
 import java.text.DateFormat;
@@ -173,6 +176,17 @@ public class RelatorioOperacionalFormActivity extends ActionBarActivity {
         } else {
             relatorioAvaliacaoOperacional = new RelatorioAvaliacaoOperacional();
         }
+    }
+
+    //botão voltar do device
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_BACK)) {
+            Intent it = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(it);
+            finish();
+        }
+        return super.onKeyDown(keyCode, event);
     }
 
     public String getDateTime() {

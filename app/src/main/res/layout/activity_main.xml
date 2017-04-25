@@ -12,9 +12,9 @@
 
         <LinearLayout
             style="@style/LinearBasico"
+            android:orientation="horizontal"
             android:background="@color/branco"
             >
-
             <WebView
                 android:layout_marginLeft="100dp"
                 android:id="@+id/webView"

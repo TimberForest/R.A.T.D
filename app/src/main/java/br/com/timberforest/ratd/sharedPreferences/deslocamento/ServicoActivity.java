@@ -15,7 +15,7 @@ import java.util.Date;
 import br.com.timberforest.ratd.R;
 import br.com.timberforest.ratd.dashboards.MainActivity;
 
-public class TrabalhoActivity extends AppCompatActivity {
+public class ServicoActivity extends AppCompatActivity {
 
     public static final String PREFS_NAME = "sharedPreferencesDeslocamento";
 
@@ -95,7 +95,7 @@ public class TrabalhoActivity extends AppCompatActivity {
         atualizaCampos();
     }
     public void goToMain(){
-        Intent intent = new Intent(TrabalhoActivity.this, MainActivity.class);
+        Intent intent = new Intent(ServicoActivity.this, MainActivity.class);
         startActivity(intent);
         finish();
     }

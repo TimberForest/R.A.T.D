@@ -72,6 +72,7 @@ public class ListRelatorioAvaliacaoOperacionalActivity extends Activity {
         if ((keyCode == KeyEvent.KEYCODE_BACK)) {
             Intent intent = new Intent(ListRelatorioAvaliacaoOperacionalActivity.this, MainActivity.class);
             startActivity(intent);
+            finish();
         }
         return super.onKeyDown(keyCode, event);
     }

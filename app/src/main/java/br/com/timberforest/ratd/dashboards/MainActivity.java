@@ -3,12 +3,17 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
+import android.widget.TextView;
+
+import java.util.GregorianCalendar;
+
 import br.com.timberforest.ratd.R;
 import br.com.timberforest.ratd.listActivity.relatorioAssistenciaTecnica.ListRelatorioAssistenciaTecnicaActivity;
 import br.com.timberforest.ratd.listActivity.cadastroMecanico.ListCadastroMecanicoActivity;
@@ -25,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     public String packageName = "com.vajsi.digital_signature";
     public String googlePlayEndereco = "https://play.google.com/store/apps/details?id=";
     private String animacao = "file:///android_asset/animacao_main.html";
+
      WebView webView;
 
     @Override
@@ -38,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
 
         PackageManager pm = getPackageManager();
         boolean isInstalled = isPackageInstalled(packageName, pm);
-
     }
+
     private boolean isPackageInstalled(String packagename, PackageManager packageManager) {
         try {
             packageManager.getPackageInfo(packagename, 0);

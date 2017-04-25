@@ -47,6 +47,7 @@ public class ServicosLogMaxActivity extends Activity {
         if ((keyCode == KeyEvent.KEYCODE_BACK)) {
             Intent intent = new Intent(ServicosLogMaxActivity.this, MainActivity.class);
             startActivity(intent);
+            finish();
         }
         return super.onKeyDown(keyCode, event);
     }

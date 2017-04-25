@@ -46,6 +46,7 @@ public class ListRelatorioAssistenciaTecnicaActivity extends Activity {
             public void onClick(View v) {
                 Intent intent = new Intent(ListRelatorioAssistenciaTecnicaActivity.this, FormRelatorioAssistenciaTecnicaActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -71,6 +72,7 @@ public class ListRelatorioAssistenciaTecnicaActivity extends Activity {
         RelatorioAssistenciaTecnica relatorioAssistenciaTecnica = (RelatorioAssistenciaTecnica) relatorioAssistenciaTecnicaListAdatapter.getItem(position);
         intent.putExtra("relatorioAssistenciaTecnica", relatorioAssistenciaTecnica);
         startActivity(intent);
+        finish();
     }
 
     //botão voltar do device
@@ -93,6 +95,7 @@ public class ListRelatorioAssistenciaTecnicaActivity extends Activity {
         if(item.getItemId()==R.id.action_new) {
             Intent intent = new Intent(this, FormRelatorioAssistenciaTecnicaActivity.class);
             startActivity(intent);
+            finish();
             return true;
         }
 /*        if(item.getItemId()==R.id.action_refresh) {
