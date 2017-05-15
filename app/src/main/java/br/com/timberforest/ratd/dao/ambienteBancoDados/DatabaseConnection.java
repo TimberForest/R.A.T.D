@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 public class DatabaseConnection extends SQLiteOpenHelper {
     private static final String DATABASE_NAME="RATD.db";
-    private static final int DATABASE_VERSION=1;
+    private static final int DATABASE_VERSION=2;
 
     public DatabaseConnection(Context context){
         super(context,DATABASE_NAME,null,DATABASE_VERSION);
@@ -35,20 +35,17 @@ public class DatabaseConnection extends SQLiteOpenHelper {
                 "defeitoCost text," +
                 "procedimentosAdot text," +
                 "pendencias text," +
-                "inicioDeslocamento text,"+
-                "inicioTrabalho text,"+
-                "inicioAlmoco text,"+
-                "fimAlmoco text,"+
-                "fimTrabalho text,"+
-                "fimDeslocamento text,"+
+                "deslocamento text,"+
+                "trabalho text,"+
+                "refeicao text,"+
+                "extraServ text,"+
+                "extraDesl text,"+
                 "kmRodado text," +
                 "codigoPeca text," +
                 "quantidade text," +
-                "descricao text," +
-                "codigoPeca1 text," +
-                "quantidade1 text," +
-                "descricao1 text" +
+                "descricao text" +
                 ")");
+
 
         db.execSQL("create table CadastroMecanico("+
                 "id integer primary key autoincrement,"+
@@ -59,8 +56,7 @@ public class DatabaseConnection extends SQLiteOpenHelper {
                 "cidade text,"+
                 "estado text"+
                 ")");
-        db.execSQL("INSERT INTO CadastroMecanico VALUES(1,'Padrão','','','','','')");
-//        db.execSQL("INSERT or replace INTO CadastroMecanico (id, nome, matricula, cargoFuncao,filial, cidade, estado ) VALUES('1, 'Padrão','','','','','')");
+        db.execSQL("INSERT INTO CadastroMecanico VALUES(1,'','','','','','')");
 
 
         db.execSQL("create table RelatorioAvaliacaoOperacional("+
@@ -135,16 +131,47 @@ public class DatabaseConnection extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
-/*        if (newVersion > oldVersion) {
-            db.execSQL("ALTER TABLE RelatorioAssistenciaTecnica RENAME COLUMN horaTrabal TO inicioDeslocamento;");
-            db.execSQL("ALTER TABLE RelatorioAssistenciaTecnica RENAME COLUMN horaExtraDesl TO inicioTrabalho;");
-            db.execSQL("ALTER TABLE RelatorioAssistenciaTecnica RENAME COLUMN horaExtraTrab TO inicioAlmoco;");
-            db.execSQL("ALTER TABLE RelatorioAssistenciaTecnica RENAME COLUMN horaDesloc TO fimAlmoco;");
-            db.execSQL("ALTER TABLE RelatorioAssistenciaTecnica RENAME COLUMN cod_fun TO fimTrabalho;");*//*
-            db.execSQL("ALTER TABLE RelatorioAssistenciaTecnica ADD COLUMN pendencias text;");
+        if (newVersion>oldVersion){
+            db.execSQL("create table aux(" +
+                    "id integer primary key autoincrement, " +
+                    "relator text," +
+                    "data date," +
+                    "numeroRelatorio text," +
+                    "chassi text," +
+                    "modelo text," +
+                    "horimetro text," +
+                    "distribuidorPostoAss text," +
+                    "cidadeDist text," +
+                    "estadoDist text," +
+                    "cliente text," +
+                    "cidadeCli text," +
+                    "estadoCli text," +
+                    "localObra text," +
+                    "materialTransp text," +
+                    "defeitoCost text," +
+                    "procedimentosAdot text," +
+                    "pendencias text," +
+                    "deslocamento text,"+
+                    "trabalho text,"+
+                    "refeicao text,"+
+                    "extraServ text,"+
+                    "extraDesl text,"+
+                    "kmRodado text," +
+                    "codigoPeca text," +
+                    "quantidade text," +
+                    "descricao text" +
+                    ")");
+            db.execSQL("INSERT INTO aux (id, relator, data, numeroRelatorio, chassi, modelo, horimetro, distribuidorPostoAss, cidadeDist, estadoDist, cliente," +
+                    "cidadeCli, estadoCli, localObra, materialTransp, " +
+                    "defeitoCost, procedimentosAdot, pendencias, deslocamento, trabalho, refeicao, extraServ, extraDesl, kmRodado, codigoPeca, quantidade, descricao)" +
+                    "SELECT  id, relator, data, numeroRelatorio, chassi, modelo, horimetro, distribuidorPostoAss, cidadeDist, estadoDist, cliente," +
+                    "cidadeCli, estadoCli, localObra, materialTransp, " +
+                    "defeitoCost, procedimentosAdot, pendencias, inicioDeslocamento, inicioTrabalho, inicioAlmoco, fimAlmoco, fimTrabalho, kmRodado, codigoPeca, quantidade, descricao FROM RelatorioAssistenciaTecnica");
+            db.execSQL("DROP TABLE RelatorioAssistenciaTecnica");
 
+            db.execSQL("ALTER TABLE aux RENAME TO RelatorioAssistenciaTecnica");
 
+        }
 
-        }*/
     }
 }

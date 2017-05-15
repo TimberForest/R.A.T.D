@@ -488,11 +488,12 @@ public class ServicoActivity extends AppCompatActivity {
 
             String horaDiferenca = null, minutosDiferenca = null;
 
-            if (diffHours>0){
-                horaDiferenca = String.valueOf(diffHours);
-                horaDiferenca = horaDiferenca.replace(".", "");
-            }else {
+            if (diffHours==0){
                 horaDiferenca="00";
+            }else if (diffHours>0 && diffHours<10){
+                horaDiferenca = "0"+String.valueOf(diffHours);
+            }else {
+                horaDiferenca = String.valueOf(diffHours);
             }
 
             if (diffMinutes==0){
@@ -680,6 +681,8 @@ public class ServicoActivity extends AppCompatActivity {
             resultado = horasSoma +":"+minutosDiferenca;
 
             gravarServTot(spTotalServico, resultado);
+
+            Log.i("info","Serviço Total: "+resultado);
 
         }catch (Exception e){
             e.printStackTrace();

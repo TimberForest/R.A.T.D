@@ -35,7 +35,7 @@
         </LinearLayout>
 
         <TextView
-            android:text="Deseja utilizar as informações de deslocamento em outro relatório ?"
+            android:text="Deseja utilizar as informações de deslocamento somente neste relatório ?"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"

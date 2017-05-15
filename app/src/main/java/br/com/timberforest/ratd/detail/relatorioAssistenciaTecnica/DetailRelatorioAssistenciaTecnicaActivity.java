@@ -2,6 +2,7 @@ package br.com.timberforest.ratd.detail.relatorioAssistenciaTecnica;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -9,9 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-
 import java.io.FileOutputStream;
-
 import br.com.timberforest.ratd.R;
 import br.com.timberforest.ratd.dao.relatorioAssistenciaTecnica.RelatorioAssistenciaTecnicaDao;
 import br.com.timberforest.ratd.formulariosActivity.relatorioAssistenciaTecnica.FormRelatorioAssistenciaTecnicaActivity;
@@ -29,12 +28,28 @@ public class DetailRelatorioAssistenciaTecnicaActivity extends ActionBarActivity
     public String packageName = "com.vajsi.digital_signature";
     FileOutputStream outputStream;
     String filename = "ExemploTeste";
+
+    private String subject= null;
+    private String message = null;
+    private String email = null;
+    public String arquivo = null;
+    public String storageImage = "/R.A.T.D./";
+    public String relatorio = "Relatorio_Nº";
+    public String aux = null;
+    public String chassi = "";
+    public String horimetro = "";
+    public String defeito = "";
+    public String defeito1 = "";
+    public String defeito2 = "";
+    public String defeito3 = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.detail_relatorio_relatorio_assistencia_tecnica);
         relatorioAssistenciaTecnica = (RelatorioAssistenciaTecnica) getIntent().getExtras().get("relatorioAssistenciaTecnica");
         atualizarTelaFormulario();
+
     }
 
     //botão voltar do device
@@ -67,17 +82,14 @@ public class DetailRelatorioAssistenciaTecnicaActivity extends ActionBarActivity
         TextView textFormularioProcedAdot = (TextView) findViewById(R.id.textProcedimentoAdotDetailFormulario);
         TextView textFormularioPendencias = (TextView) findViewById(R.id.textPendenciasAdotDetailFormulario);
         TextView textFormularioKmRodad = (TextView) findViewById(R.id.textKmRodadoDetailFormulario);
-        TextView textFormularioInicioDeslocamento = (TextView) findViewById(R.id.textInicioDeslocamentoDetailFormulario);
-        TextView textFormularioInicioTrabalho = (TextView) findViewById(R.id.textInicioTrabalhoDetailFormulario);
-        TextView textFormularioInicioAlmoco = (TextView) findViewById(R.id.textInicioAlmocoDetailFormulario);
-        TextView textFormularioFimAlmoco = (TextView) findViewById(R.id.textFimAlmocoDetailFormulario);
-        TextView textFormularioFimTrabalho = (TextView) findViewById(R.id.textFimTrabalhoDetailFormulario);
+        TextView textFormularioDeslocamento = (TextView) findViewById(R.id.textDeslocamentoDetailFormulario);
+        TextView textFormularioTrabalho = (TextView) findViewById(R.id.textTrabalhoDetailFormulario);
+        TextView textFormularioRefeicao = (TextView) findViewById(R.id.textRefeicaoDetailFormulario);
+        TextView textFormularioExtraServ = (TextView) findViewById(R.id.textExtraServDetailFormulario);
+        TextView textFormularioExtraDesl = (TextView) findViewById(R.id.textExtraDeslDetailFormulario);
         TextView textFormularioGetCodPec = (TextView) findViewById(R.id.textCodigoDetailFormulario);
         TextView textFormularioGetPecaQtd = (TextView) findViewById(R.id.textQtdDetailFormulario);
         TextView textFormularioGetDescPec = (TextView) findViewById(R.id.textDescricaoDetailFormulario);
-        TextView textFormularioGetCodPec1 = (TextView) findViewById(R.id.textCodigoDetailFormulario1);
-        TextView textFormularioGetPecaQtd1 = (TextView) findViewById(R.id.textQtdDetailFormulario1);
-        TextView textFormularioGetDescPec1 = (TextView) findViewById(R.id.textDescricaoDetailFormulario1);
 
         textFormularioRelator.setText(relatorioAssistenciaTecnica.getRelator());
         textFormularioData.setText(relatorioAssistenciaTecnica.getData());
@@ -97,17 +109,17 @@ public class DetailRelatorioAssistenciaTecnicaActivity extends ActionBarActivity
         textFormularioProcedAdot.setText(relatorioAssistenciaTecnica.getProcedAdot());
         textFormularioPendencias.setText(relatorioAssistenciaTecnica.getPendencias());
         textFormularioKmRodad.setText(relatorioAssistenciaTecnica.getKmRodad());
-        textFormularioInicioDeslocamento.setText(relatorioAssistenciaTecnica.getInicioDeslocamento());
-        textFormularioInicioTrabalho.setText(relatorioAssistenciaTecnica.getInicioTrabalho());
-        textFormularioInicioAlmoco.setText(relatorioAssistenciaTecnica.getInicioAlmoco());
-        textFormularioFimAlmoco.setText(relatorioAssistenciaTecnica.getFimAlmoco());
-        textFormularioFimTrabalho.setText(relatorioAssistenciaTecnica.getFimTrabalho());
+        textFormularioDeslocamento.setText(relatorioAssistenciaTecnica.getDeslocamento());
+        textFormularioTrabalho.setText(relatorioAssistenciaTecnica.getTrabalho());
+        textFormularioRefeicao.setText(relatorioAssistenciaTecnica.getRefeicao());
+        textFormularioExtraServ.setText(relatorioAssistenciaTecnica.getExtraServ());
+        textFormularioExtraDesl.setText(relatorioAssistenciaTecnica.getExtraDesl());
         textFormularioGetCodPec.setText(relatorioAssistenciaTecnica.getGetCodPec());
         textFormularioGetPecaQtd.setText(relatorioAssistenciaTecnica.getPecaQtd());
         textFormularioGetDescPec.setText(relatorioAssistenciaTecnica.getGetDescPec());
-        textFormularioGetCodPec1.setText(relatorioAssistenciaTecnica.getGetCodPec1());
-        textFormularioGetPecaQtd1.setText(relatorioAssistenciaTecnica.getGetPecaQtd1());
-        textFormularioGetDescPec1.setText(relatorioAssistenciaTecnica.getGetDescPec1());
+
+        subject="RATD Nº"+textFormularioRelatorio.getText().toString()+" - Técnico: "+textFormularioRelator.getText().toString();
+        message="Cliente: "+textFormularioCliente.getText().toString()+" / Data do Serviço: "+textFormularioData.getText().toString();
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -116,34 +128,28 @@ public class DetailRelatorioAssistenciaTecnicaActivity extends ActionBarActivity
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
- /*       if(item.getItemId()==R.id.action_delete){
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setTitle("Excluir RATD");
-            builder.setMessage("Deseja realmente excluir esse RATD?");
-            builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int id) {
-                    relatorioAssistenciaTecnicaDao.excluir(relatorioAssistenciaTecnica);
-                    Toast.makeText( DetailRelatorioAssistenciaTecnicaActivity.this, "RATD excluído com sucesso!", Toast.LENGTH_SHORT).show();
-                    finish();
-                }
-            });
-            builder.setNegativeButton("Não", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int id) {
-                    Toast.makeText(DetailRelatorioAssistenciaTecnicaActivity.this, "RATD não excluído!", Toast.LENGTH_SHORT).show();
-                }
-            });
-            builder.show();
-        }*/
+
         if (item.getItemId() == R.id.action_edit) {
             Intent intent = new Intent(this, FormRelatorioAssistenciaTecnicaActivity.class);
             intent.putExtra("relatorioAssistenciaTecnica", relatorioAssistenciaTecnica);
             startActivity(intent);
         }
         if (item.getItemId() == R.id.action_enviar) {
+
             SharedPreferences sharedPreferences = getSharedPreferences(PREF_NAME, 0);
             String email = sharedPreferences.getString("email", "");
-            EnviarEmail.enviarEmail(this, email);
+
+            String[] to = {email};
+            Intent enviarEmail = new Intent(Intent.ACTION_SEND);
+
+            enviarEmail.setData(Uri.parse("mailto:"));
+            enviarEmail.setType("application/image");
+            enviarEmail.putExtra(Intent.EXTRA_EMAIL, to);
+            enviarEmail.putExtra(Intent.EXTRA_SUBJECT, subject);
+            enviarEmail.putExtra(Intent.EXTRA_TEXT, message);
+            startActivity(Intent.createChooser(enviarEmail, "Enviar E-mail com Gmail !!!"));
+
+//            EnviarEmail.enviarEmail(this, email);
         }
 
         if (item.getItemId() == R.id.action__enviar_email_rigesa) {

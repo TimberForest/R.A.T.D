@@ -44,6 +44,7 @@
                 style="@style/EdtKmDeslocamento"
                 android:id="@+id/edt_km_fim1" />
             <TextView
+                android:hint="Total Rodado"
                 style="@style/TxtCinzaDeslocamento"
                 android:id="@+id/txt_kmRod1" />
         </LinearLayout>
@@ -71,6 +72,7 @@
                 style="@style/EdtKmDeslocamento"
                 android:id="@+id/edt_km_fim2" />
             <TextView
+                android:hint="Total Rodado"
                 style="@style/TxtCinzaDeslocamento"
                 android:id="@+id/txt_kmRod2" />
         </LinearLayout>
@@ -96,6 +98,7 @@
                 style="@style/EdtKmDeslocamento"
                 android:id="@+id/edt_km_fim3" />
             <TextView
+                android:hint="Total Rodado"
                 style="@style/TxtCinzaDeslocamento"
                 android:id="@+id/txt_kmRod3" />
         </LinearLayout>
@@ -121,6 +124,7 @@
                 style="@style/EdtKmDeslocamento"
                 android:id="@+id/edt_km_fim4" />
             <TextView
+                android:hint="Total Rodado"
                 style="@style/TxtCinzaDeslocamento"
                 android:id="@+id/txt_kmRod4" />
         </LinearLayout>
@@ -147,6 +151,7 @@
                 android:id="@+id/edt_km_fim5" />
 
             <TextView
+                android:hint="Total Rodado"
                 android:id="@+id/txt_kmRod5"
                 style="@style/TxtCinzaDeslocamento" />
         </LinearLayout>
@@ -172,6 +177,7 @@
                 style="@style/EdtKmDeslocamento"
                 android:id="@+id/edt_km_fim6" />
             <TextView
+                android:hint="Total Rodado"
                 style="@style/TxtCinzaDeslocamento"
                 android:id="@+id/txt_kmRod6" />
         </LinearLayout>

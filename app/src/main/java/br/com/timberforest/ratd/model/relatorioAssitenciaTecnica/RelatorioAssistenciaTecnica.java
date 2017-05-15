@@ -28,63 +28,50 @@ public class RelatorioAssistenciaTecnica implements Serializable{
     private String defeitoCostatado;
     private String procedAdot;
 
+
+    private String deslocamento;
+    private String trabalho;
+    private String refeicao;
+    private String extraServ;
+    private String extraDesl;
     private String kmRodad;
-    private String inicioDeslocamento;
-    private String inicioTrabalho;
-    private String inicioAlmoco;
-    private String fimAlmoco;
-    private String fimTrabalho;
-    private String fimDeslocamento;
+
     private String pendencias;
     private String getCodPec;
     private String getPecaQtd;
     private String getDescPec;
-    private String getCodPec1;
-    private String getPecaQtd1;
-    private String getDescPec1;
 
     public RelatorioAssistenciaTecnica(){
     }
 
-    public RelatorioAssistenciaTecnica(Long idFormulario, String relator, String data, String numeroRelatorio, String numeroChassi,
-                                       String modelo, String horimetro, String distribuidorAssisTec, String cidadeDistr,
-                                       String estadoDistr, String cliente, String cidadeCli, String estadoCli, String localObra,
-                                       String materialTransp, String defeitoCostatado, String procedAdot, String pendencias, String kmRodad, String inicioDeslocamento,
-                                       String inicioTrabalho, String inicioAlmoco, String fimAlmoco, String fimTrabalho, String fimDeslocamento,
-                                       String getCodPec, String getPecaQtd, String getDescPec, String getCodPec1, String getPecaQtd1, String getDescPec1){
-        this.idFormulario=idFormulario;
-        this.relator= relator;
-        this.data= data;
-        this.numeroRelatorio= numeroRelatorio;
-        this.numeroChassi= numeroChassi;
-        this.modelo= modelo;
-        this.horimetro= horimetro;
-        this.distribuidorAssisTec= distribuidorAssisTec;
-        this.cidadeDistr= cidadeDistr;
-        this.estadoDistr= estadoDistr;
-        this.cliente= cliente;
-        this.cidadeCli= cidadeCli;
-        this.estadoCli= estadoCli;
-        this.localObra= localObra;
-        this.materialTransp= materialTransp;
-        this.defeitoCostatado= defeitoCostatado;
-        this.procedAdot= procedAdot;
-        this.pendencias= pendencias;
-        this.kmRodad= kmRodad;
-        this.inicioDeslocamento=inicioDeslocamento;
-        this.inicioTrabalho=inicioTrabalho;
-        this.inicioAlmoco=inicioAlmoco;
-        this.fimAlmoco=fimAlmoco;
-        this.fimTrabalho=fimTrabalho;
-        this.fimDeslocamento=fimDeslocamento;
-        this.getCodPec= getCodPec;
-        this.getPecaQtd= getPecaQtd;
-        this.getDescPec= getDescPec;
-        this.getCodPec1= getCodPec1;
-        this.getPecaQtd1= getPecaQtd1;
-        this.getDescPec1= getDescPec1;
-
-
+    public RelatorioAssistenciaTecnica(Long idFormulario, String relator, String data, String numeroRelatorio, String numeroChassi, String modelo, String horimetro, String distribuidorAssisTec, String cidadeDistr, String estadoDistr, String cliente, String cidadeCli, String estadoCli, String localObra, String materialTransp, String defeitoCostatado, String procedAdot, String deslocamento, String trabalho, String refeicao, String extraServ, String extraDesl, String kmRodad, String pendencias, String getCodPec, String getPecaQtd, String getDescPec) {
+        this.idFormulario = idFormulario;
+        this.relator = relator;
+        this.data = data;
+        this.numeroRelatorio = numeroRelatorio;
+        this.numeroChassi = numeroChassi;
+        this.modelo = modelo;
+        this.horimetro = horimetro;
+        this.distribuidorAssisTec = distribuidorAssisTec;
+        this.cidadeDistr = cidadeDistr;
+        this.estadoDistr = estadoDistr;
+        this.cliente = cliente;
+        this.cidadeCli = cidadeCli;
+        this.estadoCli = estadoCli;
+        this.localObra = localObra;
+        this.materialTransp = materialTransp;
+        this.defeitoCostatado = defeitoCostatado;
+        this.procedAdot = procedAdot;
+        this.deslocamento = deslocamento;
+        this.trabalho = trabalho;
+        this.refeicao = refeicao;
+        this.extraServ = extraServ;
+        this.extraDesl = extraDesl;
+        this.kmRodad = kmRodad;
+        this.pendencias = pendencias;
+        this.getCodPec = getCodPec;
+        this.getPecaQtd = getPecaQtd;
+        this.getDescPec = getDescPec;
     }
 
     @JavascriptInterface
@@ -271,78 +258,46 @@ public class RelatorioAssistenciaTecnica implements Serializable{
         this.getPecaQtd = getPecaQtd;
     }
 
-    @JavascriptInterface
-    public String getGetCodPec1() {
-        return getCodPec1;
+    public String getDeslocamento() {
+        return deslocamento;
     }
 
-    public void setGetCodPec1(String getCodPec1) {
-        this.getCodPec1 = getCodPec1;
-    }
-    @JavascriptInterface
-    public String getGetPecaQtd1() {
-        return getPecaQtd1;
-    }
-
-    public void setGetPecaQtd1(String getPecaQtd1) {
-        this.getPecaQtd1 = getPecaQtd1;
-    }
-    @JavascriptInterface
-    public String getGetDescPec1() {
-        return getDescPec1;
-    }
-
-    public void setGetDescPec1(String getDescPec1) {
-        this.getDescPec1 = getDescPec1;
+    public void setDeslocamento(String deslocamento) {
+        this.deslocamento = deslocamento;
     }
 
     @JavascriptInterface
-    public String getInicioDeslocamento() {
-        return inicioDeslocamento;
+    public String getTrabalho() {
+        return trabalho;
     }
 
-    public void setInicioDeslocamento(String inicioDeslocamento) {
-        this.inicioDeslocamento = inicioDeslocamento;
+    public void setTrabalho(String trabalho) {
+        this.trabalho = trabalho;
+    }
+
+    @JavascriptInterface
+    public String getRefeicao() {
+        return refeicao;
+    }
+
+    public void setRefeicao(String refeicao) {
+        this.refeicao = refeicao;
     }
     @JavascriptInterface
-    public String getInicioTrabalho() {
-        return inicioTrabalho;
+    public String getExtraServ() {
+        return extraServ;
     }
 
-    public void setInicioTrabalho(String inicioTrabalho) {
-        this.inicioTrabalho = inicioTrabalho;
+    public void setExtraServ(String extraServ) {
+        this.extraServ = extraServ;
     }
     @JavascriptInterface
-    public String getInicioAlmoco() {
-        return inicioAlmoco;
+    public String getExtraDesl() {
+        return extraDesl;
     }
 
-    public void setInicioAlmoco(String inicioAlmoco) {
-        this.inicioAlmoco = inicioAlmoco;
-    }
-    @JavascriptInterface
-    public String getFimAlmoco() {
-        return fimAlmoco;
-    }
-
-    public void setFimAlmoco(String fimAlmoco) {
-        this.fimAlmoco = fimAlmoco;
-    }
-    @JavascriptInterface
-    public String getFimTrabalho() {
-        return fimTrabalho;
-    }
-
-    public void setFimTrabalho(String fimTrabalho) {
-        this.fimTrabalho = fimTrabalho;
-    }
-    @JavascriptInterface
-    public String getFimDeslocamento() {
-        return fimDeslocamento;
-    }
-
-    public void setFimDeslocamento(String fimDeslocamento) {
-        this.fimDeslocamento = fimDeslocamento;
+    public void setExtraDesl(String extraDesl) {
+        this.extraDesl = extraDesl;
     }
 
     @JavascriptInterface

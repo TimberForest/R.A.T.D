@@ -496,11 +496,12 @@ public class DeslocamentoActivity extends AppCompatActivity{
 
             String horaDiferenca=null, minutosDiferenca = null;
 
-            if (diffHours>0){
-                horaDiferenca = String.valueOf(diffHours);
-                horaDiferenca = horaDiferenca.replace(".", "");
-            }else {
+            if (diffHours==0){
                 horaDiferenca="00";
+            }else if (diffHours>0 && diffHours<10){
+                horaDiferenca = "0"+String.valueOf(diffHours);
+            }else {
+                horaDiferenca = String.valueOf(diffHours);
             }
 
             if (diffMinutes==0){
@@ -541,6 +542,8 @@ public class DeslocamentoActivity extends AppCompatActivity{
                 lh1 = Long.parseLong(h1);
                 lm1 = Long.parseLong(m1);
             }
+            Log.i("Info","H1: "+h1);
+            Log.i("Info","Lm: "+lm1);
 
             if (tempo2.getText().equals(vazio)){
                 lm2=0; lh2=0;
@@ -696,6 +699,8 @@ public class DeslocamentoActivity extends AppCompatActivity{
             }
             resultado = horasSoma+":"+minutosDiferenca;
             gravarDeslTot(spTotalDeslocamento, resultado);
+
+            Log.i("info","Deslocamento Total: "+resultado);
 
         }catch (Exception e){
             e.printStackTrace();

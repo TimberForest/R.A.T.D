@@ -36,16 +36,19 @@
                 android:id="@+id/btn_ini_desl1" />
             <TextView
                 style="@style/EdtBrancoDeslocamento"
+                android:hint="Clique em Inicio"
                 android:id="@+id/txt_ini_desl1" />
             <Button
                 android:text="@string/fim"
                 style="@style/BotaoDeslocamento"
                 android:id="@+id/btn_fim_desl1" />
             <TextView
+                android:hint="Clique em Fim"
                 style="@style/EdtBrancoDeslocamento"
                 android:id="@+id/txt_fim_desl1" />
 
             <TextView
+                android:hint="Tempo Total"
                 style="@style/TxtCinzaDeslocamento"
                 android:id="@+id/txt_tempo_desl1" />
 
@@ -62,6 +65,7 @@
                 style="@style/BotaoDeslocamento"
                 android:id="@+id/btn_ini_desl2" />
             <TextView
+                android:hint="Clique em Inicio"
                 style="@style/EdtBrancoDeslocamento"
                 android:id="@+id/txt_ini_desl2" />
             <Button
@@ -69,10 +73,12 @@
                 style="@style/BotaoDeslocamento"
                 android:id="@+id/btn_fim_desl2" />
             <TextView
+                android:hint="Clique em Fim"
                 style="@style/EdtBrancoDeslocamento"
                 android:id="@+id/txt_fim_desl2" />
 
             <TextView
+                android:hint="Tempo Total"
                 style="@style/TxtCinzaDeslocamento"
                 android:id="@+id/txt_tempo_desl2" />
 
@@ -89,6 +95,7 @@
                 style="@style/BotaoDeslocamento"
                 android:id="@+id/btn_ini_desl3" />
             <TextView
+                android:hint="Clique em Inicio"
                 style="@style/EdtBrancoDeslocamento"
                 android:id="@+id/txt_ini_desl3" />
             <Button
@@ -96,9 +103,11 @@
                 style="@style/BotaoDeslocamento"
                 android:id="@+id/btn_fim_desl3" />
             <TextView
+                android:hint="Clique em Fim"
                 style="@style/EdtBrancoDeslocamento"
                 android:id="@+id/txt_fim_desl3" />
             <TextView
+                android:hint="Tempo Total"
                 style="@style/TxtCinzaDeslocamento"
                 android:id="@+id/txt_tempo_desl3" />
 
@@ -115,6 +124,7 @@
                 style="@style/BotaoDeslocamento"
                 android:id="@+id/btn_ini_desl4" />
             <TextView
+                android:hint="Clique em Inicio"
                 style="@style/EdtBrancoDeslocamento"
                 android:id="@+id/txt_ini_desl4" />
             <Button
@@ -122,9 +132,11 @@
                 style="@style/BotaoDeslocamento"
                 android:id="@+id/btn_fim_desl4" />
             <TextView
+                android:hint="Clique em Fim"
                 style="@style/EdtBrancoDeslocamento"
                 android:id="@+id/txt_fim_desl4" />
             <TextView
+                android:hint="Tempo Total"
                 style="@style/TxtCinzaDeslocamento"
                 android:id="@+id/txt_tempo_desl4" />
 
@@ -141,6 +153,7 @@
                 style="@style/BotaoDeslocamento"
                 android:id="@+id/btn_ini_desl5" />
             <TextView
+                android:hint="Clique em Inicio"
                 style="@style/EdtBrancoDeslocamento"
                 android:id="@+id/txt_ini_desl5" />
             <Button
@@ -148,9 +161,11 @@
                 style="@style/BotaoDeslocamento"
                 android:id="@+id/btn_fim_desl5" />
             <TextView
+                android:hint="Clique em Fim"
                 style="@style/EdtBrancoDeslocamento"
                 android:id="@+id/txt_fim_desl5" />
             <TextView
+                android:hint="Tempo Total"
                 style="@style/TxtCinzaDeslocamento"
                 android:id="@+id/txt_tempo_desl5" />
 
@@ -167,6 +182,7 @@
                 style="@style/BotaoDeslocamento"
                 android:id="@+id/btn_ini_desl6" />
             <TextView
+                android:hint="Clique em Inicio"
                 style="@style/EdtBrancoDeslocamento"
                 android:id="@+id/txt_ini_desl6" />
             <Button
@@ -174,9 +190,11 @@
                 style="@style/BotaoDeslocamento"
                 android:id="@+id/btn_fim_desl6" />
             <TextView
+                android:hint="Clique em Fim"
                 style="@style/EdtBrancoDeslocamento"
                 android:id="@+id/txt_fim_desl6" />
             <TextView
+                android:hint="Tempo Total"
                 style="@style/TxtCinzaDeslocamento"
                 android:id="@+id/txt_tempo_desl6" />
 

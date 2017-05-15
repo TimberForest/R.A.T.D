@@ -5,7 +5,6 @@
     <string name="inicio">Inicio</string>
     <string name="fim">Fim</string>
 
-
     <!--Telas relatórios de assistencia técnica-->
     <string name="title_activity_formulario_detail">Serviço realizado</string>
     <string name="title_activity_formulario_list">Lista de RATDs</string>

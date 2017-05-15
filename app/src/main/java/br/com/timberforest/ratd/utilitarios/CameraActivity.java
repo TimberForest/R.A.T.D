@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -39,25 +40,44 @@ public class CameraActivity extends ActionBarActivity {
 
     private Uri outputFileUri;
 
-    public static final String PREF_ID_RATD = "idRatd";
-    public TextView ratdId;
-    public String idRatd;
+    public static final String PREF_NAME = "sharedPreferencesDeslocamento";
+    public String ratdId;
+    public String aux = null;
+
+    public String storageImage = "/R.A.T.D.";
+    public String relatorio = "Relatorio_Nº";
+
+    public String chassi = "";
+    public String horimetro = "";
+    public String defeito = "";
+    public String defeito1 = "";
+    public String defeito2 = "";
+    public String defeito3 = "";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fotos);
 
+        Intent intent = getIntent();
 
-/*        SharedPreferences settings = getSharedPreferences(PREF_ID_RATD, 0);
-        ratdId.setText(settings.getString("idRatd", ""));
-        idRatd=ratdId.toString();*/
+        Bundle bundle = intent.getExtras();
+
+        aux = bundle.getString("aux");
+
+        chassi = relatorio+aux+"_chassi.jpg";
+        horimetro = relatorio+aux+"_horimetro.jpg";
+        defeito = relatorio+aux+"_defeito.jpg";
+        defeito1 = relatorio+aux+"_defeito1.jpg";
+        defeito2 = relatorio+aux+"_defeito2.jpg";
+        defeito3 = relatorio+aux+"_defeito3.jpg";
+        Log.i("info", "ID relatório: "+aux);
 
         imageViewChassi = (ImageView) findViewById(R.id.image_chassi);
         TextView btnChassi = (TextView) findViewById(R.id.btn_foto_chassi);
         btnChassi.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                String nomePasta = Environment.getExternalStorageDirectory()+"/relatorios";
+                String nomePasta = Environment.getExternalStorageDirectory()+storageImage;
 
                 File pasta = new File(nomePasta);
                 pasta.mkdirs();
@@ -65,7 +85,7 @@ public class CameraActivity extends ActionBarActivity {
                     pasta.mkdirs();
                 }
 
-                File file = new File(nomePasta,"chassi.jpg");
+                File file = new File(nomePasta,chassi);
                 outputFileUri = Uri.fromFile(file);
                 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 intent.putExtra(MediaStore.EXTRA_OUTPUT, outputFileUri);
@@ -76,14 +96,14 @@ public class CameraActivity extends ActionBarActivity {
         TextView btnFotoHorimetro = (TextView) findViewById(R.id.btn_foto_horimetro);
         btnFotoHorimetro.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                String nomePasta = Environment.getExternalStorageDirectory()+"/relatorios";
+                String nomePasta = Environment.getExternalStorageDirectory()+storageImage;
 
                 File pasta = new File(nomePasta);
                 pasta.mkdirs();
                 if(pasta.exists()==true) {
                     pasta.mkdirs();
                 }
-                File file = new File(nomePasta, "horimetro.jpg");
+                File file = new File(nomePasta, horimetro);
                 outputFileUri = Uri.fromFile(file);
                 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 intent.putExtra(MediaStore.EXTRA_OUTPUT, outputFileUri);
@@ -94,14 +114,14 @@ public class CameraActivity extends ActionBarActivity {
         TextView btnDefeito = (TextView) findViewById(R.id.btn_defeito);
         btnDefeito.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                String nomePasta = Environment.getExternalStorageDirectory()+"/relatorios";
+                String nomePasta = Environment.getExternalStorageDirectory()+storageImage;
 
                 File pasta = new File(nomePasta);
                 pasta.mkdirs();
                 if(pasta.exists()==true) {
                     pasta.mkdirs();
                 }
-                File file = new File(nomePasta, "defeito.jpg");
+                File file = new File(nomePasta, defeito);
                 outputFileUri = Uri.fromFile(file);
                 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 intent.putExtra(MediaStore.EXTRA_OUTPUT, outputFileUri);
@@ -112,14 +132,14 @@ public class CameraActivity extends ActionBarActivity {
         TextView btnDefeito1 = (TextView) findViewById(R.id.btn_defeito1);
         btnDefeito1.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                String nomePasta = Environment.getExternalStorageDirectory()+"/relatorios";
+                String nomePasta = Environment.getExternalStorageDirectory()+storageImage;
 
                 File pasta = new File(nomePasta);
                 pasta.mkdirs();
                 if(pasta.exists()==true) {
                     pasta.mkdirs();
                 }
-                File file = new File(nomePasta, "defeito1.jpg");
+                File file = new File(nomePasta, defeito1);
                 outputFileUri = Uri.fromFile(file);
                 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 intent.putExtra(MediaStore.EXTRA_OUTPUT, outputFileUri);
@@ -130,14 +150,14 @@ public class CameraActivity extends ActionBarActivity {
         TextView btnDefeito2 = (TextView) findViewById(R.id.btn_defeito2);
         btnDefeito2.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                String nomePasta = Environment.getExternalStorageDirectory()+"/relatorios";
+                String nomePasta = Environment.getExternalStorageDirectory()+storageImage;
 
                 File pasta = new File(nomePasta);
                 pasta.mkdirs();
                 if(pasta.exists()==true) {
                     pasta.mkdirs();
                 }
-                File file = new File(nomePasta, "defeito2.jpg");
+                File file = new File(nomePasta, defeito2);
                 outputFileUri = Uri.fromFile(file);
                 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 intent.putExtra(MediaStore.EXTRA_OUTPUT, outputFileUri);
@@ -148,7 +168,7 @@ public class CameraActivity extends ActionBarActivity {
         TextView btnDefeito3 = (TextView) findViewById(R.id.btn_defeito3);
         btnDefeito3.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                String nomePasta = Environment.getExternalStorageDirectory()+"/relatorios";
+                String nomePasta = Environment.getExternalStorageDirectory()+storageImage;
 
                 File pasta = new File(nomePasta);
                 pasta.mkdirs();
@@ -156,7 +176,7 @@ public class CameraActivity extends ActionBarActivity {
                     pasta.mkdirs();
                 }
                 // Arquivo onde ser� armazenada a foto.
-                File file = new File(nomePasta, "defeito3.jpg");
+                File file = new File(nomePasta, defeito3);
                 outputFileUri = Uri.fromFile(file);
                 // Gera um intent para abrir a activity de camera padr�o do android.
                 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -166,18 +186,6 @@ public class CameraActivity extends ActionBarActivity {
             }
         });
     }
-
-/*    public void atualizarImagens(){
-        String nomePasta = Environment.getExternalStorageDirectory()+"/relatorios";
-        File pasta = new File(nomePasta);
-        pasta.mkdirs();
-        if(pasta.exists()==true) {
-            pasta.mkdirs();
-        }
-        File file = new File(nomePasta+"chassi.jpg");
-        ImageView iv = (ImageView) findViewById(R.id.image_chassi);
-        iv.setImageBitmap(file);
-    }*/
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

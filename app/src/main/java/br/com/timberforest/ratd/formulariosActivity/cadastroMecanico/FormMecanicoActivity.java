@@ -1,9 +1,8 @@
 package br.com.timberforest.ratd.formulariosActivity.cadastroMecanico;
 
+import android.app.Activity;
 import android.content.res.Resources;
 import android.support.v4.app.NavUtils;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -21,7 +20,7 @@ import br.com.timberforest.ratd.R;
 import br.com.timberforest.ratd.dao.cadastroMecanico.CadastroMecanicoDao;
 import br.com.timberforest.ratd.model.CadastroMecanico.CadastroMecanico;
 
-public class FormMecanicoActivity extends ActionBarActivity {
+public class FormMecanicoActivity extends Activity {
     CadastroMecanicoDao cadastroMecanicoDao = new CadastroMecanicoDao();
     private CadastroMecanico mecanico;
 
@@ -40,8 +39,8 @@ public class FormMecanicoActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
 //        setContentView(R.layout.activity_form_relatorio_avaliacao_operacional);
         setContentView(R.layout.form_cadastro_mecanico);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
+//        ActionBar actionBar = getSupportActionBar();
+//        actionBar.setDisplayHomeAsUpEnabled(true);
 
         initViews();
         if (getIntent().hasExtra("CadastroMecanico")) {

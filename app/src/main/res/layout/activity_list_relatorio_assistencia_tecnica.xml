@@ -5,16 +5,16 @@
     android:id="@+id/coordinatorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/branco"
+    android:background="@color/amarelo_padrao"
+    android:padding="15dp"
     tools:context=".listActivity.relatorioAssistenciaTecnica.ListRelatorioAssistenciaTecnicaActivity">
 
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginTop="5dp"
-        android:background="@color/branco"
         android:id="@+id/linearLayout16">
 
         <TextView
@@ -31,9 +31,10 @@
 
 
         <ListView
+            android:padding="5dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/branco"
+            android:background="@drawable/screen_border_botao_grande_branco"
             android:id="@+id/listViewFormularios"
             />
     </LinearLayout>
@@ -47,6 +48,6 @@
         app:fabSize="normal"
         android:tintMode="add"
         android:src="@drawable/ic_action_add"
-        app:backgroundTint="@android:color/holo_blue_light" />
+        app:backgroundTint="@color/preto" />
 
 </android.support.design.widget.CoordinatorLayout>

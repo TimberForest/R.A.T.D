@@ -491,11 +491,12 @@ public class RefeicaoActivity extends AppCompatActivity {
 
             String horaDiferenca, minutosDiferenca = null;
 
-            if (diffHours>0){
-                horaDiferenca = String.valueOf(diffHours);
-                horaDiferenca = horaDiferenca.replace(".", "");
-            }else {
+            if (diffHours==0){
                 horaDiferenca="00";
+            }else if (diffHours>0 && diffHours<10){
+                horaDiferenca = "0"+String.valueOf(diffHours);
+            }else {
+                horaDiferenca = String.valueOf(diffHours);
             }
 
             if (diffMinutes==0){
@@ -689,6 +690,8 @@ public class RefeicaoActivity extends AppCompatActivity {
             resultado = horasSoma +":"+minutosDiferenca;
 
             gravarDeslTot(spTotalRef, resultado);
+
+            Log.i("info","Refeição Total: "+resultado);
 
         }catch (Exception e){
             e.printStackTrace();

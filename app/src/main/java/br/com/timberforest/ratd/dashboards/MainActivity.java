@@ -27,7 +27,8 @@ import br.com.timberforest.ratd.utilitarios.Geolocalizacao;
 
 public class MainActivity extends AppCompatActivity {
 
-    public String packageName = "com.vajsi.digital_signature";
+    public String digitalSignature = "com.vajsi.digital_signature";
+    public String picFolder = "com.alensw.PicFolder";
     public String googlePlayEndereco = "https://play.google.com/store/apps/details?id=";
     private String animacao = "file:///android_asset/animacao_main.html";
 
@@ -43,7 +44,8 @@ public class MainActivity extends AppCompatActivity {
         webView.loadUrl(animacao);
 
         PackageManager pm = getPackageManager();
-        boolean isInstalled = isPackageInstalled(packageName, pm);
+        boolean isInstalled = isPackageInstalled(digitalSignature, pm);
+        boolean isInstalledPic = picFolderVerifica(picFolder, pm);
     }
 
     private boolean isPackageInstalled(String packagename, PackageManager packageManager) {
@@ -53,7 +55,19 @@ public class MainActivity extends AppCompatActivity {
             return true;
         } catch (PackageManager.NameNotFoundException e) {
             Log.i("Erro", "Pacote não instalado");
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(googlePlayEndereco + packageName)));
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(googlePlayEndereco + digitalSignature)));
+            return false;
+        }
+    }
+
+    private boolean picFolderVerifica(String packagename, PackageManager packageManager) {
+        try {
+            packageManager.getPackageInfo(packagename, 0);
+            Log.i("Erro", "Pacote Instalado");
+            return true;
+        } catch (PackageManager.NameNotFoundException e) {
+            Log.i("Erro", "Pacote não instalado");
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(googlePlayEndereco + picFolder)));
             return false;
         }
     }

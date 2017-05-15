@@ -5,7 +5,8 @@
     android:id="@+id/coordinatorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/branco"
+    android:background="@color/amarelo_padrao"
+    android:padding="15dp"
     tools:context=".listActivity.relatorioAvaliacaoOperacional.ListRelatorioAvaliacaoOperacionalActivity">
 
 
@@ -13,8 +14,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="5dp"
-        android:background="@color/branco" >
+        android:layout_marginTop="5dp" >
 
 
         <TextView
@@ -23,12 +23,14 @@
             android:textSize="40dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center" />
+            android:layout_gravity="center"
+            android:paddingBottom="5dp"/>
 
         <ListView
+            android:padding="5dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/branco"
+            android:layout_height="match_parent"
+            android:background="@drawable/screen_border_botao_grande_branco"
             android:id="@+id/relatorioOperacioanalListView"
             />
     </LinearLayout>
@@ -41,6 +43,6 @@
         android:layout_margin="16dp"
         app:fabSize="normal"
         android:src="@drawable/ic_action_add"
-        app:backgroundTint="@android:color/holo_blue_light" />
+        app:backgroundTint="@color/preto" />
 
 </android.support.design.widget.CoordinatorLayout>

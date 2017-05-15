@@ -15,6 +15,7 @@
             android:orientation="horizontal"
             android:background="@color/branco"
             >
+
             <WebView
                 android:layout_marginLeft="100dp"
                 android:id="@+id/webView"
@@ -61,7 +62,13 @@
                     android:id="@+id/PerfilMecanicoButton"
                 />
     </LinearLayout>
+
 </LinearLayout>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="40dp" />
+
 
     <LinearLayout
         android:layout_width="match_parent"

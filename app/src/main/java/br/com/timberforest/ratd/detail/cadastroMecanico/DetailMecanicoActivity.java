@@ -1,5 +1,7 @@
 package br.com.timberforest.ratd.detail.cadastroMecanico;
+import android.app.Activity;
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
@@ -7,27 +9,41 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import br.com.timberforest.ratd.R;
 import br.com.timberforest.ratd.dao.cadastroMecanico.CadastroMecanicoDao;
 import br.com.timberforest.ratd.dashboards.MainActivity;
 import br.com.timberforest.ratd.formulariosActivity.cadastroMecanico.FormMecanicoActivity;
+import br.com.timberforest.ratd.formulariosActivity.relatorioAssistenciaTecnica.FormRelatorioAssistenciaTecnicaActivity;
+import br.com.timberforest.ratd.listActivity.relatorioAssistenciaTecnica.ListRelatorioAssistenciaTecnicaActivity;
 import br.com.timberforest.ratd.listActivity.relatorioAvaliacaoOperacional.ListRelatorioAvaliacaoOperacionalActivity;
 import br.com.timberforest.ratd.model.CadastroMecanico.CadastroMecanico;
 
-public class DetailMecanicoActivity extends ActionBarActivity {
+public class DetailMecanicoActivity extends Activity {
     private CadastroMecanicoDao cadastroMecanicoDao = new CadastroMecanicoDao();
     private CadastroMecanico mecanico;
+    private FloatingActionButton fab;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.detail_cadastro_mecanico);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
+//        ActionBar actionBar = getSupportActionBar();
+//        actionBar.setDisplayHomeAsUpEnabled(true);
         mecanico = (CadastroMecanico) getIntent().getExtras().get("CadastroMecanico");
 
         atualizarTela();
+
+        fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DetailMecanicoActivity.this, FormMecanicoActivity.class);
+                intent.putExtra("CadastroMecanico", mecanico);
+                startActivity(intent);
+            }
+        });
     }
     //botão voltar do device
     @Override
@@ -55,7 +71,7 @@ public class DetailMecanicoActivity extends ActionBarActivity {
         textMecanicoCidade.setText(mecanico.getCidade());
         textMecanicoEstado.setText(mecanico.getEstado());
     }
-    @Override
+/*    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_mecanico_detail, menu);
         return true;
@@ -73,7 +89,7 @@ public class DetailMecanicoActivity extends ActionBarActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
-    }
+    }*/
     @Override
     protected void onResume(){
         super.onResume();

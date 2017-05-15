@@ -48,19 +48,17 @@ public class RelatorioAssistenciaTecnicaDao extends AppCompatActivity {
         values.put("defeitoCost", relatorioAssistenciaTecnica.getDefeitoCostatado());
         values.put("procedimentosAdot", relatorioAssistenciaTecnica.getProcedAdot());
         values.put("pendencias", relatorioAssistenciaTecnica.getPendencias());
-        values.put("inicioDeslocamento", relatorioAssistenciaTecnica.getInicioDeslocamento());
-        values.put("inicioTrabalho", relatorioAssistenciaTecnica.getInicioTrabalho());
-        values.put("inicioAlmoco", relatorioAssistenciaTecnica.getInicioAlmoco());
-        values.put("fimAlmoco", relatorioAssistenciaTecnica.getFimAlmoco());
-        values.put("fimTrabalho", relatorioAssistenciaTecnica.getFimTrabalho());
-        values.put("fimDeslocamento", relatorioAssistenciaTecnica.getFimDeslocamento());
+
+        values.put("deslocamento", relatorioAssistenciaTecnica.getDeslocamento());
+        values.put("trabalho", relatorioAssistenciaTecnica.getTrabalho());
+        values.put("refeicao", relatorioAssistenciaTecnica.getRefeicao());
+        values.put("extraServ", relatorioAssistenciaTecnica.getExtraServ());
+        values.put("extraDesl", relatorioAssistenciaTecnica.getExtraDesl());
         values.put("kmRodado", relatorioAssistenciaTecnica.getKmRodad());
+
         values.put("codigoPeca", relatorioAssistenciaTecnica.getGetCodPec());
         values.put("quantidade", relatorioAssistenciaTecnica.getPecaQtd());
         values.put("descricao", relatorioAssistenciaTecnica.getGetDescPec());
-        values.put("codigoPeca1", relatorioAssistenciaTecnica.getGetCodPec1());
-        values.put("quantidade1", relatorioAssistenciaTecnica.getGetPecaQtd1());
-        values.put("descricao1", relatorioAssistenciaTecnica.getGetDescPec1());
 
         if(relatorioAssistenciaTecnica.getIdFormulario()==null){
             database.insert("RelatorioAssistenciaTecnica", null, values);
@@ -96,8 +94,8 @@ public class RelatorioAssistenciaTecnicaDao extends AppCompatActivity {
         List<RelatorioAssistenciaTecnica> relatorioAssistenciaTecnicas = new ArrayList<>();
         Cursor cursor= database.rawQuery("select id, relator, data, numeroRelatorio, chassi, modelo,horimetro, distribuidorPostoAss," +
                 "cidadeDist, estadoDist, cliente , cidadeCli, estadoCli, localObra, materialTransp, defeitoCost,  " +
-                "procedimentosAdot, pendencias, kmRodado, inicioDeslocamento, inicioTrabalho, inicioAlmoco, fimAlmoco, fimTrabalho, fimDeslocamento, " +
-                "codigoPeca, quantidade, descricao, codigoPeca1, quantidade1, descricao1 from RelatorioAssistenciaTecnica", null);
+                "procedimentosAdot, pendencias, kmRodado, deslocamento, trabalho, refeicao, extraServ, extraDesl, " +
+                "codigoPeca, quantidade, descricao from RelatorioAssistenciaTecnica", null);
         cursor.moveToFirst();
         while (!cursor.isAfterLast()){
             RelatorioAssistenciaTecnica form = new RelatorioAssistenciaTecnica();
@@ -120,18 +118,14 @@ public class RelatorioAssistenciaTecnicaDao extends AppCompatActivity {
             form.setProcedAdot(cursor.getString(16));
             form.setPendencias(cursor.getString(17));
             form.setKmRodad(cursor.getString(18));
-            form.setInicioDeslocamento(cursor.getString(19));
-            form.setInicioTrabalho(cursor.getString(20));
-            form.setInicioAlmoco(cursor.getString(21));
-            form.setFimAlmoco(cursor.getString(22));
-            form.setFimTrabalho(cursor.getString(23));
-            form.setFimDeslocamento(cursor.getString(24));
-            form.setGetCodPec(cursor.getString(25));
-            form.setPecaQtd(cursor.getString(26));
-            form.setGetDescPec(cursor.getString(27));
-            form.setGetCodPec1(cursor.getString(28));
-            form.setGetPecaQtd1(cursor.getString(29));
-            form.setGetDescPec1(cursor.getString(30));
+            form.setDeslocamento(cursor.getString(19));
+            form.setTrabalho(cursor.getString(20));
+            form.setRefeicao(cursor.getString(21));
+            form.setExtraServ(cursor.getString(22));
+            form.setExtraDesl(cursor.getString(23));
+            form.setGetCodPec(cursor.getString(24));
+            form.setPecaQtd(cursor.getString(25));
+            form.setGetDescPec(cursor.getString(26));
             relatorioAssistenciaTecnicas.add(form);
             cursor.moveToNext();
         }
@@ -141,8 +135,8 @@ public class RelatorioAssistenciaTecnicaDao extends AppCompatActivity {
     public RelatorioAssistenciaTecnica buscaPorId(Long idFormulario){
         Cursor cursor= database.rawQuery("select id, relator, data,numeroRelatorio, chassi, modelo, horimetro, distribuidorPostoAss, " +
                 "cidadeDist, estadoDist, cliente, cidadeCli, estadoCli, localObra, materialTransp, defeitoCost,  " +
-                "procedimentosAdot, pendencias, kmRodado, inicioDeslocamento, inicioTrabalho, inicioAlmoco, fimAlmoco, fimTrabalho, fimDeslocamento, codigoPeca, quantidade, " +
-                "descricao, codigoPeca1, quantidade1, descricao1 from RelatorioAssistenciaTecnica where id="+idFormulario,null);
+                "procedimentosAdot, pendencias, kmRodado, deslocamento, trabalho, refeicao, extraServ, extraDesl, codigoPeca, quantidade, " +
+                "descricao from RelatorioAssistenciaTecnica where id="+idFormulario,null);
         cursor.moveToFirst();
         if(!cursor.isAfterLast()){
             RelatorioAssistenciaTecnica form = new RelatorioAssistenciaTecnica();
@@ -165,18 +159,14 @@ public class RelatorioAssistenciaTecnicaDao extends AppCompatActivity {
             form.setProcedAdot(cursor.getString(16));
             form.setPendencias(cursor.getString(17));
             form.setKmRodad(cursor.getString(18));
-            form.setInicioDeslocamento(cursor.getString(19));
-            form.setInicioTrabalho(cursor.getString(20));
-            form.setInicioAlmoco(cursor.getString(21));
-            form.setFimAlmoco(cursor.getString(22));
-            form.setFimTrabalho(cursor.getString(23));
-            form.setFimDeslocamento(cursor.getString(24));
-            form.setGetCodPec(cursor.getString(25));
-            form.setPecaQtd(cursor.getString(26));
-            form.setGetDescPec(cursor.getString(27));
-            form.setGetCodPec1(cursor.getString(28));
-            form.setGetPecaQtd1(cursor.getString(29));
-            form.setGetDescPec1(cursor.getString(30));
+            form.setDeslocamento(cursor.getString(19));
+            form.setTrabalho(cursor.getString(20));
+            form.setRefeicao(cursor.getString(21));
+            form.setExtraServ(cursor.getString(22));
+            form.setExtraDesl(cursor.getString(23));
+            form.setGetCodPec(cursor.getString(24));
+            form.setPecaQtd(cursor.getString(25));
+            form.setGetDescPec(cursor.getString(26));
 
             cursor.close();
             return form;

@@ -1,133 +1,115 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:background="#FFFFFF"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="@color/amarelo_padrao"
     android:orientation="vertical"
     tools:context=".formulariosActivity.cadastroMecanico.FormMecanicoActivity">
 
 
     <LinearLayout
+        android:background="@drawable/screen_border_botao_grande_branco"
         android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true">
 
-
-        <TextView
+        <android.support.design.widget.TextInputLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nome:"
-            android:textColor="#000000"
-            android:textSize="17dp"
-            android:id="@+id/textNomeMecanico" />
+            android:layout_height="wrap_content">
 
-        <EditText
+            <EditText
+                android:hint="Nome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editNomeMecanico"
+                android:inputType="textCapWords"
+                android:textSize="@dimen/campos_edt_forms"
+                android:imeOptions="actionNext"
+                android:maxLength="50"
+                android:ems="25"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/editNomeMecanico"
-            android:inputType="textCapWords"
-            android:textSize="@dimen/campos_edt_forms"
-            android:imeOptions="actionNext"
-            android:maxLength="50"
-            android:ems="25"
-            />
+            android:layout_height="wrap_content">
+            <EditText
+                android:hint="Matricula"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editMatriculaMecanico"
+                android:inputType="numberDecimal"
+                android:textSize="@dimen/campos_edt_forms"
+                android:maxLength="8"
+                android:ems="5"
+                android:imeOptions="actionNext"/>
+        </android.support.design.widget.TextInputLayout>
 
-        <TextView
+        <android.support.design.widget.TextInputLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Matrícula:"
-            android:textColor="#000000"
-            android:textSize="17dp"
-            android:id="@+id/textMatriculaMecanico" />
+            android:layout_height="wrap_content">
+            <EditText
+                android:hint="Cargo / Função"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editCargoMecanico"
+                android:inputType="textCapWords"
+                android:textSize="@dimen/campos_edt_forms"
+                android:maxLength="50"
+                android:ems="20"
+                android:imeOptions="actionNext"/>
+        </android.support.design.widget.TextInputLayout>
 
-        <EditText
+        <android.support.design.widget.TextInputLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/editMatriculaMecanico"
-            android:inputType="numberDecimal"
-            android:textSize="@dimen/campos_edt_forms"
-            android:maxLength="8"
-            android:ems="5"
-            android:imeOptions="actionNext"/>
+            android:layout_height="wrap_content">
+            <EditText
+                android:hint="Filial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editFilialMecanico"
+                android:inputType="textCapWords"
+                android:textSize="@dimen/campos_edt_forms"
+                android:maxLength="30"
+                android:ems="17"
+                android:imeOptions="actionNext"/>
+        </android.support.design.widget.TextInputLayout>
 
-        <TextView
+        <android.support.design.widget.TextInputLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Cargo/Função:"
-            android:textColor="#000000"
-            android:textSize="17dp"
-            android:id="@+id/textCargoMecanico" />
+            android:layout_height="wrap_content">
 
-        <EditText
+            <EditText
+                android:hint="Cidade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editCidadeMecanico"
+                android:inputType="textCapWords"
+                android:textSize="@dimen/campos_edt_forms"
+                android:maxLength="30"
+                android:ems="17"
+                android:imeOptions="actionNext"/>
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/editCargoMecanico"
-            android:inputType="textCapWords"
-            android:textSize="@dimen/campos_edt_forms"
-            android:maxLength="20"
-            android:ems="10"
-            android:imeOptions="actionNext"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Filial:"
-            android:textColor="#000000"
-            android:textSize="17dp"
-            android:id="@+id/textFilialMecanico" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/editFilialMecanico"
-            android:inputType="textCapWords"
-            android:textSize="@dimen/campos_edt_forms"
-            android:maxLength="30"
-            android:ems="17"
-            android:imeOptions="actionNext"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textCapWords"
-            android:imeOptions="actionNext"
-            android:text="Cidade:"
-            android:textColor="#000000"
-            android:textSize="17dp"
-            android:id="@+id/textCidadeMecanico" />
-
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/editCidadeMecanico"
-            android:inputType="textCapWords"
-            android:textSize="@dimen/campos_edt_forms"
-            android:maxLength="30"
-            android:ems="17"
-            android:imeOptions="actionNext"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Estado:"
-            android:textColor="#000000"
-            android:textSize="17dp"
-            android:id="@+id/textViewEstadoMecanico" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/editEstadoMecanico"
-            android:inputType="textCapCharacters"
-            android:textSize="@dimen/campos_edt_forms"
-            android:maxLength="2"
-            android:ems="2"
-            android:imeOptions="actionGo"/>
+            android:layout_height="wrap_content">
+            <EditText
+                android:hint="Estado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editEstadoMecanico"
+                android:inputType="textCapCharacters"
+                android:textSize="@dimen/campos_edt_forms"
+                android:maxLength="2"
+                android:ems="4"
+                android:imeOptions="actionGo"/>
+        </android.support.design.widget.TextInputLayout>
 
         <TextView
             android:layout_width="200dp"

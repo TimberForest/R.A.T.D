@@ -5,16 +5,17 @@
     style="@style/LinearPadrão"
     tools:context=".sharedPreferences.SharedPreferencesEmailActivity">
 
+    <TextView
+        android:text="Configurações Gerais"
+        android:id="@+id/txtTitulo"
+        style="@style/TextosTitulos" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/branco"
+        android:background="@drawable/screen_border_botao_grande_branco"
+        android:padding="10dp"
         android:orientation="vertical">
-
-        <TextView
-            android:text="Configurações Gerais"
-            android:id="@+id/txtTitulo"
-            style="@style/TextosTitulos" />
 
         <TextView
             style="@style/FontesTxt"

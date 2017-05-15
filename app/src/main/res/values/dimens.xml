@@ -10,4 +10,8 @@
     <dimen name="campos_edt_forms">17dp</dimen>
     <dimen name="padding_padrao">16dp</dimen>
 
+
+    <dimen name="textTitle">26sp</dimen>
+    <dimen name="textItens">24sp</dimen>
+
 </resources>
