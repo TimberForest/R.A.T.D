@@ -1,6 +1,7 @@
 package br.com.timberforest.ratd.dashboards;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -19,11 +20,13 @@ import br.com.timberforest.ratd.listActivity.relatorioAssistenciaTecnica.ListRel
 import br.com.timberforest.ratd.listActivity.cadastroMecanico.ListCadastroMecanicoActivity;
 import br.com.timberforest.ratd.listActivity.relatorioAvaliacaoOperacional.ListRelatorioAvaliacaoOperacionalActivity;
 import br.com.timberforest.ratd.dao.ambienteBancoDados.DatabaseFactory;
-import br.com.timberforest.ratd.sharedPreferences.SharedPreferencesDeslocamento;
 import br.com.timberforest.ratd.sharedPreferences.SharedPreferencesEmailActivity;
 import br.com.timberforest.ratd.sharedPreferences.deslocamento.KmRodado;
 import br.com.timberforest.ratd.sharedPreferences.deslocamento.OpcoesDeslocamentoActivity;
-import br.com.timberforest.ratd.utilitarios.Geolocalizacao;
+import br.com.timberforest.ratd.utilitarios.Configuracoes;
+import de.keyboardsurfer.android.widget.crouton.Configuration;
+import de.keyboardsurfer.android.widget.crouton.Crouton;
+import de.keyboardsurfer.android.widget.crouton.Style;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,7 +35,28 @@ public class MainActivity extends AppCompatActivity {
     public String googlePlayEndereco = "https://play.google.com/store/apps/details?id=";
     private String animacao = "file:///android_asset/animacao_main.html";
 
+    private String msg;
+    private String assunto;
+
      WebView webView;
+
+    final Style styleAlert = new Style.Builder()
+            .setTextSize(30)
+            .setBackgroundColorValue(Color.RED)
+            .setConfiguration(new Configuration.Builder().setDuration(3000).build())
+            .build();
+
+    final Style styleConfirm = new Style.Builder()
+            .setTextSize(30)
+            .setBackgroundColorValue(Color.GREEN)
+            .setConfiguration(new Configuration.Builder().setDuration(3000).build())
+            .build();
+    final Style styleInf = new Style.Builder()
+            .setTextSize(30)
+            .setBackgroundColorValue(Color.BLUE)
+            .setConfiguration(new Configuration.Builder().setDuration(3000).build())
+            .build();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (item.getItemId() == R.id.action_config) {
-            Intent intent = new Intent(MainActivity.this, SharedPreferencesEmailActivity.class);
+            Intent intent = new Intent(MainActivity.this, Configuracoes.class);
             startActivity(intent);
         }
 /*        if (item.getItemId()== R.id.action_voltar) {

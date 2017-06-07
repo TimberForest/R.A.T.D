@@ -27,52 +27,61 @@
 
         </LinearLayout>
 
-            <LinearLayout
-                style="@style/LinearBasico"
-                android:layout_width="420dp"
-                android:layout_height="200dp"
-                android:layout_marginLeft="43dp"
-                android:layout_marginRight="43dp"
-                android:background="@drawable/logo_timber">
+        <LinearLayout
+            style="@style/LinearBasico"
+            android:layout_width="420dp"
+            android:layout_height="200dp"
+            android:layout_marginLeft="43dp"
+            android:layout_marginRight="43dp"
+            android:background="@drawable/logo_timber">
 
-            </LinearLayout>
+        </LinearLayout>
 
-            <LinearLayout
-                style="@style/LinearBasico" >
+        <LinearLayout
+            style="@style/LinearBasico" >
 
 
-                <TextView
-                    style="@style/BotaoSimplesAmarelo"
-                    android:text="Relatórios de assistência técnica"
-                    android:onClick="selecionarOpcao"
-                    android:id="@+id/RelatoriosAssistenciaTecnicaButton"
-                    />
-
-                <TextView
-                    style="@style/BotaoSimplesAmarelo"
-                    android:text="Relatório de avaliação operacional"
-                    android:onClick="selecionarOpcao"
-                    android:id="@+id/RelatoriosAvaliacaoOperacionalButton"
-                    />
-
-                <TextView
-                    style="@style/BotaoSimplesAmarelo"
-                    android:text="Perfil do mecânico"
-                    android:onClick="selecionarOpcao"
-                    android:id="@+id/PerfilMecanicoButton"
+            <TextView
+                style="@style/BotaoSimplesAmarelo"
+                android:text="Relatórios de assistência técnica"
+                android:onClick="selecionarOpcao"
+                android:id="@+id/RelatoriosAssistenciaTecnicaButton"
                 />
+
+            <TextView
+                style="@style/BotaoSimplesAmarelo"
+                android:text="Relatório de avaliação operacional"
+                android:onClick="selecionarOpcao"
+                android:id="@+id/RelatoriosAvaliacaoOperacionalButton"
+                />
+
+            <TextView
+                style="@style/BotaoSimplesAmarelo"
+                android:text="Perfil do mecânico"
+                android:onClick="selecionarOpcao"
+                android:id="@+id/PerfilMecanicoButton"
+                />
+        </LinearLayout>
+
     </LinearLayout>
 
-</LinearLayout>
-
-    <Space
-        android:layout_width="wrap_content"
-        android:layout_height="40dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="A SOLUÇÃO COMPLETA EM EQUIPAMENTOS FLORESTAIS"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="45dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        />
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="horizontal"
         android:background="@color/branco">
 
@@ -98,7 +107,7 @@
             android:id="@+id/btn_palfinger" />
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:onClick="selecionarOpcao"
             android:layout_weight="1"
             android:background="@drawable/emp_ponsse"

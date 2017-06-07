@@ -15,6 +15,7 @@ import java.util.Calendar;
 import java.util.Date;
 import br.com.timberforest.ratd.R;
 import br.com.timberforest.ratd.dashboards.MainActivity;
+import br.com.timberforest.ratd.utilitarios.ToastManager;
 import de.keyboardsurfer.android.widget.crouton.Configuration;
 import de.keyboardsurfer.android.widget.crouton.Style;
 
@@ -50,7 +51,7 @@ public class RefeicaoActivity extends AppCompatActivity {
     private String spTotalRef = "tempo_refeicao";
 
     private String msgIniRef = "Inicio da Refeição: ";
-    private String msgSucesso = " Gravado com sucesso !";
+    private String msgSucesso = " Registrado !";
     private String msgFimRef = "Fim da Refeição: ";
     private String DataFormat = "HH:mm";
     private String vazio = "";
@@ -102,10 +103,10 @@ public class RefeicaoActivity extends AppCompatActivity {
         finish();
     }
     public void msgIni(String data){
-        Toast.makeText(getApplicationContext(), msgIniRef+data+msgSucesso, Toast.LENGTH_SHORT).show();
+        ToastManager.show(this, msgIniRef+data+msgSucesso, ToastManager.OK);
     }
     public void msgFim(String data){
-        Toast.makeText(getApplicationContext(), msgFimRef+data+msgSucesso, Toast.LENGTH_SHORT).show();
+        ToastManager.show(this, msgFimRef+data+msgSucesso, ToastManager.OK);
     }
     public void gravarRefIni(String chaveValor){
         //recupera hora atual

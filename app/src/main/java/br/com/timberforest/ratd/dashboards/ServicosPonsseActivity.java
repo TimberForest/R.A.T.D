@@ -1,15 +1,12 @@
 package br.com.timberforest.ratd.dashboards;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
-import android.widget.Toast;
-
 import br.com.timberforest.ratd.R;
-import br.com.timberforest.ratd.sharedPreferences.SharedPreferencesDeslocamento;
 import de.keyboardsurfer.android.widget.crouton.Configuration;
 import de.keyboardsurfer.android.widget.crouton.Crouton;
 import de.keyboardsurfer.android.widget.crouton.Style;
@@ -54,33 +51,39 @@ public class ServicosPonsseActivity extends Activity {
     public void selecionarOpcao(View view) {
         switch (view.getId()) {
             case R.id.manutencaoProgBasCompGruaButton:
-                Crouton.makeText(ServicosPonsseActivity.this, "Relatório em desenvolvimento !", styleAlert).show();
-//                startActivity(new Intent(this, ListManutencaoProgGruaPonsseActivity.class));
+/*                Intent intent = new Intent(ServicosPonsseActivity.this, FormManutencaoProgramadaGruaPonsseActivity.class);
+                startActivity(intent);*/
+                Crouton.makeText(ServicosPonsseActivity.this, "Relatório em desenvolvimento !", styleInf).show();
                 break;
             case R.id.manutencaoProgBasCompCabecoteButton:
-                Crouton.makeText(ServicosPonsseActivity.this, "Relatório em desenvolvimento !", styleAlert).show();
-//                startActivity(new Intent(this, FormManutencaoPragramadaCabecotePonsseActivity.class));
+/*                Intent it = new Intent(ServicosPonsseActivity.this, FormManutencaoPragramadaCabecotePonsseActivity.class);
+                startActivity(it);*/
+                Crouton.makeText(ServicosPonsseActivity.this, "Relatório em desenvolvimento !", styleInf).show();
                 break;
             case R.id.manutencaoProgBasCompForwarderButton:
-                Crouton.makeText(ServicosPonsseActivity.this, "Relatório em desenvolvimento !", styleAlert).show();
-//                startActivity(new Intent(this, FormManutencaoProgramadaForwarderPonsseActivity.class));
+ /*               Intent ite = new Intent(ServicosPonsseActivity.this, FormManutencaoProgramadaForwarderPonsseActivity.class);
+                startActivity(ite);*/
+                Crouton.makeText(ServicosPonsseActivity.this, "Relatório em desenvolvimento !", styleInf).show();
                 break;
             case R.id.manutencaoProgBasCompMaquinaBaseButton:
-                Crouton.makeText(ServicosPonsseActivity.this, "Relatório em desenvolvimento !", styleAlert).show();
-//                startActivity(new Intent(this, FormManutencaoProgramadaMaquinaBasePonsseActivity.class));
+/*                Intent i = new Intent(ServicosPonsseActivity.this, FormManutencaoProgramadaMaquinaBasePonsseActivity.class);
+                startActivity(i);*/
+                Crouton.makeText(ServicosPonsseActivity.this, "Relatório em desenvolvimento !", styleInf).show();
                 break;
             case R.id.garantiaForwarderButton:
-                Crouton.makeText(ServicosPonsseActivity.this, "Relatório em desenvolvimento !", styleAlert).show();
-                /*Intent intent = new Intent(this, FormGarantiaForwarderPonsseActivity.class);
-                startActivity(intent);*/
+/*                Intent inte = new Intent(ServicosPonsseActivity.this, FormGarantiaForwarderPonsseActivity.class);
+                startActivity(inte);*/
+                Crouton.makeText(ServicosPonsseActivity.this, "Relatório em desenvolvimento !", styleInf).show();
                 break;
             case R.id.garantiaHarvesterButton:
-                Crouton.makeText(ServicosPonsseActivity.this, "Relatório em desenvolvimento !", styleAlert).show();
-//                startActivity(new Intent(this, FormGarantiaHarvesterPonsseActivity.class));
+/*                Intent inten = new Intent(ServicosPonsseActivity.this, FormGarantiaHarvesterPonsseActivity.class);
+                startActivity(inten);*/
+                Crouton.makeText(ServicosPonsseActivity.this, "Relatório em desenvolvimento !", styleInf).show();
                 break;
             case R.id.imageView2:
-                Crouton.makeText(ServicosPonsseActivity.this, "Relatório em desenvolvimento !", styleAlert).show();
-//                startActivity(new Intent(this, ListGarantiaForwarderPonsseActivity.class));
+/*                Intent intente = new Intent(ServicosPonsseActivity.this, FormGarantiaForwarderPonsseActivity.class);
+                startActivity(intente);*/
+                Crouton.makeText(ServicosPonsseActivity.this, "Relatório em desenvolvimento !", styleInf).show();
                 break;
         }
     }

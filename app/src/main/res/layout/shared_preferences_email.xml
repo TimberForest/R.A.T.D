@@ -6,7 +6,7 @@
     tools:context=".sharedPreferences.SharedPreferencesEmailActivity">
 
     <TextView
-        android:text="Configurações Gerais"
+        android:text="Configurações - E-mail"
         android:id="@+id/txtTitulo"
         style="@style/TextosTitulos" />
 

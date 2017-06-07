@@ -14,6 +14,7 @@ import java.util.Calendar;
 import java.util.Date;
 import br.com.timberforest.ratd.R;
 import br.com.timberforest.ratd.dashboards.MainActivity;
+import br.com.timberforest.ratd.utilitarios.ToastManager;
 
 public class DeslocamentoActivity extends AppCompatActivity{
 
@@ -45,13 +46,14 @@ public class DeslocamentoActivity extends AppCompatActivity{
     private String spTempoDesl5 = "tempo_desl5";
     private String spTempoDesl6 = "tempo_desl6";
     private String spTotalDeslocamento = "tempo_deslocamento";
+    private String spExtraDesl = "extra_deslocada";
 
     long lh1 =0, lh2 =0, lh3 =0, lh4 =0, lh5 =0, lh6 =0, horasSoma =0, diffHours =0;
     long lm1 =0, lm2 =0, lm3 =0, lm4 =0, lm5 =0, lm6 =0, diffMinutes =0;
 
 
     private String msgIniDesl = "Inicio do Deslocamento: ";
-    private String msgSucesso = " Gravado com sucesso !";
+    private String msgSucesso = " Registrado !";
     private String msgFimDesl = "Fim do Deslocamento: ";
     private String DataFormat = "HH:mm";
     private String vazio = "";
@@ -101,10 +103,10 @@ public class DeslocamentoActivity extends AppCompatActivity{
         finish();
     }
     public void msgIni(String data){
-        Toast.makeText(getApplicationContext(), msgIniDesl+data+msgSucesso, Toast.LENGTH_SHORT).show();
+        ToastManager.show(this, msgIniDesl+data+msgSucesso, ToastManager.OK);
     }
     public void msgFim(String data){
-        Toast.makeText(getApplicationContext(), msgFimDesl+data+msgSucesso, Toast.LENGTH_SHORT).show();
+        ToastManager.show(this, msgFimDesl+data+msgSucesso, ToastManager.OK);
     }
     public void gravarDeslIni(String chaveValor){
         //recupera hora atual

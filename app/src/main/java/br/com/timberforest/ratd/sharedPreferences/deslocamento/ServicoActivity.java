@@ -14,6 +14,7 @@ import java.util.Calendar;
 import java.util.Date;
 import br.com.timberforest.ratd.R;
 import br.com.timberforest.ratd.dashboards.MainActivity;
+import br.com.timberforest.ratd.utilitarios.ToastManager;
 
 public class ServicoActivity extends AppCompatActivity {
 
@@ -46,7 +47,7 @@ public class ServicoActivity extends AppCompatActivity {
     private String spTotalServico = "tempo_servico";
 
     private String msgIniServ = "Inicio do Serviço: ";
-    private String msgSucesso = " Gravado com sucesso !";
+    private String msgSucesso = " Registrado !";
     private String msgFimServ = "Fim do Serviço: ";
     private String DataFormat = "HH:mm";
     private String vazio = "";
@@ -100,10 +101,10 @@ public class ServicoActivity extends AppCompatActivity {
         finish();
     }
     public void msgIni(String data){
-        Toast.makeText(getApplicationContext(), msgIniServ+data+msgSucesso, Toast.LENGTH_SHORT).show();
+        ToastManager.show(this, msgIniServ+data+msgSucesso, ToastManager.OK);
     }
     public void msgFim(String data){
-        Toast.makeText(getApplicationContext(), msgFimServ+data+msgSucesso, Toast.LENGTH_SHORT).show();
+        ToastManager.show(this, msgFimServ+data+msgSucesso, ToastManager.OK);
     }
     public void gravarServIni(String chaveValor){
         //recupera hora atual

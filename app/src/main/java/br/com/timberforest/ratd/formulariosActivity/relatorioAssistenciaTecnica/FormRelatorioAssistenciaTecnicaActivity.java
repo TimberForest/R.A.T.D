@@ -144,8 +144,8 @@ public class FormRelatorioAssistenciaTecnicaActivity extends Activity {
             Utils.setTextEditText(this, R.id.editGetProcAdot, relatorioAssistenciaTecnica.getProcedAdot());
             Utils.setTextEditText(this, R.id.edt_pendencias, relatorioAssistenciaTecnica.getPendencias());
             Utils.setTextEditText(this, R.id.edt_horas_deslocamento, relatorioAssistenciaTecnica.getDeslocamento());
-            Utils.setTextEditText(this, R.id.edt_horas_refeicao, relatorioAssistenciaTecnica.getTrabalho());
-            Utils.setTextEditText(this, R.id.edt_horas_trabalhadas, relatorioAssistenciaTecnica.getRefeicao());
+            Utils.setTextEditText(this, R.id.edt_horas_refeicao, relatorioAssistenciaTecnica.getRefeicao());
+            Utils.setTextEditText(this, R.id.edt_horas_trabalhadas, relatorioAssistenciaTecnica.getTrabalho());
             Utils.setTextEditText(this, R.id.edt_extras_deslocamento, relatorioAssistenciaTecnica.getExtraDesl());
             Utils.setTextEditText(this, R.id.edt_extras_trabalhadas, relatorioAssistenciaTecnica.getExtraServ());
             Utils.setTextEditText(this, R.id.edt_km_rodado, relatorioAssistenciaTecnica.getKmRodad());

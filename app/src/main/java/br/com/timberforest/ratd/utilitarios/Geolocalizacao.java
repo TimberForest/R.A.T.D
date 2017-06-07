@@ -1,3 +1,4 @@
+/*
 package br.com.timberforest.ratd.utilitarios;
 
 import android.content.Intent;
@@ -151,3 +152,4 @@ public class Geolocalizacao extends AppCompatActivity implements GoogleApiClient
                 "Horario: " + DateFormat.getTimeInstance().format(new Date()) + "<br />"));
     }
 }
+*/

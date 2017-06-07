@@ -16,6 +16,7 @@ import br.com.timberforest.ratd.R;
 import br.com.timberforest.ratd.dashboards.MainActivity;
 import br.com.timberforest.ratd.listActivity.relatorioAssistenciaTecnica.ListRelatorioAssistenciaTecnicaActivity;
 import br.com.timberforest.ratd.sharedPreferences.SharedPreferencesDeslocamento;
+import br.com.timberforest.ratd.utilitarios.ToastManager;
 import de.keyboardsurfer.android.widget.crouton.Configuration;
 import de.keyboardsurfer.android.widget.crouton.Crouton;
 import de.keyboardsurfer.android.widget.crouton.Style;
@@ -258,10 +259,10 @@ public class KmRodado extends AppCompatActivity {
 
     }
     public void msgIni(String km){
-        Toast.makeText(getApplicationContext(), "km inicial gravado com sucesso: "+km, Toast.LENGTH_SHORT).show();
+        ToastManager.show(this, "km inicial gravado com sucesso: "+km, ToastManager.OK);
     }
     public void msgFim(String km){
-        Toast.makeText(getApplicationContext(), "km final gravado com sucesso: "+km, Toast.LENGTH_SHORT).show();
+        ToastManager.show(this, "km final gravado com sucesso: "+km, ToastManager.OK);
     }
     public void gravarKmDesl(TextView txt_kmRod1, TextView txt_kmRod2, TextView txt_kmRod3, TextView txt_kmRod4, TextView txt_kmRod5, TextView txt_kmRod6){
 

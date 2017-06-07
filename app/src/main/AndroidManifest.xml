@@ -182,6 +182,79 @@
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden"/>
+
+
+        <!--P.O.G-->
+        <activity
+            android:name=".listActivity.servicosPonsse.ListGarantiaForwarderPonsseActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_check_list_ponsse"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".listActivity.servicosPonsse.ListGarantiaHarvesterPonsseActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_check_list_ponsse"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".listActivity.servicosPonsse.ListManutencaoProgGruaPonsseActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_check_list_ponsse"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".listActivity.servicosPonsse.ListManutencaoProgramadaCabecotePonsseActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_check_list_ponsse"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".listActivity.servicosPonsse.ListManutencaoProgramadaForwarderPonsseActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_check_list_ponsse"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".listActivity.servicosPonsse.ListManutencaoProgramadaGruaPonsseActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_check_list_ponsse"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".listActivity.servicosPonsse.ListManutencaoProgramadaMaquinaBaseActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_check_list_ponsse"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".formulariosActivity.servicosPonsse.FormGarantiaForwarderPonsseActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_check_list_ponsse"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".formulariosActivity.servicosPonsse.FormGarantiaHarvesterPonsseActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_check_list_ponsse"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".formulariosActivity.servicosPonsse.FormManutencaoPragramadaCabecotePonsseActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_check_list_ponsse"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".formulariosActivity.servicosPonsse.FormManutencaoProgramadaForwarderPonsseActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_check_list_ponsse"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".formulariosActivity.servicosPonsse.FormManutencaoProgramadaGruaPonsseActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_check_list_ponsse"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".formulariosActivity.servicosPonsse.FormManutencaoProgramadaMaquinaBasePonsseActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_check_list_ponsse"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".utilitarios.Configuracoes"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape" />
     </application>
 
 </manifest>
