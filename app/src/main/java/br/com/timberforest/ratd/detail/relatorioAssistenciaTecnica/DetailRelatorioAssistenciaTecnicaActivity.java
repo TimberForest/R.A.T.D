@@ -1,6 +1,7 @@
 package br.com.timberforest.ratd.detail.relatorioAssistenciaTecnica;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.support.v7.app.ActionBarActivity;
@@ -42,6 +43,10 @@ public class DetailRelatorioAssistenciaTecnicaActivity extends ActionBarActivity
     public String defeito1 = "";
     public String defeito2 = "";
     public String defeito3 = "";
+
+    public String versionCode = "";
+    public TextView versao;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -118,7 +123,16 @@ public class DetailRelatorioAssistenciaTecnicaActivity extends ActionBarActivity
         textFormularioGetPecaQtd.setText(relatorioAssistenciaTecnica.getPecaQtd());
         textFormularioGetDescPec.setText(relatorioAssistenciaTecnica.getGetDescPec());
 
-        subject="RATD Nº"+textFormularioRelatorio.getText().toString()+" - Técnico: "+textFormularioRelator.getText().toString();
+        PackageInfo pinfo = null;
+
+        try {
+            pinfo = getPackageManager().getPackageInfo(getPackageName(), 0);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        versao.setText(String.valueOf(pinfo.versionName));
+        versionCode = versao.getText().toString();
+        subject="RATD Nº"+textFormularioRelatorio.getText().toString()+" - Técnico: "+textFormularioRelator.getText().toString()+"       - Ver.:"+versionCode;
         message="Cliente: "+textFormularioCliente.getText().toString()+" / Data do Serviço: "+textFormularioData.getText().toString();
     }
     @Override
